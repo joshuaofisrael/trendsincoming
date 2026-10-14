@@ -1,18 +1,79 @@
 # Trends Incoming
 
-> Fast, fact-checked guide to upcoming US trends, releases, events and deadlines. Owned and operated by Joshua Israel Ventures LLC (Florida LLC). Every page cites its sources.
+> Your curator for what's trending right now. Hand-picked US trends with why each is trending and links to sources. Owned and operated by Joshua Israel Ventures LLC (Florida LLC).
 
-## Pages
-- [Zelda 40th Anniversary Switch 2: Oct 29 release, $519.99](https://trendsincoming.com/games/zelda-switch-2-40th-anniversary-edition/): Nintendo Switch 2 – The Legend of Zelda – 40th Anniversary Edition: release date, US price, what's in the box.
-- [Ocarina of Time remake: Nov 5 on Switch 2, price and new features](https://trendsincoming.com/games/ocarina-of-time-remake/): The Legend of Zelda: Ocarina of Time remake launches November 5, 2026 exclusively on Nintendo Switch 2.
-- [GTA 6 release date: November 19, 2026 (preload Nov 12)](https://trendsincoming.com/games/gta-6-release-date/): Grand Theft Auto VI launches November 19, 2026 on PS5 and Xbox Series X|S for $79.99. Preload starts Nov 12.
-- [2027 Grammy nominations: announced Monday, Nov 16, 2026](https://trendsincoming.com/music/grammy-nominations-2027/): Key dates for the 2027 Grammys: nominations Nov 16, 2026; show Feb 7, 2027 on ABC, Disney+ and Hulu.
-- [Where to watch the NBA in 2026-27: NBC, Peacock, ESPN, ABC, Prime Video](https://trendsincoming.com/sports/nba-where-to-watch-2026-27/): 2026-27 NBA where-to-watch guide: opening night Oct 20 on NBC/Peacock, plus the weekly national TV and streaming schedule.
-- [Where to watch the NHL in 2026-27: ESPN, ABC, TNT, ESPN+, NHL Power Play](https://trendsincoming.com/sports/nhl-where-to-watch-2026-27/): 2026-27 NHL where-to-watch guide: ESPN/ABC, TNT, ESPN+/Disney+/Hulu, NHL Power Play, plus marquee dates.
-- [ACA open enrollment 2027: Nov 1, 2026 to Jan 15, 2027 key dates](https://trendsincoming.com/money/open-enrollment-2027/): HealthCare.gov open enrollment for 2027 coverage runs Nov 1, 2026 to Jan 15, 2027. Enroll by Dec 15 for Jan 1 coverage.
+## Key pages
+- [/games/zelda-switch-2-40th-anniversary-edition/](https://trendsincoming.com/games/zelda-switch-2-40th-anniversary-edition/)
+- [/games/ocarina-of-time-remake/](https://trendsincoming.com/games/ocarina-of-time-remake/)
+- [/games/gta-6-release-date/](https://trendsincoming.com/games/gta-6-release-date/)
+- [/music/grammy-nominations-2027/](https://trendsincoming.com/music/grammy-nominations-2027/)
+- [/sports/nba-where-to-watch-2026-27/](https://trendsincoming.com/sports/nba-where-to-watch-2026-27/)
+- [/sports/nhl-where-to-watch-2026-27/](https://trendsincoming.com/sports/nhl-where-to-watch-2026-27/)
+- [/money/open-enrollment-2027/](https://trendsincoming.com/money/open-enrollment-2027/)
+- [/pop-culture/](https://trendsincoming.com/pop-culture/)
+- [/music/](https://trendsincoming.com/music/)
+- [/tv-streaming/](https://trendsincoming.com/tv-streaming/)
+- [/movies/](https://trendsincoming.com/movies/)
+- [/gaming/](https://trendsincoming.com/gaming/)
+- [/sports/](https://trendsincoming.com/sports/)
+- [/tech-ai/](https://trendsincoming.com/tech-ai/)
+- [/fashion-beauty/](https://trendsincoming.com/fashion-beauty/)
+- [/food/](https://trendsincoming.com/food/)
+- [/memes-viral/](https://trendsincoming.com/memes-viral/)
+- [/shopping/](https://trendsincoming.com/shopping/)
+- [/finance/](https://trendsincoming.com/finance/)
+- [/news/](https://trendsincoming.com/news/)
+- [/science/](https://trendsincoming.com/science/)
+- [/travel/](https://trendsincoming.com/travel/)
+- [/trending-hashtags/](https://trendsincoming.com/trending-hashtags/)
+- [/finance/trending-stocks/](https://trendsincoming.com/finance/trending-stocks/)
+- [/](https://trendsincoming.com/)
+- [/about/](https://trendsincoming.com/about/)
+- [/terms/](https://trendsincoming.com/terms/)
+- [/privacy/](https://trendsincoming.com/privacy/)
+- [/disclaimer/](https://trendsincoming.com/disclaimer/)
 
-## Legal
-- [About](https://trendsincoming.com/about/)
-- [Terms](https://trendsincoming.com/terms/)
-- [Privacy](https://trendsincoming.com/privacy/)
-- [Disclaimer](https://trendsincoming.com/disclaimer/)
+## Trends (as of 2026-10-14)
+- Zelda 40th Anniversary Switch 2: Nintendo's first special-edition Switch 2. Triforce dock, green and gold Joy-Con, $519.99. Pre-orders vanished in minutes. Source: https://www.nintendo.co.jp/corporate/release/en/2026/260908_2.html
+- Ocarina of Time remake: The N64 legend, rebuilt for Switch 2. Real jump button, free camera, and yes, you can hum into the mic. Source: https://www.gematsu.com/2026/09/the-legend-of-zelda-ocarina-of-time-remake-launches-november-5
+- GTA VI: Five weeks out. Preload opens Nov 12. The internet is already counting the minutes. Source: https://www.rockstargames.com/VI/
+- VisionQuest on Disney+: Paul Bettany is back as Vision and James Spader's Ultron is in his head. Episodes 1 and 2 dropped Oct 13. It's trending on X. Source: https://www.disneyplus.com/explore/articles/marvel-visionquest
+- DWTS Super Bowl Night: Joe Buck guest-judged and admitted he knows nothing about dancing. Fan favorite Guillermo got sent home. Source: https://www.tvinsider.com/1297039/dancing-with-the-stars-super-bowl-night-2026-scores-eliminated-recap/
+- Helluva Boss S3: Prime Video is dropping it weekly and the fandom is loud. The Part 1 finale lands Oct 28. Source: https://www.radiotimes.com/tv/fantasy/helluva-boss-season-3-release-schedule/
+- Narnia: The Magician's Nephew trailer: Greta Gerwig's Narnia, scored to Stairway to Heaven, with Meryl Streep voicing Aslan. Big swing. Our take: it works. Source: https://variety.com/2026/film/news/narnia-the-magicians-nephew-trailer-greta-gerwig-netflix-1236909994/
+- Other Mommy wins the box office: Jessica Chastain horror, D-plus CinemaScore, $27.5M opening anyway. Critics hated it. Audiences showed up. Source: https://deadline.com/2026/10/box-office-other-mommy-social-reckoning-1237151001/
+- The Social Reckoning flops: Aaron Sorkin's Facebook follow-up opened to just $5.5M. Ouch. Source: https://deadline.com/2026/10/box-office-other-mommy-social-reckoning-1237151001/
+- Street Fighter hits theaters: Paramount's PG-13 Street Fighter movie opens this Friday, IMAX included. Source: https://www.paramountpictures.com/movies/street-fighter
+- Danny Trejo vs. the internet: Trejo says he's "not pro-ICE" after backlash over a Daily Wire movie. His son says he'd never heard of Ben Shapiro. Source: https://www.usatoday.com/story/entertainment/movies/2026/10/13/danny-trejo-ice-movie-ben-shapiro/92228770007/
+- Taylor Swift's "Patient Zero": Second straight week at No. 1 on the Hot 100. Her 16th chart-topper. TikTok is using it for wedding edits. Source: https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-second-week/
+- Drake & Don Toliver debut at No. 5: New collab, straight into the Hot 100 top 5. Also on that chart: ADÉLA's first top 10. Source: https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-second-week/
+- "we fell in love in october": girl in red's song is the fastest-climbing TikTok sound right now, with 2M+ videos and still going. Peak fall. Source: https://kabo.sh/tools/trending-tiktok-sounds
+- KAROL G "BbY WOW": Up 26% in TikTok videos in a single day. Small but climbing fast, so catch it early. Source: https://kabo.sh/tools/trending-tiktok-sounds
+- Grammy nominations: The 2027 nominees drop Monday, Nov 16. The ceremony is Feb 7 on ABC, Disney+ and Hulu. Source: https://www.grammy.com/news/2027-grammys-show-air-date-nominations-announced/
+- NBA opening night: Knicks raise the banner, LeBron debuts for Philly, and NBC has the first-ever opening tripleheader. Source: https://www.nba.com/news/2026-27-nba-regular-season-schedule
+- NHL: where to watch: 84-game season, split between ESPN and TNT. Heritage Classic Oct 25. Source: https://www.nhl.com/news/2026-2027-national-tv-schedule-announced
+- Bills 37, Rams 34 (OT): A blocked field goal, then a walk-off kick. Josh Allen's first career OT win. Super Bowl preview? Maybe. Source: https://apnews.com/article/rams-bills-score-4fdc64fbeb421f66a516bb0b4d566863
+- MLB LCS: Rays-Guardians, Brewers-Dodgers: The final four. World Series starts Oct 23. Source: https://www.mlb.com/news/mlb-2026-league-championship-series-matchups
+- Google Gemini 4 Argon: Google's new frontier model, out Oct 13 with a 1M-token window. It's pitched as less hedgy and less cliché. Source: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
+- Meta Muse Wonder: Meta's first frontier model. Not open-weight this time, which is a big shift from Llama. Source: https://www.techrepublic.com/article/news-meta-muse-wonder-ai-models-launch/
+- Microsoft Maia 300 chip: Microsoft's third in-house AI chip. The pitch: 40% better performance per megawatt. Deployment is planned for 2027. Source: https://ai.tldr.tech/p/2026-10-13-tldr-ai
+- Starshield speed cap in Ukraine: Ukraine says SpaceX capped moving Starshield terminals at 100 mph with no warning. Starshield is trending on X. Source: https://kyivindependent.com/this-cannot-be-a-coincidence-ukraines-starlink-access-restricted-without-warning-zelensky-adviser-says/
+- iPhone Duo pre-orders: Apple's first foldable. $1,999. Pre-orders open Oct 16 at 5 a.m. PT and it ships Oct 23. Source: https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/
+- Copper & cherry-cola hair: Pinterest's first Beauty Trend Report says hair is going warm and moody: mocha, copper, cherry cola. Source: https://newsroom.pinterest.com/news/beauty-trend-report-2026/
+- Ghost Rose nails: Milky, blush-nude nails beating burgundy this fall. Quiet but very chic. Source: https://www.elle.com/beauty/a73916869/ghost-rose-nails-trend/
+- Smoky eyes + burgundy lips: Clean girl is taking a night off. Runways from Saint Laurent to Gucci brought the smoke back. Source: https://pagesix.com/2026/10/06/style/fall-makeup-trends-2026/
+- Taco Bell x Milk Bar Birthday Cake Empanada: Cake-flavored empanada with pink frosting and sprinkles. $3.49. Chaotic in the best way. Source: https://www.prnewswire.com/news-releases/taco-bell-and-milk-bar-reunite-for-all-new-birthday-cake-empanada-302901760.html
+- Wingstop x Sour Patch Kids wings: Wings in a sour-then-sweet glaze. We're scared. We're also going. Source: https://www.qsrmagazine.com/news/wingstop-announces-wings-flavored-with-sour-patch-kids-glaze/
+- Dunkin' Spider Donut is back: The Halloween Spider Donut returns, plus a purple Berry Battie drink. Source: https://www.usatoday.com/story/money/food/2026/10/14/dunkin-spider-donut-berry-battie-halloween/92232735007/
+- Popeyes x Megan Thee Stallion: A new Honey Chicken Biscuit with a Megan Thee Stallion merch tie-in. Source: https://news.popeyes.com/blog-posts/want-to-try-the-new-popeyes-honey-chicken-biscuit-and-score-a-megan-thee-stallion-t-shirt-heres-how
+- The "Six Seven" dance: A Brazilian funk track: count on your fingers, shrug on the drop. J-Hope did it and the top video hit 75M+ views. Source: https://lightreel.ai/blogs/whats-trending-on-tiktok
+- Ramalama costume walk: A creepy low-angle shot zooms out to reveal the Halloween fit, set to Róisín Murphy. Easy to copy, hard to stop watching. Source: https://newengen.com/insights/october-tiktok-trends/
+- Pumpkin Head Illusion: Hold a pumpkin up to the lens and congratulations, you're a pumpkin. Spooky-season gold. Source: https://newengen.com/insights/october-tiktok-trends/
+- AI cat melodrama: Synthetic cats acting out family dramas and tiny tragedies. Weirdly emotional, and a fast-breaking format. Source: https://lightreel.ai/blogs/whats-trending-on-tiktok
+- Bank of America beats: Q3 came in strong even with a $1.2B Treasury penalty. Bank of America is trending on X. Source: https://investor.bankofamerica.com/events-and-presentations/events/detail/20261014-q3-2026-bank-of-america-earnings-conference-call?wcmmode=disabled
+- J&J slides after earnings: It beat estimates, then fell 5.73%. The culprits: a talc-related charge and soft MedTech sales. Source: https://www.investing.com/news/stock-market-news/why-is-johnson--johnson-stock-tumbling-7-today-93CH-4947310
+- Chip stocks wobble: AMAT, Micron and KLA fell after Broadcom's CEO said some AI investment looks like "casino gambling". Source: https://swingfolio.com/daily/us/2026-10-13/afternoon
+- Open enrollment 2027: HealthCare.gov opens Nov 1. Enroll by Dec 15 for Jan 1 coverage. It closes Jan 15. Source: https://www.healthcare.gov/quick-guide/dates-and-deadlines/
+- SpaceX CRS-35 heads to the ISS: 6,300+ lbs of cargo, including the station's final roll-out solar arrays. Dragon docks Oct 15. Source: https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/
+- Artemis III booster stacked: NASA finished stacking the boosters for the Moon-landing mission, with all four RS-25 engines installed. Source: https://www.nasa.gov/blogs/missions/2026/10/13/nasa-completes-artemis-iii-booster-stacking-shares-status-update/
+- Holiday airfares spike: Hopper says Thanksgiving domestic fares average $402, up 31%. Book by late October. Seriously. Source: https://www.travelagewest.com/Industry-Insight/Opinion/holiday-travel-fares-10-year-high
