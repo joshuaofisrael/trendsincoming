@@ -190,7 +190,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
     if home: lds.append({"@context":"https://schema.org","@type":"WebSite","name":"Trends Incoming","description":TAG,"url":B+"/","publisher":pub})
     if ld: lds+=ld if isinstance(ld,list) else [ld]
     if article and not home: lds.append({"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":UPD,"dateModified":UPD,"mainEntityOfPage":url,"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub})
-    gv='<meta name="google-site-verification" content="ezBQqKRJO61dxr5XtfUeBwFylFtxGkBcroJzRxI8vds" />\n' if home else ''
+    gv=('<meta name="google-site-verification" content="Xsz9tsHeBE7D0xaGXOZcReX0k8j8tm1LpWoIaUujKdM" />\n<meta name="google-site-verification" content="ezBQqKRJO61dxr5XtfUeBwFylFtxGkBcroJzRxI8vds" />\n') if home else ''
     r="../"*path.count("/")
     nav="".join(f'<a class="l" href="{r}{c}/">{e} {n}</a>' for c,n,e in CATS if c not in ("news","gaming","politics","world"))
     h=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
