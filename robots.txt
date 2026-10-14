@@ -64,4 +64,4 @@ Allow: /
 User-agent: xAI-Bot
 Allow: /
 
-Sitemap: https://joshuaofisrael.github.io/trendsincoming/sitemap.xml
+Sitemap: https://trendsincoming.com/sitemap.xml

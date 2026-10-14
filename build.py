@@ -1,5 +1,5 @@
 import json,os,uuid
-B="https://joshuaofisrael.github.io/trendsincoming"
+B="https://trendsincoming.com"
 LLC="Joshua Israel Ventures LLC"
 UPD="2026-10-14"
 pub={"@type":"Organization","name":LLC,"url":B+"/","address":{"@type":"PostalAddress","addressRegion":"FL","addressCountry":"US"}}
@@ -91,6 +91,6 @@ open("style.css","w").write(CSS)
 open("robots.txt","w").write("".join(f"User-agent: {a}\nAllow: /\n\n" for a in ["*","GPTBot","OAI-SearchBot","ChatGPT-User","ClaudeBot","Claude-Web","anthropic-ai","CCBot","Google-Extended","Googlebot","Bingbot","PerplexityBot","Perplexity-User","Bytespider","Applebot","Applebot-Extended","Amazonbot","meta-externalagent","DuckAssistBot","cohere-ai","YouBot","xAI-Bot"])+f"Sitemap: {B}/sitemap.xml\n")
 open("sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{u}</loc><lastmod>{UPD}</lastmod></url>\n" for u in P)+"</urlset>\n")
 open("llms.txt","w").write(f"# Trends Incoming\n\n> Fast, fact-checked guide to upcoming US trends, releases, events and deadlines. Owned and operated by {LLC} (Florida LLC). Every page cites its sources.\n\n## Pages\n"+"".join(f"- [{t}]({B}/{p.replace('index.html','')}): {d}\n" for p,t,_,_,d,_,_ in items)+f"\n## Legal\n- [About]({B}/about/)\n- [Terms]({B}/terms/)\n- [Privacy]({B}/privacy/)\n- [Disclaimer]({B}/disclaimer/)\n")
-k=uuid.uuid4().hex; open(f"{k}.txt","w").write(k); print("indexnow",k)
+k="2d25fe1d50014ed98b5fff9381edba6a"; open(f"{k}.txt","w").write(k); print("indexnow",k)
 open(".nojekyll","w").write("")
 open("404.html","w").write(open("index.html").read())
