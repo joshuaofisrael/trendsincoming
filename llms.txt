@@ -67,6 +67,16 @@
 - [/celebrities/engagements/](https://trendsincoming.com/celebrities/engagements/)
 - [/relationships/dating-apps/](https://trendsincoming.com/relationships/dating-apps/)
 - [/weather/fall/](https://trendsincoming.com/weather/fall/)
+- [/blog/gta-6-explained/](https://trendsincoming.com/blog/gta-6-explained/)
+- [/blog/midterms-2026-explained/](https://trendsincoming.com/blog/midterms-2026-explained/)
+- [/blog/zelda-switch-2-explained/](https://trendsincoming.com/blog/zelda-switch-2-explained/)
+- [/blog/social-security-cola-2027-explained/](https://trendsincoming.com/blog/social-security-cola-2027-explained/)
+- [/blog/narnia-magicians-nephew-explained/](https://trendsincoming.com/blog/narnia-magicians-nephew-explained/)
+- [/blog/six-seven-dance-explained/](https://trendsincoming.com/blog/six-seven-dance-explained/)
+- [/blog/strait-of-hormuz-explained/](https://trendsincoming.com/blog/strait-of-hormuz-explained/)
+- [/blog/ai-model-race-october-2026/](https://trendsincoming.com/blog/ai-model-race-october-2026/)
+- [/blog/government-funding-deadline-oct-31/](https://trendsincoming.com/blog/government-funding-deadline-oct-31/)
+- [/blog/](https://trendsincoming.com/blog/)
 - [/trending-hashtags/](https://trendsincoming.com/trending-hashtags/)
 - [/finance/trending-stocks/](https://trendsincoming.com/finance/trending-stocks/)
 - [/](https://trendsincoming.com/)
@@ -74,6 +84,17 @@
 - [/terms/](https://trendsincoming.com/terms/)
 - [/privacy/](https://trendsincoming.com/privacy/)
 - [/disclaimer/](https://trendsincoming.com/disclaimer/)
+
+## Blog explainers
+- [GTA VI is five weeks away. Here's everything that's actually confirmed.](https://trendsincoming.com/blog/gta-6-explained/): GTA VI launches Nov 19 on PS5 and Xbox Series X|S. What it is, why it's trending, the long road here, and what happens next.
+- [The 2026 midterms, explained without the spin](https://trendsincoming.com/blog/midterms-2026-explained/): Nov 3, 2026: every House seat, 35 Senate races and 36 governorships. A neutral guide to what's at stake, what the polls show and how to follow it.
+- [Why everyone wants the Zelda Switch 2 (and how to actually get one)](https://trendsincoming.com/blog/zelda-switch-2-explained/): Nintendo's Zelda 40th Anniversary Switch 2 drops Oct 29 for $519.99. What it is, why it sold out, and what's next.
+- [The 2027 Social Security COLA: what it is and what to expect](https://trendsincoming.com/blog/social-security-cola-2027-explained/): The 2027 Social Security COLA is due Oct 14, 2026. How it's calculated, what forecasters expect, and when it hits checks.
+- [Greta Gerwig's Narnia trailer is here, and it's not what you expected](https://trendsincoming.com/blog/narnia-magicians-nephew-explained/): Netflix dropped the first trailer for Narnia: The Magician's Nephew. What it is, why it's trending, and the release plan.
+- [The "Six Seven" dance: why your whole feed is counting on its fingers](https://trendsincoming.com/blog/six-seven-dance-explained/): The Six Seven dance is October's biggest TikTok trend. What it is, how J-Hope sent it viral, and how to join in.
+- [Hormuz, the Houthis and why a strip of water matters to your gas tank](https://trendsincoming.com/blog/strait-of-hormuz-explained/): A neutral explainer on the Saudi–Houthi escalation and tension around the Strait of Hormuz, and why it's trending.
+- [Gemini 4 Argon, Muse Wonder and Maia 300: the AI week, explained](https://trendsincoming.com/blog/ai-model-race-october-2026/): Google, Meta and Microsoft all made big AI moves in one week. What launched, why it's trending, and what to watch.
+- [The Oct 31 funding deadline: a neutral guide to the shutdown talk](https://trendsincoming.com/blog/government-funding-deadline-oct-31/): Congress must fund the government by Oct 31. What's at stake, where the parties stand, and what happens next.
 
 ## Trends (as of 2026-10-14)
 - Zelda 40th Anniversary Switch 2: Nintendo's first special-edition Switch 2. Triforce dock, green and gold Joy-Con, $519.99. Pre-orders vanished in minutes. Source: https://www.nintendo.co.jp/corporate/release/en/2026/260908_2.html
@@ -124,7 +145,7 @@
 - IonQ buying Elisity: The quantum computing firm is buying a Zero Trust security startup in an all-stock deal worth up to $1.3B. Source: https://www.stocktitan.net/sec-filings/IONQ/8-k-ion-q-inc-reports-material-event-25423483b701.html
 - Workday acquires C1.ai: Workday is buying C1.ai, an identity platform for people and AI agents. Source: https://www.prnewswire.com/news-releases/workday-to-acquire-c1ai-a-leading-agentic-identity-platform-for-people-and-agents-302906593.html
 - Big-bank earnings week: JPMorgan, Goldman, Wells, Citi, BofA and Morgan Stanley all reported this week. The market's reactions were all over the place. Source: https://newslantern.com/news/18592/2026-10-14/bank-of-america-and-morgan-stanley-post-strong-third-quarter-results
-- Social Security COLA day: The 2027 COLA is expected today, alongside the September CPI report. Forecasts are 3.5% to 3.6%, which would be the biggest raise in three years. It hits January checks. Source: https://www.cnbc.com/2026/10/13/social-security-cola-2027.html
+- Social Security COLA day: The 2027 COLA is expected today, right after the September CPI report at 8:30 a.m. ET. Not official yet. Forecasts are 3.5% to 3.6%, which would be the biggest raise in three years. It hits January checks. Source: https://www.cnbc.com/2026/10/13/social-security-cola-2027.html
 - Mortgage rates at 7.40%: Freddie Mac's 30-year average is at a three-year high. The next reading comes Oct 15. Source: https://www.freddiemac.com/pmms
 - Flu shot: aim for end of October: CDC says everyone 6 months and older should get a flu shot, ideally by the end of October. People 65+ should get the high-dose types. Source: https://www.cdc.gov/flu/season/2026-2027.html
 - COVID vaccine guidance: CDC's current COVID shot guidance is a shared decision with your provider. It's especially important for 65+ and high-risk people. Source: https://www.cdc.gov/covid/vaccines/stay-up-to-date.html
