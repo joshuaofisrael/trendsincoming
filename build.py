@@ -203,7 +203,7 @@ legal={"about":("About Trends Incoming",f"<p><b>Trends Incoming is {TAG.lower()}
 for k,(t,x) in legal.items(): page(f"{k}/index.html",t,f"{t} for Trends Incoming, {TAG.lower()}. Owned by {LLC}.",f"<h1>{t}</h1>{x}",article=False)
 open("style.css","w").write(CSS+CSS2)
 open("app.js","w").write(JS.replace("__QUIZ__",json.dumps([[t[1],t[2]] for t in T])))
-items="".join(f"<item><title>{esc(t[1])}</title><link>{B}/{t[6] or t[0]+'/'}</link><guid isPermaLink=\"false\">ti-{tid(t)}</guid><description>{esc(t[2])}</description><category>{CN[t[0]][0]}</category><pubDate>Wed, 14 Oct 2026 10:05:00 GMT</pubDate></item>\n" for t in T)
+items="".join(f"<item><title>{esc(t[1])}</title><link>{B}/{t[6] or t[0]+'/'}</link><guid isPermaLink=\"false\">ti-{tid(t)}</guid><description>{esc(t[2])}</description><category>{esc(CN[t[0]][0])}</category><pubDate>Wed, 14 Oct 2026 10:05:00 GMT</pubDate></item>\n" for t in T)
 open("feed.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trends Incoming</title><link>{B}/</link><atom:link href="{B}/feed.xml" rel="self" type="application/rss+xml"/><description>{TAG}</description><language>en-us</language><copyright>© 2026 {LLC}</copyright><lastBuildDate>Wed, 14 Oct 2026 10:05:00 GMT</lastBuildDate>\n{items}</channel></rss>\n')
 os.makedirs("games",exist_ok=True)
 open("games/index.html","w").write(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Games | Trends Incoming</title><link rel="canonical" href="{B}/gaming/"><meta http-equiv="refresh" content="0; url=/gaming/"><meta name="robots" content="noindex,follow"></head><body><p>Games moved to <a href="/gaming/">/gaming/</a>.</p></body></html>')
