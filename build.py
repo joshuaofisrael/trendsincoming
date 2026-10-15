@@ -245,11 +245,44 @@ FEAT=[("games/zelda-switch-2-40th-anniversary-edition/","gaming","Zelda 40th Ann
 for p,c,ti,desc,iso,tag,body,s in FEAT:
     so='<h2>Dig into the conversation</h2><div class="links">'+"".join(f'<a class="s" href="{u}" {EXT}>#{tag} on {l}</a>' for l,u in soc(tag))+'</div>'
     page(p+"index.html",ti,desc,"<article>"+body.replace("{BY}",BY)+so+srclist(s)+"</article>",ld=ev(ti.split(":")[0],iso,p),cat=c)
+# --- Sunrise on the Reaping guide (added 2026-10-15) ---
+RP="movies/sunrise-on-the-reaping-guide/"
+RSRC=[("Fandango: release date, rating, runtime, cast","https://www.fandango.com/the-hunger-games-sunrise-on-the-reaping-2026-240138/movie-overview"),("Laemmle: tickets on sale no later than Nov 17","https://www.laemmle.com/film/hunger-games-sunrise-reaping"),("Cinemark: Nov 20 release","https://www.cinemark.com/movies/the-hunger-games-sunrise-on-the-reaping"),("Showtimes.com listing","https://www.showtimes.com/movies/the-hunger-games-sunrise-on-the-reaping-179490/"),("ComingSoon: all five films hit Hulu Oct 14","https://www.comingsoon.net/movies/news/2203213-new-hulu-releases-this-week-october-12-18"),("Netflix Tudum: leaving Netflix in October","https://www.netflix.com/tudum/articles/whats-leaving-netflix"),("Lionsgate UK film page","https://www.lionsgatefilms.co.uk/films/sunrise-on-the-reaping/")]
+WO=[("The Hunger Games: The Ballad of Songbirds & Snakes","2023","Set 64 years before Katniss. Optional, but great context for Snow."),("The Hunger Games","2012","Where it all starts. Katniss volunteers."),("The Hunger Games: Catching Fire","2013","The one with the most Haymitch backstory hints."),("The Hunger Games: Mockingjay – Part 1","2014","The rebellion goes public."),("The Hunger Games: Mockingjay – Part 2","2015","The finale.")]
+RFAQ=[("When does Sunrise on the Reaping come out?","Friday, November 20, 2026, in US theaters. Some theaters may add Thursday night previews, so check your local listings."),
+("When do Sunrise on the Reaping tickets go on sale?","A nationwide presale date has not been announced yet. Laemmle Theatres says its tickets go on sale no later than Tuesday, November 17 at 7pm, and may open earlier."),
+("How long is Sunrise on the Reaping?","Not officially confirmed. Fandango and several theaters list 2 hr 30 min, but other listings show 158 or 160 minutes."),
+("What is Sunrise on the Reaping rated?","Fandango and theater listings show PG-13."),
+("Do I need to watch the other Hunger Games movies first?","No, it's a prequel set 24 years before the first film. But Catching Fire hits differently once you know Haymitch's story, so a rewatch is a fun warm-up."),
+("Where can I stream the Hunger Games movies?","All five earlier films moved to Hulu on October 14, 2026, after leaving Netflix the same day. Availability changes, so check Hulu before you start.")]
+def _cell(l,u): return f'<a href="{u}" {EXT}>{l}</a>'
+rbody=f'''<article><p class="by"><a href="../">🍿 Movies</a> › Sunrise on the Reaping guide</p><span class="pill">In theaters Fri Nov 20, 2026</span>
+<h1>Sunrise on the Reaping: release date, tickets, runtime and watch order</h1><p class="by">{BY} · Oct 15, 2026</p>
+<p>Haymitch is finally getting his moment. <b>The Hunger Games: Sunrise on the Reaping</b> opens in US theaters on <b>Friday, November 20, 2026</b>, and the fandom is already volunteering as tribute. Here's everything you need, minus the spoilers.</p>
+<table><tr><th>Release</th><td>Friday, Nov 20, 2026 (US theaters)</td></tr><tr><th>Tickets</th><td>National presale date <b>not yet announced</b>. Laemmle says no later than Tue Nov 17, 7pm.</td></tr><tr><th>Rating</th><td>PG-13 (per Fandango and theater listings)</td></tr><tr><th>Runtime</th><td><b>Not officially confirmed.</b> Most listings say 2 hr 30 min; some say 158 or 160 min.</td></tr><tr><th>Director</th><td>Francis Lawrence</td></tr><tr><th>Cast</th><td>Joseph Zada (young Haymitch), Whitney Peak, Mckenna Grace, Jesse Plemons, Elle Fanning, Ralph Fiennes, Kieran Culkin, Glenn Close, Maya Hawke, Kelvin Harrison Jr.</td></tr></table>
+<h2>🎟️ Getting tickets</h2><p>No big-chain presale date yet. When it drops, these are the places to check:</p>
+<div class="links">{_cell("Fandango","https://www.fandango.com/the-hunger-games-sunrise-on-the-reaping-2026-240138/movie-overview")}{_cell("Cinemark","https://www.cinemark.com/movies/the-hunger-games-sunrise-on-the-reaping")}{_cell("AMC Theatres","https://www.amctheatres.com/")}{_cell("Regal","https://www.regmovies.com/")}{_cell("Atom Tickets","https://www.atomtickets.com/")}</div>
+<p>Pro tip: opening-weekend premium screens (IMAX, Dolby, big recliners) usually go first. Set an alert and grab seats early.</p>
+<h2>📺 Watch order before you go</h2><p>Release order is the classic route. Chronological fans can start with the 2023 prequel. All five streamed on Hulu from Oct 14, 2026.</p>
+<table><tr><th>#</th><th>Film</th><th>Why watch</th><th>Stream</th></tr>{"".join(f'<tr><td>{i+1}</td><td><b>{esc(n)}</b> ({y})</td><td>{esc(w)}</td><td>{_cell("Hulu","https://www.hulu.com/")}</td></tr>' for i,(n,y,w) in enumerate(WO))}</table>
+<p>Heads up: they left Netflix in the US on Oct 14. Streaming deals move fast, so double-check before movie night.</p>
+<h2>🔥 Spoiler-free refresher</h2><p>Panem is a country split into a glittering Capitol and twelve struggling districts. Every year, each district must send two teenagers into a televised fight for survival called the Hunger Games. It's a punishment for an old rebellion, dressed up as entertainment.</p>
+<p>Every 25th year is a "Quarter Quell" with an extra-cruel twist. Sunrise on the Reaping goes back to the <b>50th Games</b>, the second Quell, 24 years before Katniss. Our lead is a teenage Haymitch Abernathy from District 12. If you only know him as Katniss's grumpy, sharp-tongued mentor, this is the story of how he got that way. It's based on Suzanne Collins's 2025 novel.</p>
+<h2>Quick answers</h2>{"".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q,a in RFAQ)}
+<h2>Dig into the conversation</h2><div class="links">{"".join(f'<a class="s" href="{u}" {EXT}>#SunriseOnTheReaping on {l}</a>' for l,u in soc("SunriseOnTheReaping"))}</div>
+{srclist(RSRC)}</article>'''
+rld=[{"@context":"https://schema.org","@type":"Movie","name":"The Hunger Games: Sunrise on the Reaping","datePublished":"2026-11-20","director":{"@type":"Person","name":"Francis Lawrence"},"actor":[{"@type":"Person","name":a} for a in ["Joseph Zada","Whitney Peak","Mckenna Grace","Jesse Plemons","Elle Fanning","Ralph Fiennes","Kieran Culkin","Glenn Close"]],"contentRating":"PG-13","productionCompany":{"@type":"Organization","name":"Lionsgate"},"url":B+"/"+RP},
+{"@context":"https://schema.org","@type":"ItemList","name":"Hunger Games watch order before Sunrise on the Reaping","itemListElement":[{"@type":"ListItem","position":i+1,"item":{"@type":"Movie","name":n,"datePublished":y}} for i,(n,y,w) in enumerate(WO)]},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in RFAQ]},
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":B+"/"},{"@type":"ListItem","position":2,"name":"Movies","item":B+"/movies/"},{"@type":"ListItem","position":3,"name":"Sunrise on the Reaping guide","item":B+"/"+RP}]}]
+page(RP+"index.html","Sunrise on the Reaping: Release Date, Tickets, Runtime and Watch Order","Opens 20 November 2026. When tickets go on sale, how long it runs, and the Hunger Games watch order with where to stream each film.",rbody,ld=rld,cat="movies")
+REAPLINK='<div class="card picks" style="margin:14px 0"><span class="pill">Nov 20</span><h3>🏹 Sunrise on the Reaping guide</h3><p>Tickets, runtime, rating and the Hunger Games watch order with where to stream.</p><div class="links"><a class="in" href="{r}movies/sunrise-on-the-reaping-guide/">Read the guide →</a></div></div>'
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
     extra=('<p><a href="trending-stocks/">→ Today\'s trending stocks</a></p>'+DISC if c=="finance" else "")+('<p class="warn">Strictly nonpartisan: we link sourced facts, represent both sides fairly and never endorse candidates or parties.</p>' if c=="politics" else "")
     subs=[sb for sb in SUBS if sb[0]==c]
+    if c=="movies": extra+=REAPLINK.replace("{r}","../")
     if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(sb[2])}</a>' for sb in subs)+'</div>'
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
 for sb in SUBS:
@@ -276,7 +309,7 @@ page("finance/trending-stocks/index.html","Trending stocks today: who's buzzing 
 # home
 picks=[t for t in T if t[7]]
 home=f'''<section class="hero"><p>⚡ {TAG}</p><h1>Catch it before your group chat does.</h1><p>{len(T)}+ hand-picked trends across {len(CATS)} categories. Why each one is buzzing, plus links to dig in.</p></section>
-<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
+{REAPLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
 <section id="quiz" class="quiz" hidden><h2>🧠 Guess the trend</h2><p class="q"></p><div class="opts"></div><p class="res"></p></section><h2>Jump to a vibe</h2><div class="cats"><a href="trending-hashtags/"># Trending hashtags</a><a href="finance/trending-stocks/">$ Trending stocks</a>{"".join(f'<a href="{c}/">{e} {n}</a>' for c,n,e in CATS)}</div>
 <h2>🔥 Everything trending right now</h2><p class="by">Vote 🔥 Hot or 🧊 Not on any card. Your votes stay on your device.</p><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p><div class="grid">{"".join(card(t,"") for t in T if not t[7])}</div>'''
 page("index.html","Trends Incoming: your curator for what's trending right now",f"{TAG}. Hand-picked US trends in pop culture, music, games, sports, tech, food, memes and more, with why each one's buzzing and links to dig in.",home,home=True,ld={"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":t[1]} for i,t in enumerate(T)]})
