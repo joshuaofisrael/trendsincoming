@@ -1,0 +1,7 @@
+# Trends Incoming outreach log
+
+| Date (London) | Inbox | Target | URL / page | Asset | Status |
+|---|---|---|---|---|---|
+| 2026-10-15 ~09:00 | joshuaofisrael@gmail.com | The Leonida (contact@theleonida.com) | https://theleonida.com/ | GTA VI explainer https://trendsincoming.com/blog/gta-6-explained/ | Sent (Gmail id 1a13e8ba9f8c51a3) |
+| 2026-10-15 ~09:01 | joshuaofisrael@gmail.com | Squared Away / CRR (kimberly.blanton@bc.edu) | https://crr.bc.edu/contact-us-2/ | Official 3.6% COLA explainer https://trendsincoming.com/blog/social-security-cola-2027-explained/ | Sent (Gmail id 1a13e8c7bb339a20) |
+| 2026-10-15 | joshofisrael@yahoo.com | Medicare Interactive / MRC (mi@medicarerights.org) | https://www.medicareinteractive.org/ | Medicare OE starter https://trendsincoming.com/blog/medicare-open-enrollment-2027-starter/ | Yahoo draft filed: outreach/2026-10-15-yahoo-draft.md — parent must send via Yahoo browser |
