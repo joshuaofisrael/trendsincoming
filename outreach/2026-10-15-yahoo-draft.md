@@ -38,4 +38,4 @@ If you’d rather not receive notes like this, reply “unsubscribe” and I’l
 ---
 **Asset:** Medicare open enrollment 2027 starter  
 **Target page:** https://www.medicareinteractive.org/ (and related MRC education)  
-**Status:** DRAFT ONLY — awaiting Yahoo browser send by parent
+**Status:** SENT ~08:54 London from joshofisrael@yahoo.com (confirmed in Sent)
