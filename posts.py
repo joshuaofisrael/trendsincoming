@@ -20,7 +20,7 @@ POSTS=[
 <p><b>November 12:</b> preload opens and physical copies arrive. Clear your SSD space now. Seriously, do it this weekend. <b>November 19:</b> launch. Expect servers, stores and your group chat to be very busy. Between now and then, watch Rockstar's official channels for any final trailer or launch details. That's where real news shows up first.</p>
 <h2>Where to follow it</h2>
 <p>Stick to official sources for dates: Rockstar's GTA VI page, the PlayStation and Xbox store listings, and Take-Two's investor releases. For the vibes, memes and wild theories, the hashtag links below will take you straight into the conversation. Just remember: a theory with a lot of likes is still a theory.</p>"""),
-("midterms-2026-explained","The 2026 midterms, explained without the spin","Nov 3, 2026: every House seat, 35 Senate races and 36 governorships. A neutral guide to what's at stake, what the polls show and how to follow it.","politics","elections-2026","Midterms: 20 days out","Midterms2026",
+("midterms-2026-explained","The 2026 midterms, explained without the spin","Nov 3, 2026: every House seat, 35 Senate races and 36 governorships. A neutral guide to what's at stake, what the polls show and how to follow it.","politics","elections-2026","Midterms: 19 days out","Midterms2026",
 [("Call the Map forecast","https://www.callthemap.com/state-of-the-race"),("Senate race ratings roundup (Oct 9)","https://intel.innerpulse.net/doc/competitive-us-senate-races-2026-ratings-polls-and-paths-to-control-as-of-9"),("Poliwave Ohio polls","https://www.poliwave.com/us/oh/sen-fed"),("co/efficient Ohio poll","https://battlegrounds.coefficient.org/oh/"),("NYT/Siena polls summary","https://uspoliticalrank.com/articles/times-siena-five-red-state-senate-polls-october-2026")],
 """<p>Election Day is <b>Tuesday, November 3, 2026</b>. Here's the quick version: all 435 House seats, 35 Senate seats and 36 governorships are up. This page is strictly nonpartisan. We report what forecasters and pollsters are publishing, show where they disagree, and don't tell you who to vote for.</p>
 <h2>What it is</h2>
@@ -59,25 +59,35 @@ POSTS=[
 <li><b>After that:</b> watch for restocks rather than paying resale markups.</li></ul>
 <h2>Where to follow it</h2>
 <p>For official info, Nintendo's news releases and store listings are the source of truth. For restocks, the big retailers and stock trackers are your friends. For fan reactions, unboxings and setup photos, tap the hashtag links below.</p>"""),
-("social-security-cola-2027-explained","The 2027 Social Security COLA: what it is and what to expect","The 2027 Social Security COLA is due Oct 14, 2026. How it's calculated, what forecasters expect, and when it hits checks.","money","retirement","Social Security COLA day","SocialSecurity",
-[("CNBC","https://www.cnbc.com/2026/10/13/social-security-cola-2027.html"),("The Hill / Nexstar","https://thehill.com/homenews/6129494-when-will-2027s-social-security-cola-be-announced/"),("SavingAdvice on announcement day","https://www.savingadvice.com/articles/2026/10/12/10750341_social-securitys-2027-cola-is-almost-here-what-happens-on-announcement-day.html"),("SSA COLA page","https://www.ssa.gov/cola/"),("USA Today","https://www.usatoday.com/story/money/personal-finance/retirement/2026/08/25/social-security-cola-2027-announcement-date/91454199007/")],
-"""<p>If you or someone you love gets Social Security, today matters. The <b>2027 cost-of-living adjustment (COLA)</b> is expected to be announced on <b>Wednesday, October 14, 2026</b>, the same morning the government publishes September inflation data at 8:30 a.m. ET. <b>As we publish, the official number isn't out yet.</b> When it is, it'll appear on SSA's COLA page, and we'll update this post.</p>
+("social-security-cola-2027-explained","Social Security COLA 2027 is official: 3.6%","SSA confirmed a 3.6% COLA for 2027. What it is, when it hits checks, earnings limits, and where to follow it.","money","retirement","Social Security COLA is 3.6%","SocialSecurity",
+[("SSA COLA page","https://www.ssa.gov/cola/"),("CNBC pre-announcement coverage","https://www.cnbc.com/2026/10/13/social-security-cola-2027.html"),("Medicare open enrollment","https://www.medicare.gov/health-drug-plans/open-enrollment")],
+"""<p>It's official. The Social Security Administration says <b>Social Security and SSI benefits rise 3.6% in 2027</b>. That's the number on <a href="https://www.ssa.gov/cola/">ssa.gov/cola</a>, not a forecast screenshot. About <b>76 million Americans</b> are covered by the bump.</p>
 <h2>What a COLA is</h2>
 <p>Every year, Social Security and SSI benefits get adjusted so they keep up with inflation. It isn't a raise Congress votes on. The formula is set by law. SSA compares the average of a specific inflation index, the CPI-W, for July, August and September with the same three months a year earlier. The percentage change, rounded to a tenth of a point, becomes the COLA. If prices fall, benefits stay put rather than going down.</p>
+<h2>The official 2027 numbers</h2>
+<ul>
+<li><b>COLA:</b> 3.6% (up from 2.8% for 2026).</li>
+<li><b>Social Security:</b> higher payments for nearly 72 million beneficiaries begin with benefits <b>payable in January 2027</b>.</li>
+<li><b>SSI:</b> about 7.3 million recipients see the increase starting <b>December 31, 2026</b>.</li>
+<li><b>Taxable maximum:</b> earnings subject to Social Security tax rise to <b>$192,300</b>.</li>
+<li><b>Earnings limit (under full retirement age all year):</b> <b>$25,560</b> ($1 deducted for each $2 over).</li>
+<li><b>Earnings limit (year you reach full retirement age):</b> <b>$67,920</b> until the month before you hit full retirement age ($1 for each $3 over).</li>
+<li>No earnings limit once you're full retirement age for the entire year.</li>
+</ul>
 <h2>Why it's trending</h2>
-<p>Because the forecasts are higher than last year. For 2026, the COLA was 2.8%. For 2027, The Senior Citizens League and analyst Mary Johnson both forecast 3.5%, and CNBC reported AARP at 3.6%. Other reports say AARP later trimmed its estimate to 3.5%. Either way, that would be the biggest bump in three years. TSCL estimates a 3.5% COLA would raise the average retirement check by about $67.90 a month, from about $1,940 to about $2,008.</p>
-<p>There's a flip side. CNBC talked to older Americans who worry the increase won't cover what they're actually paying for groceries, housing and health care. Medicare Part B premiums, which are usually deducted from Social Security checks, also tend to rise. That can eat part of the raise.</p>
-<h2>The backstory</h2>
-<p>COLA announcements usually land in mid-October with the September CPI report. Last year, though, a government shutdown delayed the data and pushed the announcement to late October. This year there's no shutdown as of today, so the schedule is back to normal. Forecasts have drifted over the year. TSCL projected 3.9% in April, 3.6% by August and 3.5% last month, as each month's inflation data came in.</p>
+<p>Because the wait is over. Ahead of the announcement, forecasters were clustered around 3.5% to 3.6%. AARP and others had been quoted in that range; The Senior Citizens League had also floated 3.5%. The official figure landed at the high end of that band, and it's the biggest COLA in three years. People are doing the math on their January checks, and social feeds lit up the second SSA posted it.</p>
+<p>There's still a flip side. Medicare Part B premiums, which are often deducted from Social Security checks, also tend to rise. That can eat part of the raise. Medicare's 2027 numbers come later; SSA points people to medicare.gov for those details.</p>
+<h2>The backstory (forecasts as context)</h2>
+<p>COLA announcements usually land in mid-October with the September CPI report. Last year a government shutdown delayed the data. This year the schedule held. Forecasts drifted all year: TSCL was as high as 3.9% in the spring, then 3.6%, then about 3.5% as monthly inflation data came in. Those estimates were useful for planning. They're history now. The official source is SSA.</p>
 <h2>When you'll actually see it</h2>
-<ul><li>The COLA applies to <b>December 2026 benefits, which are paid in January 2027</b>.</li>
-<li>Because January 1 is a holiday, some people, including SSI recipients, get their first 2027 payment on <b>December 31, 2026</b>.</li>
-<li>SSA mails COLA notices in December, and many people can see theirs in their online my Social Security account.</li>
+<ul><li>The COLA applies to <b>December 2026 benefits, paid in January 2027</b>.</li>
+<li>SSI's first adjusted payment lands <b>December 31, 2026</b>.</li>
+<li>COLA notices show up in late November in many my Social Security Message Centers (create or sign in by November 18, 2026 if you want the online notice).</li>
 <li>There's nothing to apply for. The adjustment is automatic.</li></ul>
 <h2>What's next</h2>
-<p>Once the number is out, the next shoe to drop is the 2027 Medicare Part B premium, which determines how much of the COLA you actually keep. Medicare open enrollment starts October 15 and runs through December 7. That's a good time to check whether your plan still fits.</p>
+<p><b>Medicare open enrollment</b> runs <b>October 15 through December 7</b>. That's the window to compare 2027 Medicare Advantage and Part D plans before the COLA and premium changes hit. (HealthCare.gov's separate open enrollment opens November 1.) See our <a href="/money/medicare-open-enrollment-2027/">Medicare open enrollment hub</a> and the <a href="/money/retirement/">retirement &amp; Social Security hub</a>.</p>
 <h2>Where to follow it</h2>
-<p>Go straight to SSA's COLA page for the official figure, not a screenshot on social media. For context and what it means for your budget, reputable outlets like CNBC and AARP are useful. The hashtag links below show what people are saying, but treat any number there as unofficial until SSA posts it.</p>"""),
+<p>Bookmark <a href="https://www.ssa.gov/cola/">SSA's COLA page</a>. Treat any number on social media as unofficial unless it matches SSA. Hashtag links below show the conversation; the government page has the facts.</p>"""),
 ("narnia-magicians-nephew-explained","Greta Gerwig's Narnia trailer is here, and it's not what you expected","Netflix dropped the first trailer for Narnia: The Magician's Nephew. What it is, why it's trending, and the release plan.","movies","trailers-and-releases","Narnia: The Magician's Nephew trailer","Narnia",
 [("Variety","https://variety.com/2026/film/news/narnia-the-magicians-nephew-trailer-greta-gerwig-netflix-1236909994/"),("Netflix Tudum","https://www.netflix.com/tudum/articles/narnia-release-date"),("The Guardian","https://www.theguardian.com/film/2026/oct/13/narnia-trailer-netflix-greta-gerwig"),("Entertainment Weekly","https://ew.com/narnia-the-magicians-nephew-trailer-greta-gerwig-12172076")],
 """<p>A Led Zeppelin guitar solo. A lion singing a world into existence. Daniel Craig as a shady magician. Yes, this is Narnia. Netflix released the first trailer for <b>Greta Gerwig's <i>Narnia: The Magician's Nephew</i></b> on October 13, and the internet hasn't stopped talking about it since.</p>
@@ -177,15 +187,73 @@ POSTS=[
 <li><b>Lame duck:</b> POLITICO reports lawmakers return after the election with about 24 legislative days and a must-do list that includes extending funding past Dec 11 and the annual defense policy bill.</li></ul>
 <h2>Where to follow it</h2>
 <p>For the play-by-play, POLITICO's congressional live coverage and Federal News Network are solid. For official text, congress.gov has the bills. The hashtag links below show the debate, which runs hot on every side. Check the source before you share.</p>"""),
+("mlb-nlcs-dodgers-brewers-explained","Dodgers vs. Brewers NLCS: why baseball owns your feed right now","The NLCS has Dodgers, Brewers, Snell and Dave Roberts trending nationwide. What the series is, why it's loud, and where to follow it.","sports","mlb-nlcs-dodgers-brewers","MLB NLCS: Brewers vs. Dodgers","Dodgers",
+[("MLB.com postseason","https://www.mlb.com/postseason"),("MLB LCS matchups","https://www.mlb.com/news/mlb-2026-league-championship-series-matchups")],
+"""<p>If your X timeline looks like a baseball broadcast booth, you're not imagining it. <b>Dodgers</b>, <b>Brewers</b>, <b>Snell</b>, <b>Dave Roberts</b> and half the NLCS roster are topping US trends. Here's the calm version of what's going on.</p>
+<h2>What it is</h2>
+<p>The <b>National League Championship Series</b> is the best-of-seven that decides who represents the NL in the World Series. This year it's <b>Los Angeles Dodgers vs. Milwaukee Brewers</b>. Over in the ALCS, it's Rays vs. Guardians. The <b>World Series starts October 23</b>.</p>
+<h2>Why it's trending</h2>
+<p>October baseball always travels, but this matchup has the perfect mix: a blue-blood Dodgers clubhouse, a Brewers team that refuses to be a footnote, star pitching names in the trend list, and managers who make for great second-screen debate. When Snell or Roberts pops as a standalone trend, you know the game thread has left the sports app and entered the main feed.</p>
+<h2>How to watch without losing the plot</h2>
+<ul>
+<li>Start at <a href="https://www.mlb.com/postseason">MLB's postseason hub</a> for schedules, scores and official series pages.</li>
+<li>Treat social clips as vibes, not box scores. Check the official score before you celebrate (or doom-scroll).</li>
+<li>World Series prep starts now. Clear Oct 23 on the calendar.</li>
+</ul>
+<h2>What's next</h2>
+<p>Finish the LCS. Then it's the Fall Classic. We'll keep the <a href="/sports/mlb-postseason/">MLB postseason hub</a> and this NLCS page updated as the series turns.</p>
+<h2>Where to follow it</h2>
+<p>MLB.com for facts. The hashtag links below for the live reaction. If you only have time for one scoreboard, make it the official one.</p>"""),
+("street-fighter-movie-weekend-guide","Street Fighter opens Friday: your weekend movie guide","Paramount's live-action Street Fighter hits theaters Oct 16. Cast, what it is, and how to follow the opening weekend buzz.","movies","street-fighter-2026","Street Fighter hits theaters","StreetFighter",
+[("Paramount","https://www.paramountpictures.com/movies/street-fighter"),("Official site","https://www.streetfightermovie.com/"),("Capcom press release","https://www.capcom.co.jp/ir/english/news/html/e250905.html")],
+"""<p>Hadoukens are about to leave the arcade again. <b>Street Fighter</b> opens in theaters <b>Friday, October 16, 2026</b>, from Paramount and Legendary, with Capcom in the mix. If you grew up mashing buttons, this is your weekend.</p>
+<h2>What it is</h2>
+<p>A live-action adaptation set in <b>1993</b>. Estranged fighters <b>Ryu (Andrew Koji)</b> and <b>Ken Masters (Noah Centineo)</b> get pulled back into the World Warrior Tournament by <b>Chun-Li (Callina Liang)</b>. Director <b>Kitao Sakurai</b> is steering it. The official pitch promises fists, fate, fury, and yes, the classic roster energy.</p>
+<p>The supporting cast is stacked for meme potential: <b>Jason Momoa</b> as Blanka, <b>Roman Reigns</b> as Akuma, <b>Cody Rhodes</b> as Guile, <b>David Dastmalchian</b> as M. Bison, plus 50 Cent, Eric André, Andrew Schulz and more, per Paramount and Capcom materials.</p>
+<h2>Why it's trending</h2>
+<p>Opening weekend is tomorrow. Fight-game fans have waited a long time for a big-screen swing that isn't the 1994 camp classic. Cast drops kept the hashtag warm for months. Now the only question left is whether the movie sticks the landing.</p>
+<h2>Weekend game plan</h2>
+<ul>
+<li><b>Thursday previews / Friday open:</b> check your local listings for IMAX and premium formats.</li>
+<li><b>Bring the right crowd:</b> half the fun is yelling character names in the lobby afterward.</li>
+<li><b>Keep expectations honest:</b> it's a big studio fighter movie. Fun first. Lore debates second.</li>
+</ul>
+<h2>What's next</h2>
+<p>Opening-weekend box office chatter will dominate entertainment feeds. We'll track it on our <a href="/movies/box-office/">box office hub</a> and the <a href="/movies/street-fighter-2026/">Street Fighter page</a>.</p>
+<h2>Where to follow it</h2>
+<p>Paramount's page and the official Street Fighter movie site for trailers and showtimes. Capcom's IR note confirms the Oct 16 date and main cast. Hashtag links below are where the round-one reactions will land.</p>"""),
+("medicare-open-enrollment-2027-starter","Medicare open enrollment starts today: a no-panic starter guide","Oct 15–Dec 7 is the window to compare 2027 Medicare Advantage and Part D plans. What you can change, deadlines, and where to look.","money","medicare-open-enrollment-2027","Medicare open enrollment starts today","Medicare",
+[("Medicare.gov Open Enrollment","https://www.medicare.gov/health-drug-plans/open-enrollment"),("CMS 2027 landscape release","https://www.cms.gov/newsroom/press-releases/medicare-advantage-medicare-prescription-drug-programs-expected-remain-stable-2027"),("SSA COLA page","https://www.ssa.gov/cola/")],
+"""<p>Mark the calendar: <b>Medicare Open Enrollment runs October 15 through December 7, 2026</b>, for coverage that starts <b>January 1, 2027</b>. If you or a parent is on Medicare, this is the annual "are we still on the right plan?" window.</p>
+<h2>What it is (and what it isn't)</h2>
+<p>During Open Enrollment you can, depending on your current coverage, join, switch or drop a <b>Medicare Advantage</b> plan, change how you get Medicare (Advantage vs. Original Medicare), and join, switch or drop a <b>Part D</b> drug plan. Your plan needs your enrollment request by <b>December 7</b>.</p>
+<p><b>This is not the same as HealthCare.gov open enrollment</b> for Marketplace plans. That separate window opens <b>November 1</b>. We cover that on our <a href="/money/open-enrollment-2027/">2027 open enrollment page</a>.</p>
+<h2>Why it's trending today</h2>
+<p>Because day one is loud on purpose. CMS says Advantage and Part D choices for 2027 look broadly stable, and it wants people comparing plans on Medicare.gov before auto-renewing into surprises. Pair that with today's official <a href="/blog/social-security-cola-2027-explained/">3.6% Social Security COLA</a>, and a lot of households are looking at benefits and premiums in the same week.</p>
+<h2>A simple checklist</h2>
+<ol>
+<li>Open the Annual Notice of Change from your current plan. Read the 2027 premium, deductible and drug list changes.</li>
+<li>List your prescriptions and doctors.</li>
+<li>Compare on <a href="https://www.medicare.gov/plan-compare">Medicare Plan Finder</a> (or call 1-800-MEDICARE).</li>
+<li>If you're happy, you can do nothing and stay put. If you're not, enroll by Dec 7.</li>
+</ol>
+<h2>What's next</h2>
+<p>You've got until December 7. Don't wait until the last weekend if you need to mail a form. And keep an eye on 2027 Medicare premium announcements, which shape how much of that COLA you actually keep.</p>
+<h2>Where to follow it</h2>
+<p>Start at <a href="https://www.medicare.gov/health-drug-plans/open-enrollment">Medicare.gov's Open Enrollment page</a>. CMS's landscape release has the high-level 2027 picture. Hashtag links below show the public conversation; use official tools for decisions that affect your coverage.</p>"""),
 ]
 FAQ={
 "gta-6-explained":[("When does GTA VI come out?","Thursday, November 19, 2026, on PS5 and Xbox Series X|S, per Rockstar."),("Can I preload GTA VI?","Yes. Digital pre-orders can preload from November 12, 2026, and physical copies with a download code also go on sale that day."),("Is GTA VI on PC?","Rockstar hasn't announced a PC version or date.")],
 "midterms-2026-explained":[("When is the 2026 midterm election?","Tuesday, November 3, 2026."),("What's on the ballot?","All 435 House seats, 35 Senate seats and 36 governorships, plus state and local races."),("Where do I check my voting deadlines?","Your state election office or vote.gov. Rules for early and mail voting vary by state.")],
 "zelda-switch-2-explained":[("When does the Zelda Switch 2 come out?","October 29, 2026."),("How much is it?","$519.99 in the US, per Nintendo's US store listing as reported. That's $20 more than the standard Switch 2."),("Does it include Ocarina of Time?","No. Nintendo says the system doesn't come with a game. Ocarina of Time launches separately on November 5 for $59.99 digital or $69.99 physical."),("Is there a matching controller?","Yes. A Zelda Pro Controller is $99.99, or $109.99 with a display stand, also out October 29.")],
-"social-security-cola-2027-explained":[("When is the 2027 COLA announced?","It's expected October 14, 2026, alongside the September CPI report at 8:30 a.m. ET."),("When will I see the increase?","In benefits for December 2026, paid in January 2027. Some SSI payments arrive December 31, 2026."),("Do I need to apply?","No. The COLA is automatic.")],
+"social-security-cola-2027-explained":[("What is the official 2027 COLA?","3.6%, per the Social Security Administration's COLA page."),("When will I see the increase?","Social Security benefits payable in January 2027. SSI increases begin December 31, 2026."),("Do I need to apply?","No. The COLA is automatic."),("What is the 2027 taxable maximum?","$192,300, per SSA.")],
 "narnia-magicians-nephew-explained":[("When does Narnia: The Magician's Nephew come out?","In theaters, including IMAX, on February 12, 2027, with IMAX sneak previews from February 10. It hits Netflix on April 2, 2027."),("Who's in it?","Newcomers David McKenna and Beatrice Campbell lead. Daniel Craig plays Uncle Andrew, Emma Mackey plays Jadis and Carey Mulligan also stars. Meryl Streep voices Aslan."),("What song is in the trailer?","Led Zeppelin's \"Stairway to Heaven.\""),("Is it a remake of the old movies?","No. It's the first-ever film of The Magician's Nephew, the prequel that shows how Narnia began.")],
 "six-seven-dance-explained":[("What is the Six Seven dance?","A TikTok trend set to a Brazilian funk track. You count along on your fingers with a Portuguese addition problem, then shrug on the beat."),("Who made it go viral?","BTS member J-Hope's version pushed it into the mainstream. Lightreel says the biggest single video has passed 75 million views."),("Do I need to know Portuguese?","Nope. The counting is visible on your hands, which is a big part of why it travels so well."),("Is it still worth posting?","Trends move fast, but as of mid-October it's still the top format according to trend reports. Add a personal twist in your caption to stand out.")],
 "strait-of-hormuz-explained":[("What is the Strait of Hormuz?","A narrow sea passage between Iran and the Arabian Peninsula that a large share of the world's oil tankers pass through."),("Why are flights to Saudi Arabia suspended?","Several airlines suspended flights after deadly Houthi strikes on Riyadh's airport, according to Al Jazeera."),("Will this affect gas prices?","Energy markets react to shipping risk. On Oct 13, diesel futures and refiner stocks rose, but long-term effects depend on what happens next.")],
 "ai-model-race-october-2026":[("What is Gemini 4 Argon?","Google's newest frontier AI model, released October 13, 2026, with a 1M-token limit."),("Is Meta's Muse Wonder open source?","No. Unlike Llama, neither Muse Wonder model can be downloaded or self-hosted."),("What is Maia 300?","Microsoft's third-generation in-house AI accelerator chip, with large-scale deployment planned for 2027.")],
 "government-funding-deadline-oct-31":[("When is the government funding deadline?","October 31, 2026."),("What happens in a shutdown?","Agencies without approved funding pause non-essential work and some federal workers are furloughed. Essential services continue."),("What's the main disagreement?","Reports say it's mostly policy provisions attached to the bills, including Homeland Security immigration-enforcement terms, rather than the total dollar amounts."),("What's the next deadline after this?","Reporting points to December 11 as the next funding date lawmakers need to address in the lame-duck session.")],
+"mlb-nlcs-dodgers-brewers-explained":[("Who is in the NLCS?","Los Angeles Dodgers vs. Milwaukee Brewers, per MLB's postseason coverage."),("When does the World Series start?","October 23, 2026."),("Where do I get official scores?","MLB.com's postseason hub is the safest scoreboard.")],
+"street-fighter-movie-weekend-guide":[("When does Street Fighter open?","Friday, October 16, 2026, in theaters (Paramount)."),("Who plays Ryu and Ken?","Andrew Koji as Ryu and Noah Centineo as Ken, with Callina Liang as Chun-Li."),("Is it the same as the 1994 movie?","No. This is a new Legendary/Paramount/Capcom production directed by Kitao Sakurai.")],
+"medicare-open-enrollment-2027-starter":[("When is Medicare Open Enrollment?","October 15 through December 7, 2026, for coverage starting January 1, 2027."),("Is this the same as HealthCare.gov open enrollment?","No. Marketplace open enrollment opens November 1. Medicare's window is separate."),("Where should I compare plans?","Medicare.gov Plan Finder, or call 1-800-MEDICARE.")],
 }
+

@@ -67,6 +67,11 @@
 - [/pets/cats/](https://trendsincoming.com/pets/cats/)
 - [/celebrities/engagements/](https://trendsincoming.com/celebrities/engagements/)
 - [/relationships/dating-apps/](https://trendsincoming.com/relationships/dating-apps/)
+- [/sports/mlb-nlcs-dodgers-brewers/](https://trendsincoming.com/sports/mlb-nlcs-dodgers-brewers/)
+- [/movies/street-fighter-2026/](https://trendsincoming.com/movies/street-fighter-2026/)
+- [/money/medicare-open-enrollment-2027/](https://trendsincoming.com/money/medicare-open-enrollment-2027/)
+- [/tech-ai/open-source-models/](https://trendsincoming.com/tech-ai/open-source-models/)
+- [/food/taco-bell-milk-bar/](https://trendsincoming.com/food/taco-bell-milk-bar/)
 - [/weather/fall/](https://trendsincoming.com/weather/fall/)
 - [/blog/gta-6-explained/](https://trendsincoming.com/blog/gta-6-explained/)
 - [/blog/midterms-2026-explained/](https://trendsincoming.com/blog/midterms-2026-explained/)
@@ -77,6 +82,9 @@
 - [/blog/strait-of-hormuz-explained/](https://trendsincoming.com/blog/strait-of-hormuz-explained/)
 - [/blog/ai-model-race-october-2026/](https://trendsincoming.com/blog/ai-model-race-october-2026/)
 - [/blog/government-funding-deadline-oct-31/](https://trendsincoming.com/blog/government-funding-deadline-oct-31/)
+- [/blog/mlb-nlcs-dodgers-brewers-explained/](https://trendsincoming.com/blog/mlb-nlcs-dodgers-brewers-explained/)
+- [/blog/street-fighter-movie-weekend-guide/](https://trendsincoming.com/blog/street-fighter-movie-weekend-guide/)
+- [/blog/medicare-open-enrollment-2027-starter/](https://trendsincoming.com/blog/medicare-open-enrollment-2027-starter/)
 - [/blog/](https://trendsincoming.com/blog/)
 - [/trending-hashtags/](https://trendsincoming.com/trending-hashtags/)
 - [/finance/trending-stocks/](https://trendsincoming.com/finance/trending-stocks/)
@@ -90,24 +98,27 @@
 - [GTA VI is five weeks away. Here's everything that's actually confirmed.](https://trendsincoming.com/blog/gta-6-explained/): GTA VI launches Nov 19 on PS5 and Xbox Series X|S. What it is, why it's trending, the long road here, and what happens next.
 - [The 2026 midterms, explained without the spin](https://trendsincoming.com/blog/midterms-2026-explained/): Nov 3, 2026: every House seat, 35 Senate races and 36 governorships. A neutral guide to what's at stake, what the polls show and how to follow it.
 - [Why everyone wants the Zelda Switch 2 (and how to actually get one)](https://trendsincoming.com/blog/zelda-switch-2-explained/): Nintendo's Zelda 40th Anniversary Switch 2 drops Oct 29 for $519.99. What it is, why it sold out, and what's next.
-- [The 2027 Social Security COLA: what it is and what to expect](https://trendsincoming.com/blog/social-security-cola-2027-explained/): The 2027 Social Security COLA is due Oct 14, 2026. How it's calculated, what forecasters expect, and when it hits checks.
+- [Social Security COLA 2027 is official: 3.6%](https://trendsincoming.com/blog/social-security-cola-2027-explained/): SSA confirmed a 3.6% COLA for 2027. What it is, when it hits checks, earnings limits, and where to follow it.
 - [Greta Gerwig's Narnia trailer is here, and it's not what you expected](https://trendsincoming.com/blog/narnia-magicians-nephew-explained/): Netflix dropped the first trailer for Narnia: The Magician's Nephew. What it is, why it's trending, and the release plan.
 - [The "Six Seven" dance: why your whole feed is counting on its fingers](https://trendsincoming.com/blog/six-seven-dance-explained/): The Six Seven dance is October's biggest TikTok trend. What it is, how J-Hope sent it viral, and how to join in.
 - [Hormuz, the Houthis and why a strip of water matters to your gas tank](https://trendsincoming.com/blog/strait-of-hormuz-explained/): A neutral explainer on the Saudi–Houthi escalation and tension around the Strait of Hormuz, and why it's trending.
 - [Gemini 4 Argon, Muse Wonder and Maia 300: the AI week, explained](https://trendsincoming.com/blog/ai-model-race-october-2026/): Google, Meta and Microsoft all made big AI moves in one week. What launched, why it's trending, and what to watch.
 - [The Oct 31 funding deadline: a neutral guide to the shutdown talk](https://trendsincoming.com/blog/government-funding-deadline-oct-31/): Congress must fund the government by Oct 31. What's at stake, where the parties stand, and what happens next.
+- [Dodgers vs. Brewers NLCS: why baseball owns your feed right now](https://trendsincoming.com/blog/mlb-nlcs-dodgers-brewers-explained/): The NLCS has Dodgers, Brewers, Snell and Dave Roberts trending nationwide. What the series is, why it's loud, and where to follow it.
+- [Street Fighter opens Friday: your weekend movie guide](https://trendsincoming.com/blog/street-fighter-movie-weekend-guide/): Paramount's live-action Street Fighter hits theaters Oct 16. Cast, what it is, and how to follow the opening weekend buzz.
+- [Medicare open enrollment starts today: a no-panic starter guide](https://trendsincoming.com/blog/medicare-open-enrollment-2027-starter/): Oct 15–Dec 7 is the window to compare 2027 Medicare Advantage and Part D plans. What you can change, deadlines, and where to look.
 
-## Trends (as of 2026-10-14)
+## Trends (as of 2026-10-15)
 - Zelda 40th Anniversary Switch 2: Nintendo's first special-edition Switch 2. Triforce dock, green and gold Joy-Con, $519.99. Pre-orders vanished in minutes. Source: https://www.nintendo.co.jp/corporate/release/en/2026/260908_2.html
 - Ocarina of Time remake: The N64 legend, rebuilt for Switch 2. Real jump button, free camera, and yes, you can hum into the mic. Source: https://www.gematsu.com/2026/09/the-legend-of-zelda-ocarina-of-time-remake-launches-november-5
 - GTA VI: Five weeks out. Preload opens Nov 12. The internet is already counting the minutes. Source: https://www.rockstargames.com/VI/
 - VisionQuest on Disney+: Paul Bettany is back as Vision and James Spader's Ultron is in his head. Episodes 1 and 2 dropped Oct 13. It's trending on X. Source: https://www.disneyplus.com/explore/articles/marvel-visionquest
 - DWTS Super Bowl Night: Joe Buck guest-judged and admitted he knows nothing about dancing. Fan favorite Guillermo got sent home. Source: https://www.tvinsider.com/1297039/dancing-with-the-stars-super-bowl-night-2026-scores-eliminated-recap/
-- Helluva Boss S3: Prime Video is dropping it weekly and the fandom is loud. The Part 1 finale lands Oct 28. Source: https://www.radiotimes.com/tv/fantasy/helluva-boss-season-3-release-schedule/
+- Helluva Boss S3 (and Stolas): Prime Video weekly drops; Stolas is trending hard on X. Part 1 finale lands Oct 28. Source: https://www.radiotimes.com/tv/fantasy/helluva-boss-season-3-release-schedule/
 - Narnia: The Magician's Nephew trailer: Greta Gerwig's Narnia, scored to Stairway to Heaven, with Meryl Streep voicing Aslan. Big swing. Our take: it works. Source: https://variety.com/2026/film/news/narnia-the-magicians-nephew-trailer-greta-gerwig-netflix-1236909994/
 - Other Mommy wins the box office: Jessica Chastain horror, D-plus CinemaScore, $27.5M opening anyway. Critics hated it. Audiences showed up. Source: https://deadline.com/2026/10/box-office-other-mommy-social-reckoning-1237151001/
 - The Social Reckoning flops: Aaron Sorkin's Facebook follow-up opened to just $5.5M. Ouch. Source: https://deadline.com/2026/10/box-office-other-mommy-social-reckoning-1237151001/
-- Street Fighter hits theaters: Paramount's PG-13 Street Fighter movie opens this Friday, IMAX included. Source: https://www.paramountpictures.com/movies/street-fighter
+- Street Fighter hits theaters: Paramount's live-action Street Fighter opens tomorrow (Fri Oct 16), IMAX included. Andrew Koji as Ryu, Noah Centineo as Ken, Callina Liang as Chun-Li. Source: https://www.paramountpictures.com/movies/street-fighter
 - Danny Trejo vs. the internet: Trejo says he's "not pro-ICE" after backlash over a Daily Wire movie. His son says he'd never heard of Ben Shapiro. Source: https://www.usatoday.com/story/entertainment/movies/2026/10/13/danny-trejo-ice-movie-ben-shapiro/92228770007/
 - Taylor Swift's "Patient Zero": Second straight week at No. 1 on the Hot 100. Her 16th chart-topper. TikTok is using it for wedding edits. Source: https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-second-week/
 - Drake & Don Toliver debut at No. 5: New collab, straight into the Hot 100 top 5. Also on that chart: ADÉLA's first top 10. Source: https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-second-week/
@@ -117,8 +128,9 @@
 - NBA opening night: Knicks raise the banner, LeBron debuts for Philly, and NBC has the first-ever opening tripleheader. Source: https://www.nba.com/news/2026-27-nba-regular-season-schedule
 - NHL: where to watch: 84-game season, split between ESPN and TNT. Heritage Classic Oct 25. Source: https://www.nhl.com/news/2026-2027-national-tv-schedule-announced
 - Bills 37, Rams 34 (OT): A blocked field goal, then a walk-off kick. Josh Allen's first career OT win. Super Bowl preview? Maybe. Source: https://apnews.com/article/rams-bills-score-4fdc64fbeb421f66a516bb0b4d566863
-- MLB LCS: Rays-Guardians, Brewers-Dodgers: The final four. World Series starts Oct 23. Source: https://www.mlb.com/news/mlb-2026-league-championship-series-matchups
+- MLB NLCS: Brewers vs. Dodgers: Dodgers, Brewers, Snell and Dave Roberts are lighting up X. NLCS is the story; ALCS has Rays-Guardians. World Series starts Oct 23. Source: https://www.mlb.com/news/mlb-2026-league-championship-series-matchups
 - Google Gemini 4 Argon: Google's new frontier model, out Oct 13 with a 1M-token window. It's pitched as less hedgy and less cliché. Source: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
+- Open-source AI keeps moving: Frontier labs went closed this week (hello, Muse Wonder). Open-weight models and small labs are still the other half of the story. Source: https://huggingface.co/models
 - Meta Muse Wonder: Meta's first frontier model. Not open-weight this time, which is a big shift from Llama. Source: https://www.techrepublic.com/article/news-meta-muse-wonder-ai-models-launch/
 - Microsoft Maia 300 chip: Microsoft's third in-house AI chip. The pitch: 40% better performance per megawatt. Deployment is planned for 2027. Source: https://ai.tldr.tech/p/2026-10-13-tldr-ai
 - Starshield speed cap in Ukraine: Ukraine says SpaceX capped moving Starshield terminals at 100 mph with no warning. Starshield is trending on X. Source: https://kyivindependent.com/this-cannot-be-a-coincidence-ukraines-starlink-access-restricted-without-warning-zelensky-adviser-says/
@@ -126,7 +138,7 @@
 - Copper & cherry-cola hair: Pinterest's first Beauty Trend Report says hair is going warm and moody: mocha, copper, cherry cola. Source: https://newsroom.pinterest.com/news/beauty-trend-report-2026/
 - Ghost Rose nails: Milky, blush-nude nails beating burgundy this fall. Quiet but very chic. Source: https://www.elle.com/beauty/a73916869/ghost-rose-nails-trend/
 - Smoky eyes + burgundy lips: Clean girl is taking a night off. Runways from Saint Laurent to Gucci brought the smoke back. Source: https://pagesix.com/2026/10/06/style/fall-makeup-trends-2026/
-- Taco Bell x Milk Bar Birthday Cake Empanada: Cake-flavored empanada with pink frosting and sprinkles. $3.49. Chaotic in the best way. Source: https://www.prnewswire.com/news-releases/taco-bell-and-milk-bar-reunite-for-all-new-birthday-cake-empanada-302901760.html
+- Taco Bell x Milk Bar Birthday Cake Empanada: It's drop day. Cake-flavored empanada with pink frosting and sprinkles. $3.49. Chaotic in the best way. Source: https://www.prnewswire.com/news-releases/taco-bell-and-milk-bar-reunite-for-all-new-birthday-cake-empanada-302901760.html
 - Wingstop x Sour Patch Kids wings: Wings in a sour-then-sweet glaze. We're scared. We're also going. Source: https://www.qsrmagazine.com/news/wingstop-announces-wings-flavored-with-sour-patch-kids-glaze/
 - Dunkin' Spider Donut is back: The Halloween Spider Donut returns, plus a purple Berry Battie drink. Source: https://www.usatoday.com/story/money/food/2026/10/14/dunkin-spider-donut-berry-battie-halloween/92232735007/
 - Popeyes x Megan Thee Stallion: A new Honey Chicken Biscuit with a Megan Thee Stallion merch tie-in. Source: https://news.popeyes.com/blog-posts/want-to-try-the-new-popeyes-honey-chicken-biscuit-and-score-a-megan-thee-stallion-t-shirt-heres-how
@@ -134,7 +146,7 @@
 - Ramalama costume walk: A creepy low-angle shot zooms out to reveal the Halloween fit, set to Róisín Murphy. Easy to copy, hard to stop watching. Source: https://newengen.com/insights/october-tiktok-trends/
 - Pumpkin Head Illusion: Hold a pumpkin up to the lens and congratulations, you're a pumpkin. Spooky-season gold. Source: https://newengen.com/insights/october-tiktok-trends/
 - AI cat melodrama: Synthetic cats acting out family dramas and tiny tragedies. Weirdly emotional, and a fast-breaking format. Source: https://lightreel.ai/blogs/whats-trending-on-tiktok
-- Midterms: 20 days out: Every House seat, 35 Senate races and 36 governor races are on the ballot Nov 3. Polls in several Senate races are inside the margin of error, and they disagree. Ohio is a good example: one poll has Brown (D) ahead, another has Husted (R) ahead. Source: https://www.callthemap.com/state-of-the-race
+- Midterms: 19 days out: Every House seat, 35 Senate races and 36 governor races are on the ballot Nov 3. Polls in several Senate races are inside the margin of error, and they disagree. Ohio is a good example: one poll has Brown (D) ahead, another has Husted (R) ahead. Source: https://www.callthemap.com/state-of-the-race
 - Oct 31 government funding deadline: Congress has until Oct 31 to fund federal agencies. The sticking points are policy riders, including DHS immigration-enforcement provisions. Republican and Democratic leaders each say the other side's terms are the obstacle. Source: https://gokhshtein.com/news/2026-10-13-white-house-mum-on-spending-bill-as-oct-31-deadline
 - Lame-duck to-do list: After the election, Congress gets about 24 legislative days. On the list: funding past Dec 11, the defense policy bill, and farm and surveillance reauthorizations. Source: https://www.politico.com/live-updates/2026/10/13/congress/gop-readies-underwhelming-lame-duck-01116398
 - SCOTUS: Beaird v. United States: Can courts still defer to Sentencing Commission commentary after Loper Bright? Justices from both wings sounded skeptical of changing the rule. A decision is due by July. Source: https://www.supremecourt.gov/oral%5Farguments/daycall/Day%20Call_10-13-26.pdf
@@ -146,7 +158,8 @@
 - IonQ buying Elisity: The quantum computing firm is buying a Zero Trust security startup in an all-stock deal worth up to $1.3B. Source: https://www.stocktitan.net/sec-filings/IONQ/8-k-ion-q-inc-reports-material-event-25423483b701.html
 - Workday acquires C1.ai: Workday is buying C1.ai, an identity platform for people and AI agents. Source: https://www.prnewswire.com/news-releases/workday-to-acquire-c1ai-a-leading-agentic-identity-platform-for-people-and-agents-302906593.html
 - Big-bank earnings week: JPMorgan, Goldman, Wells, Citi, BofA and Morgan Stanley all reported this week. The market's reactions were all over the place. Source: https://newslantern.com/news/18592/2026-10-14/bank-of-america-and-morgan-stanley-post-strong-third-quarter-results
-- Social Security COLA day: The 2027 COLA is expected today, right after the September CPI report at 8:30 a.m. ET. Not official yet. Forecasts are 3.5% to 3.6%, which would be the biggest raise in three years. It hits January checks. Source: https://www.cnbc.com/2026/10/13/social-security-cola-2027.html
+- Social Security COLA is 3.6%: It's official: Social Security and SSI rise 3.6% in 2027. About 76 million Americans. SS payable January 2027; SSI from Dec 31, 2026. Taxable max $192,300. Biggest bump in three years. Source: https://www.ssa.gov/cola/
+- Medicare open enrollment starts today: Oct 15 through Dec 7: compare 2027 Medicare Advantage and Part D plans. Changes take effect Jan 1. Different from HealthCare.gov open enrollment (that opens Nov 1). Source: https://www.medicare.gov/health-drug-plans/open-enrollment
 - Mortgage rates at 7.40%: Freddie Mac's 30-year average is at a three-year high. The next reading comes Oct 15. Source: https://www.freddiemac.com/pmms
 - Flu shot: aim for end of October: CDC says everyone 6 months and older should get a flu shot, ideally by the end of October. People 65+ should get the high-dose types. Source: https://www.cdc.gov/flu/season/2026-2027.html
 - COVID vaccine guidance: CDC's current COVID shot guidance is a shared decision with your provider. It's especially important for 65+ and high-risk people. Source: https://www.cdc.gov/covid/vaccines/stay-up-to-date.html
@@ -168,7 +181,8 @@
 - Bank of America beats: Q3 came in strong even with a $1.2B Treasury penalty. Bank of America is trending on X. Source: https://investor.bankofamerica.com/events-and-presentations/events/detail/20261014-q3-2026-bank-of-america-earnings-conference-call?wcmmode=disabled
 - J&J slides after earnings: It beat estimates, then fell 5.73%. The culprits: a talc-related charge and soft MedTech sales. Source: https://www.investing.com/news/stock-market-news/why-is-johnson--johnson-stock-tumbling-7-today-93CH-4947310
 - Chip stocks wobble: AMAT, Micron and KLA fell after Broadcom's CEO said some AI investment looks like "casino gambling". Source: https://swingfolio.com/daily/us/2026-10-13/afternoon
+- TSMC is trending on X: Taiwan Semiconductor is back in the US conversation as chip and AI spend stays the market's favorite debate. Not advice. Source: https://investor.tsmc.com/english
 - Open enrollment 2027: HealthCare.gov opens Nov 1. Enroll by Dec 15 for Jan 1 coverage. It closes Jan 15. Source: https://www.healthcare.gov/quick-guide/dates-and-deadlines/
-- SpaceX CRS-35 heads to the ISS: 6,300+ lbs of cargo, including the station's final roll-out solar arrays. Dragon docks Oct 15. Source: https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/
+- SpaceX CRS-35 docks at the ISS: Launch-and-dock day. 6,300+ lbs of cargo, including the station's final roll-out solar arrays. Source: https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/
 - Artemis III booster stacked: NASA finished stacking the boosters for the Moon-landing mission, with all four RS-25 engines installed. Source: https://www.nasa.gov/blogs/missions/2026/10/13/nasa-completes-artemis-iii-booster-stacking-shares-status-update/
 - Holiday airfares spike: Hopper says Thanksgiving domestic fares average $402, up 31%. Book by late October. Seriously. Source: https://www.travelagewest.com/Industry-Insight/Opinion/holiday-travel-fares-10-year-high
