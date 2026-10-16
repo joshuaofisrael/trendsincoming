@@ -2,7 +2,7 @@
 import json,os,re,html
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"posts.py")).read())
 from urllib.parse import quote
-B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-16"; ASOF="16 Oct 2026, 09:30 BST (04:30 ET)"
+B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-16"; ASOF="16 Oct 2026, 09:00 BST (04:00 ET)"
 KEY="2d25fe1d50014ed98b5fff9381edba6a"
 TAG="Your curator for what's trending right now"
 pub={"@type":"Organization","name":LLC,"url":B+"/","address":{"@type":"PostalAddress","addressRegion":"FL","addressCountry":"US"}}
@@ -185,7 +185,7 @@ def sub_items(sb):
     return [t for t in T if any(k in t[1] or k in t[2] for k in sb[4])]
 PAGES=[]
 CD={"ALCS: Guardians lead Rays 2-1":"2026-10-16T20:00:00-04:00","Brewers sweep the Dodgers":"2026-10-23T00:00:00-04:00","Medicare open enrollment is open":"2026-12-07T23:59:00-05:00","Midterms: 18 days out":"2026-11-03T06:00:00-05:00","Oct 31 government funding deadline":"2026-11-01T00:00:00-04:00","Flu shot: aim for end of October":"2026-11-01T00:00:00-04:00","Zelda 40th Anniversary Switch 2":"2026-10-29T00:00:00-04:00","Ocarina of Time remake":"2026-11-05T00:00:00-05:00","GTA VI":"2026-11-19T00:00:00-05:00","Grammy nominations":"2026-11-16T00:00:00-05:00","NBA opening night":"2026-10-20T15:00:00-04:00","iPhone Duo pre-orders":"2026-10-16T05:00:00-07:00","Wingstop x Sour Patch Kids wings":"2026-10-27T00:00:00-04:00","Helluva Boss S3 (and Stolas)":"2026-10-28T00:00:00-04:00","Open enrollment 2027":"2026-11-01T00:00:00-04:00","Narnia: The Magician's Nephew trailer":"2027-02-12T00:00:00-05:00"}
-UPDISO="2026-10-16T09:30:00+01:00"
+UPDISO="2026-10-16T09:00:00+01:00"
 import hashlib
 def tid(t): return hashlib.md5(t[1].encode()).hexdigest()[:8]
 def related(path,r,cat=None):
@@ -338,8 +338,8 @@ legal={"about":("About Trends Incoming",f"<p><b>Trends Incoming is {TAG.lower()}
 for k,(t,x) in legal.items(): page(f"{k}/index.html",t,f"{t} for Trends Incoming, {TAG.lower()}. Owned by {LLC}.",f"<h1>{t}</h1>{x}",article=False)
 open("style.css","w").write(CSS+CSS2)
 open("app.js","w").write(JS.replace("__QUIZ__",json.dumps([[t[1],t[2]] for t in T])))
-PD={"brewers-world-series-2026-explained":"Fri, 16 Oct 2026 08:30:00 GMT","you-can-see-everything-explained":"Fri, 16 Oct 2026 08:30:00 GMT","expectations-remix-olivia-rodrigo-chappell-roan":"Fri, 16 Oct 2026 08:30:00 GMT","mlb-nlcs-dodgers-brewers-explained":"Thu, 15 Oct 2026 07:50:00 GMT","street-fighter-movie-weekend-guide":"Thu, 15 Oct 2026 07:50:00 GMT","medicare-open-enrollment-2027-starter":"Thu, 15 Oct 2026 07:50:00 GMT","social-security-cola-2027-explained":"Thu, 15 Oct 2026 07:50:00 GMT"}
-RFC="Fri, 16 Oct 2026 08:30:00 GMT"
+PD={"brewers-world-series-2026-explained":"Fri, 16 Oct 2026 08:00:00 GMT","you-can-see-everything-explained":"Fri, 16 Oct 2026 08:00:00 GMT","expectations-remix-olivia-rodrigo-chappell-roan":"Fri, 16 Oct 2026 08:00:00 GMT","mlb-nlcs-dodgers-brewers-explained":"Thu, 15 Oct 2026 07:50:00 GMT","street-fighter-movie-weekend-guide":"Thu, 15 Oct 2026 07:50:00 GMT","medicare-open-enrollment-2027-starter":"Thu, 15 Oct 2026 07:50:00 GMT","social-security-cola-2027-explained":"Thu, 15 Oct 2026 07:50:00 GMT"}
+RFC="Fri, 16 Oct 2026 08:00:00 GMT"
 items="".join(f"<item><title>{esc(p[1])}</title><link>{B}/blog/{p[0]}/</link><guid>{B}/blog/{p[0]}/</guid><description>{esc(p[2])}</description><category>Blog</category><pubDate>{PD.get(p[0],'Wed, 14 Oct 2026 10:20:00 GMT')}</pubDate></item>\n" for p in sorted(POSTS,key=lambda p:p[0] not in PD))+"".join(f"<item><title>{esc(t[1])}</title><link>{B}/{t[6] or t[0]+'/'}</link><guid isPermaLink=\"false\">ti-{tid(t)}</guid><description>{esc(t[2])}</description><category>{esc(CN[t[0]][0])}</category><pubDate>{RFC}</pubDate></item>\n" for t in T)
 open("feed.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trends Incoming</title><link>{B}/</link><atom:link href="{B}/feed.xml" rel="self" type="application/rss+xml"/><description>{TAG}</description><language>en-us</language><copyright>© 2026 {LLC}</copyright><lastBuildDate>{RFC}</lastBuildDate>\n{items}</channel></rss>\n')
 os.makedirs("games",exist_ok=True)
