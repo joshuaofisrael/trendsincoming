@@ -286,12 +286,15 @@ rld=[{"@context":"https://schema.org","@type":"Movie","name":"The Hunger Games: 
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":B+"/"},{"@type":"ListItem","position":2,"name":"Movies","item":B+"/movies/"},{"@type":"ListItem","position":3,"name":"Sunrise on the Reaping guide","item":B+"/"+RP}]}]
 page(RP+"index.html","Sunrise on the Reaping: Release Date, Tickets, Runtime and Watch Order","Opens 20 November 2026. When tickets go on sale, how long it runs, and the Hunger Games watch order with where to stream each film.",rbody,ld=rld,cat="movies")
 REAPLINK='<div class="card picks" style="margin:14px 0"><span class="pill">Nov 20</span><h3>🏹 Sunrise on the Reaping guide</h3><p>Tickets, runtime, rating and the Hunger Games watch order with where to stream.</p><div class="links"><a class="in" href="{r}movies/sunrise-on-the-reaping-guide/">Read the guide →</a></div></div>'
+exec(open('extras_tours.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
     extra=('<p><a href="trending-stocks/">→ Today\'s trending stocks</a></p>'+DISC if c=="finance" else "")+('<p class="warn">Strictly nonpartisan: we link sourced facts, represent both sides fairly and never endorse candidates or parties.</p>' if c=="politics" else "")
     subs=[sb for sb in SUBS if sb[0]==c]
     if c=="movies": extra+=REAPLINK.replace("{r}","../")
+    if c=="music": extra+=ZBLINK.replace("{r}","../")
+    if c=="sports": extra+=NCLINK.replace("{r}","../")
     if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(sb[2])}</a>' for sb in subs)+'</div>'
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
 for sb in SUBS:
@@ -318,7 +321,7 @@ page("finance/trending-stocks/index.html","Trending stocks today: who's buzzing 
 # home
 picks=[t for t in T if t[7]]
 home=f'''<section class="hero"><p>⚡ {TAG}</p><h1>Catch it before your group chat does.</h1><p>{len(T)}+ hand-picked trends across {len(CATS)} categories. Why each one is buzzing, plus links to dig in.</p></section>
-{REAPLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
+{ZBLINK.replace("{r}","")}{NCLINK.replace("{r}","")}{REAPLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
 <section id="quiz" class="quiz" hidden><h2>🧠 Guess the trend</h2><p class="q"></p><div class="opts"></div><p class="res"></p></section><h2>Jump to a vibe</h2><div class="cats"><a href="trending-hashtags/"># Trending hashtags</a><a href="finance/trending-stocks/">$ Trending stocks</a>{"".join(f'<a href="{c}/">{e} {n}</a>' for c,n,e in CATS)}</div>
 <h2>🔥 Everything trending right now</h2><p class="by">Vote 🔥 Hot or 🧊 Not on any card. Your votes stay on your device.</p><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p><div class="grid">{"".join(card(t,"") for t in T if not t[7])}</div>'''
 page("index.html","Trends Incoming: your curator for what's trending right now",f"{TAG}. Hand-picked US trends in pop culture, music, games, sports, tech, food, memes and more, with why each one's buzzing and links to dig in.",home,home=True,ld={"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":t[1]} for i,t in enumerate(T)]})
