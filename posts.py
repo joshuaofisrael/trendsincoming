@@ -146,6 +146,7 @@ POSTS=[
 <h2>What's next</h2>
 <p><b>Medicare open enrollment</b> runs <b>October 15 through December 7</b>. That's the window to compare 2027 Medicare Advantage and Part D plans before the COLA and premium changes hit. (HealthCare.gov's separate open enrollment opens November 1.) See our <a href="/money/medicare-open-enrollment-2027/">Medicare open enrollment hub</a> and the <a href="/money/retirement/">retirement &amp; Social Security hub</a>.</p>
 <h2>Where to follow it</h2>
+<p>Want your own number? Try our <a href="/money/social-security-2027/">2027 COLA calculator and payment calendar</a>, with the Dec 31 SSI date and January payment days.</p>
 <p>Bookmark <a href="https://www.ssa.gov/cola/">SSA's COLA page</a>. Treat any number on social media as unofficial unless it matches SSA. Hashtag links below show the conversation; the government page has the facts.</p>"""),
 ("narnia-magicians-nephew-explained","Greta Gerwig's Narnia trailer is here, and it's not what you expected","Netflix dropped the first trailer for Narnia: The Magician's Nephew. What it is, why it's trending, and the release plan.","movies","trailers-and-releases","Narnia: The Magician's Nephew trailer","Narnia",
 [("Variety","https://variety.com/2026/film/news/narnia-the-magicians-nephew-trailer-greta-gerwig-netflix-1236909994/"),("Netflix Tudum","https://www.netflix.com/tudum/articles/narnia-release-date"),("The Guardian","https://www.theguardian.com/film/2026/oct/13/narnia-trailer-netflix-greta-gerwig"),("Entertainment Weekly","https://ew.com/narnia-the-magicians-nephew-trailer-greta-gerwig-12172076")],
@@ -153,6 +154,7 @@ POSTS=[
 <h2>What it is</h2>
 <p>It's the first-ever film adaptation of C.S. Lewis's 1955 novel <i>The Magician's Nephew</i>. It was the sixth Narnia book published, but it comes first in the story's timeline, because it shows how Narnia was created. Two kids, <b>Digory and Polly</b>, get magic rings from Digory's uncle, <b>Andrew Ketterley</b> (Daniel Craig), and end up in the Wood Between the Worlds and beyond. Along the way they meet <b>Jadis</b> (Emma Mackey), the future White Witch. And <b>Meryl Streep</b> voices Aslan.</p>
 <p>Newcomers David McKenna and Beatrice Campbell lead the cast, with Carey Mulligan also starring.</p>
+<p>Planning ahead? Our <a href="/movies/narnia-magicians-nephew-release-date/">Narnia guide</a> has the release dates, catch-up viewing and the reading order.</p>
 <h2>Why it's trending</h2>
 <p>The song, mostly. The trailer is set to <b>"Stairway to Heaven,"</b> which is a bold swing for a family fantasy film. EW noted Gerwig is drawing on '60s and '70s rock throughout the film's style. Some fans love it. Some are baffled. Everybody's sharing it. Add the Streep-as-Aslan reveal and Gerwig's first feature since <i>Barbie</i>, and you've got a trend.</p>
 <p>The business angle is a story too. Variety reports this is Netflix's first movie to get a global theatrical release. That's a big shift for a streamer that usually goes straight to your couch.</p>
