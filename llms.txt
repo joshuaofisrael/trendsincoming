@@ -137,6 +137,7 @@
 - [/terms/](https://trendsincoming.com/terms/)
 - [/privacy/](https://trendsincoming.com/privacy/)
 - [/disclaimer/](https://trendsincoming.com/disclaimer/)
+- [/search/](https://trendsincoming.com/search/)
 
 ## Blog explainers
 - [Valkyries vs. Dream: why the 2026 WNBA Finals are a must-watch](https://trendsincoming.com/blog/wnba-finals-valkyries-dream-explained/): A first-time champion is guaranteed. Who's playing, why it's trending, the full schedule and where to watch Game 1 on Oct 17.

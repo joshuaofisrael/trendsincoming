@@ -1,0 +1,677 @@
+{
+"": {
+"h": "2a1507e4de06ee2e",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"about/": {
+"h": "034c2b26b4153187",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"blog/": {
+"h": "d9b8e557838cfd05",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"blog/ai-model-race-october-2026/": {
+"h": "9832a87c4c3d3034",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/brewers-world-series-2026-explained/": {
+"h": "6695ebae122995a0",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"blog/expectations-remix-olivia-rodrigo-chappell-roan/": {
+"h": "d493d507f62dc7af",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"blog/government-funding-deadline-oct-31/": {
+"h": "28611fa40a9981bf",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/gta-6-explained/": {
+"h": "fe8d9486e1d1e763",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/medicare-open-enrollment-2027-starter/": {
+"h": "5c711816afcd8c4b",
+"mod": "2026-10-18",
+"pub": "2026-10-15"
+},
+"blog/midterms-2026-explained/": {
+"h": "82ae225d5a1852ba",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/mlb-nlcs-dodgers-brewers-explained/": {
+"h": "256a45e70b5c29af",
+"mod": "2026-10-15",
+"pub": "2026-10-15"
+},
+"blog/narnia-magicians-nephew-explained/": {
+"h": "0ce7058c7d96fdee",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/six-seven-dance-explained/": {
+"h": "047e0684f1a38f1e",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/social-security-cola-2027-explained/": {
+"h": "f6e5e19ed8db554c",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"blog/strait-of-hormuz-explained/": {
+"h": "f85c6131a65444ae",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"blog/street-fighter-movie-weekend-guide/": {
+"h": "d2d33a0a3864be92",
+"mod": "2026-10-15",
+"pub": "2026-10-15"
+},
+"blog/victorias-secret-fashion-show-2026-guide/": {
+"h": "a2c7342f1790789a",
+"mod": "2026-10-17",
+"pub": "2026-10-17"
+},
+"blog/why-gas-prices-are-up-oil-110-explained/": {
+"h": "b765a858295b2139",
+"mod": "2026-10-17",
+"pub": "2026-10-17"
+},
+"blog/wnba-finals-valkyries-dream-explained/": {
+"h": "8ce1f63f83c4ecda",
+"mod": "2026-10-17",
+"pub": "2026-10-17"
+},
+"blog/you-can-see-everything-explained/": {
+"h": "14b81bf988b92527",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"blog/zelda-switch-2-explained/": {
+"h": "83da98af5f12b920",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"business/": {
+"h": "b7c4cc0fa63e0192",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"business/deals/": {
+"h": "10067444482e2240",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"business/earnings/": {
+"h": "d0c89919afa2fbd8",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"cars/": {
+"h": "7880a85d8ba9e39b",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"cars/porsche-mission-s/": {
+"h": "4cd76356434b2131",
+"mod": "2026-10-17",
+"pub": "2026-10-16"
+},
+"cars/recalls/": {
+"h": "3a20b6c8dd7096b8",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"celebrities/": {
+"h": "64c8bc9ed725c380",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"celebrities/engagements/": {
+"h": "9d6c8436b6fe3e85",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"disclaimer/": {
+"h": "9d730e73f7439393",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"education/": {
+"h": "3a16801d6053f394",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"fashion-beauty/": {
+"h": "0af141eb9bdde994",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"fashion-beauty/beauty/": {
+"h": "3ab3ab8b133b1d38",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"fashion-beauty/victorias-secret-fashion-show-2026/": {
+"h": "9547b84f0ebaca23",
+"mod": "2026-10-18",
+"pub": "2026-10-17"
+},
+"finance/": {
+"h": "e9652f36eaf16d89",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"finance/trending-stocks/": {
+"h": "fbaac9df8e402fbb",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"food/": {
+"h": "482db9911af5fcca",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"food/fast-food-drops/": {
+"h": "30868521c199b007",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"food/taco-bell-milk-bar/": {
+"h": "7dea2b292cf940bc",
+"mod": "2026-10-17",
+"pub": "2026-10-15"
+},
+"games/gta-6-release-date/": {
+"h": "62f0fd7247b6f7fa",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"games/ocarina-of-time-remake/": {
+"h": "49affb657d17b029",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"games/zelda-switch-2-40th-anniversary-edition/": {
+"h": "49bbed36ecb9a2a5",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"gaming/": {
+"h": "4bffd168d9e016fd",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"gaming/deadlock/": {
+"h": "a1834061c94a5a51",
+"mod": "2026-10-17",
+"pub": "2026-10-17"
+},
+"gaming/gta-6/": {
+"h": "b7f697838dc0e54f",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"gaming/zelda/": {
+"h": "216be3c67b3c82e0",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"health/": {
+"h": "cdca59c97a81060d",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"health/vaccines/": {
+"h": "b4c247543bcd2468",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"home/": {
+"h": "eaed4ad14c44c47c",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"internet-culture/": {
+"h": "841652cb0bb377f1",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"memes-viral/": {
+"h": "57c64ae6933d1a4c",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"memes-viral/tiktok-dances/": {
+"h": "0abf6d48a87f3c7a",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"money/": {
+"h": "38a3a19765cc0597",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"money/2027-tax-numbers/": {
+"h": "c19f1b509ff4db85",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"money/2027-tax-numbers/2027-tax-brackets/": {
+"h": "8d8d6c66df6296f5",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"money/2027-tax-numbers/401k-ira-limits-2027/": {
+"h": "2af620ddb6db6340",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"money/2027-tax-numbers/hsa-limits-2027/": {
+"h": "ec0b529632353d9c",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"money/2027-tax-numbers/irs-mileage-rate-2027/": {
+"h": "9434573dd70d4af7",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"money/gas-prices-2026/": {
+"h": "24a7069519c4cd62",
+"mod": "2026-10-18",
+"pub": "2026-10-17"
+},
+"money/housing/": {
+"h": "eb0c0601b94ec4f0",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"money/medicare-open-enrollment-2027/": {
+"h": "1bc9f846642c8761",
+"mod": "2026-10-18",
+"pub": "2026-10-15"
+},
+"money/open-enrollment-2027/": {
+"h": "76f2a187b976faf1",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"money/retirement/": {
+"h": "fc35553b15dc6e6c",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"money/social-security-2027/": {
+"h": "49df50d13ecc1ab7",
+"mod": "2026-10-18",
+"pub": "2026-10-17"
+},
+"movies/": {
+"h": "260e1ca91ddb3d6a",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"movies/box-office/": {
+"h": "80bee0efe43096bd",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"movies/narnia-magicians-nephew-release-date/": {
+"h": "08e0e6defd1173a6",
+"mod": "2026-10-17",
+"pub": "2026-10-17"
+},
+"movies/street-fighter-2026/": {
+"h": "7b214555e4296a76",
+"mod": "2026-10-17",
+"pub": "2026-10-15"
+},
+"movies/sunrise-on-the-reaping-guide/": {
+"h": "5918b734d666e1ed",
+"mod": "2026-10-15",
+"pub": "2026-10-15"
+},
+"movies/trailers-and-releases/": {
+"h": "aa5f76552ba2a564",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"movies/you-can-see-everything/": {
+"h": "09251070b82bb256",
+"mod": "2026-10-17",
+"pub": "2026-10-16"
+},
+"music/": {
+"h": "2e5e0a4715f7a905",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"music/charts/": {
+"h": "22b537605268cd61",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"music/expectations-remix-rodrigo-roan/": {
+"h": "6b682362e103435d",
+"mod": "2026-10-17",
+"pub": "2026-10-16"
+},
+"music/grammy-nominations-2027/": {
+"h": "9f46b7913f1e5b38",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"music/tate-mcrae-housewife/": {
+"h": "b5a42d513bdeffeb",
+"mod": "2026-10-17",
+"pub": "2026-10-17"
+},
+"music/tiktok-sounds/": {
+"h": "ba4a652aad7173b2",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"music/zach-bryan-2027-tour-tickets/": {
+"h": "fb18c5116d728530",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/atlanta-mercedes-benz-stadium/": {
+"h": "6a5d9f56aa5d0feb",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/australia-2027/": {
+"h": "3e83d2f17e622b36",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/baltimore-m-and-t-bank-stadium/": {
+"h": "e2e41160dddd5fb8",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/boise-albertsons-stadium/": {
+"h": "818d2af3c245d6dc",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/buffalo-highmark-stadium/": {
+"h": "5453f1c045f8fb73",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/chicago-soldier-field/": {
+"h": "e6b806d77e205d42",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/east-rutherford-metlife-stadium-may-14/": {
+"h": "3c24562a2a1f6b1f",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/east-rutherford-metlife-stadium-may-15/": {
+"h": "63f22903dcf74fe5",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/edmonton-commonwealth-stadium/": {
+"h": "8c225cd3cbb48863",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/green-bay-lambeau-field/": {
+"h": "9d1c550f07fe7179",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/indianapolis-lucas-oil-stadium/": {
+"h": "5ab82cb1b1fb6784",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/las-vegas-allegiant-stadium/": {
+"h": "ba6c561d9cfd4aa8",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/los-angeles-sofi-stadium/": {
+"h": "b05bdf367eba1daf",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/minneapolis-us-bank-stadium/": {
+"h": "c8bd8b832d56818a",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/nashville-nissan-stadium/": {
+"h": "a9bad648004e00f6",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/philadelphia-lincoln-financial-field/": {
+"h": "601e64ba60e3e3e4",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/seattle-lumen-field/": {
+"h": "8869b90a87716fbd",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"music/zach-bryan-2027-tour-tickets/vancouver-bc-place/": {
+"h": "c937db8e420f8691",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"news/": {
+"h": "e751bfecffa3d167",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"pets/": {
+"h": "e9616a33cb0020b6",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"pets/cats/": {
+"h": "404f3da2222cf511",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"politics/": {
+"h": "4856780d4e7f18e9",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"politics/congress/": {
+"h": "282a22ce3b0bc360",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"politics/elections-2026/": {
+"h": "a8f4586d7dda570e",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"politics/supreme-court/": {
+"h": "f0e0dbe8d443076c",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"pop-culture/": {
+"h": "aa72a0b0711996d2",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"privacy/": {
+"h": "43b16091d0767993",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"relationships/": {
+"h": "d156b8e2623c258e",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"relationships/dating-apps/": {
+"h": "15065bb30daebe69",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"science/": {
+"h": "932f2ed2b8133819",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"search/": {
+"h": "709da12633fa4e57",
+"mod": "2026-10-18",
+"pub": "2026-10-18"
+},
+"shopping/": {
+"h": "607e341e42b21dfa",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"sports/": {
+"h": "d430db12d3d6966a",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"sports/mlb-nlcs-dodgers-brewers/": {
+"h": "05da1cd92449d735",
+"mod": "2026-10-17",
+"pub": "2026-10-15"
+},
+"sports/mlb-postseason/": {
+"h": "15fa07abd6b3b698",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"sports/nba-cup-2026/": {
+"h": "5f4fdb5a34d827cb",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"sports/nba-cup-2026/final-hinkle-fieldhouse-tickets/": {
+"h": "30e2555d9404841c",
+"mod": "2026-10-16",
+"pub": "2026-10-16"
+},
+"sports/nba-where-to-watch-2026-27/": {
+"h": "131d62137ad478a0",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"sports/nba/": {
+"h": "151b00458dbeafad",
+"mod": "2026-10-18",
+"pub": "2026-10-14"
+},
+"sports/nfl/": {
+"h": "9befee526f394b01",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"sports/nhl-where-to-watch-2026-27/": {
+"h": "707659ac91bae469",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"sports/wnba-finals-2026/": {
+"h": "c9753bb700915b13",
+"mod": "2026-10-18",
+"pub": "2026-10-17"
+},
+"sports/world-series-2026/": {
+"h": "bba2d0fe1ca75351",
+"mod": "2026-10-18",
+"pub": "2026-10-16"
+},
+"tech-ai/": {
+"h": "2c29f0d1224d0ed6",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"tech-ai/ai-models/": {
+"h": "c82d87979ef63be2",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"tech-ai/open-source-models/": {
+"h": "1b88f18815823b72",
+"mod": "2026-10-17",
+"pub": "2026-10-15"
+},
+"terms/": {
+"h": "27bf38d1c2b6d0f2",
+"mod": "2026-10-14",
+"pub": "2026-10-14"
+},
+"travel/": {
+"h": "69cb4ea40b68c6cb",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"trending-hashtags/": {
+"h": "7b5d8455b767c456",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"tv-streaming/": {
+"h": "7bcbc5c386da125f",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"tv-streaming/marvel/": {
+"h": "b751a26ae93fa860",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"weather/": {
+"h": "07b19c63a88afe2a",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"weather/fall/": {
+"h": "d353aa795f2a6616",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"weather/santa-ana-fire-watch/": {
+"h": "e9cd7424cd74ac2d",
+"mod": "2026-10-17",
+"pub": "2026-10-16"
+},
+"world/": {
+"h": "6d6a8a15c5ff77f4",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"world/middle-east/": {
+"h": "c42748a936798302",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+},
+"world/ukraine-russia/": {
+"h": "5b4521a22515e13f",
+"mod": "2026-10-17",
+"pub": "2026-10-14"
+}
+}

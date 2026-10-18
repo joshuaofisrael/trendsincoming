@@ -1,11 +1,18 @@
 # Trends Incoming static site generator. Run: python3 build.py
-import json,os,re,html
+import json,os,re,html,hashlib
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"posts.py")).read())
 from urllib.parse import quote
 B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-17"; ASOF="17 Oct 2026, 09:30 BST (04:30 ET)"
 KEY="2d25fe1d50014ed98b5fff9381edba6a"
+# Real published/modified dates: dates.json stores first-publish date, last real content change and a body hash per URL.
+import datetime
+TODAY=datetime.date.today().isoformat()
+DATES=json.load(open("dates.json")) if os.path.exists("dates.json") else {}
+SEARCH=[]
+ADDR={"@type":"PostalAddress","streetAddress":"5640 W Maple Rd, Ste 101","addressLocality":"West Bloomfield","addressRegion":"MI","postalCode":"48322","addressCountry":"US"}
+ADDRTXT="5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322"
 TAG="Your curator for what's trending right now"
-pub={"@type":"Organization","name":LLC,"url":B+"/","address":{"@type":"PostalAddress","addressRegion":"FL","addressCountry":"US"}}
+pub={"@type":"Organization","@id":B+"/#publisher","name":LLC,"url":B+"/","address":ADDR,"logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512}}
 BY="By The Trends Incoming team"
 CATS=[("politics","Politics","🏛️"),("world","World","🌍"),("business","Business","💼"),("pop-culture","Pop culture","🌶️"),("music","Music","🎧"),("tv-streaming","TV & streaming","📺"),("movies","Movies","🍿"),("gaming","Gaming","🎮"),("sports","Sports","🏆"),("tech-ai","Tech & AI","🤖"),("fashion-beauty","Fashion & beauty","💅"),("food","Food","🌮"),("memes-viral","Memes & viral","😂"),("shopping","Products & shopping","🛍️"),("finance","Finance & stocks","📈"),("news","News","🗞️"),("science","Science","🚀"),("travel","Travel","✈️"),("celebrities","Celebrities","⭐"),("internet-culture","Internet culture","🌐"),("relationships","Relationships & dating","💘"),("health","Health & wellness","🩺"),("money","Money & personal finance","💵"),("cars","Cars","🚗"),("home","Home","🏠"),("pets","Pets","🐾"),("education","Education","🎓"),("weather","Weather & seasons","🍂")]
 CN={c:(n,e) for c,n,e in CATS}
@@ -215,24 +222,45 @@ def share(url,title):
     return f'<div class="share"><b>Share:</b> <a href="https://x.com/intent/post?url={u}&text={ti}" {EXT}>X</a><a href="https://www.facebook.com/sharer/sharer.php?u={u}" {EXT}>Facebook</a><a href="https://www.reddit.com/submit?url={u}&title={ti}" {EXT}>Reddit</a><a href="https://wa.me/?text={ti}%20{u}" {EXT}>WhatsApp</a><a href="https://www.threads.net/intent/post?text={ti}%20{u}" {EXT}>Threads</a><button type="button" class="js-share" data-url="{url}" data-title="{esc(title)}" hidden>Copy / share</button></div>'
 
 def esc(s): return html.escape(s,quote=True)
+def _norm(s):
+    for v in (UPDISO,ASOF,UPD): s=s.replace(v,"")
+    return re.sub(r"\s+"," ",s)
+def pdates(path):
+    k=path.replace("index.html","")
+    e=DATES.get(k)
+    return (e["pub"],e["mod"]) if e else (TODAY,TODAY)
 def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True):
     url=B+"/"+path.replace("index.html","")
+    k=path.replace("index.html","")
+    hsh=hashlib.sha1(_norm(title+desc+body).encode()).hexdigest()[:16]
+    e=DATES.get(k)
+    if not e: e=DATES[k]={"pub":TODAY,"mod":TODAY,"h":hsh}
+    elif "h" not in e: e["h"]=hsh
+    elif e["h"]!=hsh: e["h"]=hsh; e["mod"]=TODAY
+    dp,dm=e["pub"],e["mod"]
     lds=[]
-    if home: lds.append({"@context":"https://schema.org","@type":"WebSite","name":"Trends Incoming","description":TAG,"url":B+"/","publisher":pub})
+    if home:
+        lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","legalName":LLC,"url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"parentOrganization":pub,"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
+        lds.append({"@context":"https://schema.org","@type":"WebSite","@id":B+"/#website","name":"Trends Incoming","description":TAG,"url":B+"/","inLanguage":"en-US","publisher":{"@id":B+"/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":B+"/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}})
     if ld: lds+=ld if isinstance(ld,list) else [ld]
-    if article and not home: lds.append({"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":UPD,"dateModified":UPD,"mainEntityOfPage":url,"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub})
+    for x in lds:
+        if x.get("@type") in ("Article","NewsArticle","BlogPosting"): x["datePublished"]=dp; x["dateModified"]=dm
+    if article and not home: lds.append({"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":dp,"dateModified":dm,"mainEntityOfPage":url,"image":B+f"/og/{cat if cat in CN else 'default'}.png","author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub})
     gv=('<meta name="google-site-verification" content="Xsz9tsHeBE7D0xaGXOZcReX0k8j8tm1LpWoIaUujKdM" />\n<meta name="google-site-verification" content="ezBQqKRJO61dxr5XtfUeBwFylFtxGkBcroJzRxI8vds" />\n') if home else ''
     r="../"*path.count("/")
+    og=B+f"/og/{cat if cat in CN else 'default'}.png"; ogalt=f"Trends Incoming: {CN[cat][0]}" if cat in CN else "Trends Incoming: what's trending now"
+    upiso=UPDISO if (home or dm==UPD) else dm+"T12:00:00Z"
     nav="".join(f'<a class="l" href="{r}{c}/">{e} {n}</a>' for c,n,e in CATS if c not in ("news","gaming","politics","world"))
     h=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 {gv}<title>{esc(title)} | Trends Incoming</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="{url}"><meta property="og:site_name" content="Trends Incoming"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}"><meta property="og:type" content="website"><meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="{r}style.css"><link rel="alternate" type="application/rss+xml" title="Trends Incoming" href="{B}/feed.xml">{''.join('<script type="application/ld+json">'+json.dumps(x)+'</script>' for x in lds)}</head><body>
-<header><nav class="nav"><a class="logo" href="{r}">⚡ Trends Incoming</a><a class="l hot" href="{r}blog/">✍️ Blog</a><a class="l hot" href="{r}news/">🗞️ News</a><a class="l hot" href="{r}politics/">🏛️ Politics</a><a class="l hot" href="{r}world/">🌍 World</a><a class="l hot" href="{r}gaming/">🎮 Games</a><a class="l" href="{r}trending-hashtags/"># Hashtags</a><a class="l" href="{r}finance/trending-stocks/">$ Stocks</a>{nav}</nav></header>
+<link rel="canonical" href="{url}"><meta property="og:site_name" content="Trends Incoming"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}"><meta property="og:type" content="{'website' if home else 'article'}"><meta property="og:image" content="{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(ogalt)}">{'' if home else f'<meta property="article:published_time" content="{dp}"><meta property="article:modified_time" content="{dm}">'}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{og}">
+<link rel="icon" href="{r}og/logo.png"><link rel="stylesheet" href="{r}style.css"><link rel="alternate" type="application/rss+xml" title="Trends Incoming" href="{B}/feed.xml">{''.join('<script type="application/ld+json">'+json.dumps(x)+'</script>' for x in lds)}</head><body>
+<header><nav class="nav"><a class="logo" href="{r}">⚡ Trends Incoming</a><a class="l hot" href="{r}search/">🔎 Search</a><a class="l hot" href="{r}blog/">✍️ Blog</a><a class="l hot" href="{r}news/">🗞️ News</a><a class="l hot" href="{r}politics/">🏛️ Politics</a><a class="l hot" href="{r}world/">🌍 World</a><a class="l hot" href="{r}gaming/">🎮 Games</a><a class="l" href="{r}trending-hashtags/"># Hashtags</a><a class="l" href="{r}finance/trending-stocks/">$ Stocks</a>{nav}</nav></header>
 <div class="ticker" aria-label="Trending now"><div class="tk">{"".join(f'<a href="{r}{t[0]}/">🔥 {esc(t[1])}</a>' for t in T)}</div></div>
-<main><p class="stamp">⏱️ <time datetime="{UPDISO}" data-updated="{UPDISO}">Updated {UPD}</time></p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer><p>© 2026 {LLC}. All rights reserved. Trends Incoming is owned and operated by {LLC}</p>
-<a href="{r}about/">About</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a></footer><script src="{r}app.js" defer></script></body></html>"""
+<main><p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer><p>© 2026 {LLC}. All rights reserved. Trends Incoming is owned and operated by {LLC}, {ADDRTXT}.</p>
+<a href="{r}about/">About</a><a href="{r}about/#editorial-policy">Editorial policy</a><a href="{r}about/#corrections">Corrections</a><a href="{r}search/">Search</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a></footer><script src="{r}app.js" defer></script></body></html>"""
     os.makedirs(os.path.dirname(path) or ".",exist_ok=True); open(path,"w").write(h); PAGES.append(url)
+    SEARCH.append({"u":"/"+k,"t":title,"d":desc,"c":CN[cat][0] if cat in CN else ""})
 EXT='rel="nofollow noopener" target="_blank"'
 def card(t,r):
     c,ti,take,when,srcs,tag,inn,_=t
@@ -311,6 +339,7 @@ REAPLINK='<div class="card picks" style="margin:14px 0"><span class="pill">Nov 2
 exec(open('extras_tours.py').read())
 exec(open('extras_cola_narnia.py').read())
 exec(open('extras_tax2027.py').read())
+exec(open('extras_seo.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
@@ -324,7 +353,7 @@ for c,n,e in CATS:
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
 for sb in SUBS:
     h,slug,ti,ex,kw,src=sb; n,e=CN[h]; it=sub_items(sb)
-    page(f"{h}/{slug}/index.html",f"{ti}: trends & explainer",f"{ti} trends, curated by Trends Incoming. {ex}",f'<p class="by"><a href="../">{e} {n}</a> › {esc(ti)}</p><h1>{esc(ti)}</h1><p class="by">{BY}</p><p>{esc(ex)}</p>'+('<div class="links">'+"".join(f'<a href="{u}" {EXT}>{esc(l)}</a>' for l,u in src)+'</div>' if src else "")+f'<h2>What\'s trending in {esc(ti)}</h2><div class="grid">'+"".join(card(t,"../../") for t in it)+'</div>'+SUBX.get(slug,"")+(DISC if h in ("finance","business","money") else "")+('<p class="warn">We cover politics neutrally: sourced facts, both sides represented, and no endorsements. Polls are snapshots, not predictions.</p>' if h=="politics" else ""),cat=h,ld={"@context":"https://schema.org","@type":"CollectionPage","name":ti,"isPartOf":B+f"/{h}/","publisher":pub})
+    page(f"{h}/{slug}/index.html",f"{ti}: trends & explainer",f"{ti} trends, curated by Trends Incoming. {ex}",f'<p class="by"><a href="../">{e} {n}</a> › {esc(ti)}</p><h1>{esc(ti)}</h1><p class="by">{BY}</p><p>{esc(ex)}</p>'+('<div class="links">'+"".join(f'<a href="{u}" {EXT}>{esc(l)}</a>' for l,u in src)+'</div>' if src else "")+f'<h2>What\'s trending in {esc(ti)}</h2><div class="grid">'+"".join(card(t,"../../") for t in it)+'</div>'+SUBX.get(slug,"")+subdeep(slug)+(DISC if h in ("finance","business","money") else "")+('<p class="warn">We cover politics neutrally: sourced facts, both sides represented, and no endorsements. Polls are snapshots, not predictions.</p>' if h=="politics" else ""),cat=h,ld=[{"@context":"https://schema.org","@type":"CollectionPage","name":ti,"isPartOf":B+f"/{h}/","publisher":pub}]+subld(h,slug,ti))
 for slug,ti,desc,hub,sub,tt,tag,src,body in POSTS:
     n,e=CN[hub]; sbt=[x for x in SUBS if x[0]==hub and x[1]==sub]
     tr=[t for t in T if t[1]==tt]
@@ -335,7 +364,7 @@ for slug,ti,desc,hub,sub,tt,tag,src,body in POSTS:
     trc=('<h2>The trend card</h2><div class="grid">'+card(tr[0],"../../")+'</div>') if tr else ""
     extra=(DISC if hub in ("money","business","finance") else "")+('<p class="warn">Nonpartisan explainer: sourced facts, both sides represented, no endorsements.</p>' if hub in ("politics","world") else "")
     ld=[{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}] if faq else []
-    page(f"blog/{slug}/index.html",ti,desc,f'<article>{crumbs}<h1>{esc(ti)}</h1><p class="by">{BY} · {UPD}</p>{extra}{body}{fh}{follow}{trc}{srclist(src)}</article>',cat=hub,ld=ld)
+    page(f"blog/{slug}/index.html",ti,desc,f'<article>{crumbs}<h1>{esc(ti)}</h1><p class="by">{BY} · Published {pdates(f'blog/{slug}/index.html')[0]}</p>{extra}{body}{fh}{follow}{trc}{srclist(src)}</article>',cat=hub,ld=ld)
 page("blog/index.html","The Trends Incoming blog: explainers on what's trending","Explainers on the biggest trends right now, from GTA VI to the midterms, written by your trend curator.",'<h1>✍️ The blog</h1><p class="by">Explainers from The Trends Incoming team. What it is, why it\'s trending, and what\'s next.</p><div class="grid">'+"".join(f'<div class="card"><span class="pill">{CN[p[3]][1]} {CN[p[3]][0]}</span><h3><a href="{p[0]}/">{esc(p[1])}</a></h3><p>{esc(p[2])}</p><div class="links"><a class="in" href="{p[0]}/">Read →</a></div></div>' for p in POSTS)+'</div>',article=False,ld={"@context":"https://schema.org","@type":"Blog","name":"Trends Incoming blog","publisher":pub})
 # hashtags
 rows="".join(f'<div class="card"><h3>#{h}</h3><p>{esc(w)}</p><p class="by" style="font-size:.75rem">Seen on: {esc(s)}</p><div class="links">'+"".join(f'<a class="s" href="{u}" {EXT}>{l}</a>' for l,u in soc(h))+'</div></div>' for h,w,s in HASH)
@@ -350,11 +379,22 @@ home=f'''<section class="hero"><p>⚡ {TAG}</p><h1>Catch it before your group ch
 <section id="quiz" class="quiz" hidden><h2>🧠 Guess the trend</h2><p class="q"></p><div class="opts"></div><p class="res"></p></section><h2>Jump to a vibe</h2><div class="cats"><a href="trending-hashtags/"># Trending hashtags</a><a href="finance/trending-stocks/">$ Trending stocks</a>{"".join(f'<a href="{c}/">{e} {n}</a>' for c,n,e in CATS)}</div>
 <h2>🔥 Everything trending right now</h2><p class="by">Vote 🔥 Hot or 🧊 Not on any card. Your votes stay on your device.</p><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p><div class="grid">{"".join(card(t,"") for t in T if not t[7])}</div>'''
 page("index.html","Trends Incoming: your curator for what's trending right now",f"{TAG}. Hand-picked US trends in pop culture, music, games, sports, tech, food, memes and more, with why each one's buzzing and links to dig in.",home,home=True,ld={"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":t[1]} for i,t in enumerate(T)]})
-legal={"about":("About Trends Incoming",f"<p><b>Trends Incoming is {TAG.lower()}.</b> The internet throws a thousand things at you every day. We pick the ones that actually matter: the drop, the trailer, the chart-topper, the meme your cousin's going to send you tomorrow.</p><p>Every card gets a short take on why it's trending, plus links to the original source and the conversation on TikTok, Instagram, X and more. We check dates against official sources and show our receipts.</p><p>Trends Incoming is written by The Trends Incoming team and owned and operated by {LLC}, a Florida limited liability company.</p>"),
+legal={"about":("About Trends Incoming",ABOUT_HTML),
 "terms":("Terms of Use",f"<p>These Terms govern your use of Trends Incoming, which is owned and operated by {LLC}, a Florida limited liability company (\"we\"). By using the site, you agree to these Terms.</p><p>Content is provided for general information and entertainment only, \"as is\", without warranties of any kind. To the fullest extent permitted by law, {LLC} is not liable for any damages arising from your use of the site or any linked third-party site. Third-party trademarks belong to their owners and do not imply endorsement. You may not copy or republish our content in bulk without permission.</p><p>These Terms are governed by the laws of the State of Florida, USA, and any dispute will be resolved in the state or federal courts located in Florida. We may update these Terms at any time. Last updated {UPD}.</p>"),
 "privacy":("Privacy Policy",f"<p>Trends Incoming is owned and operated by {LLC}, a Florida limited liability company. We don't require accounts and don't knowingly collect personal information directly. Our host (GitHub Pages) may log technical data such as IP addresses for security and operations. Outbound links take you to third-party sites (including social platforms) with their own privacy policies.</p><p>If we add analytics, advertising or newsletters, we'll update this policy first. We don't sell personal information. The site isn't directed at children under 13. This policy is governed by the laws of the State of Florida, USA. Last updated {UPD}.</p>"),
 "disclaimer":("Disclaimer",f"<p>Trends Incoming, owned and operated by {LLC} (a Florida LLC), curates general information about trending topics and upcoming events. Dates, prices and broadcast details come from cited public sources and can change without notice, so always confirm with the official source. Nothing on this site is legal, medical or insurance advice. We are not affiliated with any brand, platform, league or company mentioned. Some pages may later contain affiliate links, which will be disclosed.</p><h2>Stocks and finance</h2>{DISC}<p>This disclaimer is governed by the laws of the State of Florida, USA.</p>")}
 for k,(t,x) in legal.items(): page(f"{k}/index.html",t,f"{t} for Trends Incoming, {TAG.lower()}. Owned by {LLC}.",f"<h1>{t}</h1>{x}",article=False)
+# search page + index
+SRCH_IDX=SEARCH+[{"u":"/"+(t[6] or t[0]+"/"),"t":t[1],"d":t[2],"c":CN[t[0]][0]} for t in T]
+page("search/index.html","Search Trends Incoming","Search every trend, guide and explainer on Trends Incoming.",'''<h1>🔎 Search Trends Incoming</h1><form id="sf" action="./" method="get" role="search"><label for="q"><b>What are you looking for?</b></label><br><input id="q" name="q" type="search" placeholder="e.g. GTA 6, tax brackets, World Series" style="font:inherit;font-size:1.1rem;padding:8px 12px;border:2px solid #16121f;border-radius:10px;margin:8px 0;width:min(32em,100%)"> <button style="font:inherit;font-weight:800;border:2px solid #16121f;border-radius:10px;background:#ffd60a;padding:8px 14px;cursor:pointer">Search</button></form><p id="sc" class="by" aria-live="polite"></p><div id="sr" class="grid"></div>
+<script>(function(){var q=new URLSearchParams(location.search).get("q")||"",i=document.getElementById("q"),o=document.getElementById("sr"),c=document.getElementById("sc");i.value=q;
+function e(s){return s.replace(/[&<>"]/g,function(x){return{"&":"&amp;","<":"&lt;",">":"&gt;",\'"\':"&quot;"}[x]})}
+if(!q.trim()){c.textContent="Type a trend, show, game, team or topic.";return}
+fetch("/search-index.json").then(function(r){return r.json()}).then(function(D){var w=q.toLowerCase().split(/\\s+/).filter(Boolean),seen={};
+var res=D.map(function(d){var t=d.t.toLowerCase(),s=(d.d+" "+d.c).toLowerCase(),sc=0;w.forEach(function(x){if(t.indexOf(x)>-1)sc+=3;else if(s.indexOf(x)>-1)sc+=1;else sc-=4});return[sc,d]}).filter(function(x){return x[0]>0}).sort(function(a,b){return b[0]-a[0]}).filter(function(x){if(seen[x[1].u])return false;seen[x[1].u]=1;return true}).slice(0,40);
+c.textContent=res.length?res.length+" result"+(res.length>1?"s":"")+" for \u201c"+q+"\u201d":"No results for \u201c"+q+"\u201d. Try a shorter word.";
+o.innerHTML=res.map(function(x){var d=x[1];return\'<div class="card"><span class="pill">\'+e(d.c||"Trends Incoming")+\'</span><h3><a href="\'+e(d.u)+\'">\'+e(d.t)+\'</a></h3><p>\'+e(d.d)+\'</p></div>\'}).join("")})})();</script>''',article=False,rel=False,ld={"@context":"https://schema.org","@type":"SearchResultsPage","name":"Search Trends Incoming","url":B+"/search/"})
+open("search-index.json","w").write(json.dumps(SRCH_IDX,separators=(",",":")))
 open("style.css","w").write(CSS+CSS2)
 open("app.js","w").write(JS.replace("__QUIZ__",json.dumps([[t[1],t[2]] for t in T])))
 PD={"wnba-finals-valkyries-dream-explained":"Sat, 17 Oct 2026 08:30:00 GMT","victorias-secret-fashion-show-2026-guide":"Sat, 17 Oct 2026 08:30:00 GMT","why-gas-prices-are-up-oil-110-explained":"Sat, 17 Oct 2026 08:30:00 GMT","government-funding-deadline-oct-31":"Sat, 17 Oct 2026 08:30:00 GMT","brewers-world-series-2026-explained":"Fri, 16 Oct 2026 08:00:00 GMT","you-can-see-everything-explained":"Fri, 16 Oct 2026 08:00:00 GMT","expectations-remix-olivia-rodrigo-chappell-roan":"Fri, 16 Oct 2026 08:00:00 GMT","mlb-nlcs-dodgers-brewers-explained":"Thu, 15 Oct 2026 07:50:00 GMT","street-fighter-movie-weekend-guide":"Thu, 15 Oct 2026 07:50:00 GMT","medicare-open-enrollment-2027-starter":"Thu, 15 Oct 2026 07:50:00 GMT","social-security-cola-2027-explained":"Thu, 15 Oct 2026 07:50:00 GMT"}
@@ -364,8 +404,9 @@ open("feed.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss versio
 os.makedirs("games",exist_ok=True)
 open("games/index.html","w").write(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Games | Trends Incoming</title><link rel="canonical" href="{B}/gaming/"><meta http-equiv="refresh" content="0; url=/gaming/"><meta name="robots" content="noindex,follow"></head><body><p>Games moved to <a href="/gaming/">/gaming/</a>.</p></body></html>')
 open("robots.txt","w").write("".join(f"User-agent: {a}\nAllow: /\n\n" for a in ["*","GPTBot","OAI-SearchBot","ChatGPT-User","ClaudeBot","Claude-Web","anthropic-ai","CCBot","Google-Extended","Googlebot","Bingbot","PerplexityBot","Perplexity-User","Bytespider","Applebot","Applebot-Extended","Amazonbot","meta-externalagent","DuckAssistBot","cohere-ai","YouBot","xAI-Bot"])+f"Sitemap: {B}/sitemap.xml\n")
-open("sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{u}</loc><lastmod>{LM.get(u,UPD)}</lastmod></url>\n" for u in PAGES)+"</urlset>\n")
+open("sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{u}</loc><lastmod>{DATES.get(u.replace(B+"/",""),{}).get("mod",UPD)}</lastmod></url>\n" for u in PAGES)+"</urlset>\n")
 open("llms.txt","w").write(f"# Trends Incoming\n\n> {TAG}. Hand-picked US trends with why each is trending and links to sources. Owned and operated by {LLC} (Florida LLC).\n\n## Key pages\n"+"".join(f"- [{u.replace(B,'') or '/'}]({u})\n" for u in PAGES)+"\n## Blog explainers\n"+"".join(f"- [{p[1]}]({B}/blog/{p[0]}/): {p[2]}\n" for p in POSTS)+"\n## Trends (as of "+UPD+")\n"+"".join(f"- {t[1]}: {t[2]} Source: {t[4][0][1]}\n" for t in T))
 open(f"{KEY}.txt","w").write(KEY); open(".nojekyll","w").write("")
 open("404.html","w").write('<!doctype html><meta charset="utf-8"><title>Not found | Trends Incoming</title><link rel="stylesheet" href="/style.css"><main><h1>404: this trend already passed 😅</h1><p><a href="/">Back to what\'s trending →</a></p></main>')
+json.dump(DATES,open("dates.json","w"),indent=0,sort_keys=True)
 print(len(T),"trends",len(PAGES),"pages")
