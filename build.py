@@ -271,7 +271,7 @@ FEAT=[("games/zelda-switch-2-40th-anniversary-edition/","gaming","Zelda 40th Ann
 <h2>Circle these</h2><p><b>Oct 25:</b> Heritage Classic, Canadiens vs Jets (TNT). <b>Nov 27:</b> Thanksgiving doubleheader (TNT). <b>Dec 31:</b> Winter Classic, Mammoth vs Avalanche in Salt Lake City, 6 p.m. ET (TNT).</p>""",[("NHL.com national TV schedule","https://www.nhl.com/news/2026-2027-national-tv-schedule-announced"),("ESPN Press Room","https://espnpressroom.com/press-release/nhl-on-espn-returns-tuesday-with-opening-night-tripleheader/")]),
 ("money/open-enrollment-2027/","news","Open enrollment 2027: Nov 1 to Jan 15","HealthCare.gov open enrollment for 2027 runs Nov 1, 2026 to Jan 15, 2027. The dates that matter, curated.","2026-11-01","OpenEnrollment","""<span class="pill">Opens Sun Nov 1</span><h1>Open enrollment: don't sleep on these dates</h1><p class="by">{BY}</p>
 <table><tr><th>Nov 1, 2026</th><td>Open enrollment starts on HealthCare.gov</td></tr><tr><th>Dec 15, 2026</th><td>Deadline for coverage that starts Jan 1</td></tr><tr><th>Jan 15, 2027</th><td>Open enrollment ends</td></tr><tr><th>Feb 1, 2027</th><td>Coverage starts if you signed up Dec 16 to Jan 15</td></tr></table>
-<p>Real talk: Dec 15 is the date that matters for most people. Miss Jan 15 and you'll need a qualifying life event (moving, losing coverage, a new baby) to get in. Some states run their own marketplaces with different deadlines, so check yours. Medicaid and CHIP take applications all year.</p><p><i>General info, not insurance advice.</i></p>""",[("HealthCare.gov dates and deadlines","https://www.healthcare.gov/quick-guide/dates-and-deadlines/")]),
+<p>Real talk: Dec 15 is the date that matters for most people. Miss Jan 15 and you'll need a qualifying life event (moving, losing coverage, a new baby) to get in. Some states run their own marketplaces with different deadlines, so check yours. Medicaid and CHIP take applications all year.</p><p>Picking a high-deductible plan? The <a href="../2027-tax-numbers/hsa-limits-2027/">2027 HSA limits</a> are official at $4,500 self-only and $9,000 family. More in our <a href="../2027-tax-numbers/">2027 tax numbers tracker</a>.</p><p><i>General info, not insurance advice.</i></p>""",[("HealthCare.gov dates and deadlines","https://www.healthcare.gov/quick-guide/dates-and-deadlines/")]),
 ]
 for p,c,ti,desc,iso,tag,body,s in FEAT:
     so='<h2>Dig into the conversation</h2><div class="links">'+"".join(f'<a class="s" href="{u}" {EXT}>#{tag} on {l}</a>' for l,u in soc(tag))+'</div>'
@@ -310,20 +310,21 @@ page(RP+"index.html","Sunrise on the Reaping: Release Date, Tickets, Runtime and
 REAPLINK='<div class="card picks" style="margin:14px 0"><span class="pill">Nov 20</span><h3>🏹 Sunrise on the Reaping guide</h3><p>Tickets, runtime, rating and the Hunger Games watch order with where to stream.</p><div class="links"><a class="in" href="{r}movies/sunrise-on-the-reaping-guide/">Read the guide →</a></div></div>'
 exec(open('extras_tours.py').read())
 exec(open('extras_cola_narnia.py').read())
+exec(open('extras_tax2027.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
     extra=('<p><a href="trending-stocks/">→ Today\'s trending stocks</a></p>'+DISC if c=="finance" else "")+('<p class="warn">Strictly nonpartisan: we link sourced facts, represent both sides fairly and never endorse candidates or parties.</p>' if c=="politics" else "")
     subs=[sb for sb in SUBS if sb[0]==c]
     if c=="movies": extra+=REAPLINK.replace("{r}","../")+NNLINK.replace("{r}","../")
-    if c=="money": extra+=SSLINK.replace("{r}","../")
+    if c=="money": extra+=SSLINK.replace("{r}","../")+TAXLINK.replace("{r}","../")
     if c=="music": extra+=ZBLINK.replace("{r}","../")
     if c=="sports": extra+=NCLINK.replace("{r}","../")
     if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(sb[2])}</a>' for sb in subs)+'</div>'
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
 for sb in SUBS:
     h,slug,ti,ex,kw,src=sb; n,e=CN[h]; it=sub_items(sb)
-    page(f"{h}/{slug}/index.html",f"{ti}: trends & explainer",f"{ti} trends, curated by Trends Incoming. {ex}",f'<p class="by"><a href="../">{e} {n}</a> › {esc(ti)}</p><h1>{esc(ti)}</h1><p class="by">{BY}</p><p>{esc(ex)}</p>'+('<div class="links">'+"".join(f'<a href="{u}" {EXT}>{esc(l)}</a>' for l,u in src)+'</div>' if src else "")+f'<h2>What\'s trending in {esc(ti)}</h2><div class="grid">'+"".join(card(t,"../../") for t in it)+'</div>'+(DISC if h in ("finance","business","money") else "")+('<p class="warn">We cover politics neutrally: sourced facts, both sides represented, and no endorsements. Polls are snapshots, not predictions.</p>' if h=="politics" else ""),cat=h,ld={"@context":"https://schema.org","@type":"CollectionPage","name":ti,"isPartOf":B+f"/{h}/","publisher":pub})
+    page(f"{h}/{slug}/index.html",f"{ti}: trends & explainer",f"{ti} trends, curated by Trends Incoming. {ex}",f'<p class="by"><a href="../">{e} {n}</a> › {esc(ti)}</p><h1>{esc(ti)}</h1><p class="by">{BY}</p><p>{esc(ex)}</p>'+('<div class="links">'+"".join(f'<a href="{u}" {EXT}>{esc(l)}</a>' for l,u in src)+'</div>' if src else "")+f'<h2>What\'s trending in {esc(ti)}</h2><div class="grid">'+"".join(card(t,"../../") for t in it)+'</div>'+SUBX.get(slug,"")+(DISC if h in ("finance","business","money") else "")+('<p class="warn">We cover politics neutrally: sourced facts, both sides represented, and no endorsements. Polls are snapshots, not predictions.</p>' if h=="politics" else ""),cat=h,ld={"@context":"https://schema.org","@type":"CollectionPage","name":ti,"isPartOf":B+f"/{h}/","publisher":pub})
 for slug,ti,desc,hub,sub,tt,tag,src,body in POSTS:
     n,e=CN[hub]; sbt=[x for x in SUBS if x[0]==hub and x[1]==sub]
     tr=[t for t in T if t[1]==tt]
@@ -345,7 +346,7 @@ page("finance/trending-stocks/index.html","Trending stocks today: who's buzzing 
 # home
 picks=[t for t in T if t[7]]
 home=f'''<section class="hero"><p>⚡ {TAG}</p><h1>Catch it before your group chat does.</h1><p>{len(T)}+ hand-picked trends across {len(CATS)} categories. Why each one is buzzing, plus links to dig in.</p></section>
-{ZBLINK.replace("{r}","")}{NCLINK.replace("{r}","")}{SSLINK.replace("{r}","")}{REAPLINK.replace("{r}","")}{NNLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
+{ZBLINK.replace("{r}","")}{NCLINK.replace("{r}","")}{SSLINK.replace("{r}","")}{TAXLINK.replace("{r}","")}{REAPLINK.replace("{r}","")}{NNLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
 <section id="quiz" class="quiz" hidden><h2>🧠 Guess the trend</h2><p class="q"></p><div class="opts"></div><p class="res"></p></section><h2>Jump to a vibe</h2><div class="cats"><a href="trending-hashtags/"># Trending hashtags</a><a href="finance/trending-stocks/">$ Trending stocks</a>{"".join(f'<a href="{c}/">{e} {n}</a>' for c,n,e in CATS)}</div>
 <h2>🔥 Everything trending right now</h2><p class="by">Vote 🔥 Hot or 🧊 Not on any card. Your votes stay on your device.</p><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p><div class="grid">{"".join(card(t,"") for t in T if not t[7])}</div>'''
 page("index.html","Trends Incoming: your curator for what's trending right now",f"{TAG}. Hand-picked US trends in pop culture, music, games, sports, tech, food, memes and more, with why each one's buzzing and links to dig in.",home,home=True,ld={"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":t[1]} for i,t in enumerate(T)]})

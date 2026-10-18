@@ -44,6 +44,7 @@ ssbody=f'''<article><p class="by"><a href="../">💵 Money</a> › <a href="../r
 <p class="warn">Only use ssa.gov. SSA doesn't need you to pay or "activate" anything to get the COLA.</p>
 <h2>Still unconfirmed</h2><ul><li><b>2027 Medicare Part B premium:</b> not announced. SSA says it will appear in the Message Center from late November. We'll update this page and show the raise after Part B.</li><li><b>Exact online notice date:</b> SSA only says "late November" (its FAQ also mentions early December for some).</li></ul>
 <p>Want the backstory? Read our <a href="../../blog/social-security-cola-2027-explained/">2027 COLA explainer</a>, and if you're on Medicare, compare plans during <a href="../medicare-open-enrollment-2027/">Medicare open enrollment</a> (Oct 15 to Dec 7).</p>
+<p>Planning the rest of your 2027 money? Our <a href="../2027-tax-numbers/">2027 tax numbers tracker</a> covers the <a href="../2027-tax-numbers/2027-tax-brackets/">2027 tax brackets and standard deduction</a>, plus 401(k), IRA and HSA limits.</p>
 {fhtml(SSQ)}{DISC.replace("financial, investment or tax advice","financial, investment, tax or benefits advice")}
 <h2>Dig into the conversation</h2><div class="links">{"".join(f'<a class="s" href="{u}" {EXT}>#SocialSecurity on {l}</a>' for l,u in soc("SocialSecurity"))}</div>{srclist(SSRC)}</article>'''
 SSTITLE="Social Security 2027: 3.6% COLA, New Amounts and January Payment Dates"

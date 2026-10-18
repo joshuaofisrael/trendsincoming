@@ -180,6 +180,7 @@ POSTS=[
 ("social-security-cola-2027-explained","Social Security COLA 2027 is official: 3.6%","SSA confirmed a 3.6% COLA for 2027. What it is, when it hits checks, earnings limits, and where to follow it.","money","retirement","Social Security COLA is 3.6%","SocialSecurity",
 [("SSA COLA page","https://www.ssa.gov/cola/"),("CNBC pre-announcement coverage","https://www.cnbc.com/2026/10/13/social-security-cola-2027.html"),("Medicare open enrollment","https://www.medicare.gov/health-drug-plans/open-enrollment")],
 """<p>It's official. The Social Security Administration says <b>Social Security and SSI benefits rise 3.6% in 2027</b>. That's the number on <a href="https://www.ssa.gov/cola/">ssa.gov/cola</a>, not a forecast screenshot. About <b>76 million Americans</b> are covered by the bump.</p>
+<p>Planning beyond Social Security? See the <a href="/money/2027-tax-numbers/2027-tax-brackets/">2027 tax brackets and standard deduction</a> in our <a href="/money/2027-tax-numbers/">2027 tax numbers tracker</a>.</p>
 <h2>What a COLA is</h2>
 <p>Every year, Social Security and SSI benefits get adjusted so they keep up with inflation. It isn't a raise Congress votes on. The formula is set by law. SSA compares the average of a specific inflation index, the CPI-W, for July, August and September with the same three months a year earlier. The percentage change, rounded to a tenth of a point, becomes the COLA. If prices fall, benefits stay put rather than going down.</p>
 <h2>The official 2027 numbers</h2>
@@ -353,6 +354,7 @@ POSTS=[
 <p><b>This is not the same as HealthCare.gov open enrollment</b> for Marketplace plans. That separate window opens <b>November 1</b>. We cover that on our <a href="/money/open-enrollment-2027/">2027 open enrollment page</a>.</p>
 <h2>Why it's trending today</h2>
 <p>Because day one is loud on purpose. CMS says Advantage and Part D choices for 2027 look broadly stable, and it wants people comparing plans on Medicare.gov before auto-renewing into surprises. Pair that with today's official <a href="/blog/social-security-cola-2027-explained/">3.6% Social Security COLA</a>, and a lot of households are looking at benefits and premiums in the same week.</p>
+<p>Weighing a high-deductible plan at work too? The <a href="/money/2027-tax-numbers/hsa-limits-2027/">2027 HSA limits</a> are already official at $4,500 and $9,000, and our <a href="/money/2027-tax-numbers/">2027 tax numbers tracker</a> has the rest.</p>
 <h2>A simple checklist</h2>
 <ol>
 <li>Open the Annual Notice of Change from your current plan. Read the 2027 premium, deductible and drug list changes.</li>
