@@ -11,6 +11,7 @@ DATES=json.load(open("dates.json")) if os.path.exists("dates.json") else {}
 SEARCH=[]
 ADDR={"@type":"PostalAddress","streetAddress":"5640 W Maple Rd, Ste 101","addressLocality":"West Bloomfield","addressRegion":"MI","postalCode":"48322","addressCountry":"US"}
 ADDRTXT="5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322"
+EMAIL="joshuaofisrael@gmail.com"
 TAG="Your curator for what's trending right now"
 pub={"@type":"Organization","@id":B+"/#publisher","name":LLC,"url":B+"/","address":ADDR,"logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512}}
 BY="By The Trends Incoming team"
@@ -257,7 +258,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
     dp,dm=e["pub"],e["mod"]
     lds=[]
     if home:
-        lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","legalName":LLC,"url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"parentOrganization":pub,"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
+        lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","legalName":LLC,"url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"contactPoint":{"@type":"ContactPoint","email":EMAIL,"contactType":"customer support","url":B+"/about/#contact"},"parentOrganization":pub,"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
         lds.append({"@context":"https://schema.org","@type":"WebSite","@id":B+"/#website","name":"Trends Incoming","description":TAG,"url":B+"/","inLanguage":"en-US","publisher":{"@id":B+"/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":B+"/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}})
     if ld: lds+=ld if isinstance(ld,list) else [ld]
     for x in lds:
@@ -274,7 +275,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
 <link rel="icon" href="{r}og/logo.png"><link rel="stylesheet" href="{r}style.css"><link rel="alternate" type="application/rss+xml" title="Trends Incoming" href="{B}/feed.xml">{''.join('<script type="application/ld+json">'+json.dumps(x)+'</script>' for x in lds)}</head><body>
 <header><nav class="nav"><a class="logo" href="{r}">⚡ Trends Incoming</a><a class="l hot" href="{r}search/">🔎 Search</a><a class="l hot" href="{r}blog/">✍️ Blog</a><a class="l hot" href="{r}news/">🗞️ News</a><a class="l hot" href="{r}politics/">🏛️ Politics</a><a class="l hot" href="{r}world/">🌍 World</a><a class="l hot" href="{r}gaming/">🎮 Games</a><a class="l" href="{r}trending-hashtags/"># Hashtags</a><a class="l" href="{r}finance/trending-stocks/">$ Stocks</a>{nav}</nav></header>
 <div class="ticker" aria-label="Trending now"><div class="tk">{"".join(f'<a href="{r}{t[0]}/">🔥 {esc(t[1])}</a>' for t in T)}</div></div>
-<main><p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer><p>© 2026 {LLC}. All rights reserved. Trends Incoming is owned and operated by {LLC}, {ADDRTXT}.</p>
+<main><p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer><p>© 2026 {LLC}. All rights reserved. Trends Incoming is owned and operated by {LLC}, {ADDRTXT}. Contact: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <a href="{r}about/">About</a><a href="{r}about/#editorial-policy">Editorial policy</a><a href="{r}about/#corrections">Corrections</a><a href="{r}search/">Search</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a></footer><script src="{r}app.js" defer></script></body></html>"""
     os.makedirs(os.path.dirname(path) or ".",exist_ok=True); open(path,"w").write(h); PAGES.append(url)
     SEARCH.append({"u":"/"+k,"t":title,"d":desc,"c":CN[cat][0] if cat in CN else ""})
