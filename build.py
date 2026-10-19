@@ -306,7 +306,8 @@ FEAT=[("games/zelda-switch-2-40th-anniversary-edition/","gaming","Zelda 40th Ann
 ("music/grammy-nominations-2027/","music","2027 Grammy nominations: Monday, Nov 16","The 2027 Grammy nominations drop Nov 16 and the show is Feb 7 on ABC. Every key date, curated.","2026-11-16","GRAMMYs","""<span class="pill">Mon Nov 16, 2026</span><h1>Grammy noms drop Nov 16</h1><p class="by">{BY}</p>
 <p>Mark it. The Recording Academy reveals the <b>2027 Grammy</b> nominees on <b>Monday, November 16</b>. The show itself is <b>Sunday, February 7, 2027</b> at Crypto.com Arena, and for the first time it airs on <b>ABC, Disney+ and Hulu</b>.</p>
 <table><tr><th>Eligibility</th><td>Aug 31, 2025 to Aug 28, 2026</td></tr><tr><th>First-round voting</th><td>Oct 12 to 22, 2026</td></tr><tr><th>Nominations</th><td>Nov 16, 2026</td></tr><tr><th>Final voting</th><td>Dec 10, 2026 to Jan 7, 2027</td></tr><tr><th>Show</th><td>Feb 7, 2027</td></tr></table>
-<p>Voting is happening right now. Our gut says Taylor Swift's name comes up a lot, but "Patient Zero" came out after the cutoff, so it's a 2028 story.</p>""",[("Grammy.com dates","https://www.grammy.com/news/2027-grammys-show-air-date-nominations-announced/"),("Grammy.com timeline","https://www.grammy.com/news/2027-grammys-how-submit-music-guide/"),("Billboard: Patient Zero debut 10/10/26","https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-second-week/")]),
+<p>Voting is happening right now. Our gut says Taylor Swift's name comes up a lot, but "Patient Zero" came out after the cutoff, so it's a 2028 story.</p>
+<p>Counting down to your own year in music? Track the <a href="../spotify-wrapped-2026/">Spotify Wrapped 2026 release date</a>.</p>""",[("Grammy.com dates","https://www.grammy.com/news/2027-grammys-show-air-date-nominations-announced/"),("Grammy.com timeline","https://www.grammy.com/news/2027-grammys-how-submit-music-guide/"),("Billboard: Patient Zero debut 10/10/26","https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-second-week/")]),
 ("sports/nba-where-to-watch-2026-27/","sports","Where to watch the NBA in 2026-27","Where to watch every national NBA game in 2026-27: NBC, Peacock, ESPN, ABC and Prime Video. Curated and sourced.","2026-10-20","NBA","""<span class="pill">Tips off Tue Oct 20</span><h1>NBA 2026-27: where to watch</h1><p class="by">{BY}</p>
 <h2>Opening night, NBC and Peacock</h2><table><tr><th>3 p.m. ET</th><td>Celtics at Pistons</td></tr><tr><th>7 p.m. ET</th><td>76ers at Knicks. Banner night at MSG, and LeBron's Philly debut.</td></tr><tr><th>9:30 p.m. ET</th><td>Thunder at Spurs</td></tr></table>
 <p>ESPN follows with doubleheaders on Oct 21 (Giannis's Heat debut) and Oct 22.</p>
@@ -360,14 +361,16 @@ exec(open('extras_cola_narnia.py').read())
 exec(open('extras_tax2027.py').read())
 exec(open('extras_seo.py').read())
 exec(open('extras_daily_1018.py').read())
+exec(open('extras_wrapped.py').read())
+exec(open('extras_minwage.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
     extra=('<p><a href="trending-stocks/">→ Today\'s trending stocks</a></p>'+DISC if c=="finance" else "")+('<p class="warn">Strictly nonpartisan: we link sourced facts, represent both sides fairly and never endorse candidates or parties.</p>' if c=="politics" else "")
     subs=[sb for sb in SUBS if sb[0]==c]
     if c=="movies": extra+=REAPLINK.replace("{r}","../")+NNLINK.replace("{r}","../")
-    if c=="money": extra+=SSLINK.replace("{r}","../")+TAXLINK.replace("{r}","../")
-    if c=="music": extra+=ZBLINK.replace("{r}","../")
+    if c=="money": extra+=MWLINK.replace("{r}","../")+SSLINK.replace("{r}","../")+TAXLINK.replace("{r}","../")
+    if c=="music": extra+=WRAPLINK.replace("{r}","../")+ZBLINK.replace("{r}","../")
     if c=="sports": extra+=NCLINK.replace("{r}","../")
     if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(sb[2])}</a>' for sb in subs)+'</div>'
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
@@ -397,7 +400,7 @@ page("finance/trending-stocks/index.html","Trending stocks today: who's buzzing 
 # home
 picks=[t for t in T if t[7]]
 home=f'''<section class="hero"><p>⚡ {TAG}</p><h1>Catch it before your group chat does.</h1><p>{len(T)}+ hand-picked trends across {len(CATS)} categories. Why each one is buzzing, plus links to dig in.</p></section>
-{ZBLINK.replace("{r}","")}{NCLINK.replace("{r}","")}{SSLINK.replace("{r}","")}{TAXLINK.replace("{r}","")}{REAPLINK.replace("{r}","")}{NNLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
+{WRAPLINK.replace("{r}","")}{MWLINK.replace("{r}","")}{ZBLINK.replace("{r}","")}{NCLINK.replace("{r}","")}{SSLINK.replace("{r}","")}{TAXLINK.replace("{r}","")}{REAPLINK.replace("{r}","")}{NNLINK.replace("{r}","")}<h2>🎯 Curator's picks</h2><div class="grid picks">{"".join(card(t,"") for t in picks)}</div>
 <section id="quiz" class="quiz" hidden><h2>🧠 Guess the trend</h2><p class="q"></p><div class="opts"></div><p class="res"></p></section><h2>Jump to a vibe</h2><div class="cats"><a href="trending-hashtags/"># Trending hashtags</a><a href="finance/trending-stocks/">$ Trending stocks</a>{"".join(f'<a href="{c}/">{e} {n}</a>' for c,n,e in CATS)}</div>
 <h2>🔥 Everything trending right now</h2><p class="by">Vote 🔥 Hot or 🧊 Not on any card. Your votes stay on your device.</p><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p><div class="grid">{"".join(card(t,"") for t in T if not t[7])}</div>'''
 page("index.html","Trends Incoming: your curator for what's trending right now",f"{TAG}. Hand-picked US trends in pop culture, music, games, sports, tech, food, memes and more, with why each one's buzzing and links to dig in.",home,home=True,ld={"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":i+1,"name":t[1]} for i,t in enumerate(T)]})

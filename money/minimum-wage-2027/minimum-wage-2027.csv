@@ -1,0 +1,20 @@
+state,abbr,rate_2026,rate_2027_jan1,change,status,tipped_cash_wage_2027,source_url
+Washington,WA,17.13,17.73,0.60,official,"No tip credit",https://lni.wa.gov/workers-rights/wages/minimum-wage/
+Connecticut,CT,16.94,17.48,0.54,official,"See source",https://portal.ct.gov/governor/news/press-releases/2026/08-2026/governor-lamont-announces-minimum-wage-will-increase
+California,CA,16.90,17.40,0.50,official,"No tip credit",https://www.dir.ca.gov/DIRNews/2026/2026-66.html
+Rhode Island,RI,16.00,17.00,1.00,law,"See source",https://dlt.ri.gov/regulation-and-safety/labor-standards/minimum-wage
+New Jersey,NJ,15.92,16.48,0.56,official,"$6.61",https://www.nj.gov/labor/lwdhome/press/2026/20260929_min_wage.shtml
+Colorado,CO,15.16,15.71,0.55,official,"$12.69",https://cdle.colorado.gov/press-releases/press-release-colorado-minimum-wage-will-increase-to-1571/hour-in-2027
+Maine,ME,15.10,15.70,0.60,official,"$7.85",https://www.maine.gov/labor/labor_laws/minimumwagefaq/
+Arizona,AZ,15.15,15.65,0.50,official,"$12.65",https://www.azica.gov/posters-employers-must-display
+Nebraska,NE,15.00,15.26,0.26,law,"See source",https://dol.nebraska.gov/webdocs/getfile/18bc2309-85ed-4957-b072-e899caeaca99
+Michigan,MI,13.73,15.00,1.27,law,"$6.30",https://www.michigan.gov/leo/bureaus-agencies/ber/wage-and-hour/frequently-asked-questions/wage-and-hour/minimum-wage-and-overtime-faq
+Vermont,VT,14.42,pending,,pending,"Pending",https://labor.vermont.gov/rights-and-wages
+Virginia,VA,12.77,13.75,0.98,law,"See source",https://law.lis.virginia.gov/vacodeupdates/title40.1/section40.1-28.10/
+South Dakota,SD,11.85,12.30,0.45,official,"$6.15",https://dlr.sd.gov/employment_laws/publications/min-wage-poster-2027-english.pdf
+Minnesota,MN,11.41,11.87,0.46,official,"See source",https://dli.mn.gov/news/minimum-wage-rate-adjusted-inflation-jan-1-2027
+Ohio,OH,11.00,11.40,0.40,official,"$5.70",https://dam.assets.ohio.gov/image/upload/com.ohio.gov/DICO/WageAndHour/2027_Minumum_Wage_Poster.pdf
+Montana,MT,10.85,11.20,0.35,official,"See source",https://erd.dli.mt.gov/labor-standards/wage-and-hour-payment-act/2027-MINIMUM-WAGE-POSTER.pdf
+New York (NYC/LI/Westchester),NY,17.00,17.00,0.00,official,14.15 (service),https://dol.ny.gov/minimum-wage-0
+New York (rest of state),NY,16.00,16.00,0.00,official,13.30 (service),https://dol.ny.gov/minimum-wage-0
+Federal,US,7.25,7.25,0.00,official,2.13,https://www.dol.gov/agencies/whd/minimum-wage/state
