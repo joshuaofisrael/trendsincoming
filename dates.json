@@ -1,7 +1,7 @@
 {
 "": {
-"h": "0ee08c20624b8e56",
-"mod": "2026-10-19",
+"h": "b2796761a8252976",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -10,8 +10,8 @@
 "pub": "2026-10-14"
 },
 "blog/": {
-"h": "8af5d75d5ecc2835",
-"mod": "2026-10-19",
+"h": "e49cf08f4b893f8c",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -20,9 +20,14 @@
 "pub": "2026-10-14"
 },
 "blog/brewers-world-series-2026-explained/": {
-"h": "6695ebae122995a0",
-"mod": "2026-10-16",
+"h": "f54088b24c961278",
+"mod": "2026-10-20",
 "pub": "2026-10-16"
+},
+"blog/clayface-movie-explained/": {
+"h": "ffbe05c16d7b370b",
+"mod": "2026-10-20",
+"pub": "2026-10-20"
 },
 "blog/crystal-lake-peacock-explained/": {
 "h": "c1836bb44948787c",
@@ -30,8 +35,8 @@
 "pub": "2026-10-18"
 },
 "blog/ebola-outbreak-kenya-explained/": {
-"h": "a36704712e92672e",
-"mod": "2026-10-19",
+"h": "c326ddf4fc640d7d",
+"mod": "2026-10-20",
 "pub": "2026-10-19"
 },
 "blog/expectations-remix-olivia-rodrigo-chappell-roan/": {
@@ -60,13 +65,13 @@
 "pub": "2026-10-18"
 },
 "blog/iphone-duo-launch-week-explained/": {
-"h": "fb40d1536f9e75c7",
-"mod": "2026-10-19",
+"h": "923cfd3d3e58bac0",
+"mod": "2026-10-20",
 "pub": "2026-10-19"
 },
 "blog/kylie-jenner-fantasy-bra-explained/": {
-"h": "2c48120fa440f9fe",
-"mod": "2026-10-19",
+"h": "f2e8b1e683ebfed6",
+"mod": "2026-10-20",
 "pub": "2026-10-19"
 },
 "blog/medicare-open-enrollment-2027-starter/": {
@@ -75,8 +80,8 @@
 "pub": "2026-10-15"
 },
 "blog/midterms-2026-explained/": {
-"h": "7f49aa42fc188e06",
-"mod": "2026-10-19",
+"h": "f5da9792847129d7",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "blog/mlb-nlcs-dodgers-brewers-explained/": {
@@ -88,6 +93,11 @@
 "h": "0ce7058c7d96fdee",
 "mod": "2026-10-14",
 "pub": "2026-10-14"
+},
+"blog/rays-brewers-world-series-2026-preview/": {
+"h": "eac46e8e3f5d8a49",
+"mod": "2026-10-20",
+"pub": "2026-10-20"
 },
 "blog/six-seven-dance-explained/": {
 "h": "047e0684f1a38f1e",
@@ -115,18 +125,18 @@
 "pub": "2026-10-17"
 },
 "blog/why-gas-prices-are-up-oil-110-explained/": {
-"h": "f27d0449cee75e25",
-"mod": "2026-10-18",
+"h": "758bfa18389c9b26",
+"mod": "2026-10-20",
 "pub": "2026-10-17"
 },
 "blog/wnba-finals-valkyries-dream-explained/": {
-"h": "49fa3cb383eea20a",
-"mod": "2026-10-19",
+"h": "bb79ff883545cf36",
+"mod": "2026-10-20",
 "pub": "2026-10-17"
 },
 "blog/you-can-see-everything-explained/": {
-"h": "94ebaa7967055f16",
-"mod": "2026-10-19",
+"h": "0c8729a2641fd8ad",
+"mod": "2026-10-20",
 "pub": "2026-10-16"
 },
 "blog/zelda-switch-2-explained/": {
@@ -140,13 +150,13 @@
 "pub": "2026-10-14"
 },
 "business/deals/": {
-"h": "e702aadb430f91a3",
-"mod": "2026-10-18",
+"h": "ef54e7622909fe59",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "business/earnings/": {
-"h": "6cec23d2a96080b7",
-"mod": "2026-10-19",
+"h": "809638bb1829ed84",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "cars/": {
@@ -155,8 +165,8 @@
 "pub": "2026-10-14"
 },
 "cars/porsche-mission-s/": {
-"h": "4cd76356434b2131",
-"mod": "2026-10-17",
+"h": "91328e1bff41177b",
+"mod": "2026-10-20",
 "pub": "2026-10-16"
 },
 "cars/recalls/": {
@@ -200,8 +210,8 @@
 "pub": "2026-10-14"
 },
 "fashion-beauty/beauty/": {
-"h": "1b11c0410375e115",
-"mod": "2026-10-18",
+"h": "9fd2cd206ed98ca2",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "fashion-beauty/victorias-secret-fantasy-bra-2026/": {
@@ -215,13 +225,13 @@
 "pub": "2026-10-17"
 },
 "finance/": {
-"h": "dbc800a9548d7ad8",
-"mod": "2026-10-19",
+"h": "47afa693be02ca56",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "finance/trending-stocks/": {
-"h": "81d78b71f7f7f16a",
-"mod": "2026-10-19",
+"h": "a6f225fc7fa74ae8",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "food/": {
@@ -230,8 +240,8 @@
 "pub": "2026-10-14"
 },
 "food/fast-food-drops/": {
-"h": "30868521c199b007",
-"mod": "2026-10-17",
+"h": "e41801219c819ad4",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "food/taco-bell-milk-bar/": {
@@ -255,9 +265,14 @@
 "pub": "2026-10-18"
 },
 "gaming/": {
-"h": "26a808585222cc9a",
-"mod": "2026-10-19",
+"h": "027bd1d01b930062",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
+},
+"gaming/call-of-duty-modern-warfare-4/": {
+"h": "66b24a393dbf38f8",
+"mod": "2026-10-20",
+"pub": "2026-10-20"
 },
 "gaming/deadlock/": {
 "h": "8478382ca0e649f8",
@@ -310,8 +325,8 @@
 "pub": "2026-10-14"
 },
 "money/": {
-"h": "465005672a2bf992",
-"mod": "2026-10-19",
+"h": "cf573dc5d0fb49b4",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
@@ -340,8 +355,8 @@
 "pub": "2026-10-18"
 },
 "money/gas-prices-2026/": {
-"h": "deb4e960786f4f1a",
-"mod": "2026-10-19",
+"h": "842be51b5e9efc0c",
+"mod": "2026-10-20",
 "pub": "2026-10-17"
 },
 "money/housing/": {
@@ -405,14 +420,19 @@
 "pub": "2026-10-17"
 },
 "movies/": {
-"h": "dc83c22d3d8c8077",
-"mod": "2026-10-19",
+"h": "777debc47ef297cc",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "movies/box-office/": {
-"h": "3a6b34e069eff639",
-"mod": "2026-10-19",
+"h": "e2a027cfbd6c0d55",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
+},
+"movies/clayface-2026/": {
+"h": "80f1643bf2aa1f77",
+"mod": "2026-10-20",
+"pub": "2026-10-20"
 },
 "movies/narnia-magicians-nephew-release-date/": {
 "h": "08e0e6defd1173a6",
@@ -430,13 +450,13 @@
 "pub": "2026-10-15"
 },
 "movies/trailers-and-releases/": {
-"h": "1146639586cad6ef",
-"mod": "2026-10-19",
+"h": "1a9bf728d0237279",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "movies/you-can-see-everything/": {
-"h": "595a2b9f534b5ff1",
-"mod": "2026-10-19",
+"h": "d9dd02314b57ef9f",
+"mod": "2026-10-20",
 "pub": "2026-10-16"
 },
 "music/": {
@@ -600,8 +620,8 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "ab8a384605c06924",
-"mod": "2026-10-19",
+"h": "8309439f7d907b41",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "politics/congress/": {
@@ -609,9 +629,14 @@
 "mod": "2026-10-18",
 "pub": "2026-10-14"
 },
+"politics/early-voting-2026/": {
+"h": "9c334209beb46da3",
+"mod": "2026-10-20",
+"pub": "2026-10-20"
+},
 "politics/elections-2026/": {
-"h": "1587b94e9b8a1b8a",
-"mod": "2026-10-19",
+"h": "1e0ffaac3890894b",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "politics/supreme-court/": {
@@ -660,23 +685,23 @@
 "pub": "2026-10-14"
 },
 "sports/": {
-"h": "d408f784b89e16e1",
-"mod": "2026-10-19",
+"h": "7b935e655d17a4bc",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "sports/alcs-2026-rays-guardians/": {
-"h": "28ea939db8f1c556",
-"mod": "2026-10-19",
+"h": "3d7c7450febaaae0",
+"mod": "2026-10-20",
 "pub": "2026-10-18"
 },
 "sports/mlb-nlcs-dodgers-brewers/": {
-"h": "98d871d0db9d088d",
-"mod": "2026-10-18",
+"h": "c08c09a56df8c7e7",
+"mod": "2026-10-20",
 "pub": "2026-10-15"
 },
 "sports/mlb-postseason/": {
-"h": "2d9258b3613791a8",
-"mod": "2026-10-19",
+"h": "a1d4add39a33faa3",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "sports/nba-cup-2026/": {
@@ -695,8 +720,8 @@
 "pub": "2026-10-14"
 },
 "sports/nba/": {
-"h": "86987495bbda301b",
-"mod": "2026-10-19",
+"h": "7a73076c678145f4",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "sports/nfl/": {
@@ -710,13 +735,13 @@
 "pub": "2026-10-14"
 },
 "sports/wnba-finals-2026/": {
-"h": "68bc884481399460",
-"mod": "2026-10-19",
+"h": "07f43d29413bfb4a",
+"mod": "2026-10-20",
 "pub": "2026-10-17"
 },
 "sports/world-series-2026/": {
-"h": "4010cb68c243dcc5",
-"mod": "2026-10-19",
+"h": "2a624b41be8804bb",
+"mod": "2026-10-20",
 "pub": "2026-10-16"
 },
 "tech-ai/": {
@@ -735,8 +760,8 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "5dd57abd062626d2",
-"mod": "2026-10-19",
+"h": "8397e7adc4dac6a5",
+"mod": "2026-10-20",
 "pub": "2026-10-15"
 },
 "terms/": {
@@ -750,8 +775,8 @@
 "pub": "2026-10-14"
 },
 "trending-hashtags/": {
-"h": "0fd1709462bc89be",
-"mod": "2026-10-19",
+"h": "482c0c2a70def544",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "tv-streaming/": {
@@ -765,8 +790,8 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/marvel/": {
-"h": "b751a26ae93fa860",
-"mod": "2026-10-17",
+"h": "d4922bf1a57b6fe3",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "weather/": {
@@ -785,8 +810,8 @@
 "pub": "2026-10-16"
 },
 "world/": {
-"h": "035396cc6ace363c",
-"mod": "2026-10-19",
+"h": "7f9fd889e842995f",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "world/ebola-outbreak-2026/": {
@@ -800,13 +825,13 @@
 "pub": "2026-10-18"
 },
 "world/middle-east/": {
-"h": "dc8c89b1473f52cf",
-"mod": "2026-10-19",
+"h": "755b49e0c1755a0e",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 },
 "world/ukraine-russia/": {
-"h": "436a7c14276e0468",
-"mod": "2026-10-19",
+"h": "16888ae488fcfc87",
+"mod": "2026-10-20",
 "pub": "2026-10-14"
 }
 }
