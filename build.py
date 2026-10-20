@@ -368,6 +368,7 @@ exec(open('extras_wrapped.py').read())
 exec(open('extras_minwage.py').read())
 exec(open('extras_daily_1019.py').read())
 exec(open('extras_daily_1020.py').read())
+exec(open('extras_shutdown_1020.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
@@ -377,6 +378,7 @@ for c,n,e in CATS:
     if c=="money": extra+=MWLINK.replace("{r}","../")+SSLINK.replace("{r}","../")+TAXLINK.replace("{r}","../")
     if c=="music": extra+=WRAPLINK.replace("{r}","../")+ZBLINK.replace("{r}","../")
     if c=="sports": extra+=NCLINK.replace("{r}","../")
+    extra+=HUBX.get(c,"").replace("{r}","../")
     if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(sb[2])}</a>' for sb in subs)+'</div>'
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
 for sb in SUBS:
