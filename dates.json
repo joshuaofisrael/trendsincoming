@@ -1,6 +1,6 @@
 {
 "": {
-"h": "5cef234ccaf5941e",
+"h": "c82f138613a6bcf8",
 "mod": "2026-10-21",
 "pub": "2026-10-14"
 },
@@ -10,7 +10,7 @@
 "pub": "2026-10-14"
 },
 "blog/": {
-"h": "23f9dec9abdabbc8",
+"h": "1980779a713b21e4",
 "mod": "2026-10-21",
 "pub": "2026-10-14"
 },
@@ -101,6 +101,11 @@
 },
 "blog/nba-opening-night-2026-explained/": {
 "h": "78ec3792c6e35c57",
+"mod": "2026-10-21",
+"pub": "2026-10-21"
+},
+"blog/openai-security-breach-explained/": {
+"h": "a05e0b8430eee918",
 "mod": "2026-10-21",
 "pub": "2026-10-21"
 },
@@ -765,13 +770,13 @@
 "pub": "2026-10-16"
 },
 "tech-ai/": {
-"h": "e8e8b9911c690036",
+"h": "4d32791e8be910a1",
 "mod": "2026-10-21",
 "pub": "2026-10-14"
 },
 "tech-ai/ai-models/": {
-"h": "842fb9c7adfde513",
-"mod": "2026-10-19",
+"h": "f1f6bd1c4251a6af",
+"mod": "2026-10-21",
 "pub": "2026-10-14"
 },
 "tech-ai/google-cloud-outage-revolut/": {
@@ -788,6 +793,11 @@
 "h": "32f6b804ce2ccfd3",
 "mod": "2026-10-21",
 "pub": "2026-10-15"
+},
+"tech-ai/openai-security-breach/": {
+"h": "6f9a241757e14784",
+"mod": "2026-10-21",
+"pub": "2026-10-21"
 },
 "terms/": {
 "h": "27bf38d1c2b6d0f2",
