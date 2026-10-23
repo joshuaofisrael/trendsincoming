@@ -257,6 +257,60 @@ def pdates(path):
     k=path.replace("index.html","")
     e=DATES.get(k)
     return (e["pub"],e["mod"]) if e else (TODAY,TODAY)
+
+PHOTO={"home-hero":"City skyline at dusk with glowing windows and light trails from traffic on the avenues below",
+"politics-voting-booths":"Row of empty voting booths with privacy dividers in a school gymnasium",
+"shutdown-capitol":"The U.S. Capitol dome lit up at dusk seen across an empty lawn",
+"tech-ai-servers":"Open laptop on a desk in front of rows of lit server racks in a data center",
+"openai-security-padlock":"Steel padlock on a server rack door in a dim data center aisle",
+"baseball-stadium-night":"Empty baseball stadium at night under floodlights with a baseball near home plate",
+"gaming-setup":"Game controller on a desk in front of a glowing ultrawide gaming monitor",
+"music-turntable":"Vinyl record on a turntable next to over-ear headphones in warm window light",
+"movies-theater":"Empty movie theater auditorium with red seats facing a blank screen",
+"science-spacecraft":"Uncrewed spacecraft probe with gold foil, solar panels and an antenna dish in a clean room",
+"money-desk":"Desk with a calculator, blank pay stub, coins, notebook and coffee",
+"thanksgiving-table":"Thanksgiving dinner table with roast turkey, mashed potatoes, cranberry sauce, green beans and pumpkin pie",
+"travel-airport-sunrise":"Passenger jet parked at an airport gate at sunrise seen through a terminal window",
+"autumn-avenue-barricades":"Empty city avenue lined with yellow autumn trees and metal crowd barricades in the early morning",
+"holiday-mall-lights":"Shopping mall corridor at night with holiday lights, wreaths and closed storefront doors"}
+KEYPH={"":"home-hero","politics/":"politics-voting-booths","politics/early-voting-2026/":"politics-voting-booths","politics/elections-2026/":"politics-voting-booths","blog/midterms-2026-explained/":"politics-voting-booths",
+"politics/government-shutdown-deadline-2026/":"shutdown-capitol","blog/government-funding-deadline-oct-31/":"shutdown-capitol",
+"tech-ai/openai-security-breach/":"openai-security-padlock","blog/openai-security-breach-explained/":"openai-security-padlock",
+"sports/":"baseball-stadium-night","blog/rays-brewers-world-series-2026-preview/":"baseball-stadium-night","blog/brewers-world-series-2026-explained/":"baseball-stadium-night","blog/mlb-nlcs-dodgers-brewers-explained/":"baseball-stadium-night",
+"food/":"thanksgiving-table","shopping/":"holiday-mall-lights","world/":"travel-airport-sunrise"}
+CATPH={"politics":"shutdown-capitol","tech-ai":"tech-ai-servers","gaming":"gaming-setup","music":"music-turntable","movies":"movies-theater","science":"science-spacecraft","money":"money-desk","finance":"money-desk","travel":"travel-airport-sunrise"}
+PHCSS='''
+.ph{margin:14px 0 18px}.ph img{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:440px;object-fit:cover;border:3px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink)}
+.hero-photo{position:relative;overflow:hidden;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;background:var(--ink)}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,18,31,.05) 20%,rgba(22,18,31,.82))}.hero-photo>*:not(img){position:relative;z-index:2;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));margin:10px 0 22px}.tile{position:relative;display:block;border:3px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:4px 4px 0 var(--ink);aspect-ratio:4/3;background:var(--ink);transition:transform .15s ease,box-shadow .15s ease}.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}.tile span{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;color:#fff;font-weight:900;text-decoration:none;background:linear-gradient(transparent,rgba(22,18,31,.85))}.tile:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}.tile:hover img{transform:scale(1.06)}
+.card{transition:transform .15s ease,box-shadow .15s ease}.card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+main h2{margin-top:1.4em}main p{line-height:1.6}
+@media (prefers-reduced-motion:reduce){.card,.tile,.tile img{transition:none}.tile:hover img{transform:none}}
+'''
+def photo_for(k,cat,home=False):
+    n=KEYPH.get(k)
+    if n is None and cat in CATPH and (k.count("/")>=2 or k==cat+"/") and "iphone" not in k: n=CATPH[cat]
+    if n is None and "thanksgiving" in k: n="thanksgiving-table"
+    if n is None and ("holiday-store" in k or "black-friday" in k): n="holiday-mall-lights"
+    if n is None and "parade" in k: n="autumn-avenue-barricades"
+    return (n,PHOTO[n]) if n else None
+def ogimg(k,cat,home=False):
+    p=photo_for(k,cat,home)
+    return B+f"/assets/img/og-{p[0]}.jpg" if p else B+f"/og/{cat if cat in CN else 'default'}.png"
+TILES=[("politics","politics-voting-booths","Politics"),("tech-ai","tech-ai-servers","Tech & AI"),("sports","baseball-stadium-night","Sports"),("gaming","gaming-setup","Gaming"),("music","music-turntable","Music"),("movies","movies-theater","Movies"),("science","science-spacecraft","Science"),("money","money-desk","Money"),("food","thanksgiving-table","Food"),("travel","travel-airport-sunrise","Travel")]
+def tiles_html():
+    return '<h2>📸 Explore by topic</h2><div class="tiles">'+"".join(f'<a class="tile" href="{c}/"><img src="assets/img/{n}.webp" width="1200" height="675" alt="{esc(PHOTO[n])}" loading="lazy" decoding="async"><span>{t}</span></a>' for c,n,t in TILES)+'</div>'
+def inject_photo(body,k,cat,home,rr):
+    p=photo_for(k,cat,home)
+    if not p: return body
+    n,alt=p
+    if home:
+        body=body.replace('<section class="hero">',f'<section class="hero hero-photo"><img class="hero-bg" src="{rr}assets/img/{n}.webp" width="1200" height="675" alt="{esc(alt)}" fetchpriority="high" decoding="async">',1)
+        return body.replace("<h2>🎯 Curator",tiles_html()+"<h2>🎯 Curator",1)
+    i=body.find("</h1>")
+    if i<0: return body
+    fig=f'<figure class="ph"><img src="{rr}assets/img/{n}.webp" width="1200" height="675" alt="{esc(alt)}" fetchpriority="high" decoding="async"></figure>'
+    return body[:i+5]+fig+body[i+5:]
 def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True):
     url=B+"/"+path.replace("index.html","")
     k=path.replace("index.html","")
@@ -266,6 +320,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
     elif "h" not in e: e["h"]=hsh
     elif e["h"]!=hsh: e["h"]=hsh; e["mod"]=TODAY
     dp,dm=e["pub"],e["mod"]
+    body=inject_photo(body,k,cat,home,"../"*path.count("/"))
     lds=[]
     if home:
         lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","legalName":LLC,"url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"contactPoint":{"@type":"ContactPoint","email":EMAIL,"contactType":"customer support","url":B+"/contact/"},"parentOrganization":pub,"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
@@ -273,10 +328,12 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
     if ld: lds+=ld if isinstance(ld,list) else [ld]
     for x in lds:
         if x.get("@type") in ("Article","NewsArticle","BlogPosting"): x["datePublished"]=dp; x["dateModified"]=dm
-    if article and not home: lds.append({"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":dp,"dateModified":dm,"mainEntityOfPage":url,"image":B+f"/og/{cat if cat in CN else 'default'}.png","author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub})
+    if article and not home: lds.append({"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":dp,"dateModified":dm,"mainEntityOfPage":url,"image":ogimg(k,cat,home),"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub})
     gv=('<meta name="google-site-verification" content="Xsz9tsHeBE7D0xaGXOZcReX0k8j8tm1LpWoIaUujKdM" />\n<meta name="google-site-verification" content="ezBQqKRJO61dxr5XtfUeBwFylFtxGkBcroJzRxI8vds" />\n') if home else ''
     r="../"*path.count("/")
     og=B+f"/og/{cat if cat in CN else 'default'}.png"; ogalt=f"Trends Incoming: {CN[cat][0]}" if cat in CN else "Trends Incoming: what's trending now"
+    og=ogimg(k,cat,home); _p=photo_for(k,cat,home)
+    if _p: ogalt=_p[1]
     upiso=UPDISO if (home or dm==UPD) else dm+"T12:00:00Z"
     nav="".join(f'<a class="l" href="{r}{c}/">{e} {n}</a>' for c,n,e in CATS if c not in ("news","gaming","politics","world"))
     h=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -427,7 +484,7 @@ for k,(t,x) in legal.items(): page(f"{k}/index.html",t,f"{t} for Trends Incoming
 # contact page (FormSubmit)
 FI='style="font:inherit;font-size:1.05rem;padding:8px;border:2px solid var(--ink);border-radius:8px;width:100%;max-width:560px;box-sizing:border-box"'
 CONTACT_HTML=f'''<h1>📬 Contact Trends Incoming</h1><p>Spotted a trend we missed, a date that changed, or a mistake we should fix? Send us a note with the form below and it comes straight to the Trends Incoming team. You can also email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
-<form action="https://formsubmit.co/{EMAIL}" method="POST" style="margin:1em 0">
+<form action="https://formsubmit.co/4497ee41a1200e746e967998473d21da" method="POST" style="margin:1em 0">
 <input type="hidden" name="_subject" value="Trends Incoming contact">
 <input type="hidden" name="_next" value="{B}/contact/thanks/">
 <input type="hidden" name="_captcha" value="false">
@@ -455,7 +512,7 @@ var res=D.map(function(d){var t=d.t.toLowerCase(),s=(d.d+" "+d.c).toLowerCase(),
 c.textContent=res.length?res.length+" result"+(res.length>1?"s":"")+" for \u201c"+q+"\u201d":"No results for \u201c"+q+"\u201d. Try a shorter word.";
 o.innerHTML=res.map(function(x){var d=x[1];return\'<div class="card"><span class="pill">\'+e(d.c||"Trends Incoming")+\'</span><h3><a href="\'+e(d.u)+\'">\'+e(d.t)+\'</a></h3><p>\'+e(d.d)+\'</p></div>\'}).join("")})})();</script>''',article=False,rel=False,ld={"@context":"https://schema.org","@type":"SearchResultsPage","name":"Search Trends Incoming","url":B+"/search/"})
 open("search-index.json","w").write(json.dumps(SRCH_IDX,separators=(",",":")))
-open("style.css","w").write(CSS+CSS2)
+open("style.css","w").write(CSS+CSS2+PHCSS)
 open("app.js","w").write(JS.replace("__QUIZ__",json.dumps([[t[1],t[2]] for t in T])))
 PD={"rays-brewers-world-series-2026-preview":"Tue, 20 Oct 2026 08:30:00 GMT","clayface-movie-explained":"Tue, 20 Oct 2026 08:30:00 GMT","ebola-outbreak-kenya-explained":"Mon, 19 Oct 2026 08:00:00 GMT","iphone-duo-launch-week-explained":"Mon, 19 Oct 2026 08:00:00 GMT","kylie-jenner-fantasy-bra-explained":"Mon, 19 Oct 2026 08:00:00 GMT","crystal-lake-peacock-explained":"Sun, 18 Oct 2026 08:00:00 GMT","halloween-costume-trends-2026":"Sun, 18 Oct 2026 08:00:00 GMT","france-protests-october-17-2026":"Sun, 18 Oct 2026 08:00:00 GMT","wnba-finals-valkyries-dream-explained":"Sat, 17 Oct 2026 08:30:00 GMT","victorias-secret-fashion-show-2026-guide":"Sat, 17 Oct 2026 08:30:00 GMT","why-gas-prices-are-up-oil-110-explained":"Sat, 17 Oct 2026 08:30:00 GMT","government-funding-deadline-oct-31":"Sat, 17 Oct 2026 08:30:00 GMT","brewers-world-series-2026-explained":"Fri, 16 Oct 2026 08:00:00 GMT","you-can-see-everything-explained":"Fri, 16 Oct 2026 08:00:00 GMT","expectations-remix-olivia-rodrigo-chappell-roan":"Fri, 16 Oct 2026 08:00:00 GMT","mlb-nlcs-dodgers-brewers-explained":"Thu, 15 Oct 2026 07:50:00 GMT","street-fighter-movie-weekend-guide":"Thu, 15 Oct 2026 07:50:00 GMT","medicare-open-enrollment-2027-starter":"Thu, 15 Oct 2026 07:50:00 GMT","social-security-cola-2027-explained":"Thu, 15 Oct 2026 07:50:00 GMT"}
 RFC="Tue, 20 Oct 2026 08:30:00 GMT"
