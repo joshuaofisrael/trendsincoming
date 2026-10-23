@@ -2,7 +2,7 @@
 import json,os,re,html,hashlib
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"posts.py")).read())
 from urllib.parse import quote
-B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-23"; ASOF="23 Oct 2026, 10:00 BST (05:00 ET)"
+B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-23"; ASOF="23 Oct 2026, 09:00 BST (04:00 ET)"
 BEACON="""<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "28844648818e40b580364b41bd8894eb"}'></script>"""
 KEY="2d25fe1d50014ed98b5fff9381edba6a"
 # Real published/modified dates: dates.json stores first-publish date, last real content change and a body hash per URL.
@@ -236,7 +236,7 @@ def sub_items(sb):
     return [t for t in T if any(k in t[1] or k in t[2] for k in sb[4])]
 PAGES=[]
 CD={"World Series: Rays vs. Brewers":"2026-10-23T20:00:00-04:00","WNBA Finals tied 1-1":"2026-10-21T20:00:00-04:00","Clayface hits theaters Friday":"2026-10-23T00:00:00-04:00","Modern Warfare 4 launches Friday":"2026-10-23T00:00:00-04:00","Pok\u00e9mon's 30th Celebration and Delta Reign":"2026-11-06T00:00:00-05:00","Halloween costume rankings are in":"2026-10-31T00:00:00-04:00","Earnings week: Netflix, Tesla, Meta":"2026-10-21T16:00:00-04:00","iPhone Duo arrives Friday":"2026-10-23T00:00:00-04:00","Medicare open enrollment is open":"2026-12-07T23:59:00-05:00","Midterms: 13 days out":"2026-11-03T06:00:00-05:00","Shutdown watch: the real deadline is Dec 11":"2026-12-12T00:01:00-05:00","Flu shot: aim for end of October":"2026-11-01T00:00:00-04:00","Zelda 40th Anniversary Switch 2":"2026-10-29T00:00:00-04:00","Ocarina of Time remake":"2026-11-05T00:00:00-05:00","GTA VI":"2026-11-19T00:00:00-05:00","Grammy nominations":"2026-11-16T00:00:00-05:00","Wingstop x Sour Patch Kids wings":"2026-10-27T00:00:00-04:00","Helluva Boss S3 (and Stolas)":"2026-10-28T00:00:00-04:00","Open enrollment 2027":"2026-11-01T00:00:00-04:00","Narnia: The Magician's Nephew trailer":"2027-02-12T00:00:00-05:00"}
-UPDISO="2026-10-23T10:00:00+01:00"
+UPDISO="2026-10-23T09:00:00+01:00"
 import hashlib
 def tid(t): return hashlib.md5(t[1].encode()).hexdigest()[:8]
 def related(path,r,cat=None):
