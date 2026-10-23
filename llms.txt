@@ -183,6 +183,9 @@
 - [/terms/](https://trendsincoming.com/terms/)
 - [/privacy/](https://trendsincoming.com/privacy/)
 - [/disclaimer/](https://trendsincoming.com/disclaimer/)
+- [/copyright/](https://trendsincoming.com/copyright/)
+- [/corrections/](https://trendsincoming.com/corrections/)
+- [/advertising-disclosure/](https://trendsincoming.com/advertising-disclosure/)
 - [/contact/](https://trendsincoming.com/contact/)
 - [/search/](https://trendsincoming.com/search/)
 
