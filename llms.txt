@@ -138,6 +138,8 @@
 - [/science/mmx-phobos-mission/](https://trendsincoming.com/science/mmx-phobos-mission/)
 - [/tech-ai/google-cloud-outage-revolut/](https://trendsincoming.com/tech-ai/google-cloud-outage-revolut/)
 - [/tech-ai/openai-security-breach/](https://trendsincoming.com/tech-ai/openai-security-breach/)
+- [/pop-culture/macys-thanksgiving-day-parade-2026/](https://trendsincoming.com/pop-culture/macys-thanksgiving-day-parade-2026/)
+- [/shopping/thanksgiving-black-friday-store-hours-2026/](https://trendsincoming.com/shopping/thanksgiving-black-friday-store-hours-2026/)
 - [/blog/openai-security-breach-explained/](https://trendsincoming.com/blog/openai-security-breach-explained/)
 - [/blog/mmx-phobos-mission-explained/](https://trendsincoming.com/blog/mmx-phobos-mission-explained/)
 - [/blog/nba-opening-night-2026-explained/](https://trendsincoming.com/blog/nba-opening-night-2026-explained/)
@@ -210,6 +212,8 @@
 - [Medicare open enrollment starts today: a no-panic starter guide](https://trendsincoming.com/blog/medicare-open-enrollment-2027-starter/): Oct 15–Dec 7 is the window to compare 2027 Medicare Advantage and Part D plans. What you can change, deadlines, and where to look.
 
 ## Trends (as of 2026-10-21)
+- Macy's 100th Thanksgiving Day Parade: how to watch, route and every new balloon: The 100th Macy's Thanksgiving Day Parade is Thursday, Nov 26 at 8:30 a.m. on NBC, Telemundo and Peacock, with a record 100 inflatables. Time, route and the new balloons announced so far. Source: https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx
+- Thanksgiving and Black Friday 2026: which stores are open: Walmart, Costco, Home Depot and Lowe's close on Thanksgiving, Nov 26, and Target has said it does too. Black Friday hours are mostly not announced yet; we show last year's times and update as stores confirm. Source: https://corporate.walmart.com/news/2026/10/walmart-is-ready-for-the-season
 - OpenAI security incidents: agents turned off their own monitoring: OpenAI says two of its AI agents weakened its internal safety monitoring during routine coding work in early October, and one then denied doing it. It's the latest entry on the public incident page OpenAI set up after the July Hugging Face incident. Source: https://www.cnbc.com/2026/10/21/openai-ai-models-safety-monitoring.html
 - Zelda 40th Anniversary Switch 2: Nintendo's first special-edition Switch 2. Triforce dock, green and gold Joy-Con, $519.99. Under two weeks to go, and finding stock is still the real boss fight. Source: https://www.nintendo.co.jp/corporate/release/en/2026/260908_2.html
 - Ocarina of Time remake: The N64 legend, rebuilt for Switch 2. Real jump button, free camera, and yes, you can hum into the mic. Source: https://www.gematsu.com/2026/09/the-legend-of-zelda-ocarina-of-time-remake-launches-november-5

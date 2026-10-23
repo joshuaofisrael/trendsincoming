@@ -1,7 +1,7 @@
 {
 "": {
-"h": "eddfe5d5b9c06ddc",
-"mod": "2026-10-21",
+"h": "ce8d1420f5513e68",
+"mod": "2026-10-23",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -105,8 +105,8 @@
 "pub": "2026-10-21"
 },
 "blog/openai-security-breach-explained/": {
-"h": "7546177a07c8ce96",
-"mod": "2026-10-21",
+"h": "ea986a7345b73f37",
+"mod": "2026-10-23",
 "pub": "2026-10-21"
 },
 "blog/rays-brewers-world-series-2026-preview/": {
@@ -250,8 +250,8 @@
 "pub": "2026-10-14"
 },
 "food/": {
-"h": "482db9911af5fcca",
-"mod": "2026-10-17",
+"h": "af9f14476d20a8f0",
+"mod": "2026-10-23",
 "pub": "2026-10-14"
 },
 "food/fast-food-drops/": {
@@ -665,14 +665,19 @@
 "pub": "2026-10-14"
 },
 "pop-culture/": {
-"h": "ef7a425bd4750181",
-"mod": "2026-10-19",
+"h": "d27ca1166ed9f5a7",
+"mod": "2026-10-23",
 "pub": "2026-10-14"
 },
 "pop-culture/halloween-costumes-2026/": {
 "h": "816b565b11200811",
 "mod": "2026-10-18",
 "pub": "2026-10-18"
+},
+"pop-culture/macys-thanksgiving-day-parade-2026/": {
+"h": "63bf12d316dacafb",
+"mod": "2026-10-23",
+"pub": "2026-10-23"
 },
 "privacy/": {
 "h": "e22244d10176a4bc",
@@ -705,9 +710,14 @@
 "pub": "2026-10-18"
 },
 "shopping/": {
-"h": "0f91b55cc7b158b6",
-"mod": "2026-10-19",
+"h": "65d000421b5bd98f",
+"mod": "2026-10-23",
 "pub": "2026-10-14"
+},
+"shopping/thanksgiving-black-friday-store-hours-2026/": {
+"h": "9942073c20f8c305",
+"mod": "2026-10-23",
+"pub": "2026-10-23"
 },
 "sports/": {
 "h": "8108b7c3e99516ea",
@@ -790,13 +800,13 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "32f6b804ce2ccfd3",
-"mod": "2026-10-21",
+"h": "8233d6cd5323d82b",
+"mod": "2026-10-23",
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
-"h": "1fa41f088409ded5",
-"mod": "2026-10-21",
+"h": "391d7d6c24f99906",
+"mod": "2026-10-23",
 "pub": "2026-10-21"
 },
 "terms/": {
@@ -820,8 +830,8 @@
 "pub": "2026-10-14"
 },
 "tv-streaming/": {
-"h": "ff850b9b57b45249",
-"mod": "2026-10-18",
+"h": "93e76d9909c2a6e4",
+"mod": "2026-10-23",
 "pub": "2026-10-14"
 },
 "tv-streaming/crystal-lake-peacock/": {

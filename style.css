@@ -20,3 +20,4 @@ footer{max-width:1100px;margin:40px auto 0;padding:20px 14px;border-top:3px soli
 .card{transition:transform .15s ease,box-shadow .15s ease}.card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
 main h2{margin-top:1.4em}main p{line-height:1.6}
 @media (prefers-reduced-motion:reduce){.card,.tile,.tile img{transition:none}.tile:hover img{transform:none}}
+.live{border:3px solid var(--ink);border-radius:16px;background:#fff8d6;padding:4px 16px;margin:14px 0;box-shadow:4px 4px 0 var(--ink)}
