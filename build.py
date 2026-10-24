@@ -454,6 +454,7 @@ exec(open('extras_shutdown_1020.py').read())
 exec(open('extras_daily_1021.py').read())
 exec(open('extras_openai_1021.py').read())
 exec(open('extras_catchup_1023.py').read())
+exec(open('extras_openai_live_1025.py').read())
 exec(open('extras_daily_1023.py').read())
 exec(open('extras_daily_1024.py').read())
 # category hubs
