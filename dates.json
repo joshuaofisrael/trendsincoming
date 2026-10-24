@@ -1,7 +1,7 @@
 {
 "": {
-"h": "4fe39694ff8f7371",
-"mod": "2026-10-23",
+"h": "0fcba560860cdea1",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "f64d967d58e8875f",
-"mod": "2026-10-23",
+"h": "714e78f1a3487ac9",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -49,14 +49,19 @@
 "mod": "2026-10-16",
 "pub": "2026-10-16"
 },
+"blog/four-corners-flooding-explained/": {
+"h": "e03cc879ce7d221b",
+"mod": "2026-10-24",
+"pub": "2026-10-24"
+},
 "blog/france-protests-october-17-2026/": {
 "h": "f911819318f0263b",
 "mod": "2026-10-19",
 "pub": "2026-10-18"
 },
 "blog/government-funding-deadline-oct-31/": {
-"h": "89ebddd92eac898c",
-"mod": "2026-10-23",
+"h": "5a24ce0dfaee3d6a",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -115,8 +120,8 @@
 "pub": "2026-10-21"
 },
 "blog/php2shell-explained/": {
-"h": "2e7ca37ff48bb147",
-"mod": "2026-10-23",
+"h": "dc9860fb8f4cde77",
+"mod": "2026-10-24",
 "pub": "2026-10-23"
 },
 "blog/rays-brewers-world-series-2026-preview/": {
@@ -160,9 +165,14 @@
 "pub": "2026-10-17"
 },
 "blog/world-series-game-1-2026-tonight/": {
-"h": "ec2c9f3547f3b5e7",
-"mod": "2026-10-23",
+"h": "c5545d09f72efd46",
+"mod": "2026-10-24",
 "pub": "2026-10-23"
+},
+"blog/world-series-game-2-2026-tonight/": {
+"h": "7d6fb98d4e379181",
+"mod": "2026-10-24",
+"pub": "2026-10-24"
 },
 "blog/you-can-see-everything-explained/": {
 "h": "0c8729a2641fd8ad",
@@ -270,7 +280,7 @@
 "pub": "2026-10-17"
 },
 "finance/": {
-"h": "f9235d2b62b1c030",
+"h": "89fac40c66431b4a",
 "mod": "2026-10-24",
 "pub": "2026-10-14"
 },
@@ -405,7 +415,7 @@
 "pub": "2026-10-18"
 },
 "money/gas-prices-2026/": {
-"h": "ed848009c13b4b4e",
+"h": "46d5bc3a6d5f125f",
 "mod": "2026-10-24",
 "pub": "2026-10-17"
 },
@@ -470,18 +480,18 @@
 "pub": "2026-10-17"
 },
 "movies/": {
-"h": "5302a13bbced2bcd",
-"mod": "2026-10-23",
+"h": "65323ac549eb2526",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "movies/box-office/": {
-"h": "2bc39c40710fa988",
-"mod": "2026-10-23",
+"h": "fc483abbf14f116a",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "movies/clayface-2026/": {
-"h": "9f66883f0870862b",
-"mod": "2026-10-23",
+"h": "0b1dc6ca1b8bbfea",
+"mod": "2026-10-24",
 "pub": "2026-10-20"
 },
 "movies/narnia-magicians-nephew-release-date/": {
@@ -500,8 +510,8 @@
 "pub": "2026-10-15"
 },
 "movies/trailers-and-releases/": {
-"h": "89f2b04d1b345ee4",
-"mod": "2026-10-23",
+"h": "330239ccd3ea2ee5",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "movies/you-can-see-everything/": {
@@ -665,14 +675,19 @@
 "pub": "2026-10-14"
 },
 "pets/cats/": {
-"h": "719007509575981e",
-"mod": "2026-10-23",
+"h": "2949812a873542b9",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "68c5cc8e9f592ca9",
-"mod": "2026-10-23",
+"h": "d49c105ad740794e",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
+},
+"politics/alaska-senate-certification-lawsuit/": {
+"h": "ba35637dd6cc2571",
+"mod": "2026-10-24",
+"pub": "2026-10-24"
 },
 "politics/congress/": {
 "h": "79bb259f1e405f85",
@@ -680,18 +695,18 @@
 "pub": "2026-10-14"
 },
 "politics/early-voting-2026/": {
-"h": "7492c7cc8714862f",
-"mod": "2026-10-23",
+"h": "c7d6e87c479b54ed",
+"mod": "2026-10-24",
 "pub": "2026-10-20"
 },
 "politics/elections-2026/": {
-"h": "45cdc735e441ae3e",
-"mod": "2026-10-23",
+"h": "13ea78f06a6e9736",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "84c9d238d4241ce2",
-"mod": "2026-10-23",
+"h": "714b9d3cd15d78a3",
+"mod": "2026-10-24",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
@@ -755,13 +770,13 @@
 "pub": "2026-10-23"
 },
 "sports/": {
-"h": "e23303005d5911be",
-"mod": "2026-10-23",
+"h": "fc56a03d47ccc61e",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "sports/alcs-2026-rays-guardians/": {
-"h": "9911d97352af952c",
-"mod": "2026-10-23",
+"h": "2267b8c716a7037e",
+"mod": "2026-10-24",
 "pub": "2026-10-18"
 },
 "sports/mlb-nlcs-dodgers-brewers/": {
@@ -770,8 +785,8 @@
 "pub": "2026-10-15"
 },
 "sports/mlb-postseason/": {
-"h": "ec00737df167989e",
-"mod": "2026-10-23",
+"h": "b32f036fbed7a13f",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "sports/nba-cup-2026/": {
@@ -790,8 +805,8 @@
 "pub": "2026-10-14"
 },
 "sports/nba/": {
-"h": "13e67bd1277ac198",
-"mod": "2026-10-23",
+"h": "19b84c6669abb9cd",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "sports/nfl/": {
@@ -805,13 +820,13 @@
 "pub": "2026-10-14"
 },
 "sports/wnba-finals-2026/": {
-"h": "b7d504dc03e3a15a",
-"mod": "2026-10-23",
+"h": "1754bbfb41102f29",
+"mod": "2026-10-24",
 "pub": "2026-10-17"
 },
 "sports/world-series-2026/": {
-"h": "80cfc093847f8cc3",
-"mod": "2026-10-23",
+"h": "4c52b1c7ca3294a9",
+"mod": "2026-10-24",
 "pub": "2026-10-16"
 },
 "tech-ai/": {
@@ -835,8 +850,8 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "00fbc8dbed02c07b",
-"mod": "2026-10-23",
+"h": "893d825377c1f44a",
+"mod": "2026-10-24",
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
@@ -865,8 +880,8 @@
 "pub": "2026-10-21"
 },
 "trending-hashtags/": {
-"h": "0af99a482d830fea",
-"mod": "2026-10-23",
+"h": "c23ad2120b2ebc85",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "tv-streaming/": {
@@ -885,14 +900,19 @@
 "pub": "2026-10-14"
 },
 "weather/": {
-"h": "3bbc751ea78814a8",
-"mod": "2026-10-19",
+"h": "b3861406a3229c31",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "weather/fall/": {
-"h": "b531294b49984907",
-"mod": "2026-10-19",
+"h": "8fc31ca0da9600fb",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
+},
+"weather/four-corners-flooding-2026/": {
+"h": "ffa76bdf5bb55767",
+"mod": "2026-10-24",
+"pub": "2026-10-24"
 },
 "weather/santa-ana-fire-watch/": {
 "h": "47227f2cac703579",
@@ -900,8 +920,8 @@
 "pub": "2026-10-16"
 },
 "world/": {
-"h": "4983adc7b93cc359",
-"mod": "2026-10-23",
+"h": "a9c7adf2ee82290b",
+"mod": "2026-10-24",
 "pub": "2026-10-14"
 },
 "world/ebola-outbreak-2026/": {
@@ -918,6 +938,11 @@
 "h": "2d629f679e296df2",
 "mod": "2026-10-23",
 "pub": "2026-10-14"
+},
+"world/nairobi-building-collapse-2026/": {
+"h": "e29393155eb55071",
+"mod": "2026-10-24",
+"pub": "2026-10-24"
 },
 "world/tibet-earthquake-2026/": {
 "h": "4110ff62167538ec",

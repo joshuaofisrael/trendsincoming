@@ -2,7 +2,7 @@
 import json,os,re,html,hashlib
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"posts.py")).read())
 from urllib.parse import quote
-B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-23"; ASOF="23 Oct 2026, 09:00 BST (04:00 ET)"
+B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-24"; ASOF="24 Oct 2026, 09:00 BST (04:00 ET)"
 BEACON="""<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "28844648818e40b580364b41bd8894eb"}'></script>"""
 KEY="2d25fe1d50014ed98b5fff9381edba6a"
 ADS='<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-5681559774142917">'
@@ -455,6 +455,7 @@ exec(open('extras_daily_1021.py').read())
 exec(open('extras_openai_1021.py').read())
 exec(open('extras_catchup_1023.py').read())
 exec(open('extras_daily_1023.py').read())
+exec(open('extras_daily_1024.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
