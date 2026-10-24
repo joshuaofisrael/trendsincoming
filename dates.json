@@ -10,8 +10,8 @@
 "pub": "2026-10-14"
 },
 "advertising-disclosure/": {
-"h": "2e45f5878f92d7a0",
-"mod": "2026-10-24",
+"h": "dd1f1fc6c82333b2",
+"mod": "2026-10-25",
 "pub": "2026-10-23"
 },
 "blog/": {
@@ -240,18 +240,18 @@
 "pub": "2026-10-18"
 },
 "copyright/": {
-"h": "9a4ad5f30e2e7792",
-"mod": "2026-10-24",
+"h": "3057c09f16d81051",
+"mod": "2026-10-25",
 "pub": "2026-10-23"
 },
 "corrections/": {
-"h": "a5d2e861f0d00aec",
-"mod": "2026-10-24",
+"h": "a1f03fb348f31469",
+"mod": "2026-10-25",
 "pub": "2026-10-23"
 },
 "disclaimer/": {
-"h": "a1d4153cafd8ee5b",
-"mod": "2026-10-24",
+"h": "c7d4816de68c90f7",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "education/": {
@@ -725,13 +725,13 @@
 "pub": "2026-10-18"
 },
 "pop-culture/macys-thanksgiving-day-parade-2026/": {
-"h": "63bf12d316dacafb",
-"mod": "2026-10-23",
+"h": "ca4ff715dab1a90c",
+"mod": "2026-10-25",
 "pub": "2026-10-23"
 },
 "privacy/": {
-"h": "56e0e589f7de8b91",
-"mod": "2026-10-24",
+"h": "defcd2c74e1de47e",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "relationships/": {
@@ -760,14 +760,19 @@
 "pub": "2026-10-18"
 },
 "shopping/": {
-"h": "40198eddde2e9c99",
-"mod": "2026-10-23",
+"h": "dd2184b78e395ea9",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "shopping/thanksgiving-black-friday-store-hours-2026/": {
-"h": "9942073c20f8c305",
-"mod": "2026-10-23",
+"h": "3d415eff117af2f5",
+"mod": "2026-10-25",
 "pub": "2026-10-23"
+},
+"shopping/veterans-day-free-meals-deals-2026/": {
+"h": "90aadda941a423c0",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
 },
 "sports/": {
 "h": "fc56a03d47ccc61e",
@@ -865,8 +870,8 @@
 "pub": "2026-10-23"
 },
 "terms/": {
-"h": "e8de30033425dd23",
-"mod": "2026-10-24",
+"h": "3bd5e1e142c12885",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "travel/": {

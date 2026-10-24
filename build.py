@@ -341,9 +341,10 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
     body=inject_photo(body,k,cat,home,"../"*path.count("/"))
     lds=[]
     if home:
-        lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"contactPoint":{"@type":"ContactPoint","email":EMAIL,"contactType":"customer support","url":B+"/contact/"},"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
+        lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"contactPoint":{"@type":"ContactPoint","email":EMAIL,"contactType":"customer support","url":B+"/contact/"},"parentOrganization":{"@type":"Organization","name":LLC},"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
         lds.append({"@context":"https://schema.org","@type":"WebSite","@id":B+"/#website","name":"Trends Incoming","description":TAG,"url":B+"/","inLanguage":"en-US","publisher":{"@id":B+"/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":B+"/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}})
     if ld: lds+=ld if isinstance(ld,list) else [ld]
+    evfix(lds)
     for x in lds:
         if x.get("@type") in ("Article","NewsArticle","BlogPosting"): x["datePublished"]=dp; x["dateModified"]=dm; x.setdefault("image",ogimg(k,cat,home))
     if article and not home: lds.append({"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":dp,"dateModified":dm,"mainEntityOfPage":url,"image":ogimg(k,cat,home),"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub})
@@ -360,7 +361,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
 <link rel="icon" href="{r}og/logo.png"><link rel="stylesheet" href="{r}style.css"><link rel="alternate" type="application/rss+xml" title="Trends Incoming" href="{B}/feed.xml">{''.join('<script type="application/ld+json">'+json.dumps(x)+'</script>' for x in lds)}</head><body>
 <header><nav class="nav"><a class="logo" href="{r}">⚡ Trends Incoming</a><a class="l hot" href="{r}search/">🔎 Search</a><a class="l hot" href="{r}blog/">✍️ Blog</a><a class="l hot" href="{r}news/">🗞️ News</a><a class="l hot" href="{r}politics/">🏛️ Politics</a><a class="l hot" href="{r}world/">🌍 World</a><a class="l hot" href="{r}gaming/">🎮 Games</a><a class="l" href="{r}trending-hashtags/"># Hashtags</a><a class="l" href="{r}finance/trending-stocks/">$ Stocks</a>{nav}</nav></header>
 <div class="ticker" aria-label="Trending now"><div class="tk">{"".join(f'<a href="{r}{t[0]}/">🔥 {esc(t[1])}</a>' for t in T)}</div></div>
-<main>{pnote(k)}<p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer><p>© 2026 Trends Incoming. All rights reserved.</p>
+<main>{pnote(k)}<p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer>
 <p class="fnote">For information and entertainment only, not financial, tax, legal, medical or other professional advice. Predictions are not guarantees. We may show ads and may earn commissions from affiliate links, which never influence our reporting. See our <a href="{r}terms/">Terms</a> and <a href="{r}advertising-disclosure/">disclosure</a>.</p>
 <a href="{r}about/">About</a><a href="{r}contact/">Contact</a><a href="{r}about/#editorial-policy">Editorial policy</a><a href="{r}corrections/">Corrections</a><a href="{r}search/">Search</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}copyright/">Copyright &amp; DMCA</a><a href="{r}advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a></footer><script src="{r}app.js" defer></script>{BEACON}</body></html>"""
     os.makedirs(os.path.dirname(path) or ".",exist_ok=True); open(path,"w").write(h); PAGES.append(url)
@@ -374,6 +375,23 @@ def card(t,r):
     cd=f' data-countdown="{CD[ti]}"' if ti in CD else ""
     return f'<div class="card" data-id="{tid(t)}" data-added="{UPDISO}"{cd}><span class="pill">{esc(when)}</span><a class="cat" href="{r}{c}/">{e} {n}</a><h3>{esc(ti)}</h3><p>{esc(take)}</p><div class="links">{L}</div></div>'
 def srclist(s): return '<h2>Sources</h2><ul class="src">'+"".join(f'<li><a href="{u}" rel="noopener" target="_blank">{esc(t)}</a></li>' for t,u in s)+f'</ul><p class="by">{BY} · Fact-checked {UPD}. Dates change, so double-check with the official source.</p>'
+EVT=("Event","SportsEvent","MusicEvent","Festival")
+ORGURL={"AEG Presents":"https://www.aegpresents.com/","Frontier Touring":"https://www.frontiertouring.com/"}
+def evfix(o):
+    if isinstance(o,list): [evfix(v) for v in o]; return
+    if not isinstance(o,dict): return
+    for v in list(o.values()): evfix(v)
+    if o.get("@type") not in EVT: return
+    org=o.get("organizer")
+    if isinstance(org,dict) and not org.get("url") and org.get("name") in ORGURL: org["url"]=ORGURL[org["name"]]
+    if "Macy's Thanksgiving Day Parade" in o.get("name","") and "endDate" not in o: o["endDate"]="2026-11-26T12:00:00-05:00"
+    o.setdefault("endDate",o["startDate"])
+    if "description" not in o:
+        loc=o.get("location",{}); a=loc.get("address",{}) if isinstance(loc,dict) else {}
+        where=", ".join(x for x in [loc.get("name") if isinstance(loc,dict) else "",a.get("addressLocality") if a.get("addressLocality")!="TBD" else ""] if x)
+        o["description"]=f"{o['name']}{', '+where if where else ''}, scheduled for {o['startDate'][:10]}."
+    off=o.get("offers")
+    if isinstance(off,dict) and "price" not in off: del o["offers"]
 def ev(name,date,path): return {"@context":"https://schema.org","@type":"Event","name":name,"startDate":date,"eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","location":{"@type":"VirtualLocation","url":B+"/"+path},"organizer":pub}
 FEAT=[("games/zelda-switch-2-40th-anniversary-edition/","gaming","Zelda 40th Anniversary Switch 2: Oct 29, $519.99","Hand-picked by your trend curator: the Zelda Switch 2 drops Oct 29 for $519.99. What's in the box, and why it sold out.","2026-10-29","Zelda","""<span class="pill">Thu Oct 29, 2026</span><h1>The Zelda Switch 2 is the one everybody wants</h1><p class="by">{BY}</p>
 <p>Nintendo finally did it. The first special-edition Switch 2 is a Zelda one, and it lands <b>October 29, 2026</b>. It got revealed in the 40th Anniversary Direct on September 8. US pre-orders went poof almost instantly.</p>
@@ -408,7 +426,7 @@ FEAT=[("games/zelda-switch-2-40th-anniversary-edition/","gaming","Zelda 40th Ann
 ]
 for p,c,ti,desc,iso,tag,body,s in FEAT:
     so='<h2>Dig into the conversation</h2><div class="links">'+"".join(f'<a class="s" href="{u}" {EXT}>#{tag} on {l}</a>' for l,u in soc(tag))+'</div>'
-    page(p+"index.html",ti,desc,"<article>"+body.replace("{BY}",BY)+so+srclist(s)+"</article>",ld=ev(ti.split(":")[0],iso,p),cat=c)
+    page(p+"index.html",ti,desc,"<article>"+body.replace("{BY}",BY)+so+srclist(s)+"</article>",ld=None,cat=c)
 # --- Sunrise on the Reaping guide (added 2026-10-15) ---
 RP="movies/sunrise-on-the-reaping-guide/"
 RSRC=[("Fandango: release date, rating, runtime, cast","https://www.fandango.com/the-hunger-games-sunrise-on-the-reaping-2026-240138/movie-overview"),("Laemmle: tickets on sale no later than Nov 17","https://www.laemmle.com/film/hunger-games-sunrise-reaping"),("Cinemark: Nov 20 release","https://www.cinemark.com/movies/the-hunger-games-sunrise-on-the-reaping"),("Showtimes.com listing","https://www.showtimes.com/movies/the-hunger-games-sunrise-on-the-reaping-179490/"),("ComingSoon: all five films hit Hulu Oct 14","https://www.comingsoon.net/movies/news/2203213-new-hulu-releases-this-week-october-12-18"),("Netflix Tudum: leaving Netflix in October","https://www.netflix.com/tudum/articles/whats-leaving-netflix"),("Lionsgate UK film page","https://www.lionsgatefilms.co.uk/films/sunrise-on-the-reaping/")]
@@ -457,6 +475,7 @@ exec(open('extras_catchup_1023.py').read())
 exec(open('extras_openai_live_1025.py').read())
 exec(open('extras_daily_1023.py').read())
 exec(open('extras_daily_1024.py').read())
+exec(open('extras_veterans_1025.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
@@ -562,7 +581,8 @@ legal={"about":("About Trends Incoming",ABOUT_HTML),
 "copyright":("Copyright, Content Use and DMCA",COPYRIGHT_HTML),
 "corrections":("Corrections Policy",CORRECTIONS_HTML),
 "advertising-disclosure":("Advertising and Affiliate Disclosure",ADV_HTML)}
-for k,(t,x) in legal.items(): page(f"{k}/index.html",t,f"{t} for Trends Incoming, {TAG.lower()}.",f"<h1>{t}</h1>{x}",article=False)
+LEGALCOPY=f'<p class="legalcopy">© 2026 {LLC}. All rights reserved. Trends Incoming is a trade name of {LLC}, a Florida limited liability company.</p>'
+for k,(t,x) in legal.items(): page(f"{k}/index.html",t,f"{t} for Trends Incoming, {TAG.lower()}.",f"<h1>{t}</h1>{x}"+(LEGALCOPY if k!="about" else ""),article=False)
 # contact page (FormSubmit)
 FI='style="font:inherit;font-size:1.05rem;padding:8px;border:2px solid var(--ink);border-radius:8px;width:100%;max-width:560px;box-sizing:border-box"'
 CONTACT_HTML=f'''<h1>📬 Contact Trends Incoming</h1><p>Spotted a trend we missed, a date that changed, or a mistake we should fix? Send us a note with the form below and it comes straight to the Trends Incoming team. You can also email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
@@ -599,14 +619,14 @@ open("app.js","w").write(JS.replace("__QUIZ__",json.dumps([[t[1],t[2]] for t in 
 PD={"rays-brewers-world-series-2026-preview":"Tue, 20 Oct 2026 08:30:00 GMT","clayface-movie-explained":"Tue, 20 Oct 2026 08:30:00 GMT","ebola-outbreak-kenya-explained":"Mon, 19 Oct 2026 08:00:00 GMT","iphone-duo-launch-week-explained":"Mon, 19 Oct 2026 08:00:00 GMT","kylie-jenner-fantasy-bra-explained":"Mon, 19 Oct 2026 08:00:00 GMT","crystal-lake-peacock-explained":"Sun, 18 Oct 2026 08:00:00 GMT","halloween-costume-trends-2026":"Sun, 18 Oct 2026 08:00:00 GMT","france-protests-october-17-2026":"Sun, 18 Oct 2026 08:00:00 GMT","wnba-finals-valkyries-dream-explained":"Sat, 17 Oct 2026 08:30:00 GMT","victorias-secret-fashion-show-2026-guide":"Sat, 17 Oct 2026 08:30:00 GMT","why-gas-prices-are-up-oil-110-explained":"Sat, 17 Oct 2026 08:30:00 GMT","government-funding-deadline-oct-31":"Sat, 17 Oct 2026 08:30:00 GMT","brewers-world-series-2026-explained":"Fri, 16 Oct 2026 08:00:00 GMT","you-can-see-everything-explained":"Fri, 16 Oct 2026 08:00:00 GMT","expectations-remix-olivia-rodrigo-chappell-roan":"Fri, 16 Oct 2026 08:00:00 GMT","mlb-nlcs-dodgers-brewers-explained":"Thu, 15 Oct 2026 07:50:00 GMT","street-fighter-movie-weekend-guide":"Thu, 15 Oct 2026 07:50:00 GMT","medicare-open-enrollment-2027-starter":"Thu, 15 Oct 2026 07:50:00 GMT","social-security-cola-2027-explained":"Thu, 15 Oct 2026 07:50:00 GMT"}
 RFC="Tue, 20 Oct 2026 08:30:00 GMT"
 items="".join(f"<item><title>{esc(p[1])}</title><link>{B}/blog/{p[0]}/</link><guid>{B}/blog/{p[0]}/</guid><description>{esc(p[2])}</description><category>Blog</category><pubDate>{PD.get(p[0],'Wed, 14 Oct 2026 10:20:00 GMT')}</pubDate></item>\n" for p in sorted(POSTS,key=lambda p:p[0] not in PD))+"".join(f"<item><title>{esc(t[1])}</title><link>{B}/{t[6] or t[0]+'/'}</link><guid isPermaLink=\"false\">ti-{tid(t)}</guid><description>{esc(t[2])}</description><category>{esc(CN[t[0]][0])}</category><pubDate>{RFC}</pubDate></item>\n" for t in T)
-open("feed.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trends Incoming</title><link>{B}/</link><atom:link href="{B}/feed.xml" rel="self" type="application/rss+xml"/><description>{TAG}</description><language>en-us</language><copyright>© 2026 Trends Incoming</copyright><lastBuildDate>{RFC}</lastBuildDate>\n{items}</channel></rss>\n')
+open("feed.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trends Incoming</title><link>{B}/</link><atom:link href="{B}/feed.xml" rel="self" type="application/rss+xml"/><description>{TAG}</description><language>en-us</language><lastBuildDate>{RFC}</lastBuildDate>\n{items}</channel></rss>\n')
 os.makedirs("games",exist_ok=True)
 open("games/index.html","w").write(f'<!doctype html><html lang="en"><head><meta charset="utf-8">'+ADHEAD+f'<title>Games | Trends Incoming</title><link rel="canonical" href="{B}/gaming/"><meta http-equiv="refresh" content="0; url=/gaming/"><meta name="robots" content="noindex,follow"></head><body><p>Games moved to <a href="/gaming/">/gaming/</a>.</p>'+BEACON+'</body></html>')
 open("robots.txt","w").write("".join(f"User-agent: {a}\nAllow: /\n\n" for a in ["*","GPTBot","OAI-SearchBot","ChatGPT-User","ClaudeBot","Claude-Web","anthropic-ai","CCBot","Google-Extended","Googlebot","Bingbot","PerplexityBot","Perplexity-User","Bytespider","Applebot","Applebot-Extended","Amazonbot","meta-externalagent","DuckAssistBot","cohere-ai","YouBot","xAI-Bot"])+f"Sitemap: {B}/sitemap.xml\n")
 open("sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{u}</loc><lastmod>{DATES.get(u.replace(B+"/",""),{}).get("mod",UPD)}</lastmod></url>\n" for u in PAGES)+"</urlset>\n")
 open("llms.txt","w").write(f"# Trends Incoming\n\n> {TAG}. Hand-picked US trends with why each is trending and links to sources.\n\n## Key pages\n"+"".join(f"- [{u.replace(B,'') or '/'}]({u})\n" for u in PAGES)+"\n## Blog explainers\n"+"".join(f"- [{p[1]}]({B}/blog/{p[0]}/): {p[2]}\n" for p in POSTS)+"\n## Trends (as of "+UPD+")\n"+"".join(f"- {t[1]}: {t[2]} Source: {t[4][0][1]}\n" for t in T))
 open(f"{KEY}.txt","w").write(KEY); open(".nojekyll","w").write("")
-open("404.html","w").write('<!doctype html><html lang="en"><head><meta charset="utf-8">'+ADHEAD+'<meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found | Trends Incoming</title><link rel="stylesheet" href="/style.css"></head><body><main><h1>404: this trend already passed 😅</h1><p><a href="/">Back to what\'s trending →</a></p></main><footer><p>© 2026 Trends Incoming. All rights reserved.</p><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/corrections/">Corrections</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/disclaimer/">Disclaimer</a><a href="/copyright/">Copyright &amp; DMCA</a><a href="/advertising-disclosure/">Ads &amp; affiliate disclosure</a></footer>'+BEACON+'</body></html>')
+open("404.html","w").write('<!doctype html><html lang="en"><head><meta charset="utf-8">'+ADHEAD+'<meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found | Trends Incoming</title><link rel="stylesheet" href="/style.css"></head><body><main><h1>404: this trend already passed 😅</h1><p><a href="/">Back to what\'s trending →</a></p></main><footer><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/corrections/">Corrections</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/disclaimer/">Disclaimer</a><a href="/copyright/">Copyright &amp; DMCA</a><a href="/advertising-disclosure/">Ads &amp; affiliate disclosure</a></footer>'+BEACON+'</body></html>')
 open("ads.txt","w").write("google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n")
 json.dump(DATES,open("dates.json","w"),indent=0,sort_keys=True)
 print(len(T),"trends",len(PAGES),"pages")
