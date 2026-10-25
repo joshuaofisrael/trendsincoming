@@ -21,3 +21,6 @@ footer{max-width:1100px;margin:40px auto 0;padding:20px 14px;border-top:3px soli
 main h2{margin-top:1.4em}main p{line-height:1.6}
 @media (prefers-reduced-motion:reduce){.card,.tile,.tile img{transition:none}.tile:hover img{transform:none}}
 .live{border:3px solid var(--ink);border-radius:16px;background:#fff8d6;padding:4px 16px;margin:14px 0;box-shadow:4px 4px 0 var(--ink)}
+.hubbar{max-width:1100px;margin:auto;display:flex;gap:8px;padding:0 14px 8px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.hubbar a{font-weight:800;font-size:.8rem;color:var(--ink);text-decoration:none;background:var(--lime);border:2px solid var(--ink);border-radius:8px;padding:2px 9px;flex:0 0 auto}
+.crumbs{font-size:.85rem;margin:0 0 10px}.hubl{list-style:none;padding:0}.hubl li{border-bottom:1px dashed #999;padding:8px 0}.hd{display:inline-block;min-width:150px;font-weight:800}.h1l{font-size:.88rem;color:#444}.hubrel{border-top:3px solid var(--ink);margin-top:28px;padding-top:6px}
+.hubgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.hubc{display:flex;flex-direction:column;gap:4px;border:3px solid var(--ink);border-radius:12px;padding:12px;background:#fff;color:var(--ink);text-decoration:none}.hubc span{font-size:.85rem}.hubc i{font-size:.8rem;font-weight:700}

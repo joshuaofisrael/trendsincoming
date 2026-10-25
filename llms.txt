@@ -195,6 +195,13 @@
 - [/corrections/](https://trendsincoming.com/corrections/)
 - [/advertising-disclosure/](https://trendsincoming.com/advertising-disclosure/)
 - [/contact/](https://trendsincoming.com/contact/)
+- [/hubs/thanksgiving-black-friday/](https://trendsincoming.com/hubs/thanksgiving-black-friday/)
+- [/hubs/holidays-observances/](https://trendsincoming.com/hubs/holidays-observances/)
+- [/hubs/money-benefits/](https://trendsincoming.com/hubs/money-benefits/)
+- [/hubs/games-movies-music/](https://trendsincoming.com/hubs/games-movies-music/)
+- [/hubs/sports/](https://trendsincoming.com/hubs/sports/)
+- [/hubs/coming-up/](https://trendsincoming.com/hubs/coming-up/)
+- [/hubs/](https://trendsincoming.com/hubs/)
 - [/search/](https://trendsincoming.com/search/)
 
 ## Blog explainers

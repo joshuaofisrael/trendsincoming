@@ -374,6 +374,41 @@
 "mod": "2026-10-17",
 "pub": "2026-10-14"
 },
+"hubs/": {
+"h": "34dab41a53c74f7d",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
+"hubs/coming-up/": {
+"h": "7657bab7e5e1fdf8",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
+"hubs/games-movies-music/": {
+"h": "eb3b6339e02879ae",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
+"hubs/holidays-observances/": {
+"h": "350e8f70add2ca3f",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
+"hubs/money-benefits/": {
+"h": "26dd8e73b2e293ca",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
+"hubs/sports/": {
+"h": "be9fc54136014eaa",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
+"hubs/thanksgiving-black-friday/": {
+"h": "343f7800eaba2b85",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
 "internet-culture/": {
 "h": "841652cb0bb377f1",
 "mod": "2026-10-17",
