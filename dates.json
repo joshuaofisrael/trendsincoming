@@ -1,7 +1,7 @@
 {
 "": {
-"h": "0fcba560860cdea1",
-"mod": "2026-10-24",
+"h": "45d4c2f4b0821352",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "714e78f1a3487ac9",
-"mod": "2026-10-24",
+"h": "1809d324cb46f902",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -44,6 +44,11 @@
 "mod": "2026-10-21",
 "pub": "2026-10-19"
 },
+"blog/election-sunday-serbia-brazil-2026/": {
+"h": "40f0c5e264926376",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
 "blog/expectations-remix-olivia-rodrigo-chappell-roan/": {
 "h": "d493d507f62dc7af",
 "mod": "2026-10-16",
@@ -60,8 +65,8 @@
 "pub": "2026-10-18"
 },
 "blog/government-funding-deadline-oct-31/": {
-"h": "5a24ce0dfaee3d6a",
-"mod": "2026-10-24",
+"h": "cad38a3f5821477a",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -159,6 +164,11 @@
 "mod": "2026-10-24",
 "pub": "2026-10-17"
 },
+"blog/wnba-finals-game-5-2026-tied-2-2/": {
+"h": "a1fe0922e8228088",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
 "blog/wnba-finals-valkyries-dream-explained/": {
 "h": "bb79ff883545cf36",
 "mod": "2026-10-20",
@@ -170,9 +180,14 @@
 "pub": "2026-10-23"
 },
 "blog/world-series-game-2-2026-tonight/": {
-"h": "7d6fb98d4e379181",
-"mod": "2026-10-24",
+"h": "01ce087068b8c613",
+"mod": "2026-10-25",
 "pub": "2026-10-24"
+},
+"blog/world-series-game-3-2026-brewers-up-2-0/": {
+"h": "03cb3111416b0067",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
 },
 "blog/you-can-see-everything-explained/": {
 "h": "0c8729a2641fd8ad",
@@ -375,12 +390,12 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "34dab41a53c74f7d",
+"h": "89db06d5a63a71dc",
 "mod": "2026-10-25",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "7657bab7e5e1fdf8",
+"h": "968f4856ec96cb94",
 "mod": "2026-10-25",
 "pub": "2026-10-25"
 },
@@ -400,7 +415,7 @@
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
-"h": "be9fc54136014eaa",
+"h": "574c3e6b9d1f2d9e",
 "mod": "2026-10-25",
 "pub": "2026-10-25"
 },
@@ -520,18 +535,18 @@
 "pub": "2026-10-17"
 },
 "movies/": {
-"h": "65323ac549eb2526",
-"mod": "2026-10-24",
+"h": "b49742a1403993e2",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "movies/box-office/": {
-"h": "fc483abbf14f116a",
-"mod": "2026-10-24",
+"h": "3443797746421d80",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "movies/clayface-2026/": {
-"h": "0b1dc6ca1b8bbfea",
-"mod": "2026-10-24",
+"h": "70360cd464605eb7",
+"mod": "2026-10-25",
 "pub": "2026-10-20"
 },
 "movies/narnia-magicians-nephew-release-date/": {
@@ -550,13 +565,13 @@
 "pub": "2026-10-15"
 },
 "movies/trailers-and-releases/": {
-"h": "330239ccd3ea2ee5",
-"mod": "2026-10-24",
+"h": "1fa51d7cff578829",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "movies/you-can-see-everything/": {
-"h": "d9dd02314b57ef9f",
-"mod": "2026-10-20",
+"h": "f13dd26becdf2fb4",
+"mod": "2026-10-25",
 "pub": "2026-10-16"
 },
 "music/": {
@@ -720,8 +735,8 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "d49c105ad740794e",
-"mod": "2026-10-24",
+"h": "03dd1551c980c954",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "politics/alaska-senate-certification-lawsuit/": {
@@ -735,18 +750,18 @@
 "pub": "2026-10-14"
 },
 "politics/early-voting-2026/": {
-"h": "c7d6e87c479b54ed",
-"mod": "2026-10-24",
+"h": "c4120bc446ba7f39",
+"mod": "2026-10-25",
 "pub": "2026-10-20"
 },
 "politics/elections-2026/": {
-"h": "13ea78f06a6e9736",
-"mod": "2026-10-24",
+"h": "3cc1019982015a8b",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "714b9d3cd15d78a3",
-"mod": "2026-10-24",
+"h": "81b63b7f73dfaa91",
+"mod": "2026-10-25",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
@@ -820,13 +835,13 @@
 "pub": "2026-10-25"
 },
 "sports/": {
-"h": "fc56a03d47ccc61e",
-"mod": "2026-10-24",
+"h": "9089611c9ac710a7",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "sports/alcs-2026-rays-guardians/": {
-"h": "2267b8c716a7037e",
-"mod": "2026-10-24",
+"h": "ecaaf2acf7a20351",
+"mod": "2026-10-25",
 "pub": "2026-10-18"
 },
 "sports/mlb-nlcs-dodgers-brewers/": {
@@ -835,8 +850,8 @@
 "pub": "2026-10-15"
 },
 "sports/mlb-postseason/": {
-"h": "b32f036fbed7a13f",
-"mod": "2026-10-24",
+"h": "d880e66b33720c02",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "sports/nba-cup-2026/": {
@@ -855,8 +870,8 @@
 "pub": "2026-10-14"
 },
 "sports/nba/": {
-"h": "19b84c6669abb9cd",
-"mod": "2026-10-24",
+"h": "451d6352a4769460",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "sports/nfl/": {
@@ -864,19 +879,24 @@
 "mod": "2026-10-23",
 "pub": "2026-10-14"
 },
+"sports/nhl-heritage-classic-2026/": {
+"h": "5e438301c4a8a69d",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
 "sports/nhl-where-to-watch-2026-27/": {
 "h": "707659ac91bae469",
 "mod": "2026-10-14",
 "pub": "2026-10-14"
 },
 "sports/wnba-finals-2026/": {
-"h": "1754bbfb41102f29",
-"mod": "2026-10-24",
+"h": "9d6af8e3b9166c0c",
+"mod": "2026-10-25",
 "pub": "2026-10-17"
 },
 "sports/world-series-2026/": {
-"h": "4c52b1c7ca3294a9",
-"mod": "2026-10-24",
+"h": "19155c652c119b8a",
+"mod": "2026-10-25",
 "pub": "2026-10-16"
 },
 "tech-ai/": {
@@ -900,8 +920,8 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "893d825377c1f44a",
-"mod": "2026-10-24",
+"h": "505286db374b64a3",
+"mod": "2026-10-25",
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
@@ -930,8 +950,8 @@
 "pub": "2026-10-21"
 },
 "trending-hashtags/": {
-"h": "c23ad2120b2ebc85",
-"mod": "2026-10-24",
+"h": "2737cddace72dd83",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "tv-streaming/": {
@@ -970,9 +990,14 @@
 "pub": "2026-10-16"
 },
 "world/": {
-"h": "a9c7adf2ee82290b",
-"mod": "2026-10-24",
+"h": "3edfe02bf58946c2",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
+},
+"world/brazil-runoff-2026/": {
+"h": "3bb17dd01ce1b72e",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
 },
 "world/ebola-outbreak-2026/": {
 "h": "a7b1655d8b076f8c",
@@ -980,19 +1005,29 @@
 "pub": "2026-10-19"
 },
 "world/france-protests-2026/": {
-"h": "98d372227ed12e8c",
-"mod": "2026-10-21",
+"h": "66dcef0685b3a540",
+"mod": "2026-10-25",
 "pub": "2026-10-18"
 },
+"world/jordan-karak-church-attack-2026/": {
+"h": "f1fff15673be15b9",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
+},
 "world/middle-east/": {
-"h": "2d629f679e296df2",
-"mod": "2026-10-23",
+"h": "03c18ca3f089954e",
+"mod": "2026-10-25",
 "pub": "2026-10-14"
 },
 "world/nairobi-building-collapse-2026/": {
 "h": "e29393155eb55071",
 "mod": "2026-10-24",
 "pub": "2026-10-24"
+},
+"world/serbia-election-2026/": {
+"h": "5c0b422508181d91",
+"mod": "2026-10-25",
+"pub": "2026-10-25"
 },
 "world/tibet-earthquake-2026/": {
 "h": "4110ff62167538ec",
