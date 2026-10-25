@@ -424,6 +424,9 @@ FEAT=[("games/zelda-switch-2-40th-anniversary-edition/","gaming","Zelda 40th Ann
 <table><tr><th>Nov 1, 2026</th><td>Open enrollment starts on HealthCare.gov</td></tr><tr><th>Dec 15, 2026</th><td>Deadline for coverage that starts Jan 1</td></tr><tr><th>Jan 15, 2027</th><td>Open enrollment ends</td></tr><tr><th>Feb 1, 2027</th><td>Coverage starts if you signed up Dec 16 to Jan 15</td></tr></table>
 <p>Real talk: Dec 15 is the date that matters for most people. Miss Jan 15 and you'll need a qualifying life event (moving, losing coverage, a new baby) to get in. Some states run their own marketplaces with different deadlines, so check yours. Medicaid and CHIP take applications all year.</p><p>Picking a high-deductible plan? The <a href="../2027-tax-numbers/hsa-limits-2027/">2027 HSA limits</a> are official at $4,500 self-only and $9,000 family. More in our <a href="../2027-tax-numbers/">2027 tax numbers tracker</a>.</p><p><i>General info, not insurance advice.</i></p>""",[("HealthCare.gov dates and deadlines","https://www.healthcare.gov/quick-guide/dates-and-deadlines/")]),
 ]
+for _i,_f in enumerate(FEAT):
+    if _f[0] in ("games/gta-6-release-date/","games/zelda-switch-2-40th-anniversary-edition/"):
+        FEAT[_i]=_f[:6]+(_f[6]+'<h2>The Game Awards 2026</h2><p>Games must be on sale by Nov 20, 2026 at 9 p.m. PT to be eligible. The show is Thursday, Dec 10 at 7:30 p.m. ET. See our <a href="../the-game-awards-2026/">Game Awards 2026 guide</a> for how to watch, tickets and voting.</p>',)+_f[7:]
 for p,c,ti,desc,iso,tag,body,s in FEAT:
     so='<h2>Dig into the conversation</h2><div class="links">'+"".join(f'<a class="s" href="{u}" {EXT}>#{tag} on {l}</a>' for l,u in soc(tag))+'</div>'
     page(p+"index.html",ti,desc,"<article>"+body.replace("{BY}",BY)+so+srclist(s)+"</article>",ld=None,cat=c)
@@ -476,6 +479,7 @@ exec(open('extras_openai_live_1025.py').read())
 exec(open('extras_daily_1023.py').read())
 exec(open('extras_daily_1024.py').read())
 exec(open('extras_veterans_1025.py').read())
+exec(open('extras_tg_tga_1025.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
