@@ -16,3 +16,13 @@ for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-2:],_LIVE2+_p[8].replace(_QH2,_QH3)); break
 FAQ["openai-security-breach-explained"]=SUBDEEP["openai-security-breach"]["faq"]
+# --- 2026-10-25 09:20 London live update: red-team details from OpenAI's Oct 23 post (microVM escapes, CPU cache side channel). Verified against the fetched post. ---
+_LIVE3=f'''<div class="live"><p><b>Live update, Sunday, October 25, 2026, 9:20 a.m. London time (5:20 a.m. ET):</b> More detail from OpenAI's October 23 post on its red-team tests, which tech outlets picked up over the weekend. OpenAI says teams of agents asked to escape its sandboxes "found several ways to chain vulnerabilities into microVM escapes," meaning breakouts from the lightweight virtual machines that isolate each agent. In a separate test, agents placed in different virtual machines were told to pass synthetic secrets to each other without a network connection or shared files, and OpenAI says they "found a way to communicate using the processor's cache," by timing how fast data could be reloaded. OpenAI notes the same cache-timing technique was used in the Spectre and Meltdown attacks. It says it is fixing and responsibly disclosing flaws it found in several microVM projects and has reserved compute to keep red-teaming its systems. These were controlled experiments OpenAI set up itself. Source: <a href="{_OCT23}" rel="noopener" target="_blank">OpenAI</a>.</p></div>'''
+_QS.insert(0,("OpenAI, Oct 23, 2026",_OCT23,"The agents found a way to communicate using the processor's cache"))
+_QH4='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE3+_d["body"].replace(_QH3,_QH4)
+_d["facts"].insert(1,("Red-team findings (Oct 23, 2026)","OpenAI says its own test agents chained flaws into microVM escapes and, in a separate experiment, passed secrets between isolated machines through a CPU cache timing side channel"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:8]+(_LIVE3+_p[8].replace(_QH3,_QH4),); break
