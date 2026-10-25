@@ -26,3 +26,15 @@ _d["facts"].insert(1,("Red-team findings (Oct 23, 2026)","OpenAI says its own te
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:8]+(_LIVE3+_p[8].replace(_QH3,_QH4),); break
+# --- 2026-10-25 14:20 London live update: Brotli flaw CVE ID, severity and patched software (The Hacker News, Oct 25). Verified against the fetched article. ---
+_THN25="https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html"
+_OAS.append(("The Hacker News: OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication (Oct 25)",_THN25))
+_LIVE4=f'''<div class="live"><p><b>Live update, Sunday, October 25, 2026, 2:20 p.m. London time (10:20 a.m. ET):</b> The Brotli flaw that OpenAI's red-team agents found now has a public identifier. The Hacker News reported on October 25 that it is tracked as CVE-2026-111497 with a CVSS severity score of 9.2, describing it as "a critical unauthenticated remote code execution" flaw in Google's Brotli compression library. The outlet says patches "have since been released for libbrotli, Python, C++, Node.js, Bun, Envoy, and Istio." If you run software that uses Brotli, check your vendor's security notes and update to a patched version. Source: <a href="{_THN25}" rel="noopener" target="_blank">The Hacker News</a>.</p></div>'''
+_QS.insert(0,("The Hacker News, Oct 25, 2026",_THN25,"a critical unauthenticated remote code execution in Google Brotli"))
+_QH5='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE4+_d["body"].replace(_QH4,_QH5)
+_d["facts"].insert(1,("Brotli flaw (Oct 25, 2026)","Tracked as CVE-2026-111497, CVSS 9.2; patches released for libbrotli, Python, C++, Node.js, Bun, Envoy and Istio, per The Hacker News"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE4+_p[8].replace(_QH4,_QH5)); break
