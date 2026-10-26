@@ -390,23 +390,23 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "89db06d5a63a71dc",
-"mod": "2026-10-25",
+"h": "2993feb2bb37d6d2",
+"mod": "2026-10-26",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "7657bab7e5e1fdf8",
+"h": "a04d0675d3468e50",
 "mod": "2026-10-26",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
-"h": "eb3b6339e02879ae",
-"mod": "2026-10-25",
+"h": "6d4d9a15098a4542",
+"mod": "2026-10-26",
 "pub": "2026-10-25"
 },
 "hubs/holidays-observances/": {
-"h": "350e8f70add2ca3f",
-"mod": "2026-10-25",
+"h": "1c35deb076400a99",
+"mod": "2026-10-26",
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
@@ -420,8 +420,8 @@
 "pub": "2026-10-25"
 },
 "hubs/thanksgiving-black-friday/": {
-"h": "343f7800eaba2b85",
-"mod": "2026-10-25",
+"h": "e6de2ff9cdce5d55",
+"mod": "2026-10-26",
 "pub": "2026-10-25"
 },
 "internet-culture/": {
@@ -780,8 +780,8 @@
 "pub": "2026-10-18"
 },
 "pop-culture/macys-thanksgiving-day-parade-2026/": {
-"h": "3c226571919fdd8d",
-"mod": "2026-10-25",
+"h": "482358ebfddc630f",
+"mod": "2026-10-26",
 "pub": "2026-10-23"
 },
 "privacy/": {
@@ -820,8 +820,8 @@
 "pub": "2026-10-14"
 },
 "shopping/thanksgiving-black-friday-store-hours-2026/": {
-"h": "06c7cefcc44a3871",
-"mod": "2026-10-25",
+"h": "08f671ffa392e303",
+"mod": "2026-10-26",
 "pub": "2026-10-23"
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
@@ -963,6 +963,11 @@
 "h": "6a5d76511c7766a0",
 "mod": "2026-10-18",
 "pub": "2026-10-18"
+},
+"tv-streaming/hallmark-christmas-movies-2026-schedule/": {
+"h": "5f94581b8c14a369",
+"mod": "2026-10-26",
+"pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
 "h": "d4922bf1a57b6fe3",

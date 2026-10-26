@@ -14,6 +14,7 @@ HUBMAP={
  "shopping/thanksgiving-dinner-deals-2026/":("thanksgiving-black-friday","2026-11-26","Thanksgiving dinner deals compared","Aldi, Lidl, Target and Sam's Club holiday meal prices side by side."),
  "pop-culture/macys-thanksgiving-day-parade-2026/":("thanksgiving-black-friday","2026-11-26","Macy's Thanksgiving Day Parade 2026","Start time, route and how to watch the parade."),
  "shopping/veterans-day-free-meals-deals-2026/":("holidays-observances","2026-11-11","Veterans Day free meals and deals","Verified Veterans Day 2026 offers from restaurants and stores."),
+ "tv-streaming/hallmark-christmas-movies-2026-schedule/":("holidays-observances","2026-10-30","Hallmark Christmas movies 2026 schedule","All 34 new Countdown to Christmas premieres, Fri, Sat and Sun at 8/7c through Dec 20."),
  "pop-culture/halloween-costumes-2026/":("holidays-observances","2026-10-31","Halloween costumes 2026","The costumes everyone is searching for this year."),
  "politics/early-voting-2026/":("holidays-observances","2026-11-03","Election Day and early voting 2026","How early voting works before Election Day on Nov 3."),
  "money/social-security-2027/":("money-benefits","2027-01-01","Social Security COLA 2027","The 3.6% COLA, new benefit amounts and January payment dates."),
@@ -43,8 +44,10 @@ _MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 def _fd(iso):
     if not iso: return "Ongoing"
     d=_dt.date.fromisoformat(iso); return f"{d.strftime('%a')} {_MON[d.month-1]} {d.day}, {d.year}"
+# Cross-listed guides: path -> extra hubs
+HUBALSO={"tv-streaming/hallmark-christmas-movies-2026-schedule/":["games-movies-music","thanksgiving-black-friday"]}
 def hub_items(s): 
-    it=[(p,v) for p,v in HUBMAP.items() if v[0]==s]
+    it=[(p,v) for p,v in HUBMAP.items() if v[0]==s or s in HUBALSO.get(p,[])]
     return sorted(it,key=lambda x:(x[1][1] is None,x[1][1] or ""))
 def hub_list(items,r):
     return '<ul class="hubl">'+"".join(f'<li><span class="hd">{_fd(v[1])}</span> <a href="{r}{p}">{esc(v[2])}</a><br><span class="h1l">{esc(v[3])}</span></li>' for p,v in items)+'</ul>'
