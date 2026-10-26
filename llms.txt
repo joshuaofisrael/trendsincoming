@@ -209,6 +209,7 @@
 - [/copyright/](https://trendsincoming.com/copyright/)
 - [/corrections/](https://trendsincoming.com/corrections/)
 - [/advertising-disclosure/](https://trendsincoming.com/advertising-disclosure/)
+- [/trend-data/](https://trendsincoming.com/trend-data/)
 - [/contact/](https://trendsincoming.com/contact/)
 - [/hubs/thanksgiving-black-friday/](https://trendsincoming.com/hubs/thanksgiving-black-friday/)
 - [/hubs/holidays-observances/](https://trendsincoming.com/hubs/holidays-observances/)
