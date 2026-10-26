@@ -344,7 +344,8 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
         lds.append({"@context":"https://schema.org","@type":"Organization","@id":B+"/#org","name":"Trends Incoming","url":B+"/","logo":{"@type":"ImageObject","url":B+"/og/logo.png","width":512,"height":512},"image":B+"/og/default.png","description":TAG,"address":ADDR,"contactPoint":{"@type":"ContactPoint","email":EMAIL,"contactType":"customer support","url":B+"/contact/"},"publishingPrinciples":B+"/about/#editorial-policy","correctionsPolicy":B+"/about/#corrections"})
         lds.append({"@context":"https://schema.org","@type":"WebSite","@id":B+"/#website","name":"Trends Incoming","description":TAG,"url":B+"/","inLanguage":"en-US","publisher":{"@id":B+"/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":B+"/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}})
     if ld: lds+=ld if isinstance(ld,list) else [ld]
-    evfix(lds)
+    lds=[x for x in evprune(lds) if not _notev(x)]
+    evfix(lds); evpage(lds,url,ogimg(k,cat,home))
     lds,body=hub_wrap(k,"../"*path.count("/"),lds,body)
     if home: body=body.replace('</section>','</section>'+home_hubs(),1)
     for x in lds:
@@ -378,7 +379,23 @@ def card(t,r):
     return f'<div class="card" data-id="{tid(t)}" data-added="{UPDISO}"{cd}><span class="pill">{esc(when)}</span><a class="cat" href="{r}{c}/">{e} {n}</a><h3>{esc(ti)}</h3><p>{esc(take)}</p><div class="links">{L}</div></div>'
 def srclist(s): return '<h2>Sources</h2><ul class="src">'+"".join(f'<li><a href="{u}" rel="noopener" target="_blank">{esc(t)}</a></li>' for t,u in s)+f'</ul><p class="by">{BY} · Fact-checked {UPD}. Dates change, so double-check with the official source.</p>'
 exec(open('hubs.py').read())
-EVT=("Event","SportsEvent","MusicEvent","Festival")
+EVT=("Event","SportsEvent","MusicEvent","Festival","BroadcastEvent")
+NOTEVENT=("COLA notice paperless deadline","Social Security and SSI payment","Spotify Wrapped 2026 release","Veterans Day 2026")
+def evprune(o):
+    if isinstance(o,list): return [evprune(v) for v in o if not _notev(v)]
+    if isinstance(o,dict): return {k:evprune(v) for k,v in o.items() if not _notev(v)}
+    return o
+def _notev(v): return isinstance(v,dict) and v.get("@type") in EVT and str(v.get("name","")).startswith(NOTEVENT)
+def evpage(o,url,img):
+    if isinstance(o,list): [evpage(v,url,img) for v in o]; return
+    if not isinstance(o,dict): return
+    for v in list(o.values()): evpage(v,url,img)
+    if o.get("@type") not in EVT: return
+    o.setdefault("url",url); o.setdefault("image",[img])
+    if o["@type"]=="BroadcastEvent":
+        o.setdefault("eventStatus","https://schema.org/EventScheduled")
+        o.setdefault("eventAttendanceMode","https://schema.org/OnlineEventAttendanceMode")
+        o.setdefault("organizer",{"@type":"Organization","name":"Hallmark Channel","url":"https://www.hallmarkchannel.com/"})
 ORGURL={"AEG Presents":"https://www.aegpresents.com/","Frontier Touring":"https://www.frontiertouring.com/"}
 def evfix(o):
     if isinstance(o,list): [evfix(v) for v in o]; return
@@ -486,6 +503,7 @@ exec(open('extras_tg_tga_1025.py').read())
 exec(open('extras_daily_1025.py').read())
 exec(open('extras_daily_1026.py').read())
 exec(open('extras_hallmark_1026.py').read())
+exec(open('extras_hanukkah_1026.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]

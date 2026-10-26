@@ -15,6 +15,7 @@ HUBMAP={
  "pop-culture/macys-thanksgiving-day-parade-2026/":("thanksgiving-black-friday","2026-11-26","Macy's Thanksgiving Day Parade 2026","Start time, route and how to watch the parade."),
  "shopping/veterans-day-free-meals-deals-2026/":("holidays-observances","2026-11-11","Veterans Day free meals and deals","Verified Veterans Day 2026 offers from restaurants and stores."),
  "tv-streaming/hallmark-christmas-movies-2026-schedule/":("holidays-observances","2026-10-30","Hallmark Christmas movies 2026 schedule","All 34 new Countdown to Christmas premieres, Fri, Sat and Sun at 8/7c through Dec 20."),
+ "pop-culture/when-is-hanukkah-2026/":("holidays-observances","2026-12-04","When is Hanukkah 2026","Starts at sundown Fri Dec 4, ends Sat Dec 12, with a night-by-night candle chart."),
  "pop-culture/halloween-costumes-2026/":("holidays-observances","2026-10-31","Halloween costumes 2026","The costumes everyone is searching for this year."),
  "politics/early-voting-2026/":("holidays-observances","2026-11-03","Election Day and early voting 2026","How early voting works before Election Day on Nov 3."),
  "money/social-security-2027/":("money-benefits","2027-01-01","Social Security COLA 2027","The 3.6% COLA, new benefit amounts and January payment dates."),
