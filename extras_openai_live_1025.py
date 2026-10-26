@@ -38,3 +38,15 @@ _d["facts"].insert(1,("Brotli flaw (Oct 25, 2026)","Tracked as CVE-2026-111497, 
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE4+_p[8].replace(_QH4,_QH5)); break
+# --- 2026-10-26 00:20 London live update: JFrog Security Research (Oct 25) on Brotli CVE-2026-111497 scope and fixed versions. Verified against the fetched post. ---
+_JFR25="https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/"
+_OAS.append(("JFrog Security Research: Brotli2Shell, Beyond Node(2Shell) and HTTP(2Shell) (Oct 25)",_JFR25))
+_LIVE5=f'''<div class="live"><p><b>Live update, Monday, October 26, 2026, 12:20 a.m. London time (Sunday, October 25, 8:20 p.m. ET):</b> Security researchers at JFrog published a deeper look at the Brotli flaw (CVE-2026-111497) on October 25. They say the bug sits in Brotli's decoder itself, so "the vulnerability belongs to the decoder, not to Node.js or HTTP itself," and any app that ships an affected copy may inherit it. JFrog says the fix is in Brotli 1.2.1 and in Node.js 22.23.4, 24.22.1 and 26.12.1, and that it reproduced crashes in its own tests of ClickHouse, FFmpeg (through JPEG XL images), .NET and Apache Arrow. According to JFrog, Microsoft announced on October 25 that .NET updates are rolling out, while a ClickHouse fix had been merged but not yet released when the post was written. If you build or run software that decompresses Brotli data, check that your version includes the fix. Source: <a href="{_JFR25}" rel="noopener" target="_blank">JFrog Security Research</a>.</p></div>'''
+_QS.insert(0,("JFrog Security Research, Oct 25, 2026",_JFR25,"the vulnerability belongs to the decoder, not to Node.js or HTTP itself"))
+_QH6='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE5+_d["body"].replace(_QH5,_QH6)
+_d["facts"].insert(1,("Brotli fix versions (Oct 25, 2026)","Fixed in Brotli 1.2.1 and Node.js 22.23.4, 24.22.1 and 26.12.1; JFrog says the flaw is in the decoder and can reach apps beyond Node.js"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE5+_p[8].replace(_QH5,_QH6)); break

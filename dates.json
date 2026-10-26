@@ -120,8 +120,8 @@
 "pub": "2026-10-21"
 },
 "blog/openai-security-breach-explained/": {
-"h": "06f2b239b41de7dd",
-"mod": "2026-10-25",
+"h": "b4610c026627f837",
+"mod": "2026-10-26",
 "pub": "2026-10-21"
 },
 "blog/php2shell-explained/": {
@@ -395,8 +395,8 @@
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "968f4856ec96cb94",
-"mod": "2026-10-25",
+"h": "7657bab7e5e1fdf8",
+"mod": "2026-10-26",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -925,8 +925,8 @@
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
-"h": "0d4e9551e742bdb8",
-"mod": "2026-10-25",
+"h": "3d2d614db7426d13",
+"mod": "2026-10-26",
 "pub": "2026-10-21"
 },
 "tech-ai/php2shell-vulnerability/": {
