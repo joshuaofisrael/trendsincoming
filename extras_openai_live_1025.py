@@ -62,3 +62,15 @@ _d["facts"].insert(1,("Patches and exploitation (Oct 26, 2026)","Microsoft patch
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE6+_p[8].replace(_QH6,_QH7)); break
+# --- 2026-10-26 20:15 London live update: The Register (Oct 26) on Microsoft's out-of-band .NET fix, Microsoft CVSS 8.1, OpenAI advisory. Verified against the fetched article. ---
+_REG26="https://www.theregister.com/security/2026/10/26/microsoft-releases-emergency-net-security-fixes-for-google-brotli-bug/5305515"
+_OAS.append(("The Register: Microsoft releases emergency .NET security fixes for Google Brotli bug (Oct 26)",_REG26))
+_LIVE7=f'''<div class="live"><p><b>Live update, Monday, October 26, 2026, 8:15 p.m. London time (4:15 p.m. ET):</b> The Register reported on October 26 that Microsoft released an out-of-band security update for .NET 8, 9, 10 and 11 to fix the Brotli flaw (CVE-2026-111497) and is urging .NET users to update "as soon as possible." According to the outlet, Microsoft's advisory rates the bug 8.1 under CVSS v3.1 and labels it "Exploitation More Likely," while also saying there is nothing to suggest criminals are using it in successful attacks. The Register also reports that OpenAI, in an advisory, recommended blocking untrusted Brotli-compressed data where practical until patches can be applied, and rebuilding affected deployments and restarting services so the fixes take effect. Source: <a href="{_REG26}" rel="noopener" target="_blank">The Register</a>.</p></div>'''
+_QS.insert(0,("The Register, Oct 26, 2026",_REG26,"Exploitation More Likely."))
+_QH8='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE7+_d["body"].replace(_QH7,_QH8)
+_d["facts"].insert(1,("Microsoft .NET fix (Oct 26, 2026)","Out-of-band update for .NET 8, 9, 10 and 11; Microsoft rates the bug CVSS 8.1 and \"Exploitation More Likely\", with no sign of successful criminal attacks, per The Register"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE7+_p[8].replace(_QH7,_QH8)); break
