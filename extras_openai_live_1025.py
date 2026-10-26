@@ -50,3 +50,15 @@ _d["facts"].insert(1,("Brotli fix versions (Oct 25, 2026)","Fixed in Brotli 1.2.
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE5+_p[8].replace(_QH5,_QH6)); break
+# --- 2026-10-26 15:30 London live update: SecurityWeek (Oct 26) on Microsoft patches, Imperva code-execution test, affected versions. Verified against the fetched article. ---
+_SW26="https://www.securityweek.com/node2shell-brotli-flaw-triggers-patching-across-microsoft-node-js-python-packages/"
+_OAS.append(("SecurityWeek: Node2Shell: Brotli Flaw Triggers Patching Across Microsoft, Node.js, Python Packages (Oct 26)",_SW26))
+_LIVE6=f'''<div class="live"><p><b>Live update, Monday, October 26, 2026, 3:30 p.m. London time (11:30 a.m. ET):</b> SecurityWeek reported on October 26 that Microsoft released fixes on October 25 for .NET, Visual Studio and PowerShell to address the Brotli flaw (CVE-2026-111497, also called Node2Shell). The outlet says the bug affects Brotli 1.0.3 through 1.2.0, and that versions 1.0.10, 1.1.1 and 1.2.1 contain the fix. It reports that security firm Imperva showed code execution on the official Node.js 24.22.0 image for Linux arm64 in its own tests, though Imperva says "the proof did not succeed on every attempt" and has not made its exploit public. SecurityWeek says no exploitation in the wild has been reported so far, and that some researchers argue the bug can only be used to crash software. It also notes that patching means restarting affected services and rebuilding container images, since running processes keep using the old code. Source: <a href="{_SW26}" rel="noopener" target="_blank">SecurityWeek</a>.</p></div>'''
+_QS.insert(0,("SecurityWeek, Oct 26, 2026",_SW26,"No exploitation in the wild has been reported so far."))
+_QH7='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE6+_d["body"].replace(_QH6,_QH7)
+_d["facts"].insert(1,("Patches and exploitation (Oct 26, 2026)","Microsoft patched .NET, Visual Studio and PowerShell on Oct 25; affected Brotli 1.0.3 to 1.2.0, fixed in 1.0.10, 1.1.1 and 1.2.1; no exploitation in the wild reported, per SecurityWeek"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE6+_p[8].replace(_QH6,_QH7)); break
