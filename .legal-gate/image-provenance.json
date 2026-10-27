@@ -1,0 +1,343 @@
+{
+ "site": "trendsincoming.com",
+ "updated": "2026-10-27",
+ "rule": "RULE.md rule 3: every image used on a page needs status documented here",
+ "files": {
+  "og/business.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/cars.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/celebrities.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/default.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/education.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/fashion-beauty.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/finance.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/food.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/gaming.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/health.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/home.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/internet-culture.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/logo.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/memes-viral.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/money.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/movies.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/music.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/news.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/pets.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/politics.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/pop-culture.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/relationships.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/science.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/shopping.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/sports.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/tech-ai.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/travel.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/tv-streaming.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/weather.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "og/world.png": {
+   "status": "documented",
+   "origin": "original text-only card generated locally by make_cards.py (Pillow, default font); owned by Joshua Israel Ventures LLC",
+   "licence": "own work"
+  },
+  "assets/img/autumn-avenue-barricades.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/baseball-stadium-night.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/gaming-setup.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/holiday-mall-lights.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/home-hero.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/money-desk.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/movies-theater.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/music-turntable.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-autumn-avenue-barricades.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-baseball-stadium-night.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-gaming-setup.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-holiday-mall-lights.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-home-hero.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-money-desk.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-movies-theater.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-music-turntable.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-openai-security-padlock.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-politics-voting-booths.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-science-spacecraft.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-shutdown-capitol.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-tech-ai-servers.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-thanksgiving-table.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/og-travel-airport-sunrise.jpg": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/openai-security-padlock.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/politics-voting-booths.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/science-spacecraft.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/shutdown-capitol.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/tech-ai-servers.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/thanksgiving-table.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "assets/img/travel-airport-sunrise.webp": {
+   "status": "undocumented",
+   "origin": "added in commit 6b5d545 (23 Oct 2026) as 'hyper-realistic' photos; no generator, job ID, licence or permission record found on the box",
+   "licence": null,
+   "action": "not used on pages until a provenance record (generator + terms, or licence/permission) is added and status set to documented"
+  },
+  "https://i.ytimg.com/vi/gDJ-ini7fF0/hqdefault.jpg": {
+   "status": "documented",
+   "origin": "YouTube-hosted thumbnail of the official Netflix Narnia trailer (youtube.com/watch?v=gDJ-ini7fF0), referenced only as VideoObject thumbnailUrl for the video embedded with YouTube's own player; not copied or hosted by us",
+   "cleared": "ChatGPT review SAFE 27 Oct 2026, logged in moderate-clearances.jsonl"
+  }
+ },
+ "prefixes": {}
+}

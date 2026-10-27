@@ -1,0 +1,18 @@
+#!/bin/sh
+# Trends Incoming legal-hold gate: block any push to main whose site output publishes held content.
+# Install: cp tools/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+z=0000000000000000000000000000000000000000
+fail=0
+while read lref lsha rref rsha; do
+  [ "$lsha" = "$z" ] && continue
+  case "$rref" in refs/heads/main) ;; *) continue ;; esac
+  tmp=$(mktemp -d /tmp/legal-gate-push.XXXXXX)
+  git archive "$lsha" | tar -x -C "$tmp" || { echo "legal gate: git archive failed"; rm -rf "$tmp"; exit 1; }
+  python3 "$tmp/legal_gate.py" check --root "$tmp" || fail=1
+  rm -rf "$tmp"
+done
+if [ "$fail" -ne 0 ]; then
+  echo "PUSH BLOCKED by the legal-hold gate (see /workspace/content-review/RULE.md). Fix or hold the content, rebuild, commit, then push."
+  exit 1
+fi
+exit 0

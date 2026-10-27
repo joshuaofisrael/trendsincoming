@@ -1,6 +1,6 @@
 {
 "": {
-"h": "96d1913012922692",
+"h": "cae368a9ca757b2c",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
@@ -15,7 +15,7 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "754adf29a16b9585",
+"h": "9d90dd71514ae2de",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
@@ -65,14 +65,9 @@
 "pub": "2026-10-19"
 },
 "blog/election-results-serbia-brazil-2026/": {
-"h": "83f8de6cededcde6",
+"h": "3b438a2de16308b1",
 "mod": "2026-10-27",
 "pub": "2026-10-26"
-},
-"blog/election-sunday-serbia-brazil-2026/": {
-"h": "63583ae9156e2c7f",
-"mod": "2026-10-26",
-"pub": "2026-10-25"
 },
 "blog/expectations-remix-olivia-rodrigo-chappell-roan/": {
 "h": "d493d507f62dc7af",
@@ -84,13 +79,8 @@
 "mod": "2026-10-26",
 "pub": "2026-10-24"
 },
-"blog/france-protests-october-17-2026/": {
-"h": "f911819318f0263b",
-"mod": "2026-10-19",
-"pub": "2026-10-18"
-},
 "blog/government-funding-deadline-oct-31/": {
-"h": "12a14aa674773191",
+"h": "f1a3a1f55bcd1cb1",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
@@ -120,8 +110,8 @@
 "pub": "2026-10-15"
 },
 "blog/midterms-2026-explained/": {
-"h": "f5da9792847129d7",
-"mod": "2026-10-20",
+"h": "c8e602eee4d06c01",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "blog/mlb-nlcs-dodgers-brewers-explained/": {
@@ -136,7 +126,7 @@
 },
 "blog/narnia-magicians-nephew-explained/": {
 "h": "0ce7058c7d96fdee",
-"mod": "2026-10-14",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "blog/nba-opening-night-2026-explained/": {
@@ -196,7 +186,7 @@
 },
 "blog/why-gas-prices-are-up-oil-110-explained/": {
 "h": "0d55315554c6d941",
-"mod": "2026-10-24",
+"mod": "2026-10-27",
 "pub": "2026-10-17"
 },
 "blog/wnba-finals-game-5-2026-tied-2-2/": {
@@ -225,8 +215,8 @@
 "pub": "2026-10-25"
 },
 "blog/you-can-see-everything-explained/": {
-"h": "0c8729a2641fd8ad",
-"mod": "2026-10-20",
+"h": "d8f33dea18b8c60d",
+"mod": "2026-10-27",
 "pub": "2026-10-16"
 },
 "blog/zelda-switch-2-explained/": {
@@ -435,12 +425,12 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "90313bc2c74e9371",
+"h": "cb21ad9852c61c9d",
 "mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "b12a957f31150074",
+"h": "aa7c2bbd07983e96",
 "mod": "2026-10-27",
 "pub": "2026-10-25"
 },
@@ -450,7 +440,7 @@
 "pub": "2026-10-25"
 },
 "hubs/holidays-observances/": {
-"h": "0cbefb134b40f23b",
+"h": "fb8e3df1c9963eda",
 "mod": "2026-10-27",
 "pub": "2026-10-25"
 },
@@ -571,7 +561,7 @@
 },
 "money/retirement/": {
 "h": "4a4088a604b7747b",
-"mod": "2026-10-24",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "money/social-security-2027/": {
@@ -586,7 +576,7 @@
 },
 "movies/box-office/": {
 "h": "ec4805168a7846cc",
-"mod": "2026-10-26",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "movies/clayface-2026/": {
@@ -616,12 +606,12 @@
 },
 "movies/trailers-and-releases/": {
 "h": "f1ca04ad6222b327",
-"mod": "2026-10-26",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "movies/you-can-see-everything/": {
 "h": "fe56f03bdf515e36",
-"mod": "2026-10-26",
+"mod": "2026-10-27",
 "pub": "2026-10-16"
 },
 "music/": {
@@ -771,7 +761,7 @@
 },
 "news/": {
 "h": "a7a3d8eb90d941ca",
-"mod": "2026-10-20",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "pets/": {
@@ -780,23 +770,18 @@
 "pub": "2026-10-14"
 },
 "pets/cats/": {
-"h": "2949812a873542b9",
-"mod": "2026-10-24",
-"pub": "2026-10-14"
-},
-"politics/": {
-"h": "35278e622aedce98",
+"h": "719007509575981e",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
-"politics/alaska-senate-certification-lawsuit/": {
-"h": "ba35637dd6cc2571",
-"mod": "2026-10-24",
-"pub": "2026-10-24"
+"politics/": {
+"h": "2198fd50578435e6",
+"mod": "2026-10-27",
+"pub": "2026-10-14"
 },
 "politics/congress/": {
 "h": "79bb259f1e405f85",
-"mod": "2026-10-20",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "politics/early-voting-2026/": {
@@ -805,18 +790,18 @@
 "pub": "2026-10-20"
 },
 "politics/elections-2026/": {
-"h": "f3194584e8884883",
+"h": "cbea5fde42453d9c",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "7674e9ad8b9d7f05",
+"h": "962b13342a685997",
 "mod": "2026-10-27",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
 "h": "0f6263baf45c187e",
-"mod": "2026-10-19",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "pop-culture/": {
@@ -995,7 +980,7 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "86b46a9d41d37ff0",
+"h": "9d8b14da5e395208",
 "mod": "2026-10-27",
 "pub": "2026-10-15"
 },
@@ -1085,13 +1070,13 @@
 "pub": "2026-10-16"
 },
 "world/": {
-"h": "7515f37173e9c7f0",
+"h": "4f7a3d5f495af070",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "world/brazil-runoff-2026/": {
-"h": "33799ae628ce9243",
-"mod": "2026-10-26",
+"h": "d58628cdd16ef7f1",
+"mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "world/ebola-outbreak-2026/": {
@@ -1099,24 +1084,14 @@
 "mod": "2026-10-21",
 "pub": "2026-10-19"
 },
-"world/france-protests-2026/": {
-"h": "66dcef0685b3a540",
-"mod": "2026-10-25",
-"pub": "2026-10-18"
-},
-"world/israel-election-2026/": {
-"h": "c4fc8af753636884",
-"mod": "2026-10-27",
-"pub": "2026-10-26"
-},
 "world/jordan-karak-church-attack-2026/": {
-"h": "f1fff15673be15b9",
-"mod": "2026-10-25",
+"h": "ddd4bbfedbfe210a",
+"mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "world/middle-east/": {
-"h": "12bec9a69f377977",
-"mod": "2026-10-26",
+"h": "03c18ca3f089954e",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 },
 "world/nairobi-building-collapse-2026/": {
@@ -1124,19 +1099,14 @@
 "mod": "2026-10-24",
 "pub": "2026-10-24"
 },
-"world/serbia-election-2026/": {
-"h": "d99615e99ab88bcb",
-"mod": "2026-10-26",
-"pub": "2026-10-25"
-},
 "world/tibet-earthquake-2026/": {
 "h": "4110ff62167538ec",
 "mod": "2026-10-23",
 "pub": "2026-10-23"
 },
 "world/ukraine-russia/": {
-"h": "1d57b3373ea94d79",
-"mod": "2026-10-23",
+"h": "315146abfa8fb224",
+"mod": "2026-10-27",
 "pub": "2026-10-14"
 }
 }

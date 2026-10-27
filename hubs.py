@@ -78,6 +78,7 @@ def home_hubs(r=""):
       f'</div><h2>🗓️ Next 30 days</h2>'+hub_list(cu,r)+f'<p><a href="{r}hubs/coming-up/">Full Coming Up calendar</a></p></section>')
 def render_hubs():
     allp=set(DATES)
+    for _h in [h for h in HUBMAP if h in HELD]: del HUBMAP[_h]  # legal gate: held items leave every hub list
     for p in HUBMAP:
         if not os.path.exists(p+"index.html"): raise SystemExit(f"HUB ERROR: {p} filed in HUBMAP but not built")
     def ild(name,url,items):
@@ -102,7 +103,7 @@ def render_hubs():
     page("hubs/index.html","Topic hubs | Trends Incoming","Browse Trends Incoming guides by hub: Thanksgiving, holidays, money, games and entertainment, and sports.",body,article=False,rel=False)
     # enforcement: new guides must be filed under a hub
     skip=("blog/","hubs/","contact/","search/")
-    miss=[k for k,e in DATES.items() if e.get("pub","")>=HUB_CUTOFF and k.count("/")>=2 and not k.startswith(skip) and k not in HUBMAP and not any(k.startswith(h) and k!=h for h in HUBMAP)]
+    miss=[k for k,e in DATES.items() if e.get("pub","")>=HUB_CUTOFF and k.count("/")>=2 and not k.startswith(skip) and k not in HUBMAP and k not in HELD and not any(k.startswith(h) and k!=h for h in HUBMAP)]
     if miss: raise SystemExit("HUB ERROR: guides with no hub (add to HUBMAP in hubs.py): "+", ".join(miss))
 
 HUBCSS='.hubbar{max-width:1100px;margin:auto;display:flex;gap:8px;padding:0 14px 8px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.hubbar a{font-weight:800;font-size:.8rem;color:var(--ink);text-decoration:none;background:var(--lime);border:2px solid var(--ink);border-radius:8px;padding:2px 9px;flex:0 0 auto}\n.crumbs{font-size:.85rem;margin:0 0 10px}.hubl{list-style:none;padding:0}.hubl li{border-bottom:1px dashed #999;padding:8px 0}.hd{display:inline-block;min-width:150px;font-weight:800}.h1l{font-size:.88rem;color:#444}.hubrel{border-top:3px solid var(--ink);margin-top:28px;padding-top:6px}\n.hubgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.hubc{display:flex;flex-direction:column;gap:4px;border:3px solid var(--ink);border-radius:12px;padding:12px;background:#fff;color:var(--ink);text-decoration:none}.hubc span{font-size:.85rem}.hubc i{font-size:.8rem;font-weight:700}\n'

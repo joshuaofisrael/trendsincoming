@@ -1,0 +1,32 @@
+{
+"blog/election-sunday-serbia-brazil-2026/": {
+"h": "63583ae9156e2c7f",
+"mod": "2026-10-26",
+"pub": "2026-10-25"
+},
+"blog/france-protests-october-17-2026/": {
+"h": "f911819318f0263b",
+"mod": "2026-10-19",
+"pub": "2026-10-18"
+},
+"politics/alaska-senate-certification-lawsuit/": {
+"h": "ba35637dd6cc2571",
+"mod": "2026-10-24",
+"pub": "2026-10-24"
+},
+"world/france-protests-2026/": {
+"h": "66dcef0685b3a540",
+"mod": "2026-10-25",
+"pub": "2026-10-18"
+},
+"world/israel-election-2026/": {
+"h": "c4fc8af753636884",
+"mod": "2026-10-27",
+"pub": "2026-10-26"
+},
+"world/serbia-election-2026/": {
+"h": "d99615e99ab88bcb",
+"mod": "2026-10-26",
+"pub": "2026-10-25"
+}
+}

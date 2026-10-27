@@ -2,6 +2,28 @@
 import json,os,re,html,hashlib
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"posts.py")).read())
 from urllib.parse import quote
+# ---- legal-hold gate (RULE.md, 27 Oct 2026): every card, post and page is scanned before it is written
+import sys as _sys
+_sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+import legal_gate as LG
+GATE=LG.Gate()
+_SEED=set(json.loads(os.environ["LG_SEED"])) if os.environ.get("LG_SEED") else set(LG.seed_held())
+HELD=set(_SEED)
+def _seg_rx(k):
+    seg=re.escape(k.rstrip("/").split("/")[-1])
+    return r'href="(?:[^"]*/)?'+seg+r'/(?:index\.html)?(?:#[^"]*)?"'
+def unlink_held(b):
+    """Drop paragraphs, list items and links that point at held (unpublished) pages."""
+    for k in HELD:
+        if not k or k.startswith("trend-card/"): continue
+        hr=_seg_rx(k)
+        if not re.search(hr,b): continue
+        b=re.sub(r'(?s)<(p|li)\b[^>]*>(?:(?!</\1>).)*?'+hr+r'(?:(?!</\1>).)*?</\1>',"",b)
+        b=re.sub(r'(?s)<a\b[^>]*'+hr+r'[^>]*>.*?</a>',"",b)
+    return b
+def _rm_held(k):
+    p=(k or "")+"index.html"
+    if os.path.exists(p): os.remove(p)
 B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-27"; ASOF="27 Oct 2026, 09:00 GMT (05:00 ET)"
 BEACON="""<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "28844648818e40b580364b41bd8894eb"}'></script>"""
 KEY="2d25fe1d50014ed98b5fff9381edba6a"
@@ -27,6 +49,7 @@ ADHEAD=GAHEAD+CONSENT+ADS
 import datetime
 TODAY=datetime.date.today().isoformat()
 DATES=json.load(open("dates.json")) if os.path.exists("dates.json") else {}
+if os.path.exists(".legal-gate/held-dates.json"): DATES.update({k:v for k,v in json.load(open(".legal-gate/held-dates.json")).items() if k not in DATES})  # dates of held pages, kept outside the public dates.json
 SEARCH=[]
 ADDR={"@type":"PostalAddress","streetAddress":"5640 W Maple Rd, Ste 101","addressLocality":"West Bloomfield","addressRegion":"MI","postalCode":"48322","addressCountry":"US"}
 ADDRTXT="5640 W Maple Rd, Ste 101, West Bloomfield, MI 48322"
@@ -201,7 +224,7 @@ if(done){res.textContent="You already played today ("+(done==="1"?"you got it �
 })();"""
 # SUBTOPICS: one line each -> (hub, slug, title, explainer, match keywords, [(source label,url)])
 SUBS=[
-("politics","elections-2026","Elections 2026","Election Day is Tuesday, Nov 3. All 435 House seats, 35 Senate seats and 36 governorships are on the ballot Nov 3, 2026. We link the polls and forecasts from across the spectrum and don't endorse anyone.",["Midterm"],[("Call the Map","https://www.callthemap.com/state-of-the-race"),("Poliwave","https://www.poliwave.com/us/oh/sen-fed")]),
+("politics","elections-2026","Elections 2026","Election Day is Tuesday, Nov 3. All 435 House seats, 35 Senate seats and 36 governorships are on the ballot Nov 3, 2026. We link the polls and forecasts from across the spectrum and don't endorse anyone.",["Midterm"],[("Call the Map","https://www.callthemap.com/state-of-the-race"),("Poliwave","https://www.poliwave.com/us/oh/sen-fed"),("USA.gov: when to vote, election dates by state","https://www.usa.gov/when-to-vote"),("California Secretary of State: November 3, 2026 general election dates","https://www.sos.ca.gov/elections/voting-resources/voting-california/election-dates-and-resources")]),
 ("politics","congress","Congress","Government funding runs through Dec 11, 2026, so the next shutdown deadline lands in the lame-duck session. What's on the must-pass list, sourced and neutral.",["Congress","funding","Lame-duck"],[("POLITICO Congress","https://www.politico.com/live-updates/2026/10/13/congress"),("Congress.gov: H.R. 6500","https://www.congress.gov/bill/119th-congress/house-bill/6500")]),
 ("politics","supreme-court","Supreme Court","The October 2026 term, case by case. Arguments, then decisions by July.",["SCOTUS"],[("SCOTUSblog","https://www.scotusblog.com/cases/term/ot2026/"),("SupremeCourt.gov","https://www.supremecourt.gov/")]),
 ("world","middle-east","Middle East","Yemen, Saudi Arabia, Iran and the shipping lanes everyone depends on.",["Houthi","Hormuz"],[("AP","https://apnews.com/article/saudi-arabia-yemen-houthis-october-13-2026-3e6e5f152048c035081eac369f62ed4f")]),
@@ -311,12 +334,14 @@ def photo_for(k,cat,home=False):
     if n is None and "thanksgiving" in k: n="thanksgiving-table"
     if n is None and ("holiday-store" in k or "black-friday" in k): n="holiday-mall-lights"
     if n is None and "parade" in k: n="autumn-avenue-barricades"
+    if n and not LG.image_ok(f"assets/img/{n}.webp",LG.load_provenance()): n=None  # rule 3: no licence/provenance record
     return (n,PHOTO[n]) if n else None
 def ogimg(k,cat,home=False):
     p=photo_for(k,cat,home)
     return B+f"/assets/img/og-{p[0]}.jpg" if p else B+f"/og/{cat if cat in CN else 'default'}.png"
 TILES=[("politics","politics-voting-booths","Politics"),("tech-ai","tech-ai-servers","Tech & AI"),("sports","baseball-stadium-night","Sports"),("gaming","gaming-setup","Gaming"),("music","music-turntable","Music"),("movies","movies-theater","Movies"),("science","science-spacecraft","Science"),("money","money-desk","Money"),("food","thanksgiving-table","Food"),("travel","travel-airport-sunrise","Travel")]
 def tiles_html():
+    if not all(LG.image_ok(f"assets/img/{n}.webp",LG.load_provenance()) for c,n,t in TILES): return ""
     return '<h2>📸 Explore by topic</h2><div class="tiles">'+"".join(f'<a class="tile" href="{c}/"><img src="assets/img/{n}.webp" width="1200" height="675" alt="{esc(PHOTO[n])}" loading="lazy" decoding="async"><span>{t}</span></a>' for c,n,t in TILES)+'</div>'
 def inject_photo(body,k,cat,home,rr):
     p=photo_for(k,cat,home)
@@ -343,9 +368,21 @@ def _mdesc(d,n=158):
     if len(d)<=n: return d
     c=d[:n].rsplit(" ",1)[0].rstrip(" ,;:.-")
     return c+"\u2026"
+def _gate_T():
+    """Gate every trend card (cards added by extras included) before any page renders them."""
+    global T
+    T[:]=[(t[:6]+(None,)+t[7:]) if (len(t)>6 and t[6] in HELD) else t for t in T]  # cards keep their text but stop pointing at held pages
+    T[:]=[t for t in T if (("trend-card/"+tid(t)+"/") in GATE.results and not GATE.results["trend-card/"+tid(t)+"/"]["status"].startswith("hold")) or GATE.check("trend-card/"+tid(t)+"/",t[1],t[2],"",None,[u for l,u in t[4]],kind="trend-card")]
 def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True):
+    _gate_T()
     url=B+"/"+path.replace("index.html","")
     k=path.replace("index.html","")
+    body=unlink_held(body)
+    if not GATE.check(k,title,desc,body,ld,kind="page"):
+        HELD.add(k); _rm_held(k)
+        if k in ("","blog/","news/") or k in LG.POLICY_PAGES or (k.count("/")==1 and k[:-1] in CN):
+            raise SystemExit(f"LEGAL GATE: essential page {k or '/'} is held ({GATE.results[k]['status']}); fix the content, build stopped")
+        return
     hsh=hashlib.sha1(_norm(title+desc+body).encode()).hexdigest()[:16]
     e=DATES.get(k)
     if not e: e=DATES[k]={"pub":TODAY,"mod":TODAY,"h":hsh}
@@ -381,6 +418,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
 <main>{pnote(k)}<p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer>
 <p class="fnote">For information and entertainment only, not financial, tax, legal, medical or other professional advice. Predictions are not guarantees. We may show ads and may earn commissions from affiliate links, which never influence our reporting. See our <a href="{r}terms/">Terms</a> and <a href="{r}advertising-disclosure/">disclosure</a>.</p>
 <a href="{r}about/">About</a><a href="{r}trend-data/">Trend Data</a><a href="{r}contact/">Contact</a><a href="{r}about/#editorial-policy">Editorial policy</a><a href="{r}corrections/">Corrections</a><a href="{r}search/">Search</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}copyright/">Copyright &amp; DMCA</a><a href="{r}advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a><a href="#cookies" data-consent-open>Cookie settings</a></footer><script src="{r}app.js" defer></script>{BEACON}</body></html>"""
+    h=unlink_held(h)  # legal gate: also drop template cards, hub lists and related links that point at held items
     os.makedirs(os.path.dirname(path) or ".",exist_ok=True); open(path,"w").write(h); PAGES.append(url)
     SEARCH.append({"u":"/"+k,"t":title,"d":desc,"c":CN[cat][0] if cat in CN else ""})
 EXT='rel="nofollow noopener" target="_blank"'
@@ -393,6 +431,7 @@ def card(t,r):
     return f'<div class="card" data-id="{tid(t)}" data-added="{UPDISO}"{cd}><span class="pill">{esc(when)}</span><a class="cat" href="{r}{c}/">{e} {n}</a><h3>{esc(ti)}</h3><p>{esc(take)}</p><div class="links">{L}</div></div>'
 def srclist(s): return '<h2>Sources</h2><ul class="src">'+"".join(f'<li><a href="{u}" rel="noopener" target="_blank">{esc(t)}</a></li>' for t,u in s)+f'</ul><p class="by">{BY} · Fact-checked {UPD}. Dates change, so double-check with the official source.</p>'
 exec(open('hubs.py').read())
+for _h in [h for h in HUBMAP if h in HELD]: del HUBMAP[_h]
 EVT=("Event","SportsEvent","MusicEvent","Festival","BroadcastEvent")
 NOTEVENT=("COLA notice paperless deadline","Social Security and SSI payment","Spotify Wrapped 2026 release","Veterans Day 2026")
 def evprune(o):
@@ -520,6 +559,22 @@ exec(open('extras_hallmark_1026.py').read())
 exec(open('extras_hanukkah_1026.py').read())
 exec(open('extras_nye_1027.py').read())
 exec(open('extras_daily_1027.py').read())
+# ---- legal gate: trend cards, subtopic pages and blog posts (held items leave T/SUBS/POSTS, so they drop out of cards, nav, blog index, feed, search and llms.txt)
+_gate_T()
+_keep=[]
+for _sb in SUBS:
+    _k=f"{_sb[0]}/{_sb[1]}/"
+    _b=unlink_held(f"<h1>{esc(_sb[2])}</h1><p>{esc(_sb[3])}</p>"+SUBX.get(_sb[1],"")+subdeep(_sb[1]))
+    if GATE.check(_k,STITLE.get(_sb[1],_sb[2]),SDESC.get(_sb[1],""),_b,None,[u for l,u in _sb[5]]+[u for _t in sub_items(_sb) for l,u in _t[4]],kind="subtopic"): _keep.append(_sb)
+    else: HELD.add(_k); _rm_held(_k)
+SUBS[:]=_keep
+_keep=[]
+for _p in POSTS:
+    _k=f"blog/{_p[0]}/"
+    _b=unlink_held(_p[8])+"".join(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>" for q,a in FAQ.get(_p[0],[]))
+    if GATE.check(_k,_p[1],_p[2],_b,None,[u for l,u in _p[7]],kind="post"): _keep.append(_p)
+    else: HELD.add(_k); _rm_held(_k)
+POSTS[:]=_keep
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
@@ -712,5 +767,18 @@ open("llms.txt","w").write(f"# Trends Incoming\n\n> {TAG}. Hand-picked US trends
 open(f"{KEY}.txt","w").write(KEY); open(".nojekyll","w").write("")
 open("404.html","w").write('<!doctype html><html lang="en"><head><meta charset="utf-8">'+ADHEAD+'<meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found | Trends Incoming</title><link rel="stylesheet" href="/style.css"></head><body><main><h1>404: this trend already passed 😅</h1><p><a href="/">Back to what\'s trending →</a></p></main><footer><a href="/about/">About</a><a href="/trend-data/">Trend Data</a><a href="/contact/">Contact</a><a href="/corrections/">Corrections</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/disclaimer/">Disclaimer</a><a href="/copyright/">Copyright &amp; DMCA</a><a href="/advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="#cookies" data-consent-open>Cookie settings</a></footer>'+BEACON+'</body></html>')
 open("ads.txt","w").write("google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n")
-json.dump(DATES,open("dates.json","w"),indent=0,sort_keys=True)
+_hk=[k for k in DATES if k in HELD]
+json.dump({k:v for k,v in DATES.items() if k not in _hk},open("dates.json","w"),indent=0,sort_keys=True)
+os.makedirs(".legal-gate",exist_ok=True); json.dump({k:DATES[k] for k in _hk},open(".legal-gate/held-dates.json","w"),indent=0,sort_keys=True)
+_now={k for k in GATE.held_keys if not k.startswith("trend-card/")}
+_pass=int(os.environ.get("LG_PASS","1"))
+if _now!=_SEED and _pass<5:
+    # held set changed: rebuild so every page drops links to exactly the held items (converges in a few passes)
+    GATE.write_manifest([u.replace(B+"/","") for u in PAGES])
+    print(f"legal gate pass {_pass}: held set changed, rebuilding"); _sys.stdout.flush()
+    os.environ["LG_PASS"]=str(_pass+1); os.environ["LG_SEED"]=json.dumps(sorted(_now))
+    os.execv(_sys.executable,[_sys.executable]+_sys.argv)
+GATE.flush()
+GATE.write_manifest([u.replace(B+"/","") for u in PAGES])
+print("legal gate:",GATE.summary(),"held:",sorted(GATE.held_keys))
 print(len(T),"trends",len(PAGES),"pages")
