@@ -1,4 +1,5 @@
 {
+ "approved_sentence_hashes": [],
  "held": {
   "blog/election-sunday-serbia-brazil-2026/": {
    "rules": [
@@ -286,19 +287,7 @@
   "world/tibet-earthquake-2026/",
   "world/ukraine-russia/"
  ],
- "released_items": {
-  "blog/you-can-see-everything-explained/": {
-   "sha256": "7df293d5fd3e25d7bf32b79ce4c5b27b3af36441aad8348cf4e6352038c45b18",
-   "status": "cleared"
-  },
-  "world/brazil-runoff-2026/": {
-   "sha256": "a017d96f75c8d73aab8f567a81c673924263bc9ef95fe4b221bf80b9700f6089",
-   "status": "cleared"
-  }
- },
- "released_sentence_hashes": [
-  "a2248f66dc17239681a1",
-  "b7b0ff0331cc2d1ac1e1"
- ],
+ "released_items": {},
+ "released_sentence_hashes": [],
  "site": "trendsincoming.com"
 }

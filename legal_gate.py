@@ -38,6 +38,9 @@ POLICY_PAGES = {"about/", "contact/", "contact/thanks/", "terms/", "privacy/", "
 STRUCTURAL = {"", "blog/", "news/", "trending-hashtags/"}
 
 HIGH, MOD = "HIGH", "MODERATE"
+# Rules that are HIGH by definition. A finding under one of these can never be released by a moderate
+# clearance or a ChatGPT SAFE, whatever severity label it carries; only an exact-sha approval does.
+HIGH_RULES = {1, 2, 6, 8}
 RULE_NAMES = {1: "damaging allegation", 2: "sensitive personal info", 3: "unclear content rights",
               4: "unsupported claim / no source", 5: "high-impact advice", 6: "election logistics without official source",
               7: "misleading presentation", 8: "legal complaint / restriction"}
@@ -230,8 +233,8 @@ def scan(title, desc, body, ld=None, sources=None, key="", kind="page"):
             if DISHONESTY.match(kw) and NONPERSON_SUBJ.search(pre): continue
             if kw.lower() in ("arrested", "arrests") and GENERIC_ARRESTS.search(s): continue
             if has_entity(s, m.span()):
-                sev = MOD if (R1_RECORD.match(kw) and srcs) else HIGH
-                f.append(finding(1, sev, s, f"'{kw}' near named entity {has_entity(s, m.span())[:3]}" + (" (court finding of record, sourced)" if sev == MOD else ""))); break
+                # rule 1 is always HIGH (court findings of record included): only Joshua's exact-sha approval releases it
+                f.append(finding(1, HIGH, s, f"'{kw}' near named entity {has_entity(s, m.span())[:3]}")); break
         # rule 2: personal data
         if not is_policy:
             for m in PHONE.finditer(s):
@@ -304,8 +307,18 @@ def approved(sha):
             return a
     return None
 
+def _revoked():
+    return {c.get("revokes_sha256") for c in _jsonl(CLEARANCES) if c.get("revokes_sha256")}
+
+def _rules_of(c):
+    r = c.get("rule", [])
+    return set(r if isinstance(r, list) else [r])
+
 def cleared(sha):
+    rv = _revoked()
     for c in _jsonl(CLEARANCES):
+        if c.get("revokes_sha256") or sha in rv: continue
+        if _rules_of(c) & HIGH_RULES: continue  # a clearance logged under a HIGH rule is never valid
         if c.get("sha256") == sha and c.get("site") == SITE and str(c.get("chatgpt_verdict", "")).upper().startswith("SAFE"):
             return c
     return None
@@ -315,7 +328,7 @@ def decide(findings, sha):
     if not findings: return "pass", None
     a = approved(sha)
     if a: return "approved", a
-    if any(x["severity"] == HIGH for x in findings): return "hold_high", None
+    if any(x["severity"] == HIGH or x["rule"] in HIGH_RULES for x in findings): return "hold_high", None
     c = cleared(sha)
     if c: return "cleared", c
     return "hold_moderate", None
@@ -391,6 +404,7 @@ class Gate:
         self.dry = dry or os.environ.get("LEGAL_GATE_DRY") == "1"
         self.results = {}      # key -> dict
         self.allow = set()     # sentence hashes released by approval/clearance of an item
+        self.approved_allow = set()  # HIGH-rule sentence hashes released only by an exact-sha approval
         self.held_keys = set()
         self._pending = {}
     def flush(self):
@@ -411,7 +425,10 @@ class Gate:
         if fs0 and not fs and prev and prev["status"] in ("approved", "cleared"):
             return True  # same item, already released by its approval/clearance in an earlier stage of this build
         if st in ("approved", "cleared"):
-            for x in fs: self.allow.add(x["sent_hash"])
+            for x in fs:
+                if x["rule"] in HIGH_RULES and st != "approved": continue  # never: a clearance cannot release a HIGH rule
+                self.allow.add(x["sent_hash"])
+                if st == "approved": self.approved_allow.add(x["sent_hash"])
         r = {"key": key, "kind": kind, "title": title, "sha256": sha, "status": st, "findings": fs,
              "released_by": (rec or {}).get("ts") if rec else None}
         if st.startswith("hold"):
@@ -433,7 +450,7 @@ class Gate:
         held = {k: {"status": r["status"], "rules": sorted({x["rule"] for x in r["findings"]}), "sha256": r["sha256"]}
                 for k, r in self.results.items() if r["status"].startswith("hold")}
         released = {k: {"status": r["status"], "sha256": r["sha256"]} for k, r in self.results.items() if r["status"] in ("approved", "cleared")}
-        json.dump({"site": SITE, "released_sentence_hashes": rel, "released_items": released, "held": held,
+        json.dump({"site": SITE, "released_sentence_hashes": rel, "approved_sentence_hashes": sorted(self.approved_allow), "released_items": released, "held": held,
                    "published_pages": sorted(published_keys)}, open(MANIFEST, "w"), indent=1, sort_keys=True)
 
 # ---------------------------------------------------------------- CI / pre-push check over the rendered site
@@ -444,6 +461,10 @@ def rendered_main(h):
     b = re.sub(r'(?s)<p class="pnote.*?</p>|<p class="stamp">.*?</p>', " ", b)
     b = re.sub(r'(?s)<div class="share.*', " ", b)  # share bar + related links are template, scanned at their own pages
     return b
+
+def man_high_ok(man, x):
+    """A HIGH-rule sentence on a rendered page is allowed only if some released item carrying it is an exact-sha approval."""
+    return x["sent_hash"] in set(man.get("approved_sentence_hashes", []))
 
 def check_site(root=REPO):
     mp = os.path.join(root, ".legal-gate", "manifest.json")
@@ -481,7 +502,7 @@ def check_site(root=REPO):
                 except Exception: pass
             fs = scan(html.unescape(t.group(1)) if t else "", "", body, ld, links_of(h), key, "rendered")
             # page-level rule 4/7 are decided at build time on the source item; CI enforces HIGH + rule 3 on output
-            fs = [x for x in fs if x["sent_hash"] not in allow and (x["severity"] == HIGH or x["rule"] == 3)]
+            fs = [x for x in fs if (x["sent_hash"] not in allow or x["rule"] in HIGH_RULES and not man_high_ok(man, x)) and (x["severity"] == HIGH or x["rule"] in HIGH_RULES or x["rule"] == 3)]
             if fs: bad.append(f"{key or '/'}: " + "; ".join(f"r{x['rule']} {x['why']} :: {x['snippet'][:100]}" for x in fs[:3]))
     if bad:
         print("LEGAL GATE CI FAIL (%d problems):" % len(bad)); [print("  -", b) for b in bad[:60]]; return 1
@@ -492,7 +513,7 @@ def review(draft_json, fix):
     """Run the independent ChatGPT review for a MODERATE item and log the result."""
     import subprocess
     meta = json.load(open(draft_json))
-    if meta.get("severity") != "MODERATE":
+    if meta.get("severity") != "MODERATE" or any(x.get("rule") in HIGH_RULES for x in meta.get("findings", [])):
         print("Refusing: HIGH items are only released by Joshua's approval."); return 2
     htmlp = draft_json[:-5] + ".html"
     rules = sorted({x["rule"] for x in meta["findings"]})
