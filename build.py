@@ -504,6 +504,7 @@ exec(open('extras_daily_1025.py').read())
 exec(open('extras_daily_1026.py').read())
 exec(open('extras_hallmark_1026.py').read())
 exec(open('extras_hanukkah_1026.py').read())
+exec(open('extras_nye_1027.py').read())
 # category hubs
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]

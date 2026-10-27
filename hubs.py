@@ -16,6 +16,10 @@ HUBMAP={
  "shopping/veterans-day-free-meals-deals-2026/":("holidays-observances","2026-11-11","Veterans Day free meals and deals","Verified Veterans Day 2026 offers from restaurants and stores."),
  "tv-streaming/hallmark-christmas-movies-2026-schedule/":("holidays-observances","2026-10-30","Hallmark Christmas movies 2026 schedule","All 34 new Countdown to Christmas premieres, Fri, Sat and Sun at 8/7c through Dec 20."),
  "pop-culture/when-is-hanukkah-2026/":("holidays-observances","2026-12-04","When is Hanukkah 2026","Starts at sundown Fri Dec 4, ends Sat Dec 12, with a night-by-night candle chart."),
+ "tv-streaming/new-years-rockin-eve-2027/":("holidays-observances","2026-12-31","New Year's Rockin' Eve 2027: how to watch","ABC and, for the first time, Disney+ from 8 p.m. ET Thu Dec 31, with hosts and ball drop times."),
+ "tv-streaming/new-years-rockin-eve-2027/performers/":("holidays-observances","2026-12-31","Rockin' Eve 2027 performers","Lineup tracker, updated as performers are announced."),
+ "pop-culture/times-square-new-years-eve-2027/":("holidays-observances","2026-12-31","Times Square New Year's Eve in person","Free entry, arrival time, banned items and no bathrooms."),
+ "pop-culture/ball-drop-time-zones-2027/":("holidays-observances","2026-12-31","Ball drop time in every US time zone","Midnight ET is 11 p.m. CT, 10 p.m. MT and 9 p.m. PT."),
  "pop-culture/halloween-costumes-2026/":("holidays-observances","2026-10-31","Halloween costumes 2026","The costumes everyone is searching for this year."),
  "politics/early-voting-2026/":("holidays-observances","2026-11-03","Election Day and early voting 2026","How early voting works before Election Day on Nov 3."),
  "money/social-security-2027/":("money-benefits","2027-01-01","Social Security COLA 2027","The 3.6% COLA, new benefit amounts and January payment dates."),
@@ -46,7 +50,7 @@ def _fd(iso):
     if not iso: return "Ongoing"
     d=_dt.date.fromisoformat(iso); return f"{d.strftime('%a')} {_MON[d.month-1]} {d.day}, {d.year}"
 # Cross-listed guides: path -> extra hubs
-HUBALSO={"tv-streaming/hallmark-christmas-movies-2026-schedule/":["games-movies-music","thanksgiving-black-friday"]}
+HUBALSO={"tv-streaming/hallmark-christmas-movies-2026-schedule/":["games-movies-music","thanksgiving-black-friday"],"tv-streaming/new-years-rockin-eve-2027/":["games-movies-music"],"tv-streaming/new-years-rockin-eve-2027/performers/":["games-movies-music"]}
 def hub_items(s): 
     it=[(p,v) for p,v in HUBMAP.items() if v[0]==s or s in HUBALSO.get(p,[])]
     return sorted(it,key=lambda x:(x[1][1] is None,x[1][1] or ""))
@@ -91,6 +95,7 @@ def render_hubs():
         e,n,_=HUBN[v[0]]
         body+=f'<h3>{_fd(v[1])}</h3>' if v[1]!=cur else ""; cur=v[1]
         body+=f'<p><a href="{r}{p}">{esc(v[2])}</a> <span class="h1l">({e} {n})</span><br>{esc(v[3])}</p>'
+    body+=f'<h2>Further out</h2><p><a href="{r}tv-streaming/new-years-rockin-eve-2027/">New Year\'s Rockin\' Eve 2027: how to watch</a> (Thu Dec 31, 8 p.m. ET on ABC and Disney+) and <a href="{r}pop-culture/ball-drop-time-zones-2027/">ball drop times in every US time zone</a>.</p>'
     body+='<h2>All hubs</h2><ul>'+"".join(f'<li><a href="{r}hubs/{s}/">{e} {n}</a></li>' for s,e,n,d in HUBS)+'</ul>'
     page("hubs/coming-up/index.html","Coming Up This Month: dates to know | Trends Incoming","An auto-sorted calendar of every dated guide on Trends Incoming for the next 30 days: holidays, releases, deadlines and games.",body,ild("Coming Up This Month",B+"/hubs/coming-up/",cu),article=False,rel=False)
     body=f'<h1>🧭 All hubs</h1><ul>'+"".join(f'<li><a href="{s}/">{e} {n}</a>: {d} ({len(hub_items(s))} guides)</li>' for s,e,n,d in HUBS)+'<li><a href="coming-up/">🗓️ Coming Up This Month</a></li></ul>'

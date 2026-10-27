@@ -410,23 +410,23 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "3825b3aedb1fd8d1",
-"mod": "2026-10-26",
+"h": "63144d57ee7ce588",
+"mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "9489490de6b90744",
+"h": "d27a1e01acfc54f7",
 "mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
-"h": "6d4d9a15098a4542",
-"mod": "2026-10-26",
+"h": "d48a99ff119efaf5",
+"mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "hubs/holidays-observances/": {
-"h": "a8835713f48569d0",
-"mod": "2026-10-26",
+"h": "0cbefb134b40f23b",
+"mod": "2026-10-27",
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
@@ -505,8 +505,8 @@
 "pub": "2026-10-15"
 },
 "money/minimum-wage-2027/": {
-"h": "2221f60136e3fbdf",
-"mod": "2026-10-19",
+"h": "3c3290fb1f5c91c4",
+"mod": "2026-10-27",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -615,8 +615,8 @@
 "pub": "2026-10-14"
 },
 "music/spotify-wrapped-2026/": {
-"h": "c446a69ae21e3601",
-"mod": "2026-10-19",
+"h": "c59269aef61154e6",
+"mod": "2026-10-27",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -794,15 +794,25 @@
 "mod": "2026-10-23",
 "pub": "2026-10-14"
 },
+"pop-culture/ball-drop-time-zones-2027/": {
+"h": "15577f4008a91f68",
+"mod": "2026-10-27",
+"pub": "2026-10-27"
+},
 "pop-culture/halloween-costumes-2026/": {
 "h": "816b565b11200811",
 "mod": "2026-10-18",
 "pub": "2026-10-18"
 },
 "pop-culture/macys-thanksgiving-day-parade-2026/": {
-"h": "482358ebfddc630f",
-"mod": "2026-10-26",
+"h": "59dbef63e7c77b81",
+"mod": "2026-10-27",
 "pub": "2026-10-23"
+},
+"pop-culture/times-square-new-years-eve-2027/": {
+"h": "7d7a5ed858f5686b",
+"mod": "2026-10-27",
+"pub": "2026-10-27"
 },
 "pop-culture/when-is-hanukkah-2026/": {
 "h": "9ee6edf38cdec783",
@@ -1000,14 +1010,24 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "5f94581b8c14a369",
-"mod": "2026-10-26",
+"h": "70a153610610b3f6",
+"mod": "2026-10-27",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
 "h": "d4922bf1a57b6fe3",
 "mod": "2026-10-20",
 "pub": "2026-10-14"
+},
+"tv-streaming/new-years-rockin-eve-2027/": {
+"h": "4c022333b5deefa0",
+"mod": "2026-10-27",
+"pub": "2026-10-27"
+},
+"tv-streaming/new-years-rockin-eve-2027/performers/": {
+"h": "f3eb76bba883d546",
+"mod": "2026-10-27",
+"pub": "2026-10-27"
 },
 "weather/": {
 "h": "b3861406a3229c31",
