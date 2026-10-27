@@ -113,3 +113,13 @@ _d["facts"].insert(1,("Compaction flaw (Oct 27, 2026)","Xint showed OpenAI's API
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-2:],_LIVE10+_p[8].replace(_QH10,_QH11)); break
+# --- 2026-10-27 London live update: CISA added Brotli CVE-2026-111497 to its KEV catalog on Oct 27 (catalog version 2026.10.27). ---
+_KEV27="https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+_OAS.append(("CISA: Known Exploited Vulnerabilities Catalog (CVE-2026-111497 added Oct 27)",_KEV27))
+_LIVE11=f'''<div class="live"><p><b>Live update, Tuesday, October 27, 2026, 9:19 p.m. London time (5:19 p.m. ET):</b> The US Cybersecurity and Infrastructure Security Agency (CISA) added the Brotli flaw (CVE-2026-111497) to its Known Exploited Vulnerabilities catalog on October 27 (catalog version 2026.10.27). This replaces the status in our October 26 update, when the flaw was not yet on the list. CISA set a due date of November 10, 2026 under its directive BOD 26-04 and lists use in ransomware campaigns as Unknown. If you run software that decompresses Brotli data, check your vendor's advisory and install the patch now. Source: <a href="{_KEV27}" rel="noopener" target="_blank">CISA</a>.</p></div>'''
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE11+_d["body"]
+_d["facts"].insert(1,("CISA KEV (Oct 27, 2026)","CISA added Brotli CVE-2026-111497 to its Known Exploited Vulnerabilities catalog on Oct 27, with a Nov 10, 2026 due date under BOD 26-04"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE11+_p[8]); break
