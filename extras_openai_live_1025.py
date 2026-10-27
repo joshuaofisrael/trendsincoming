@@ -86,3 +86,15 @@ _d["facts"].insert(1,("Expert view (Oct 26, 2026)","Experts quoted by CyberScoop
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE8+_p[8].replace(_QH8,_QH9)); break
+# --- 2026-10-27 06:25 London live update: Tenable (Oct 26) FAQ on public PoCs, ELLIO-reported exploitation attempt, KEV status, PHP Windows fix. Verified against the fetched post. ---
+_TEN26="https://www.tenable.com/blog/brotli2shell-frequently-asked-questions-for-google-brotli-decoder-cve-2026-111497"
+_OAS.append(("Tenable: Brotli2Shell, Frequently asked questions for Google Brotli decoder vulnerability (Oct 26)",_TEN26))
+_LIVE9=f'''<div class="live"><p><b>Live update, Tuesday, October 27, 2026, 6:25 a.m. London time (2:25 a.m. ET):</b> Security firm Tenable published an FAQ on the Brotli flaw (CVE-2026-111497) on October 26. It says "public proofs-of-concept (PoCs) are available" on GitHub. Tenable also reports that threat intelligence firm ELLIO said on October 26 that its sensors recorded an exploitation attempt against Node.js 24.22.0. This is ELLIO's claim: Tenable says it "has not independently confirmed this activity," and notes that as of October 26 the flaw is not in CISA's Known Exploited Vulnerabilities catalog. Tenable adds that PHP released updated Windows builds on October 26 that bundle the fixed Brotli 1.2.1, and that a patch only takes effect after affected services are restarted or container images are rebuilt. Source: <a href="{_TEN26}" rel="noopener" target="_blank">Tenable</a>.</p></div>'''
+_QS.insert(0,("Tenable, Oct 26, 2026",_TEN26,"Tenable has not independently confirmed this activity."))
+_QH10='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE9+_d["body"].replace(_QH9,_QH10)
+_d["facts"].insert(1,("Exploit status (Oct 26, 2026)","Public proof-of-concept code is on GitHub; ELLIO reports one exploitation attempt, not independently confirmed by Tenable; not in CISA's KEV catalog as of Oct 26, per Tenable"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE9+_p[8].replace(_QH9,_QH10)); break
