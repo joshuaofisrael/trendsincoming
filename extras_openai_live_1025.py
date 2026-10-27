@@ -74,3 +74,15 @@ _d["facts"].insert(1,("Microsoft .NET fix (Oct 26, 2026)","Out-of-band update fo
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE7+_p[8].replace(_QH7,_QH8)); break
+# --- 2026-10-27 01:15 London live update: CyberScoop (Oct 26) on experts tempering alarm over Brotli CVE-2026-111497. Verified against the fetched article. ---
+_CS26="https://cyberscoop.com/brotli-critical-vulnerability-decompression-library-node2shell-broccoli2shell/"
+_OAS.append(("CyberScoop: Experts temper emergency-level alarms over critical Brotli defect (Oct 26)",_CS26))
+_LIVE8=f'''<div class="live"><p><b>Live update, Tuesday, October 27, 2026, 1:15 a.m. London time (Monday, October 26, 9:15 p.m. ET):</b> CyberScoop reported on October 26 that security experts are tempering the alarm around the Brotli flaw (CVE-2026-111497) that OpenAI's Codex Security team found. The outlet says researchers "haven't observed any active exploitation of the defect in real networks," even as Microsoft, Python and other projects rushed out patches. Jake Knott, head of threat intelligence at watchTowr, told CyberScoop that "much of the impact of exploitation depends entirely on its implementation and how it is used within that piece of software." Experts quoted in the piece advise organizations to weigh the risk in their own environment rather than react to the severity score alone, and to patch where Brotli is in use. Source: <a href="{_CS26}" rel="noopener" target="_blank">CyberScoop</a>.</p></div>'''
+_QS.insert(0,("CyberScoop, Oct 26, 2026",_CS26,"Researchers haven't observed any active exploitation of the defect in real networks"))
+_QH9='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE8+_d["body"].replace(_QH8,_QH9)
+_d["facts"].insert(1,("Expert view (Oct 26, 2026)","Experts quoted by CyberScoop say no active exploitation has been observed and real-world impact depends on how each product uses Brotli"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE8+_p[8].replace(_QH8,_QH9)); break
