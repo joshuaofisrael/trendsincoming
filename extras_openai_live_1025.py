@@ -98,3 +98,18 @@ _d["facts"].insert(1,("Exploit status (Oct 26, 2026)","Public proof-of-concept c
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE9+_p[8].replace(_QH9,_QH10)); break
+# --- 2026-10-27 11:20 London live update: The Hacker News (Oct 27) on Xint compaction reasoning-leak flaw fixed Oct 23; iTnews (Oct 27) on Red Hat status for Brotli CVE-2026-111497. Verified against the fetched articles. ---
+_THN27="https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html"
+_ITN27="https://www.itnews.com.au/news/fixes-for-google-brotli-flaw-arrive-for-microsoft-net-php-and-linux-629928"
+_OAS.append(("The Hacker News: OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections (Oct 27)",_THN27))
+_OAS.append(("iTnews: Fixes for Google Brotli flaw arrive for Microsoft .NET, PHP and Linux (Oct 27)",_ITN27))
+_LIVE10=f'''<div class="live"><p><b>Live update, Tuesday, October 27, 2026, 11:20 a.m. London time (7:20 a.m. ET):</b> The Hacker News reported on October 27 that security firm Xint showed OpenAI's API "compaction" feature could be used to copy a reasoning model's hidden, encrypted reasoning out as plain text, getting past protections OpenAI added in August. The outlet says "OpenAI confirmed the problem and fixed it on October 23, according to Xint," that Xint tested only its own requests and "did not claim the method could reach another user's reasoning," and that developers using the API do not need to change anything. Xint says OpenAI paid a $6,000 bug bounty. This is a separate issue from the Brotli flaw. On Brotli (CVE-2026-111497), iTnews reported on October 27 that Red Hat said public proof-of-concept code "causes crashes but no reliable remote code execution exploit has been seen," that Red Hat has no fixed packages yet for Enterprise Linux 7 to 10, and that it advises administrators to strip or reject Brotli-encoded traffic from untrusted clients in the meantime. Sources: <a href="{_THN27}" rel="noopener" target="_blank">The Hacker News</a>, <a href="{_ITN27}" rel="noopener" target="_blank">iTnews</a>.</p></div>'''
+_QS.insert(0,("The Hacker News, Oct 27, 2026",_THN27,"The fix was on OpenAI's side, so developers who build on the API do not need to change anything."))
+_QS.insert(1,("iTnews, Oct 27, 2026",_ITN27,"Red Hat said public proof-of-concept code causes crashes but no reliable remote code execution exploit has been seen."))
+_QH11='<h2>What the reports say</h2><p class="by">Short direct quotes from OpenAI, METR and news outlets, each linked to the original.</p>'+"".join(f'<blockquote><p>"{esc(q)}"</p><p class="by">{esc(w)}, <a href="{u}" rel="noopener" target="_blank">read the article</a></p></blockquote>' for w,u,q in _QS)
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE10+_d["body"].replace(_QH10,_QH11)
+_d["facts"].insert(1,("Compaction flaw (Oct 27, 2026)","Xint showed OpenAI's API compaction feature could leak a model's hidden reasoning as plain text; OpenAI fixed it on Oct 23, per Xint as reported by The Hacker News"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-2:],_LIVE10+_p[8].replace(_QH10,_QH11)); break
