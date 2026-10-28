@@ -1,7 +1,7 @@
 {
 "": {
-"h": "cae368a9ca757b2c",
-"mod": "2026-10-27",
+"h": "a80af9b65982e326",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "9d90dd71514ae2de",
-"mod": "2026-10-27",
+"h": "24b5df5bbb708aef",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -25,8 +25,8 @@
 "pub": "2026-10-14"
 },
 "blog/anthropic-ipo-explained-2026/": {
-"h": "fcf54e4751e863ac",
-"mod": "2026-10-27",
+"h": "abbdfc48987b9c0b",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
 },
 "blog/big-monday-world-series-wnba-finals-2026/": {
@@ -35,8 +35,8 @@
 "pub": "2026-10-26"
 },
 "blog/brewers-one-win-from-world-series-sweep-2026/": {
-"h": "b522a8abd4970b71",
-"mod": "2026-10-27",
+"h": "f13edd42d14b4f61",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
 },
 "blog/brewers-world-series-2026-explained/": {
@@ -74,14 +74,19 @@
 "mod": "2026-10-16",
 "pub": "2026-10-16"
 },
+"blog/fed-decision-today-explained-oct-2026/": {
+"h": "9014a6dda3eab31b",
+"mod": "2026-10-28",
+"pub": "2026-10-28"
+},
 "blog/four-corners-flooding-explained/": {
 "h": "58797e3d609c2b4d",
 "mod": "2026-10-26",
 "pub": "2026-10-24"
 },
 "blog/government-funding-deadline-oct-31/": {
-"h": "f1a3a1f55bcd1cb1",
-"mod": "2026-10-27",
+"h": "90114a994f7ac994",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -149,6 +154,11 @@
 "mod": "2026-10-23",
 "pub": "2026-10-20"
 },
+"blog/rays-walk-off-world-series-game-4-2026/": {
+"h": "d3dcf633c4e355c3",
+"mod": "2026-10-28",
+"pub": "2026-10-28"
+},
 "blog/six-seven-dance-explained/": {
 "h": "047e0684f1a38f1e",
 "mod": "2026-10-14",
@@ -170,13 +180,13 @@
 "pub": "2026-10-15"
 },
 "blog/sunrise-on-the-reaping-tickets-on-sale/": {
-"h": "6bf3c4fa87e69503",
-"mod": "2026-10-27",
+"h": "d4535d315b37b994",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
 },
 "blog/valkyries-one-win-from-wnba-title-2026/": {
-"h": "1d541988b22329c1",
-"mod": "2026-10-27",
+"h": "59b928dbad09153f",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
 },
 "blog/victorias-secret-fashion-show-2026-guide/": {
@@ -235,8 +245,8 @@
 "pub": "2026-10-14"
 },
 "business/earnings/": {
-"h": "292b424d66f956d2",
-"mod": "2026-10-27",
+"h": "334cc065b9be87a8",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "business/tesla-q3-2026-earnings/": {
@@ -305,8 +315,8 @@
 "pub": "2026-10-14"
 },
 "fashion-beauty/beauty/": {
-"h": "9fd2cd206ed98ca2",
-"mod": "2026-10-20",
+"h": "0b5940664e60afbe",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "fashion-beauty/victorias-secret-fantasy-bra-2026/": {
@@ -320,8 +330,8 @@
 "pub": "2026-10-17"
 },
 "finance/": {
-"h": "a40123fc69ec5fe7",
-"mod": "2026-10-27",
+"h": "bd0a2b0346041119",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "finance/anthropic-ipo-2026/": {
@@ -330,9 +340,14 @@
 "pub": "2026-10-27"
 },
 "finance/big-tech-earnings-fed-week-oct-2026/": {
-"h": "1346af00ea8b7d0b",
-"mod": "2026-10-27",
+"h": "d5251031bfb85b93",
+"mod": "2026-10-28",
 "pub": "2026-10-26"
+},
+"finance/fed-decision-october-2026/": {
+"h": "5fff6063d9079a0b",
+"mod": "2026-10-28",
+"pub": "2026-10-28"
 },
 "finance/meta-q3-2026-earnings/": {
 "h": "eef3216e53f8864f",
@@ -340,18 +355,18 @@
 "pub": "2026-10-23"
 },
 "finance/trending-stocks/": {
-"h": "c087519a423d6905",
-"mod": "2026-10-27",
+"h": "ec4cad53dcff9e16",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "food/": {
-"h": "9f76df6400093ca7",
-"mod": "2026-10-27",
+"h": "af9f14476d20a8f0",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "food/fast-food-drops/": {
-"h": "1aca08a6cd74692e",
-"mod": "2026-10-27",
+"h": "e41801219c819ad4",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "food/taco-bell-milk-bar/": {
@@ -425,12 +440,12 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "29d2b73c0b4b03d2",
+"h": "b44ab24f0a4fd13e",
 "mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "d45e7cdaca07ae04",
+"h": "6f504e3680f89f42",
 "mod": "2026-10-28",
 "pub": "2026-10-25"
 },
@@ -445,13 +460,13 @@
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "c4fad17046ed6d54",
-"mod": "2026-10-27",
+"h": "34738ab5cbce65af",
+"mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
-"h": "dc69173aad0adbb4",
-"mod": "2026-10-27",
+"h": "e2a2d6d939a74ce0",
+"mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/thanksgiving-black-friday/": {
@@ -480,13 +495,13 @@
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
-"h": "4b8e3606ae784519",
-"mod": "2026-10-19",
+"h": "3b167335c600ae14",
+"mod": "2026-10-28",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
-"h": "7212056b1d88cfd2",
-"mod": "2026-10-19",
+"h": "32b23f1bf5d4f358",
+"mod": "2026-10-28",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
@@ -570,8 +585,8 @@
 "pub": "2026-10-17"
 },
 "movies/": {
-"h": "96a8274dd6009d86",
-"mod": "2026-10-27",
+"h": "ba97b2aa77c3d54f",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "movies/box-office/": {
@@ -605,8 +620,8 @@
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
-"h": "6889a7831583621f",
-"mod": "2026-10-27",
+"h": "b205030188f0bc61",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
 },
 "movies/trailers-and-releases/": {
@@ -780,8 +795,8 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "2198fd50578435e6",
-"mod": "2026-10-27",
+"h": "7a9bd7689bfe789c",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "politics/congress/": {
@@ -790,18 +805,18 @@
 "pub": "2026-10-14"
 },
 "politics/early-voting-2026/": {
-"h": "3e3301b8e68a2634",
-"mod": "2026-10-27",
+"h": "e9c79507f882bb7f",
+"mod": "2026-10-28",
 "pub": "2026-10-20"
 },
 "politics/elections-2026/": {
-"h": "cbea5fde42453d9c",
-"mod": "2026-10-27",
+"h": "55ae3397ddd7d179",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "962b13342a685997",
-"mod": "2026-10-27",
+"h": "87bb0c8529acf27e",
+"mod": "2026-10-28",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
@@ -895,13 +910,13 @@
 "pub": "2026-10-25"
 },
 "sports/": {
-"h": "deefef991c0527ce",
-"mod": "2026-10-27",
+"h": "83b85388778e8a25",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "sports/alcs-2026-rays-guardians/": {
-"h": "ecaaf2acf7a20351",
-"mod": "2026-10-27",
+"h": "6ae9611850034cfc",
+"mod": "2026-10-28",
 "pub": "2026-10-18"
 },
 "sports/mlb-nlcs-dodgers-brewers/": {
@@ -910,8 +925,8 @@
 "pub": "2026-10-15"
 },
 "sports/mlb-postseason/": {
-"h": "e0235eb19ec102d9",
-"mod": "2026-10-27",
+"h": "93fc52fab6483a16",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "sports/nba-cup-2026/": {
@@ -930,8 +945,8 @@
 "pub": "2026-10-14"
 },
 "sports/nba/": {
-"h": "106066d3b28824e8",
-"mod": "2026-10-27",
+"h": "fc4f60b985eb0711",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "sports/nfl/": {
@@ -950,19 +965,29 @@
 "pub": "2026-10-14"
 },
 "sports/wnba-finals-2026/": {
-"h": "12ca44ed21094d7c",
-"mod": "2026-10-27",
+"h": "9e0ac6c3defca598",
+"mod": "2026-10-28",
 "pub": "2026-10-17"
 },
+"sports/wnba-finals-game-6-2026/": {
+"h": "13002580150e7144",
+"mod": "2026-10-28",
+"pub": "2026-10-28"
+},
 "sports/world-series-2026/": {
-"h": "c36c22f34894381b",
-"mod": "2026-10-27",
+"h": "d05725c4cbacb02a",
+"mod": "2026-10-28",
 "pub": "2026-10-16"
 },
 "sports/world-series-game-4-2026/": {
-"h": "b0932d7b88743022",
-"mod": "2026-10-27",
+"h": "233903a93b74cc4e",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
+},
+"sports/world-series-game-5-2026/": {
+"h": "3c80080701648f91",
+"mod": "2026-10-28",
+"pub": "2026-10-28"
 },
 "tech-ai/": {
 "h": "ceae833cff6c7c53",
@@ -1010,8 +1035,8 @@
 "pub": "2026-10-14"
 },
 "travel/boeing-737-max-10/": {
-"h": "903a32c4ab1db0a1",
-"mod": "2026-10-27",
+"h": "782cddf9c0fd5126",
+"mod": "2026-10-28",
 "pub": "2026-10-21"
 },
 "trend-data/": {
@@ -1020,13 +1045,13 @@
 "pub": "2026-10-26"
 },
 "trending-hashtags/": {
-"h": "98c1b2dd73b9fa02",
-"mod": "2026-10-27",
+"h": "926bc65e89ad5bd4",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "tv-streaming/": {
-"h": "93e76d9909c2a6e4",
-"mod": "2026-10-23",
+"h": "c04a73f9eeaf1315",
+"mod": "2026-10-28",
 "pub": "2026-10-14"
 },
 "tv-streaming/crystal-lake-peacock/": {
