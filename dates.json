@@ -370,8 +370,8 @@
 "pub": "2026-10-18"
 },
 "games/the-game-awards-2026/": {
-"h": "c1f42a8b4638adda",
-"mod": "2026-10-25",
+"h": "4a2f094f7b303c52",
+"mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -425,18 +425,18 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "cb21ad9852c61c9d",
-"mod": "2026-10-27",
+"h": "29d2b73c0b4b03d2",
+"mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "d0f95c4452a4cfb6",
+"h": "d45e7cdaca07ae04",
 "mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
-"h": "c4268f074b046093",
-"mod": "2026-10-27",
+"h": "e1a6f72fb8379c28",
+"mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/holidays-observances/": {
@@ -583,6 +583,11 @@
 "h": "585c5bf78ebe7041",
 "mod": "2026-10-26",
 "pub": "2026-10-20"
+},
+"movies/golden-globes-2027/": {
+"h": "3ad5e7d680b743cb",
+"mod": "2026-10-28",
+"pub": "2026-10-28"
 },
 "movies/narnia-magicians-nephew-release-date/": {
 "h": "08e0e6defd1173a6",
@@ -1030,7 +1035,7 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "70a153610610b3f6",
+"h": "985aa4e50e9e51e6",
 "mod": "2026-10-28",
 "pub": "2026-10-26"
 },
@@ -1040,8 +1045,8 @@
 "pub": "2026-10-14"
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
-"h": "4c022333b5deefa0",
-"mod": "2026-10-27",
+"h": "81dd54d6a7230b08",
+"mod": "2026-10-28",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {

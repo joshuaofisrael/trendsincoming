@@ -559,6 +559,7 @@ exec(open('extras_hallmark_1026.py').read())
 exec(open('extras_hanukkah_1026.py').read())
 exec(open('extras_nye_1027.py').read())
 exec(open('extras_daily_1027.py').read())
+exec(open('extras_gg_1028.py').read())
 # ---- legal gate: trend cards, subtopic pages and blog posts (held items leave T/SUBS/POSTS, so they drop out of cards, nav, blog index, feed, search and llms.txt)
 _gate_T()
 _keep=[]

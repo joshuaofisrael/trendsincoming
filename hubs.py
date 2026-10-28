@@ -33,6 +33,7 @@ HUBMAP={
  "games/gta-6-release-date/":("games-movies-music","2026-11-19","GTA VI release date","GTA VI is coming November 19, 2026."),
  "movies/sunrise-on-the-reaping-guide/":("games-movies-music","2026-11-20","Sunrise on the Reaping","Release date, tickets, runtime and watch order."),
  "music/grammy-nominations-2027/":("games-movies-music","2026-11-16","Grammy nominations 2027","When the 2027 Grammy nominations are announced and how to watch."),
+ "movies/golden-globes-2027/":("games-movies-music","2026-12-07","Golden Globes 2027","Nominations Mon Dec 7 at 5 a.m. PT; ceremony Sun Jan 10 on CBS and Paramount+."),
  "games/the-game-awards-2026/":("games-movies-music","2026-12-10","The Game Awards 2026","Date, time, tickets, nominees and how to vote."),
  "movies/narnia-magicians-nephew-release-date/":("games-movies-music","2027-02-12","Narnia: The Magician's Nephew","Theater date, IMAX previews and Netflix date."),
  "music/spotify-wrapped-2026/":("games-movies-music",None,"Spotify Wrapped 2026","When Wrapped drops and how to see yours."),
@@ -96,7 +97,7 @@ def render_hubs():
         e,n,_=HUBN[v[0]]
         body+=f'<h3>{_fd(v[1])}</h3>' if v[1]!=cur else ""; cur=v[1]
         body+=f'<p><a href="{r}{p}">{esc(v[2])}</a> <span class="h1l">({e} {n})</span><br>{esc(v[3])}</p>'
-    body+=f'<h2>Further out</h2><p><a href="{r}tv-streaming/new-years-rockin-eve-2027/">New Year\'s Rockin\' Eve 2027: how to watch</a> (Thu Dec 31, 8 p.m. ET on ABC and Disney+) and <a href="{r}pop-culture/ball-drop-time-zones-2027/">ball drop times in every US time zone</a>.</p>'
+    body+=f'<h2>Further out</h2><p><a href="{r}tv-streaming/new-years-rockin-eve-2027/">New Year\'s Rockin\' Eve 2027: how to watch</a> (Thu Dec 31, 8 p.m. ET on ABC and Disney+) and <a href="{r}pop-culture/ball-drop-time-zones-2027/">ball drop times in every US time zone</a>. <a href="{r}movies/golden-globes-2027/">Golden Globes 2027</a> (Sun Jan 10, 5 p.m. PT on CBS and Paramount+).</p>'
     body+='<h2>All hubs</h2><ul>'+"".join(f'<li><a href="{r}hubs/{s}/">{e} {n}</a></li>' for s,e,n,d in HUBS)+'</ul>'
     page("hubs/coming-up/index.html","Coming Up This Month: dates to know | Trends Incoming","An auto-sorted calendar of every dated guide on Trends Incoming for the next 30 days: holidays, releases, deadlines and games.",body,ild("Coming Up This Month",B+"/hubs/coming-up/",cu),article=False,rel=False)
     body=f'<h1>🧭 All hubs</h1><ul>'+"".join(f'<li><a href="{s}/">{e} {n}</a>: {d} ({len(hub_items(s))} guides)</li>' for s,e,n,d in HUBS)+'<li><a href="coming-up/">🗓️ Coming Up This Month</a></li></ul>'
