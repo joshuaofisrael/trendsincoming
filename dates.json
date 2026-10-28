@@ -135,8 +135,8 @@
 "pub": "2026-10-21"
 },
 "blog/openai-security-breach-explained/": {
-"h": "6e9303007bebdad0",
-"mod": "2026-10-27",
+"h": "e008e599ee007391",
+"mod": "2026-10-28",
 "pub": "2026-10-21"
 },
 "blog/php2shell-explained/": {
@@ -430,8 +430,8 @@
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "aa7c2bbd07983e96",
-"mod": "2026-10-27",
+"h": "d0f95c4452a4cfb6",
+"mod": "2026-10-28",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -521,7 +521,7 @@
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-10-27",
+"mod": "2026-10-28",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -596,7 +596,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-10-27",
+"mod": "2026-10-28",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -636,7 +636,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-10-27",
+"mod": "2026-10-28",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -985,8 +985,8 @@
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
-"h": "391fe81b4d0762de",
-"mod": "2026-10-27",
+"h": "2913f42b9b8c3cac",
+"mod": "2026-10-28",
 "pub": "2026-10-21"
 },
 "tech-ai/php2shell-vulnerability/": {
@@ -1031,7 +1031,7 @@
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
 "h": "70a153610610b3f6",
-"mod": "2026-10-27",
+"mod": "2026-10-28",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {

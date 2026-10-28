@@ -123,3 +123,16 @@ _d["facts"].insert(1,("CISA KEV (Oct 27, 2026)","CISA added Brotli CVE-2026-1114
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE11+_p[8]); break
+# --- 2026-10-28 London live update: Red Hat shipped brotli fixes for RHEL 8, 9 and 10 (Oct 26) and RHEL 9.4 SAP (Oct 27), correcting the iTnews "no fixed packages" status. ---
+_RH8="https://access.redhat.com/errata/RHSA-2026:90501"
+_RH9="https://access.redhat.com/errata/RHSA-2026:90495"
+_RH10="https://access.redhat.com/errata/RHSA-2026:90449"
+_RH94="https://access.redhat.com/errata/RHSA-2026:90888"
+_OAS.append(("Red Hat: RHSA-2026:90501, brotli security update for RHEL 8 (Oct 26)",_RH8))
+_LIVE12=f'''<div class="live"><p><b>Live update, Wednesday, October 28, 2026, 2:10 a.m. London time (10:10 p.m. ET Oct 27):</b> Red Hat has now shipped fixed brotli packages for the Brotli flaw (CVE-2026-111497). Its security advisories list "Important: brotli security update" for Red Hat Enterprise Linux 8 (<a href="{_RH8}" rel="noopener" target="_blank">RHSA-2026:90501</a>), Enterprise Linux 9 (<a href="{_RH9}" rel="noopener" target="_blank">RHSA-2026:90495</a>) and Enterprise Linux 10 (<a href="{_RH10}" rel="noopener" target="_blank">RHSA-2026:90449</a>), all issued October 26, plus an October 27 update for Enterprise Linux 9.4 Update Services for SAP Solutions (<a href="{_RH94}" rel="noopener" target="_blank">RHSA-2026:90888</a>). This updates the status in our October 27 entry, where iTnews reported Red Hat had no fixed packages yet. Red Hat rates the update Important. If you run RHEL, install the brotli update and restart services that decompress Brotli data. Source: Red Hat security advisories linked above.</p></div>'''
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE12+_d["body"]
+_d["facts"].insert(1,("Red Hat fixes (Oct 26-27, 2026)","Red Hat shipped fixed brotli packages for RHEL 8, 9 and 10 on Oct 26 and for RHEL 9.4 SAP on Oct 27, per its security advisories"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE12+_p[8]); break
