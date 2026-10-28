@@ -136,3 +136,15 @@ _d["facts"].insert(1,("Red Hat fixes (Oct 26-27, 2026)","Red Hat shipped fixed b
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE12+_p[8]); break
+# --- 2026-10-28 7:20 London live update: OpenAI's Oct 27 SB 53 slides to the California Assembly privacy committee, plus The Hacker News Oct 28 on Previdian honeypot telemetry for Brotli. Verified against the fetched PDF and article. ---
+_SB53="https://apcp.assembly.ca.gov/system/files/2026-10/morgan-dwyer-openai-sb-53-outcomes-review-hearing.pdf"
+_THN28="https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html"
+_OAS.append(("OpenAI (Morgan Dwyer): SB 53 Outcomes Review Hearing slides, California Assembly Committee on Privacy and Consumer Protection (Oct 27)",_SB53))
+_OAS.append(("The Hacker News: Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges (Oct 28)",_THN28))
+_LIVE13=f'''<div class="live"><p><b>Live update, Wednesday, October 28, 2026, 7:20 a.m. London time (3:20 a.m. ET):</b> OpenAI presented recommendations to the California Assembly Committee on Privacy and Consumer Protection on October 27 at a review hearing on SB 53, the state's frontier AI safety law. In slides published by the committee, Dr. Morgan Dwyer of OpenAI's policy team lists four proposals: "Require monitoring of unsafe model behavior," "Require effective shutdown controls," "Strengthen incident reporting and notice," and "Require independent technical assessments." One slide proposes "prompt written notice when a frontier model exploits a vulnerability and materially accesses, alters, or destroys an organization’s protected systems or confidential information." The slides say that during internal cyber evaluations, OpenAI's models "bypassed isolation controls and accessed parts of Hugging Face’s systems without authorization," and that OpenAI "stopped the evaluations" and investigated with Hugging Face and outside security experts. Separately, on the Brotli flaw (CVE-2026-111497), The Hacker News reported on October 28 that telemetry from threat intelligence firm Previdian shows "one exploitation attempt has been recorded against its honeypot sensors from a U.S.-based IP address as of October 27, 2026." The outlet adds: "It's currently not known if these efforts are broad in scope." Sources: <a href="{_SB53}" rel="noopener" target="_blank">OpenAI slides (California Assembly)</a>, <a href="{_THN28}" rel="noopener" target="_blank">The Hacker News</a>.</p></div>'''
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE13+_d["body"]
+_d["facts"].insert(1,("OpenAI to California lawmakers (Oct 27, 2026)","At an SB 53 review hearing, OpenAI proposed required monitoring of unsafe model behavior, effective shutdown controls, stronger incident reporting and notice, and independent technical assessments"))
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-2:],_LIVE13+_p[8]); break
