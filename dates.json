@@ -145,8 +145,8 @@
 "pub": "2026-10-21"
 },
 "blog/openai-security-breach-explained/": {
-"h": "329ce51cbb4af275",
-"mod": "2026-10-28",
+"h": "392ad33507762009",
+"mod": "2026-10-29",
 "pub": "2026-10-21"
 },
 "blog/php2shell-explained/": {
@@ -1025,8 +1025,8 @@
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
-"h": "48bd14552d1f3d5b",
-"mod": "2026-10-28",
+"h": "06c47e15bf71bf2b",
+"mod": "2026-10-29",
 "pub": "2026-10-21"
 },
 "tech-ai/php2shell-vulnerability/": {
