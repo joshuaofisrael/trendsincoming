@@ -1,7 +1,7 @@
 {
 "": {
-"h": "a80af9b65982e326",
-"mod": "2026-10-28",
+"h": "c17dd804f3ba7f2c",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -90,8 +90,8 @@
 "pub": "2026-10-18"
 },
 "blog/government-funding-deadline-oct-31/": {
-"h": "90114a994f7ac994",
-"mod": "2026-10-28",
+"h": "cd9216660c7a0d8a",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -120,8 +120,8 @@
 "pub": "2026-10-15"
 },
 "blog/midterms-2026-explained/": {
-"h": "c8e602eee4d06c01",
-"mod": "2026-10-27",
+"h": "6e0ffe4d3cb7b738",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "blog/mlb-nlcs-dodgers-brewers-explained/": {
@@ -200,8 +200,8 @@
 "pub": "2026-10-17"
 },
 "blog/why-gas-prices-are-up-oil-110-explained/": {
-"h": "0d55315554c6d941",
-"mod": "2026-10-27",
+"h": "59f6a4cf997449ce",
+"mod": "2026-10-29",
 "pub": "2026-10-17"
 },
 "blog/wnba-finals-game-5-2026-tied-2-2/": {
@@ -345,8 +345,8 @@
 "pub": "2026-10-27"
 },
 "finance/big-tech-earnings-fed-week-oct-2026/": {
-"h": "d5251031bfb85b93",
-"mod": "2026-10-28",
+"h": "4d80974b46e9685a",
+"mod": "2026-10-29",
 "pub": "2026-10-26"
 },
 "finance/fed-decision-october-2026/": {
@@ -580,8 +580,8 @@
 "pub": "2026-10-14"
 },
 "money/retirement/": {
-"h": "4a4088a604b7747b",
-"mod": "2026-10-27",
+"h": "b53539a51d8bfb2a",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "money/social-security-2027/": {
@@ -785,8 +785,8 @@
 "pub": "2026-10-16"
 },
 "news/": {
-"h": "a7a3d8eb90d941ca",
-"mod": "2026-10-27",
+"h": "c8aba009b5b32936",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "pets/": {
@@ -800,33 +800,23 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "7a9bd7689bfe789c",
-"mod": "2026-10-28",
+"h": "380149c69dec2cc7",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "politics/congress/": {
-"h": "79bb259f1e405f85",
-"mod": "2026-10-27",
+"h": "0cfe2ef05f946d4d",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "politics/early-voting-2026/": {
-"h": "e9c79507f882bb7f",
-"mod": "2026-10-28",
-"pub": "2026-10-20"
-},
-"politics/elections-2026/": {
-"h": "55ae3397ddd7d179",
-"mod": "2026-10-28",
-"pub": "2026-10-14"
-},
-"politics/government-shutdown-deadline-2026/": {
-"h": "87bb0c8529acf27e",
-"mod": "2026-10-28",
+"h": "32888beafe484443",
+"mod": "2026-10-29",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
-"h": "0f6263baf45c187e",
-"mod": "2026-10-27",
+"h": "40d5cbee1698a1e0",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "pop-culture/": {
@@ -1110,8 +1100,8 @@
 "pub": "2026-10-14"
 },
 "world/brazil-runoff-2026/": {
-"h": "344342c894ed5edb",
-"mod": "2026-10-27",
+"h": "1c07268a76c7274e",
+"mod": "2026-10-29",
 "pub": "2026-10-25"
 },
 "world/ebola-outbreak-2026/": {
