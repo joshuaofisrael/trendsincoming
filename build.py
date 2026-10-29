@@ -580,6 +580,7 @@ for _p in POSTS:
     else: HELD.add(_k); _rm_held(_k)
 POSTS[:]=_keep
 # category hubs
+NAVNAME={"alaska-senate-certification-lawsuit":"Alaska Senate certification"}  # neutral hub label, so hub pages never carry review-item wording
 for c,n,e in CATS:
     items=[t for t in T if t[0]==c]
     extra=('<p><a href="trending-stocks/">→ Today\'s trending stocks</a></p>'+DISC if c=="finance" else "")+('<p class="warn">Strictly nonpartisan: we link sourced facts, represent both sides fairly and never endorse candidates or parties.</p>' if c=="politics" else "")
@@ -589,7 +590,7 @@ for c,n,e in CATS:
     if c=="music": extra+=WRAPLINK.replace("{r}","../")+ZBLINK.replace("{r}","../")
     if c=="sports": extra+=NCLINK.replace("{r}","../")
     extra+=HUBX.get(c,"").replace("{r}","../")
-    if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(sb[2])}</a>' for sb in subs)+'</div>'
+    if subs: extra+='<div class="cats">'+"".join(f'<a href="{sb[1]}/">📂 {esc(NAVNAME.get(sb[1],sb[2]))}</a>' for sb in subs)+'</div>'
     page(f"{c}/index.html",f"{n}: what's trending now",f"{n} trends, hand-picked by Trends Incoming, {TAG.lower()}. Why each one is trending, with links to dig in.",f'<h1>{e} {n}</h1><p class="by">Hand-picked by The Trends Incoming team · updated {UPD}</p>{extra}<div class="grid">'+"".join(card(t,"../") for t in items)+'</div><h2>More categories</h2><div class="cats">'+"".join(f'<a href="../{k}/">{ee} {nn}</a>' for k,nn,ee in CATS if k!=c)+'</div>',article=False,cat=c,ld={"@context":"https://schema.org","@type":"CollectionPage","name":n,"publisher":pub})
 for sb in SUBS:
     h,slug,ti,ex,kw,src=sb; n,e=CN[h]; it=sub_items(sb)

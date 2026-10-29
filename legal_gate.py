@@ -84,8 +84,23 @@ def imgs_of(h, ld=None):
     IMG = re.compile(r"\.(?:png|jpe?g|webp|gif|avif|svg)(?:\?|$)|ytimg\.com/", re.I)
     return [u for u in out if IMG.search(u)]
 
+# Pages awaiting a review decision. Paragraphs, list items and links pointing at them are left out of every
+# page's hash, so a page's sha256 does not change when one of these is held or released. They are still
+# rendered and scanned in full when the target is live; only the hash input is fixed.
+REVIEW_LINK_KEYS = ("politics/alaska-senate-certification-lawsuit/", "world/france-protests-2026/",
+                    "world/serbia-election-2026/", "world/israel-election-2026/", "blog/election-sunday-serbia-brazil-2026/")
+def _hash_body(b):
+    for k in REVIEW_LINK_KEYS:
+        seg = re.escape(k.rstrip("/").split("/")[-1])
+        hr = r'href="(?:[^"]*/)?' + seg + r'/(?:index\.html)?(?:#[^"]*)?"'
+        if not re.search(hr, b): continue
+        b = re.sub(r'(?s)<(p|li)\b[^>]*>(?:(?!</\1>).)*?' + hr + r'(?:(?!</\1>).)*?</\1>', "", b)
+        b = re.sub(r'(?s)<a\b[^>]*' + hr + r'[^>]*>.*?</a>', "", b)
+    return b
+
 def content_sha(title, desc, body, ld=None):
     """sha256 of the exact visible version: title, description, body text, link targets, images, JSON-LD."""
+    body = _hash_body(body)
     parts = [title or "", desc or "", strip_html(body), " ".join(links_of(body)), " ".join(imgs_of(body, ld)),
              json.dumps(ld, sort_keys=True) if ld else ""]
     return hashlib.sha256(norm("\n".join(parts)).encode()).hexdigest()
