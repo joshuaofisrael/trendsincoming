@@ -371,6 +371,7 @@ def _mdesc(d,n=158):
 def _gate_T():
     """Gate every trend card (cards added by extras included) before any page renders them."""
     global T
+    T[:]=[t for t in T if t[1] not in ("Israel votes today","DOJ sues over Alaska Senate certification")]  # q19/q20 REJECTED 29 Oct
     T[:]=[(t[:6]+(None,)+t[7:]) if (len(t)>6 and t[6] in HELD) else t for t in T]  # cards keep their text but stop pointing at held pages
     T[:]=[t for t in T if (("trend-card/"+tid(t)+"/") in GATE.results and not GATE.results["trend-card/"+tid(t)+"/"]["status"].startswith("hold")) or GATE.check("trend-card/"+tid(t)+"/",t[1],t[2],"",None,[u for l,u in t[4]],kind="trend-card")]
 def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True):
@@ -561,6 +562,7 @@ exec(open('extras_nye_1027.py').read())
 exec(open('extras_daily_1027.py').read())
 exec(open('extras_gg_1028.py').read())
 exec(open('extras_daily_1028.py').read())
+exec(open('extras_rejected.py').read())
 # ---- legal gate: trend cards, subtopic pages and blog posts (held items leave T/SUBS/POSTS, so they drop out of cards, nav, blog index, feed, search and llms.txt)
 _gate_T()
 _keep=[]

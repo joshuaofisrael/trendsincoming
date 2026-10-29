@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "24b5df5bbb708aef",
-"mod": "2026-10-28",
+"h": "bbd9e3b8cf637a4d",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -83,6 +83,11 @@
 "h": "58797e3d609c2b4d",
 "mod": "2026-10-26",
 "pub": "2026-10-24"
+},
+"blog/france-protests-october-17-2026/": {
+"h": "213d2509cdbc330b",
+"mod": "2026-10-29",
+"pub": "2026-10-18"
 },
 "blog/government-funding-deadline-oct-31/": {
 "h": "90114a994f7ac994",
@@ -386,7 +391,7 @@
 },
 "games/the-game-awards-2026/": {
 "h": "4a2f094f7b303c52",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -445,8 +450,8 @@
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "6f504e3680f89f42",
-"mod": "2026-10-28",
+"h": "0479a4eb28722c8d",
+"mod": "2026-10-29",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -496,12 +501,12 @@
 },
 "money/2027-tax-numbers/": {
 "h": "3b167335c600ae14",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
 "h": "32b23f1bf5d4f358",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
@@ -536,7 +541,7 @@
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -616,7 +621,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -656,7 +661,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -1061,7 +1066,7 @@
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
 "h": "985aa4e50e9e51e6",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
@@ -1071,7 +1076,7 @@
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
 "h": "81dd54d6a7230b08",
-"mod": "2026-10-28",
+"mod": "2026-10-29",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {

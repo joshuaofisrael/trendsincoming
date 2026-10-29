@@ -1,53 +1,29 @@
 {
- "approved_sentence_hashes": [],
+ "approved_sentence_hashes": [
+  "4685538e94dd16091db8",
+  "4eb8208858d032013275",
+  "60b4f1f8cd057bca493c",
+  "7f4082e3bb07b89fc0ba",
+  "83bec2f579c24c4903e2",
+  "9447934f340e361f4c26",
+  "a23edc8e96a9129fbf4c",
+  "bd80ad40b035e75e5fff",
+  "c87bafdfe8fb3788e0ba",
+  "cfcb8c4fb7c5e6f6e5ad"
+ ],
  "held": {
-  "blog/election-sunday-serbia-brazil-2026/": {
-   "rules": [
-    6
-   ],
-   "sha256": "178a4c19244b7058f7ecebe4d9e33bfc299e5fe7b149e16729ac2bae78cd44ac",
-   "status": "hold_high"
-  },
-  "blog/france-protests-october-17-2026/": {
-   "rules": [
-    1
-   ],
-   "sha256": "abf225f42843f9ac701ceb17fd3cc6f05092384809e841572bc7ec38c18ce37d",
-   "status": "hold_high"
-  },
   "politics/alaska-senate-certification-lawsuit/": {
    "rules": [
     1
    ],
-   "sha256": "986d6bd6813903f5b7b2efe9512597eeb10d2064e4fc633e6fc5c5e83248f9af",
-   "status": "hold_high"
-  },
-  "trend-card/337a6dfe/": {
-   "rules": [
-    1
-   ],
-   "sha256": "0af486081310138e7453e180c0dd7764ebe25df3aa8a0a353a255548e85ccc30",
-   "status": "hold_high"
-  },
-  "trend-card/9764552d/": {
-   "rules": [
-    6
-   ],
-   "sha256": "2f83c8712c98a7decd7f2b5d2cc1b5e8231e231a0254ff69615ee1b47ae15cdf",
+   "sha256": "589cbb6ee7dcdfc10b3cd6e8622e9ed26891eb2dcb057d85f449fbc8051d335c",
    "status": "hold_high"
   },
   "world/france-protests-2026/": {
    "rules": [
     1
    ],
-   "sha256": "55b8b070b239414038fac2d9da8e7a447fafc7bac264f24dd2534a6d861bda60",
-   "status": "hold_high"
-  },
-  "world/israel-election-2026/": {
-   "rules": [
-    6
-   ],
-   "sha256": "f21198c2ed452698057bcf7c25a9c310fdd9cdf530a85251b933325ce97fd7c3",
+   "sha256": "64044f73dbf2a7a80a01ec0c47b80e7d0269400f76427ef3ac6f04687e01b5d5",
    "status": "hold_high"
   },
   "world/serbia-election-2026/": {
@@ -55,7 +31,7 @@
     1,
     6
    ],
-   "sha256": "c0a7850ba1649c30fd8f91e3cedb18911bde747dbc7389981cc5923075a94d9e",
+   "sha256": "c253339d5b8a8ad0841aaadc287b0e2c236ca7df3b8b4d730d56f1b2a10b8452",
    "status": "hold_high"
   }
  },
@@ -77,6 +53,7 @@
   "blog/expectations-remix-olivia-rodrigo-chappell-roan/",
   "blog/fed-decision-today-explained-oct-2026/",
   "blog/four-corners-flooding-explained/",
+  "blog/france-protests-october-17-2026/",
   "blog/government-funding-deadline-oct-31/",
   "blog/gta-6-explained/",
   "blog/halloween-costume-trends-2026/",
@@ -298,7 +275,23 @@
   "world/tibet-earthquake-2026/",
   "world/ukraine-russia/"
  ],
- "released_items": {},
- "released_sentence_hashes": [],
+ "released_items": {
+  "blog/france-protests-october-17-2026/": {
+   "sha256": "abf225f42843f9ac701ceb17fd3cc6f05092384809e841572bc7ec38c18ce37d",
+   "status": "approved"
+  }
+ },
+ "released_sentence_hashes": [
+  "4685538e94dd16091db8",
+  "4eb8208858d032013275",
+  "60b4f1f8cd057bca493c",
+  "7f4082e3bb07b89fc0ba",
+  "83bec2f579c24c4903e2",
+  "9447934f340e361f4c26",
+  "a23edc8e96a9129fbf4c",
+  "bd80ad40b035e75e5fff",
+  "c87bafdfe8fb3788e0ba",
+  "cfcb8c4fb7c5e6f6e5ad"
+ ],
  "site": "trendsincoming.com"
 }
