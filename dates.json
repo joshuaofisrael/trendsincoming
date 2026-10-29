@@ -1,7 +1,7 @@
 {
 "": {
-"h": "a80af9b65982e326",
-"mod": "2026-10-28",
+"h": "07a8f2782148f368",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -65,8 +65,8 @@
 "pub": "2026-10-19"
 },
 "blog/election-results-serbia-brazil-2026/": {
-"h": "3b438a2de16308b1",
-"mod": "2026-10-27",
+"h": "f3ec17a0196b8103",
+"mod": "2026-10-29",
 "pub": "2026-10-26"
 },
 "blog/expectations-remix-olivia-rodrigo-chappell-roan/": {
@@ -90,8 +90,8 @@
 "pub": "2026-10-18"
 },
 "blog/government-funding-deadline-oct-31/": {
-"h": "90114a994f7ac994",
-"mod": "2026-10-28",
+"h": "66a275379fdeb8a5",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -800,9 +800,14 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "7a9bd7689bfe789c",
-"mod": "2026-10-28",
+"h": "a83b6da50277a31f",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
+},
+"politics/alaska-senate-certification-lawsuit/": {
+"h": "edc0ea7f01396c00",
+"mod": "2026-10-29",
+"pub": "2026-10-24"
 },
 "politics/congress/": {
 "h": "79bb259f1e405f85",
@@ -815,13 +820,13 @@
 "pub": "2026-10-20"
 },
 "politics/elections-2026/": {
-"h": "55ae3397ddd7d179",
-"mod": "2026-10-28",
+"h": "d80e9ac82012b183",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "87bb0c8529acf27e",
-"mod": "2026-10-28",
+"h": "b097a030e4724403",
+"mod": "2026-10-29",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
@@ -1105,13 +1110,13 @@
 "pub": "2026-10-16"
 },
 "world/": {
-"h": "4f7a3d5f495af070",
-"mod": "2026-10-27",
+"h": "55fe7aa4cf6272d3",
+"mod": "2026-10-29",
 "pub": "2026-10-14"
 },
 "world/brazil-runoff-2026/": {
-"h": "344342c894ed5edb",
-"mod": "2026-10-27",
+"h": "00263c7c6d72358f",
+"mod": "2026-10-29",
 "pub": "2026-10-25"
 },
 "world/ebola-outbreak-2026/": {
@@ -1120,8 +1125,8 @@
 "pub": "2026-10-19"
 },
 "world/jordan-karak-church-attack-2026/": {
-"h": "ddd4bbfedbfe210a",
-"mod": "2026-10-27",
+"h": "f1fff15673be15b9",
+"mod": "2026-10-29",
 "pub": "2026-10-25"
 },
 "world/middle-east/": {
@@ -1133,6 +1138,11 @@
 "h": "e29393155eb55071",
 "mod": "2026-10-24",
 "pub": "2026-10-24"
+},
+"world/serbia-election-2026/": {
+"h": "43286ed5dfae1903",
+"mod": "2026-10-29",
+"pub": "2026-10-25"
 },
 "world/tibet-earthquake-2026/": {
 "h": "4110ff62167538ec",

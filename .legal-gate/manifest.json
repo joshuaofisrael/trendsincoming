@@ -3,35 +3,27 @@
   "4685538e94dd16091db8",
   "4eb8208858d032013275",
   "60b4f1f8cd057bca493c",
+  "6dc79b2181f9134603df",
+  "7a08fb71e217e27eded3",
   "7f4082e3bb07b89fc0ba",
   "83bec2f579c24c4903e2",
+  "85d5fd53407134800e3c",
   "9447934f340e361f4c26",
   "a23edc8e96a9129fbf4c",
+  "a64289ab4a57af1b6083",
+  "b428204ca83f8aa3a65a",
   "bd80ad40b035e75e5fff",
+  "c1d0bef78dc4de421bf2",
   "c87bafdfe8fb3788e0ba",
-  "cfcb8c4fb7c5e6f6e5ad"
+  "cfcb8c4fb7c5e6f6e5ad",
+  "dd207be9bfbb71977784"
  ],
  "held": {
-  "politics/alaska-senate-certification-lawsuit/": {
-   "rules": [
-    1
-   ],
-   "sha256": "589cbb6ee7dcdfc10b3cd6e8622e9ed26891eb2dcb057d85f449fbc8051d335c",
-   "status": "hold_high"
-  },
   "world/france-protests-2026/": {
    "rules": [
     1
    ],
    "sha256": "64044f73dbf2a7a80a01ec0c47b80e7d0269400f76427ef3ac6f04687e01b5d5",
-   "status": "hold_high"
-  },
-  "world/serbia-election-2026/": {
-   "rules": [
-    1,
-    6
-   ],
-   "sha256": "f217ceee5b56aaab93cece12f7e2a25f771f9ec52659f5d58729381e3e9f2a95",
    "status": "hold_high"
   }
  },
@@ -203,6 +195,7 @@
   "pets/",
   "pets/cats/",
   "politics/",
+  "politics/alaska-senate-certification-lawsuit/",
   "politics/congress/",
   "politics/early-voting-2026/",
   "politics/elections-2026/",
@@ -272,6 +265,7 @@
   "world/jordan-karak-church-attack-2026/",
   "world/middle-east/",
   "world/nairobi-building-collapse-2026/",
+  "world/serbia-election-2026/",
   "world/tibet-earthquake-2026/",
   "world/ukraine-russia/"
  ],
@@ -279,19 +273,34 @@
   "blog/france-protests-october-17-2026/": {
    "sha256": "abf225f42843f9ac701ceb17fd3cc6f05092384809e841572bc7ec38c18ce37d",
    "status": "approved"
+  },
+  "politics/alaska-senate-certification-lawsuit/": {
+   "sha256": "589cbb6ee7dcdfc10b3cd6e8622e9ed26891eb2dcb057d85f449fbc8051d335c",
+   "status": "approved"
+  },
+  "world/serbia-election-2026/": {
+   "sha256": "f217ceee5b56aaab93cece12f7e2a25f771f9ec52659f5d58729381e3e9f2a95",
+   "status": "approved"
   }
  },
  "released_sentence_hashes": [
   "4685538e94dd16091db8",
   "4eb8208858d032013275",
   "60b4f1f8cd057bca493c",
+  "6dc79b2181f9134603df",
+  "7a08fb71e217e27eded3",
   "7f4082e3bb07b89fc0ba",
   "83bec2f579c24c4903e2",
+  "85d5fd53407134800e3c",
   "9447934f340e361f4c26",
   "a23edc8e96a9129fbf4c",
+  "a64289ab4a57af1b6083",
+  "b428204ca83f8aa3a65a",
   "bd80ad40b035e75e5fff",
+  "c1d0bef78dc4de421bf2",
   "c87bafdfe8fb3788e0ba",
-  "cfcb8c4fb7c5e6f6e5ad"
+  "cfcb8c4fb7c5e6f6e5ad",
+  "dd207be9bfbb71977784"
  ],
  "site": "trendsincoming.com"
 }
