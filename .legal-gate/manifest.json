@@ -1,31 +1,22 @@
 {
  "approved_sentence_hashes": [
-  "6dc79b2181f9134603df",
+  "4685538e94dd16091db8",
+  "4eb8208858d032013275",
+  "60b4f1f8cd057bca493c",
+  "7f4082e3bb07b89fc0ba",
   "83bec2f579c24c4903e2",
-  "85d5fd53407134800e3c",
-  "c1d0bef78dc4de421bf2",
-  "c87bafdfe8fb3788e0ba"
+  "9447934f340e361f4c26",
+  "a23edc8e96a9129fbf4c",
+  "bd80ad40b035e75e5fff",
+  "c87bafdfe8fb3788e0ba",
+  "cfcb8c4fb7c5e6f6e5ad"
  ],
  "held": {
   "politics/alaska-senate-certification-lawsuit/": {
    "rules": [
     1
    ],
-   "sha256": "e538cd380b4463e82a0ea48545fec0a1da89d18453cfb728cfe97cea7c9796c2",
-   "status": "hold_high"
-  },
-  "politics/elections-2026/": {
-   "rules": [
-    1
-   ],
-   "sha256": "5100f7da882ab018d2b521b1c9c2d1e9fc9fff900a8a492a6cea2a1c687eba98",
-   "status": "hold_high"
-  },
-  "politics/government-shutdown-deadline-2026/": {
-   "rules": [
-    1
-   ],
-   "sha256": "3e2b8eef87083895ca0296272c98e6e6c5084fc48b509e8368a484ff11fea321",
+   "sha256": "589cbb6ee7dcdfc10b3cd6e8622e9ed26891eb2dcb057d85f449fbc8051d335c",
    "status": "hold_high"
   },
   "world/france-protests-2026/": {
@@ -37,9 +28,10 @@
   },
   "world/serbia-election-2026/": {
    "rules": [
+    1,
     6
    ],
-   "sha256": "6931df8fa648970d1544c61da9bd5e49432b76b41dddf771ab46fd569d48cfb8",
+   "sha256": "f217ceee5b56aaab93cece12f7e2a25f771f9ec52659f5d58729381e3e9f2a95",
    "status": "hold_high"
   }
  },
@@ -213,6 +205,8 @@
   "politics/",
   "politics/congress/",
   "politics/early-voting-2026/",
+  "politics/elections-2026/",
+  "politics/government-shutdown-deadline-2026/",
   "politics/supreme-court/",
   "pop-culture/",
   "pop-culture/ball-drop-time-zones-2027/",
@@ -288,11 +282,16 @@
   }
  },
  "released_sentence_hashes": [
-  "6dc79b2181f9134603df",
+  "4685538e94dd16091db8",
+  "4eb8208858d032013275",
+  "60b4f1f8cd057bca493c",
+  "7f4082e3bb07b89fc0ba",
   "83bec2f579c24c4903e2",
-  "85d5fd53407134800e3c",
-  "c1d0bef78dc4de421bf2",
-  "c87bafdfe8fb3788e0ba"
+  "9447934f340e361f4c26",
+  "a23edc8e96a9129fbf4c",
+  "bd80ad40b035e75e5fff",
+  "c87bafdfe8fb3788e0ba",
+  "cfcb8c4fb7c5e6f6e5ad"
  ],
  "site": "trendsincoming.com"
 }
