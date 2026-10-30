@@ -26,6 +26,7 @@ HUBMAP={
  "money/2027-tax-numbers/":("money-benefits",None,"2027 tax numbers","Brackets, 401(k), HSA and mileage numbers for 2027, tracked from IRS releases."),
  "money/minimum-wage-2027/":("money-benefits","2027-01-01","Minimum wage by state 2027","Every state minimum wage raise that starts January 1, 2027."),
  "money/open-enrollment-2027/":("money-benefits","2026-11-01","Open enrollment 2027","ACA marketplace open enrollment dates and deadlines."),
+ "money/holiday-gift-card-bonus-deals-2026/":("money-benefits","2026-11-27","Holiday gift card bonus deals 2026","Every restaurant gift card bonus with buy dates, bonus per $100 and when bonus cards work."),
  "money/medicare-open-enrollment-2027/":("money-benefits","2026-12-07","Medicare open enrollment 2027","Medicare open enrollment runs Oct 15 to Dec 7."),
  "games/zelda-switch-2-40th-anniversary-edition/":("games-movies-music","2026-10-29","Zelda Switch 2 40th Anniversary Edition","Release day details for the Zelda Switch 2 bundle."),
  "games/ocarina-of-time-remake/":("games-movies-music","2026-11-05","Ocarina of Time remake","Release date and what is new in the remake."),
@@ -51,7 +52,7 @@ def _fd(iso):
     if not iso: return "Ongoing"
     d=_dt.date.fromisoformat(iso); return f"{d.strftime('%a')} {_MON[d.month-1]} {d.day}, {d.year}"
 # Cross-listed guides: path -> extra hubs
-HUBALSO={"tv-streaming/hallmark-christmas-movies-2026-schedule/":["games-movies-music","thanksgiving-black-friday"],"tv-streaming/new-years-rockin-eve-2027/":["games-movies-music"],"tv-streaming/new-years-rockin-eve-2027/performers/":["games-movies-music"]}
+HUBALSO={"money/holiday-gift-card-bonus-deals-2026/":["thanksgiving-black-friday"],"tv-streaming/hallmark-christmas-movies-2026-schedule/":["games-movies-music","thanksgiving-black-friday"],"tv-streaming/new-years-rockin-eve-2027/":["games-movies-music"],"tv-streaming/new-years-rockin-eve-2027/performers/":["games-movies-music"]}
 def hub_items(s): 
     it=[(p,v) for p,v in HUBMAP.items() if v[0]==s or s in HUBALSO.get(p,[])]
     return sorted(it,key=lambda x:(x[1][1] is None,x[1][1] or ""))
@@ -97,7 +98,7 @@ def render_hubs():
         e,n,_=HUBN[v[0]]
         body+=f'<h3>{_fd(v[1])}</h3>' if v[1]!=cur else ""; cur=v[1]
         body+=f'<p><a href="{r}{p}">{esc(v[2])}</a> <span class="h1l">({e} {n})</span><br>{esc(v[3])}</p>'
-    body+=f'<h2>Further out</h2><p><a href="{r}tv-streaming/new-years-rockin-eve-2027/">New Year\'s Rockin\' Eve 2027: how to watch</a> (Thu Dec 31, 8 p.m. ET on ABC and Disney+) and <a href="{r}pop-culture/ball-drop-time-zones-2027/">ball drop times in every US time zone</a>. <a href="{r}movies/golden-globes-2027/">Golden Globes 2027</a> (Sun Jan 10, 5 p.m. PT on CBS and Paramount+).</p>'
+    body+=f'<h2>Further out</h2><p><a href="{r}tv-streaming/new-years-rockin-eve-2027/">New Year\'s Rockin\' Eve 2027: how to watch</a> (Thu Dec 31, 8 p.m. ET on ABC and Disney+) and <a href="{r}pop-culture/ball-drop-time-zones-2027/">ball drop times in every US time zone</a>. <a href="{r}money/holiday-gift-card-bonus-deals-2026/">Holiday gift card bonus deals 2026</a> (most buy windows close Dec 31). <a href="{r}movies/golden-globes-2027/">Golden Globes 2027</a> (Sun Jan 10, 5 p.m. PT on CBS and Paramount+).</p>'
     body+='<h2>All hubs</h2><ul>'+"".join(f'<li><a href="{r}hubs/{s}/">{e} {n}</a></li>' for s,e,n,d in HUBS)+'</ul>'
     page("hubs/coming-up/index.html","Coming Up This Month: dates to know | Trends Incoming","An auto-sorted calendar of every dated guide on Trends Incoming for the next 30 days: holidays, releases, deadlines and games.",body,ild("Coming Up This Month",B+"/hubs/coming-up/",cu),article=False,rel=False)
     body=f'<h1>🧭 All hubs</h1><ul>'+"".join(f'<li><a href="{s}/">{e} {n}</a>: {d} ({len(hub_items(s))} guides)</li>' for s,e,n,d in HUBS)+'<li><a href="coming-up/">🗓️ Coming Up This Month</a></li></ul>'

@@ -391,7 +391,7 @@
 },
 "games/the-game-awards-2026/": {
 "h": "4a2f094f7b303c52",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -445,13 +445,13 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "b44ab24f0a4fd13e",
-"mod": "2026-10-28",
+"h": "f8a61a1d07dd14d1",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "0479a4eb28722c8d",
-"mod": "2026-10-29",
+"h": "d071f87888d75f72",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -465,8 +465,8 @@
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "34738ab5cbce65af",
-"mod": "2026-10-28",
+"h": "f5ea541efc3c680e",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
@@ -475,8 +475,8 @@
 "pub": "2026-10-25"
 },
 "hubs/thanksgiving-black-friday/": {
-"h": "e6de2ff9cdce5d55",
-"mod": "2026-10-26",
+"h": "ac8a8797852d5495",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "internet-culture/": {
@@ -501,12 +501,12 @@
 },
 "money/2027-tax-numbers/": {
 "h": "3b167335c600ae14",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
 "h": "32b23f1bf5d4f358",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
@@ -529,6 +529,11 @@
 "mod": "2026-10-24",
 "pub": "2026-10-17"
 },
+"money/holiday-gift-card-bonus-deals-2026/": {
+"h": "8df1f8fdc7dbf893",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
+},
 "money/housing/": {
 "h": "59a3c4a4e42aefa5",
 "mod": "2026-10-24",
@@ -541,7 +546,7 @@
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -621,7 +626,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -661,7 +666,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -905,18 +910,18 @@
 "pub": "2026-10-14"
 },
 "shopping/thanksgiving-black-friday-store-hours-2026/": {
-"h": "08f671ffa392e303",
-"mod": "2026-10-26",
+"h": "b0a1719683a4fc45",
+"mod": "2026-10-30",
 "pub": "2026-10-23"
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
-"h": "efb7acb8cceccd72",
-"mod": "2026-10-25",
+"h": "d552a4fc1e26750b",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "shopping/veterans-day-free-meals-deals-2026/": {
-"h": "90aadda941a423c0",
-"mod": "2026-10-25",
+"h": "b1943bfd1effbf71",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "sports/": {
@@ -1070,8 +1075,8 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "985aa4e50e9e51e6",
-"mod": "2026-10-29",
+"h": "95ef564563322857",
+"mod": "2026-10-30",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
@@ -1081,7 +1086,7 @@
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
 "h": "81dd54d6a7230b08",
-"mod": "2026-10-29",
+"mod": "2026-10-30",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {
