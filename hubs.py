@@ -11,10 +11,10 @@ HUBN={s:(e,n,d) for s,e,n,d in HUBS}
 # path: (hub, ISO date or None, short title, one line)
 HUBMAP={
  "shopping/thanksgiving-black-friday-store-hours-2026/":("thanksgiving-black-friday","2026-11-26","Thanksgiving and Black Friday store hours","Which stores are closed on Thanksgiving and when Black Friday doors open."),
- "shopping/thanksgiving-dinner-deals-2026/":("thanksgiving-black-friday","2026-11-26","Thanksgiving dinner deals compared","Aldi, Lidl, Target and Sam's Club holiday meal prices side by side."),
+ "shopping/thanksgiving-dinner-deals-2026/":("thanksgiving-black-friday","2026-11-26","Thanksgiving dinner deals compared","Walmart, Aldi, Lidl, Target and Sam's Club holiday meal prices side by side."),
  "pop-culture/macys-thanksgiving-day-parade-2026/":("thanksgiving-black-friday","2026-11-26","Macy's Thanksgiving Day Parade 2026","Start time, route and how to watch the parade."),
  "shopping/veterans-day-free-meals-deals-2026/":("holidays-observances","2026-11-11","Veterans Day free meals and deals","Verified Veterans Day 2026 offers from restaurants and stores."),
- "tv-streaming/hallmark-christmas-movies-2026-schedule/":("holidays-observances","2026-10-30","Hallmark Christmas movies 2026 schedule","All 34 new Countdown to Christmas premieres, Fri, Sat and Sun at 8/7c through Dec 20."),
+ "tv-streaming/hallmark-christmas-movies-2026-schedule/":("holidays-observances","2026-10-31","Hallmark Christmas movies 2026 schedule","All 34 new Countdown to Christmas premieres, Fri, Sat and Sun at 8/7c through Dec 20."),
  "pop-culture/when-is-hanukkah-2026/":("holidays-observances","2026-12-04","When is Hanukkah 2026","Starts at sundown Fri Dec 4, ends Sat Dec 12, with a night-by-night candle chart."),
  "tv-streaming/new-years-rockin-eve-2027/":("holidays-observances","2026-12-31","New Year's Rockin' Eve 2027: how to watch","ABC and, for the first time, Disney+ from 8 p.m. ET Thu Dec 31, with hosts and ball drop times."),
  "tv-streaming/new-years-rockin-eve-2027/performers/":("holidays-observances","2026-12-31","Rockin' Eve 2027 performers","Lineup tracker, updated as performers are announced."),

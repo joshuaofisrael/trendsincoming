@@ -1,6 +1,6 @@
 # --- 2026-10-25 Veterans Day 2026 free meals and deals desk (Trend Bot brief 2026-10-24). Every offer opened on the brand's own site on 25 Oct 2026. ---
 VDP="shopping/veterans-day-free-meals-deals-2026/"
-VDV="Oct 25, 2026"
+VDV="Oct 30, 2026"
 VDO=[("Chipotle","Free chips and your choice of guac, Queso Blanco or salsa with a $5 purchase (before tax and tip)","Active-duty U.S. service members and veterans","Valid military ID, VA-issued veteran ID or health ID, state ID with a Veteran designation, or discharge paperwork","Yes. In-restaurant only; not valid for catering, mobile, online or delivery","Participating U.S. restaurants","https://newsroom.chipotle.com/veterans-day-2026-offer","Chipotle newsroom"),
 ("Red Robin","Free Red's Big Tavern Burger with Bottomless Steak Fries, no purchase necessary; no modifications","Veterans and active-duty military","Valid military ID or proof of service","Yes. Dine-in only; not valid for to-go, online, app or third party","Participating restaurants","https://www.redrobin.com/veterans-day","redrobin.com/veterans-day"),
 ("Chili's","Free meal from a select Veterans Day menu","Veterans and active military members","Proof of service; Chili's says to call your local restaurant with questions","Yes. In-restaurant only, select items","Participating restaurants","https://www.chilis.com/restaurant-events/veterans-day","chilis.com Veterans Day page"),

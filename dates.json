@@ -1,7 +1,7 @@
 {
 "": {
-"h": "07a8f2782148f368",
-"mod": "2026-10-29",
+"h": "99e34b46f0d7b17c",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "bbd9e3b8cf637a4d",
-"mod": "2026-10-29",
+"h": "54b857cbc7e6ca05",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -38,6 +38,11 @@
 "h": "f13edd42d14b4f61",
 "mod": "2026-10-28",
 "pub": "2026-10-27"
+},
+"blog/brewers-win-world-series-2026/": {
+"h": "76dbccc9d3aee45a",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
 },
 "blog/brewers-world-series-2026-explained/": {
 "h": "f54088b24c961278",
@@ -75,8 +80,8 @@
 "pub": "2026-10-16"
 },
 "blog/fed-decision-today-explained-oct-2026/": {
-"h": "9014a6dda3eab31b",
-"mod": "2026-10-28",
+"h": "827dbdd51a69880a",
+"mod": "2026-10-30",
 "pub": "2026-10-28"
 },
 "blog/four-corners-flooding-explained/": {
@@ -90,8 +95,8 @@
 "pub": "2026-10-18"
 },
 "blog/government-funding-deadline-oct-31/": {
-"h": "66a275379fdeb8a5",
-"mod": "2026-10-29",
+"h": "51db842bbf9244a1",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -140,8 +145,8 @@
 "pub": "2026-10-14"
 },
 "blog/nba-opening-night-2026-explained/": {
-"h": "d492d07887102148",
-"mod": "2026-10-23",
+"h": "7305c073d10a0e1d",
+"mod": "2026-10-30",
 "pub": "2026-10-21"
 },
 "blog/openai-security-breach-explained/": {
@@ -160,8 +165,8 @@
 "pub": "2026-10-20"
 },
 "blog/rays-walk-off-world-series-game-4-2026/": {
-"h": "d3dcf633c4e355c3",
-"mod": "2026-10-28",
+"h": "89874e2f78014c12",
+"mod": "2026-10-30",
 "pub": "2026-10-28"
 },
 "blog/six-seven-dance-explained/": {
@@ -190,8 +195,8 @@
 "pub": "2026-10-27"
 },
 "blog/valkyries-one-win-from-wnba-title-2026/": {
-"h": "59b928dbad09153f",
-"mod": "2026-10-28",
+"h": "ac668a1f791db668",
+"mod": "2026-10-30",
 "pub": "2026-10-27"
 },
 "blog/victorias-secret-fashion-show-2026-guide/": {
@@ -199,10 +204,20 @@
 "mod": "2026-10-19",
 "pub": "2026-10-17"
 },
+"blog/walmart-35-holiday-meal-basket-2026/": {
+"h": "3d68c1088e7331bf",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
+},
 "blog/why-gas-prices-are-up-oil-110-explained/": {
 "h": "0d55315554c6d941",
 "mod": "2026-10-27",
 "pub": "2026-10-17"
+},
+"blog/wnba-finals-first-game-7-2026/": {
+"h": "a244ce742a09416a",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
 },
 "blog/wnba-finals-game-5-2026-tied-2-2/": {
 "h": "2f5dfeb6185fa3ab",
@@ -250,8 +265,8 @@
 "pub": "2026-10-14"
 },
 "business/earnings/": {
-"h": "334cc065b9be87a8",
-"mod": "2026-10-28",
+"h": "35f100ea87fa1a44",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "business/tesla-q3-2026-earnings/": {
@@ -320,8 +335,8 @@
 "pub": "2026-10-14"
 },
 "fashion-beauty/beauty/": {
-"h": "0b5940664e60afbe",
-"mod": "2026-10-28",
+"h": "9fd2cd206ed98ca2",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "fashion-beauty/victorias-secret-fantasy-bra-2026/": {
@@ -335,8 +350,8 @@
 "pub": "2026-10-17"
 },
 "finance/": {
-"h": "bd0a2b0346041119",
-"mod": "2026-10-28",
+"h": "3321db0a8cc1906f",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "finance/anthropic-ipo-2026/": {
@@ -345,23 +360,23 @@
 "pub": "2026-10-27"
 },
 "finance/big-tech-earnings-fed-week-oct-2026/": {
-"h": "d5251031bfb85b93",
-"mod": "2026-10-28",
+"h": "a333846f46797ae9",
+"mod": "2026-10-30",
 "pub": "2026-10-26"
 },
 "finance/fed-decision-october-2026/": {
-"h": "5fff6063d9079a0b",
-"mod": "2026-10-28",
+"h": "47c56ec912430c6d",
+"mod": "2026-10-30",
 "pub": "2026-10-28"
 },
 "finance/meta-q3-2026-earnings/": {
-"h": "eef3216e53f8864f",
-"mod": "2026-10-24",
+"h": "46f50fe77475908c",
+"mod": "2026-10-30",
 "pub": "2026-10-23"
 },
 "finance/trending-stocks/": {
-"h": "ec4cad53dcff9e16",
-"mod": "2026-10-28",
+"h": "c280947a7afaad3a",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "food/": {
@@ -390,7 +405,7 @@
 "pub": "2026-10-18"
 },
 "games/the-game-awards-2026/": {
-"h": "4a2f094f7b303c52",
+"h": "9f698c950d677584",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
@@ -445,37 +460,37 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "f8a61a1d07dd14d1",
+"h": "7ef77bc641efa839",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "d071f87888d75f72",
+"h": "6813568fbb362fb5",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
-"h": "e1a6f72fb8379c28",
-"mod": "2026-10-28",
+"h": "c35dc32b42a5ef11",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/holidays-observances/": {
-"h": "fb8e3df1c9963eda",
-"mod": "2026-10-27",
+"h": "04a7ebacf6cb4f92",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "f5ea541efc3c680e",
+"h": "68b95109c15bbf34",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
-"h": "e2a2d6d939a74ce0",
-"mod": "2026-10-28",
+"h": "ac9c76d1f7ea6249",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "hubs/thanksgiving-black-friday/": {
-"h": "ac8a8797852d5495",
+"h": "d77248df47244a3a",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
@@ -500,12 +515,12 @@
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
-"h": "3b167335c600ae14",
+"h": "8e1f7179b98883ed",
 "mod": "2026-10-30",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
-"h": "32b23f1bf5d4f358",
+"h": "a34cb992b6fcb7f8",
 "mod": "2026-10-30",
 "pub": "2026-10-18"
 },
@@ -595,8 +610,8 @@
 "pub": "2026-10-17"
 },
 "movies/": {
-"h": "ba97b2aa77c3d54f",
-"mod": "2026-10-28",
+"h": "482060e2688a3fde",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "movies/box-office/": {
@@ -630,8 +645,8 @@
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
-"h": "b205030188f0bc61",
-"mod": "2026-10-28",
+"h": "245e5cdf7dc0117b",
+"mod": "2026-10-30",
 "pub": "2026-10-27"
 },
 "movies/trailers-and-releases/": {
@@ -805,8 +820,8 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "a83b6da50277a31f",
-"mod": "2026-10-29",
+"h": "fe9503ad6c6d5d46",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "politics/alaska-senate-certification-lawsuit/": {
@@ -820,18 +835,18 @@
 "pub": "2026-10-14"
 },
 "politics/early-voting-2026/": {
-"h": "e9c79507f882bb7f",
-"mod": "2026-10-28",
+"h": "fc5e4d57755e0865",
+"mod": "2026-10-30",
 "pub": "2026-10-20"
 },
 "politics/elections-2026/": {
-"h": "d80e9ac82012b183",
-"mod": "2026-10-29",
+"h": "a41b253a6a6d1969",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "b097a030e4724403",
-"mod": "2026-10-29",
+"h": "fa0d865c2a1420ce",
+"mod": "2026-10-30",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
@@ -905,8 +920,8 @@
 "pub": "2026-10-18"
 },
 "shopping/": {
-"h": "f4c35bcafcec8eb5",
-"mod": "2026-10-25",
+"h": "7ac0880a9c8a4f88",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "shopping/thanksgiving-black-friday-store-hours-2026/": {
@@ -915,24 +930,34 @@
 "pub": "2026-10-23"
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
-"h": "d552a4fc1e26750b",
+"h": "212fe06dee867e07",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "shopping/veterans-day-free-meals-deals-2026/": {
-"h": "b1943bfd1effbf71",
+"h": "95a247aca8133863",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
 },
+"shopping/walmart-holiday-meal-basket-2026/": {
+"h": "a720f72dc61b8ad8",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
+},
 "sports/": {
-"h": "83b85388778e8a25",
-"mod": "2026-10-28",
+"h": "cefebabbd26bfc7f",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "sports/alcs-2026-rays-guardians/": {
-"h": "6ae9611850034cfc",
-"mod": "2026-10-28",
+"h": "4181d096a8d1edec",
+"mod": "2026-10-30",
 "pub": "2026-10-18"
+},
+"sports/brewers-world-series-champions-2026/": {
+"h": "65bdf28042653f7e",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
 },
 "sports/mlb-nlcs-dodgers-brewers/": {
 "h": "c08c09a56df8c7e7",
@@ -940,8 +965,8 @@
 "pub": "2026-10-15"
 },
 "sports/mlb-postseason/": {
-"h": "93fc52fab6483a16",
-"mod": "2026-10-28",
+"h": "2683845f044283de",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "sports/nba-cup-2026/": {
@@ -960,8 +985,8 @@
 "pub": "2026-10-14"
 },
 "sports/nba/": {
-"h": "fc4f60b985eb0711",
-"mod": "2026-10-28",
+"h": "3f47c0cd6d155fa4",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "sports/nfl/": {
@@ -970,8 +995,8 @@
 "pub": "2026-10-14"
 },
 "sports/nhl-heritage-classic-2026/": {
-"h": "5d99c804c60967de",
-"mod": "2026-10-26",
+"h": "c2c8a11f86bcd775",
+"mod": "2026-10-30",
 "pub": "2026-10-25"
 },
 "sports/nhl-where-to-watch-2026-27/": {
@@ -980,18 +1005,23 @@
 "pub": "2026-10-14"
 },
 "sports/wnba-finals-2026/": {
-"h": "9e0ac6c3defca598",
-"mod": "2026-10-28",
+"h": "6a12ddcdee62d126",
+"mod": "2026-10-30",
 "pub": "2026-10-17"
 },
 "sports/wnba-finals-game-6-2026/": {
-"h": "13002580150e7144",
-"mod": "2026-10-28",
+"h": "5d2da1a9a1fc2cc7",
+"mod": "2026-10-30",
 "pub": "2026-10-28"
 },
+"sports/wnba-finals-game-7-2026/": {
+"h": "5ee91a264a7434f9",
+"mod": "2026-10-30",
+"pub": "2026-10-30"
+},
 "sports/world-series-2026/": {
-"h": "d05725c4cbacb02a",
-"mod": "2026-10-28",
+"h": "52a5430c29914a78",
+"mod": "2026-10-30",
 "pub": "2026-10-16"
 },
 "sports/world-series-game-4-2026/": {
@@ -1000,8 +1030,8 @@
 "pub": "2026-10-27"
 },
 "sports/world-series-game-5-2026/": {
-"h": "3c80080701648f91",
-"mod": "2026-10-28",
+"h": "9c46c1d60370664f",
+"mod": "2026-10-30",
 "pub": "2026-10-28"
 },
 "tech-ai/": {
@@ -1025,8 +1055,8 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "9d8b14da5e395208",
-"mod": "2026-10-27",
+"h": "0c1c07b261783b2e",
+"mod": "2026-10-30",
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
@@ -1060,13 +1090,13 @@
 "pub": "2026-10-26"
 },
 "trending-hashtags/": {
-"h": "926bc65e89ad5bd4",
-"mod": "2026-10-28",
+"h": "acd958043ced3b66",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "tv-streaming/": {
-"h": "c04a73f9eeaf1315",
-"mod": "2026-10-28",
+"h": "93e76d9909c2a6e4",
+"mod": "2026-10-30",
 "pub": "2026-10-14"
 },
 "tv-streaming/crystal-lake-peacock/": {
@@ -1075,7 +1105,7 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "95ef564563322857",
+"h": "a8d805a1912ae6ef",
 "mod": "2026-10-30",
 "pub": "2026-10-26"
 },

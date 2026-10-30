@@ -1,7 +1,7 @@
 # --- 2026-10-26 Hallmark Countdown to Christmas 2026 schedule desk (Trend Bot brief). Every title, date, time and cast checked on hallmarkchannel.com 26 Oct 2026. ---
 import json as _j, datetime as _d2
 HMP="tv-streaming/hallmark-christmas-movies-2026-schedule/"
-HMV="Oct 26, 2026"
+HMV="Oct 30, 2026"
 HMSRC="https://www.hallmarkchannel.com/christmas/countdown-to-christmas-2026-preview"
 HMGUIDE="https://www.hallmarkchannel.com/christmas/movie-guide-countdown-to-christmas-2026"
 _MO={"OCTOBER":10,"NOVEMBER":11,"DECEMBER":12}
