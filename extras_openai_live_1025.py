@@ -160,3 +160,12 @@ _d["facts"].insert(1,("OpenAI monitoring post (Oct 29, 2026)","OpenAI says it ex
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-2:],_LIVE14+_p[8]); break
+# --- 2026-10-30 9:25 a.m. London live update: Check Point Research Oct 29 telemetry on CVE-2026-111497 (automated probing, no confirmed successful compromise in its observed events). Verified against the fetched page. ---
+_CP29="https://blog.checkpoint.com/security/http2shell-the-brotli-vulnerability-that-extends-beyond-node-js/"
+_OAS.append(("Check Point Research: HTTP2Shell, The Brotli Vulnerability That Extends Beyond Node.js (Oct 29)",_CP29))
+_LIVE15=f'''<div class="live"><p><b>Live update, Friday, October 30, 2026, 9:25 a.m. London time (5:25 a.m. ET):</b> On the Brotli flaw (CVE-2026-111497), Check Point Research published an assessment on October 29 saying that its "IPS (Intrusion Prevention System) telemetry associated with Node.js Brotli Remote Code Execution (CVE-2026-111497) shows automated vulnerability scanning and suspicious payloads potentially associated with exploitation." In the telemetry Check Point analyzed, 90.5% of the requests contained Brotli-encoded HTTP payloads, 33.8% carried the fingerprint of the Patrowl automation tool, and 24.5% targeted upload and ingestion endpoints. Check Point says the percentages "refer to the telemetry data analyzed for this assessment, not to all exploitation attempts or global activity." It reports that malformed binary payloads, unusual HTTP framing and HTTP 500 server errors were observed, "warranting further investigation but not confirming successful exploitation," and that its findings "do not establish successful compromise in the observed events." Check Point also says the flaw reaches beyond Node.js, listing Python Brotli packages, Bun, .NET, Envoy, Istio and software that bundles affected Brotli code as potentially relevant, and advises rebuilding container images and redeploying workloads after patching. Source: <a href="{_CP29}" rel="noopener" target="_blank">Check Point Research</a>.</p></div>'''
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE15+_d["body"]
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE15+_p[8]); break
