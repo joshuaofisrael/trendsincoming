@@ -169,3 +169,14 @@ _d["body"]=_LIVE15+_d["body"]
 for _i,_p in enumerate(POSTS):
     if _p[0]=="openai-security-breach-explained":
         POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-1:],_LIVE15+_p[8]); break
+# --- 2026-10-31 8:20 p.m. London live update: Cyber Security Agency of Singapore alert AL-2026-154 (Oct 30) and Microsoft MSRC customer guidance (Oct 30, Visual Studio fixes). Verified against the fetched pages. ---
+_CSA30="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-154/"
+_MSRC30="https://www.microsoft.com/en-us/msrc/blog/2026/10/patch-now-php2shell-brotli-emudhra-guidance-for-customers"
+_OAS.append(("Cyber Security Agency of Singapore: Active Exploitation of Critical Brotli Vulnerability Affecting Multiple Products (Oct 30)",_CSA30))
+_OAS.append(("Microsoft MSRC: Patch now: PHP2Shell, Brotli, and eMudhra guidance for customers (Oct 30)",_MSRC30))
+_LIVE16=f'''<div class="live"><p><b>Live update, Saturday, October 31, 2026, 8:20 p.m. London time (4:20 p.m. ET):</b> On the Brotli flaw (CVE-2026-111497), the Cyber Security Agency of Singapore issued an alert on October 30 titled "Active Exploitation of Critical Brotli Vulnerability Affecting Multiple Products." The agency says "A Proof-of-Concept (PoC) is publicly available and this vulnerability is reportedly being actively exploited," and tells users and administrators to update affected products, including Node.js and Microsoft .NET, "immediately." Also on October 30, Microsoft's Security Response Center published customer guidance covering the Brotli flaw, the PHP2Shell flaws and the eMudhra certificate authority key issue. Microsoft says "Visual Studio released fixes on October 30, 2026," advises updating Git for Windows to 2.56.0.windows.4 or later, and notes that "Azure WAF inspects only inbound requests," so applications that fetch and decompress Brotli-compressed responses from other servers must be patched. If you run software that decompresses Brotli data, install your vendor's fix and rebuild any containers that bundle it. Sources: <a href="{_CSA30}" rel="noopener" target="_blank">Cyber Security Agency of Singapore</a>, <a href="{_MSRC30}" rel="noopener" target="_blank">Microsoft MSRC</a>.</p></div>'''
+_d=SUBDEEP["openai-security-breach"]
+_d["body"]=_LIVE16+_d["body"]
+for _i,_p in enumerate(POSTS):
+    if _p[0]=="openai-security-breach-explained":
+        POSTS[_i]=_p[:7]+(list(_p[7])+_OAS[-2:],_LIVE16+_p[8]); break
