@@ -1,5 +1,6 @@
 {
  "approved_sentence_hashes": [
+  "3c91c035896d729b496b",
   "4685538e94dd16091db8",
   "4eb8208858d032013275",
   "60b4f1f8cd057bca493c",
@@ -16,17 +17,10 @@
   "c1d0bef78dc4de421bf2",
   "c87bafdfe8fb3788e0ba",
   "cfcb8c4fb7c5e6f6e5ad",
+  "db041985ad7fd7548038",
   "dd207be9bfbb71977784"
  ],
- "held": {
-  "world/france-protests-2026/": {
-   "rules": [
-    1
-   ],
-   "sha256": "64044f73dbf2a7a80a01ec0c47b80e7d0269400f76427ef3ac6f04687e01b5d5",
-   "status": "hold_high"
-  }
- },
+ "held": {},
  "published_pages": [
   "",
   "about/",
@@ -42,6 +36,7 @@
   "blog/crystal-lake-peacock-explained/",
   "blog/daylight-saving-time-ends-2026-fall-back/",
   "blog/ebola-outbreak-kenya-explained/",
+  "blog/election-night-2026-where-to-watch/",
   "blog/election-results-serbia-brazil-2026/",
   "blog/expectations-remix-olivia-rodrigo-chappell-roan/",
   "blog/fed-decision-today-explained-oct-2026/",
@@ -58,6 +53,7 @@
   "blog/mmx-phobos-mission-explained/",
   "blog/narnia-magicians-nephew-explained/",
   "blog/nba-opening-night-2026-explained/",
+  "blog/november-2026-trends-calendar/",
   "blog/openai-security-breach-explained/",
   "blog/php2shell-explained/",
   "blog/rays-brewers-world-series-2026-preview/",
@@ -102,6 +98,7 @@
   "finance/big-tech-earnings-fed-week-oct-2026/",
   "finance/fed-decision-october-2026/",
   "finance/meta-q3-2026-earnings/",
+  "finance/tech-stock-selloff-oct-30-2026/",
   "finance/trending-stocks/",
   "food/",
   "food/fast-food-drops/",
@@ -134,6 +131,8 @@
   "money/2027-tax-numbers/",
   "money/2027-tax-numbers/",
   "money/2027-tax-numbers/",
+  "money/2027-tax-numbers/",
+  "money/2027-tax-numbers/2027-tax-brackets/",
   "money/2027-tax-numbers/2027-tax-brackets/",
   "money/2027-tax-numbers/2027-tax-brackets/",
   "money/2027-tax-numbers/2027-tax-brackets/",
@@ -198,12 +197,14 @@
   "music/zach-bryan-2027-tour-tickets/seattle-lumen-field/",
   "music/zach-bryan-2027-tour-tickets/vancouver-bc-place/",
   "news/",
+  "news/november-2026-whats-coming/",
   "pets/",
   "pets/cats/",
   "politics/",
   "politics/alaska-senate-certification-lawsuit/",
   "politics/congress/",
   "politics/early-voting-2026/",
+  "politics/election-night-2026-how-to-watch/",
   "politics/elections-2026/",
   "politics/government-shutdown-deadline-2026/",
   "politics/supreme-court/",
@@ -273,6 +274,7 @@
   "world/",
   "world/brazil-runoff-2026/",
   "world/ebola-outbreak-2026/",
+  "world/france-protests-2026/",
   "world/jordan-karak-church-attack-2026/",
   "world/middle-east/",
   "world/nairobi-building-collapse-2026/",
@@ -289,12 +291,17 @@
    "sha256": "589cbb6ee7dcdfc10b3cd6e8622e9ed26891eb2dcb057d85f449fbc8051d335c",
    "status": "approved"
   },
+  "world/france-protests-2026/": {
+   "sha256": "64044f73dbf2a7a80a01ec0c47b80e7d0269400f76427ef3ac6f04687e01b5d5",
+   "status": "approved"
+  },
   "world/serbia-election-2026/": {
    "sha256": "f217ceee5b56aaab93cece12f7e2a25f771f9ec52659f5d58729381e3e9f2a95",
    "status": "approved"
   }
  },
  "released_sentence_hashes": [
+  "3c91c035896d729b496b",
   "4685538e94dd16091db8",
   "4eb8208858d032013275",
   "60b4f1f8cd057bca493c",
@@ -311,6 +318,7 @@
   "c1d0bef78dc4de421bf2",
   "c87bafdfe8fb3788e0ba",
   "cfcb8c4fb7c5e6f6e5ad",
+  "db041985ad7fd7548038",
   "dd207be9bfbb71977784"
  ],
  "site": "trendsincoming.com"

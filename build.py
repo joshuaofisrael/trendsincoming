@@ -24,7 +24,7 @@ def unlink_held(b):
 def _rm_held(k):
     p=(k or "")+"index.html"
     if os.path.exists(p): os.remove(p)
-B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-30"; ASOF="30 Oct 2026, 09:00 GMT (05:00 ET)"
+B="https://trendsincoming.com"; LLC="Joshua Israel Ventures LLC"; UPD="2026-10-31"; ASOF="31 Oct 2026, 09:00 GMT (05:00 ET)"
 BEACON="""<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "28844648818e40b580364b41bd8894eb"}'></script>"""
 KEY="2d25fe1d50014ed98b5fff9381edba6a"
 ADS='<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-5681559774142917">'
@@ -277,7 +277,7 @@ def sub_items(sb):
     return [t for t in T if any(k in t[1] or k in t[2] for k in sb[4])]
 PAGES=[]
 CD={"World Series: Rays vs. Brewers":"2026-10-23T20:00:00-04:00","WNBA Finals tied 1-1":"2026-10-21T20:00:00-04:00","Clayface hits theaters Friday":"2026-10-23T00:00:00-04:00","Modern Warfare 4 launches Friday":"2026-10-23T00:00:00-04:00","Pok\u00e9mon's 30th Celebration and Delta Reign":"2026-11-06T00:00:00-05:00","Halloween costume rankings are in":"2026-10-31T00:00:00-04:00","Earnings week: Netflix, Tesla, Meta":"2026-10-21T16:00:00-04:00","iPhone Duo arrives Friday":"2026-10-23T00:00:00-04:00","Medicare open enrollment is open":"2026-12-07T23:59:00-05:00","Midterms: 13 days out":"2026-11-03T06:00:00-05:00","Shutdown watch: the real deadline is Dec 11":"2026-12-12T00:01:00-05:00","Flu shot: aim for end of October":"2026-11-01T00:00:00-04:00","Zelda 40th Anniversary Switch 2":"2026-10-29T00:00:00-04:00","Ocarina of Time remake":"2026-11-05T00:00:00-05:00","GTA VI":"2026-11-19T00:00:00-05:00","Grammy nominations":"2026-11-16T00:00:00-05:00","Wingstop x Sour Patch Kids wings":"2026-10-27T00:00:00-04:00","Helluva Boss S3 (and Stolas)":"2026-10-28T00:00:00-04:00","Open enrollment 2027":"2026-11-01T00:00:00-04:00","Narnia: The Magician's Nephew trailer":"2027-02-12T00:00:00-05:00"}
-UPDISO="2026-10-30T09:00:00+00:00"
+UPDISO="2026-10-31T09:00:00+00:00"
 import hashlib
 def tid(t): return hashlib.md5(t[1].encode()).hexdigest()[:8]
 def related(path,r,cat=None):
@@ -564,6 +564,7 @@ exec(open('extras_gg_1028.py').read())
 exec(open('extras_giftcard_1030.py').read())
 exec(open('extras_daily_1028.py').read())
 exec(open('extras_daily_1030.py').read())
+exec(open('extras_daily_1031.py').read())
 exec(open('extras_rejected.py').read())
 # ---- legal gate: trend cards, subtopic pages and blog posts (held items leave T/SUBS/POSTS, so they drop out of cards, nav, blog index, feed, search and llms.txt)
 _gate_T()
@@ -616,7 +617,7 @@ rows="".join(f'<div class="card"><h3>#{h}</h3><p>{esc(w)}</p><p class="by" style
 page("trending-hashtags/index.html","Trending hashtags right now (US)",f"Trending US hashtags, curated by Trends Incoming. One tap to TikTok, Instagram, X, YouTube, Threads and Facebook.",f'<h1># Trending hashtags</h1><p class="by">{BY} · Snapshot {ASOF}</p><p>Hand-picked from <a href="https://x.com/explore/tabs/trending" rel="nofollow noopener" target="_blank">X\'s US trends</a>, plus TikTok hashtag reports from <a href="https://www.socialpilot.co/blog/tiktok-trends" rel="noopener" target="_blank">SocialPilot</a> and <a href="https://newengen.com/insights/october-tiktok-trends/" rel="noopener" target="_blank">NewEngen</a>. Trends move fast. Tap a platform and see what\'s happening right now.</p><div class="grid">{rows}</div>')
 # stocks
 srows="".join(f'<tr><td><b>${s}</b><br>{esc(n)}</td><td>{esc(w)}<br><span class="src">Source: '+", ".join(f'<a href="{u}" rel="noopener" target="_blank">{esc(l)}</a>' for l,u in src)+f'</span></td><td class="links"><a href="https://finance.yahoo.com/quote/{s}/" {EXT}>Yahoo Finance</a><a class="s" href="https://x.com/search?q=%24{s}" {EXT}>${s} on X</a></td></tr>' for s,n,w,src in STOCKS)
-page("finance/trending-stocks/index.html","Trending stocks today: who's buzzing and why",f"US stocks people are talking about today and why, curated by Trends Incoming. Informational only, not financial advice.",f'<h1>📈 Trending stocks: who\'s buzzing</h1><p class="by">{BY} · As of {ASOF}. Covers earnings dates for the week of Oct 26 and moves reported Oct 20 to 22. Prices are not live; check the linked sources.</p>{DISC}<table><tr><th>Ticker</th><th>Why it\'s buzzing</th><th>Dig in</th></tr>{srows}</table><p class="src">Moves are reported by the linked sources and may be delayed. We list names because they\'re in the news, not because they\'re good or bad investments.</p>')
+page("finance/trending-stocks/index.html","Trending stocks today: who's buzzing and why",f"US stocks people are talking about today and why, curated by Trends Incoming. Informational only, not financial advice.",f'<h1>📈 Trending stocks: who\'s buzzing</h1><p class="by">{BY} · As of {ASOF}. Covers moves reported Oct 29 and 30, per AP. Prices are not live; check the linked sources.</p>{DISC}<table><tr><th>Ticker</th><th>Why it\'s buzzing</th><th>Dig in</th></tr>{srows}</table><p class="src">Moves are reported by the linked sources and may be delayed. We list names because they\'re in the news, not because they\'re good or bad investments.</p>')
 # home
 HOME_FAQ=[("What is Trends Incoming?","Trends Incoming is a free US trend curator. Our team hand-picks what people are talking about in pop culture, music, games, sports, tech, food, money and more, explains why each trend is buzzing, and links to the sources so you can dig in."),
 ("How often is Trends Incoming updated?","The homepage and trend cards are refreshed every day, and fast-moving stories such as live news events get extra updates during the day. Each page shows the date it was last updated."),

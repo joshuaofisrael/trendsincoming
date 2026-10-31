@@ -75,6 +75,8 @@
 - [/money/2027-tax-numbers/](https://trendsincoming.com/money/2027-tax-numbers/)
 - [/money/2027-tax-numbers/2027-tax-brackets/](https://trendsincoming.com/money/2027-tax-numbers/2027-tax-brackets/)
 - [/money/2027-tax-numbers/](https://trendsincoming.com/money/2027-tax-numbers/)
+- [/money/2027-tax-numbers/2027-tax-brackets/](https://trendsincoming.com/money/2027-tax-numbers/2027-tax-brackets/)
+- [/money/2027-tax-numbers/](https://trendsincoming.com/money/2027-tax-numbers/)
 - [/politics/](https://trendsincoming.com/politics/)
 - [/world/](https://trendsincoming.com/world/)
 - [/business/](https://trendsincoming.com/business/)
@@ -149,6 +151,7 @@
 - [/sports/alcs-2026-rays-guardians/](https://trendsincoming.com/sports/alcs-2026-rays-guardians/)
 - [/tv-streaming/crystal-lake-peacock/](https://trendsincoming.com/tv-streaming/crystal-lake-peacock/)
 - [/pop-culture/halloween-costumes-2026/](https://trendsincoming.com/pop-culture/halloween-costumes-2026/)
+- [/world/france-protests-2026/](https://trendsincoming.com/world/france-protests-2026/)
 - [/weather/fall/](https://trendsincoming.com/weather/fall/)
 - [/world/ebola-outbreak-2026/](https://trendsincoming.com/world/ebola-outbreak-2026/)
 - [/tech-ai/iphone-duo/](https://trendsincoming.com/tech-ai/iphone-duo/)
@@ -186,6 +189,9 @@
 - [/sports/brewers-world-series-champions-2026/](https://trendsincoming.com/sports/brewers-world-series-champions-2026/)
 - [/sports/wnba-finals-game-7-2026/](https://trendsincoming.com/sports/wnba-finals-game-7-2026/)
 - [/shopping/walmart-holiday-meal-basket-2026/](https://trendsincoming.com/shopping/walmart-holiday-meal-basket-2026/)
+- [/politics/election-night-2026-how-to-watch/](https://trendsincoming.com/politics/election-night-2026-how-to-watch/)
+- [/finance/tech-stock-selloff-oct-30-2026/](https://trendsincoming.com/finance/tech-stock-selloff-oct-30-2026/)
+- [/news/november-2026-whats-coming/](https://trendsincoming.com/news/november-2026-whats-coming/)
 - [/blog/anthropic-ipo-explained-2026/](https://trendsincoming.com/blog/anthropic-ipo-explained-2026/)
 - [/blog/brewers-one-win-from-world-series-sweep-2026/](https://trendsincoming.com/blog/brewers-one-win-from-world-series-sweep-2026/)
 - [/blog/valkyries-one-win-from-wnba-title-2026/](https://trendsincoming.com/blog/valkyries-one-win-from-wnba-title-2026/)
@@ -233,6 +239,8 @@
 - [/blog/brewers-win-world-series-2026/](https://trendsincoming.com/blog/brewers-win-world-series-2026/)
 - [/blog/wnba-finals-first-game-7-2026/](https://trendsincoming.com/blog/wnba-finals-first-game-7-2026/)
 - [/blog/walmart-35-holiday-meal-basket-2026/](https://trendsincoming.com/blog/walmart-35-holiday-meal-basket-2026/)
+- [/blog/election-night-2026-where-to-watch/](https://trendsincoming.com/blog/election-night-2026-where-to-watch/)
+- [/blog/november-2026-trends-calendar/](https://trendsincoming.com/blog/november-2026-trends-calendar/)
 - [/blog/](https://trendsincoming.com/blog/)
 - [/trending-hashtags/](https://trendsincoming.com/trending-hashtags/)
 - [/finance/trending-stocks/](https://trendsincoming.com/finance/trending-stocks/)
@@ -303,15 +311,18 @@
 - [Brewers win the World Series: the title in one minute](https://trendsincoming.com/blog/brewers-win-world-series-2026/): Milwaukee beat Tampa Bay 4-1 in Game 5 for the first World Series title in franchise history. William Contreras is MVP, and the parade is today at 10 a.m. CT.
 - [The first Game 7 in WNBA Finals history: what to know](https://trendsincoming.com/blog/wnba-finals-first-game-7-2026/): Atlanta beat Golden State 80-69 to tie the Finals 3-3. Game 7 is Saturday, Oct 31, at 8 p.m. ET at Chase Center on USA and Peacock.
 - [Walmart's $35 holiday meal for 10, in one minute](https://trendsincoming.com/blog/walmart-35-holiday-meal-basket-2026/): Walmart's 2026 Holiday Meal Basket serves 10 for $35, or $3.50 each, through Dec 24. What's in it and the fine print.
+- [Election night 2026: where to watch, in one minute](https://trendsincoming.com/blog/election-night-2026-where-to-watch/): Coverage of the Nov 3 midterms starts at 4 p.m. ET on CNN and C-SPAN, with every major network live by 7 p.m. ET. A neutral guide to picking your channel.
+- [November 2026 is stacked: the dates everyone's searching](https://trendsincoming.com/blog/november-2026-trends-calendar/): From fall back on Nov 1 to Black Friday on Nov 27, here are the November dates driving searches, each with a full guide.
 
-## Trends (as of 2026-10-30)
+## Trends (as of 2026-10-31)
+- Happy Halloween: It's Halloween, and it's a big night: WNBA Finals Game 7 tips at 8 p.m. ET, and clocks fall back an hour at 2 a.m. Sunday. See the year's top costumes and what's coming in November. Source: https://www.wnba.com/game/atl-vs-gsv-1042600307
+- Tech sell-off: S&P's worst day since June: The S&P 500 fell about 1.8% Friday, the Nasdaq 2.9%, and Intel plunged 28.6% on a weak forecast, per AP. AI spending worries drove it. Not financial advice. Source: https://www.cbc.ca/news/business/tech-stocks-markets-oct-30-9.7403226
+- November 2026: what's coming: Fall back Sunday, Election Day Tuesday, Veterans Day Nov 11, GTA VI Nov 19, Hunger Games Nov 20, Thanksgiving Nov 26. Every date in one place. Source: https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst
 - Walmart's $35 meal for 10: Walmart's Holiday Meal Basket serves 10 for $35 ($3.50 each), Oct 28 to Dec 24, now the lowest total we've verified. The price assumes a 13.5 lb turkey. Source: https://corporate.walmart.com/news/2026/10/walmart-holiday-meal-basket
-- Alphabet sinks 12% after earnings: Alphabet fell about 12% Thursday after its results, and Amazon and Intel slid after hours, per CNBC. Not financial advice. Source: https://www.cnbc.com/2026/10/29/stock-market-today-live-updates.html
 - Anthropic files to go public: Anthropic filed its S-1 on Oct 26 to list on Nasdaq as "ANT." No price range yet. Revenue for the six months to June was $16.29B, CNBC says. Not financial advice. Source: https://www.anthropic.com/news/s1-sec
 - Hunger Games tickets on sale now: Sunrise on the Reaping tickets are on sale, including early screenings Nov 18 at 6 p.m. local in premium formats. Release is Fri Nov 20. Source: https://www.yahoo.com/entertainment/movies/articles/hunger-games-sunrise-reaping-tickets-180732108.html
-- NBA Cup tips off tonight: Ten Group Play games tonight, led by Knicks at 76ers (7:30 p.m. ET) and Lakers at Warriors (10 p.m. ET) on Prime Video. The final is Dec 11 at Hinkle Fieldhouse, per NBA.com. Source: https://www.nba.com/news/2026-27-schedule-announced
+- NBA Cup is underway: Group Play is underway across November, and the final is Dec 11 at Hinkle Fieldhouse, per NBA.com. Source: https://www.nba.com/news/2026-27-schedule-announced
 - Clocks fall back Sunday: Daylight saving time ends Sun Nov 1 at 2 a.m. local. Hawaii and most of Arizona don't change. DST returns Mar 14, 2027. Source: https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst
-- Fed holds rates: The Fed kept its range at 3.75% to 4% on Oct 28 on a 10-2 vote; Cook and Hammack wanted a hike. Warsh says one 2027 meeting will be strategy-only. Not financial advice. Source: https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm
 - Lula wins Brazil's runoff: Lula 51.79%, Flavio Bolsonaro 48.21% with all votes counted, per the BBC. It's Lula's fourth term, starting Jan 5. Bolsonaro has not conceded and says he'll seek annulment. Source: https://www.bbc.com/news/articles/cmvg7p001qj9o
 - Student List wins in Serbia: With 8,077 polling stations counted: Student List 52.54%, Vucic's list 39.29%, turnout 68.78%. Vucic conceded: "It is clear that we have lost these elections." Source: https://www.theguardian.com/world/live/2026/oct/25/europe-serbia-elections-aleksander-vucic-student-list-protests-bulgaria-latest-news-updates
 - Church attack in Jordan: Gunmen attacked a funeral at a church in Karak governorate on Friday. 9 dead and about 40 wounded; officials call it terrorism and the attackers are still being sought. Source: https://www.aljazeera.com/news/2026/10/24/jordans-king-abdullah-orders-firm-response-after-deadly-church-attack
@@ -354,7 +365,7 @@
 - "we fell in love in october": girl in red's song is still one of the fastest-climbing TikTok sounds, with 2M+ videos. Peak fall. Source: https://kabo.sh/tools/trending-tiktok-sounds
 - Grammy nominations: The 2027 nominees drop Monday, Nov 16. The ceremony is Feb 7 on ABC, Disney+ and Hulu. Source: https://www.grammy.com/news/2027-grammys-show-air-date-nominations-announced/
 - Brewers win the World Series: Milwaukee beat Tampa Bay 4-1 in Game 5 for the first title in franchise history, and William Contreras is MVP. The parade is today at 10 a.m. CT downtown, with a free rally after. Source: https://www.mlb.com/news/brewers-2026-world-series-championship-parade
-- WNBA Finals go to Game 7: Atlanta beat Golden State 80-69 behind Allisha Gray's 23 to tie it 3-3. Game 7 is Sat Oct 31, 8 p.m. ET at Chase Center on USA and Peacock, the first in Finals history, per ESPN. Source: https://www.wnba.com/news/2026-finals-valkyries-dream-game-6-recap
+- WNBA Finals Game 7 tonight: Dream vs. Valkyries for a first title either way: 8 p.m. ET at Chase Center on USA and Peacock, coverage from 7 p.m. ET. Atlanta is 0-3 this series when it scores under 70, per ESPN. Source: https://www.wnba.com/game/atl-vs-gsv-1042600307
 - NHL: where to watch: 84-game season, split between ESPN and TNT. Sunday's Heritage Classic: Canadiens 2, Jets 1, as Jacob Fowler made 33 saves outdoors in Winnipeg. Source: https://www.nhl.com/news/montreal-canadiens-winnipeg-jets-heritage-classic-game-recap-october-25-2026
 - AEW WrestleDream: Ospreay survives: Will Ospreay kept the AEW World title in the first-ever Clockwork Carnage match in Orlando, finishing with 3 points to 2 each for Adam Copeland, Samoa Joe and Darby Allin. Source: https://www.postwrestling.com/2026/10/18/will-ospreay-survives-clockwork-carnage-to-retain-aew-world-championship-at-wrestledream/
 - Google Gemini 4 Argon: Google's new frontier model, out Oct 13 with a 1M-token window. It's pitched as less hedgy and less cliché. Source: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
@@ -378,7 +389,7 @@
 - Your sixth photo killed you: Open your camera roll, find the sixth picture, and post it as your mock "cause of death." Geckos, toilet-paper dogs and crash-test cars so far. Started Oct 16 and spread fast. Source: https://x.com/i/trending/2111266733470429367
 - Start of COVID vs. now: Side-by-side photos from lockdown days next to 2026 mirror selfies: gym glow-ups, beards, brand-new hair. Some proud, some hilarious, all very this weekend. Source: https://x.com/i/trending/2111216662473015388
 - AI cat melodrama: Synthetic cats acting out family dramas and tiny tragedies. Weirdly emotional, and a fast-breaking format. Source: https://lightreel.ai/blogs/whats-trending-on-tiktok
-- Midterms: 4 days out: Every House seat, 35 Senate races and 36 governor races are on the ballot Tuesday, Nov 3. Early voting rules and dates differ by state, so check your own before you go. Source: https://watch.vote/midterms/2026/how-to-vote
+- Midterms: 3 days out: Every House seat, 35 Senate races and 36 governor races are on the ballot Tuesday, Nov 3. Coverage starts at 4 p.m. ET on CNN and C-SPAN; see every network's start time. Source: https://www.tvinsider.com/1300360/election-night-2026-how-to-watch-midterm-results/
 - Shutdown watch: the real deadline is Dec 11: No shutdown in October. The stopgap law signed Sept 2 (H.R. 6500) funds the government through Friday, Dec 11, 2026, so the next deadline lands in the lame-duck session after the Nov 3 election. Key dates and what a shutdown would mean for Social Security, mail and parks. Source: https://www.presidency.ucsb.edu/documents/congressional-bill-hr-6500-signed-into-law
 - White House press secretary out after 5 days: Katie Zacharia is leaving the press secretary job after five days, NBC News reports. A senior official says she's moving to a new role. It followed criticism of her first briefing and her acknowledgment that she did not pass the bar exam. She thanked the president in a statement. Source: https://www.nbcnews.com/politics/white-house/white-house-press-secretary-katie-zacharia-out-after-5-days-rcna603912
 - 60 Minutes on the people who count the votes: Lesley Stahl's Sunday report, "The Vote," looked at federal actions affecting state and local election officials ahead of Nov 3, including an FBI search of a Fulton County, Georgia election warehouse and Justice Department requests for voter rolls. It featured Utah Lt. Gov. Deidre Henderson and Justice Department official Harmeet Dhillon, so both state officials and DOJ gave their side. Source: https://www.cbsnews.com/news/election-officials-voting-system-investigations-60-minutes-transcript/
