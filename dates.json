@@ -421,7 +421,7 @@
 },
 "games/the-game-awards-2026/": {
 "h": "9f698c950d677584",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -480,8 +480,8 @@
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "3bdb05b90131ccb7",
-"mod": "2026-10-31",
+"h": "d3570673c69610a3",
+"mod": "2026-11-01",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -500,8 +500,8 @@
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
-"h": "328aef3ba4e5f03a",
-"mod": "2026-10-31",
+"h": "daa8cab3cfc12150",
+"mod": "2026-11-01",
 "pub": "2026-10-25"
 },
 "hubs/thanksgiving-black-friday/": {
@@ -531,12 +531,12 @@
 },
 "money/2027-tax-numbers/": {
 "h": "19ca8926bbabf8fe",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
 "h": "01a39e9b89b57872",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
@@ -576,7 +576,7 @@
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -656,7 +656,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -696,7 +696,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -956,12 +956,12 @@
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
 "h": "212fe06dee867e07",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-25"
 },
 "shopping/veterans-day-free-meals-deals-2026/": {
 "h": "95a247aca8133863",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-25"
 },
 "shopping/walmart-holiday-meal-basket-2026/": {
@@ -1030,8 +1030,8 @@
 "pub": "2026-10-14"
 },
 "sports/wnba-finals-2026/": {
-"h": "ef26eb5423d72eb5",
-"mod": "2026-10-31",
+"h": "8fd3552fb793ec8d",
+"mod": "2026-11-01",
 "pub": "2026-10-17"
 },
 "sports/wnba-finals-game-6-2026/": {
@@ -1040,8 +1040,8 @@
 "pub": "2026-10-28"
 },
 "sports/wnba-finals-game-7-2026/": {
-"h": "9ff5738fd6aa46d9",
-"mod": "2026-10-31",
+"h": "49b7f2c7d5b872a9",
+"mod": "2026-11-01",
 "pub": "2026-10-30"
 },
 "sports/world-series-2026/": {
@@ -1130,8 +1130,8 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "f4b075980457f533",
-"mod": "2026-10-31",
+"h": "0c920203ff421864",
+"mod": "2026-11-01",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
@@ -1141,7 +1141,7 @@
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
 "h": "81dd54d6a7230b08",
-"mod": "2026-10-31",
+"mod": "2026-11-01",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {
