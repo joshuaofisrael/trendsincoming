@@ -587,6 +587,7 @@ for _p in POSTS:
     if GATE.check(_k,_p[1],_p[2],_b,None,[u for l,u in _p[7]],kind="post"): _keep.append(_p)
     else: HELD.add(_k); _rm_held(_k)
 POSTS[:]=_keep
+POSTS.sort(key=lambda p: DATES.get(f"blog/{p[0]}/", {}).get("pub") or DATES.get(f"blog/{p[0]}/index.html", {}).get("pub") or "1970-01-01", reverse=True)
 # category hubs
 NAVNAME={"alaska-senate-certification-lawsuit":"Alaska Senate certification"}  # neutral hub label, so hub pages never carry review-item wording
 for c,n,e in CATS:
