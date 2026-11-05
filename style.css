@@ -24,3 +24,14 @@ main h2{margin-top:1.4em}main p{line-height:1.6}
 .hubbar{max-width:1100px;margin:auto;display:flex;gap:8px;padding:0 14px 8px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.hubbar a{font-weight:800;font-size:.8rem;color:var(--ink);text-decoration:none;background:var(--lime);border:2px solid var(--ink);border-radius:8px;padding:2px 9px;flex:0 0 auto}
 .crumbs{font-size:.85rem;margin:0 0 10px}.hubl{list-style:none;padding:0}.hubl li{border-bottom:1px dashed #999;padding:8px 0}.hd{display:inline-block;min-width:150px;font-weight:800}.h1l{font-size:.88rem;color:#444}.hubrel{border-top:3px solid var(--ink);margin-top:28px;padding-top:6px}
 .hubgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.hubc{display:flex;flex-direction:column;gap:4px;border:3px solid var(--ink);border-radius:12px;padding:12px;background:#fff;color:var(--ink);text-decoration:none}.hubc span{font-size:.85rem}.hubc i{font-size:.8rem;font-weight:700}
+
+/* style-pass 2026-11-05: focus, readable article measure, footer wrap, card focus */
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.nav a.l:focus-visible,.hubbar a:focus-visible,.cats a:focus-visible,.links a:focus-visible,.share a:focus-visible,.tile:focus-visible,.hubc:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.card:focus-within{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+article,.post,.entry{max-width:42rem}
+article p,.post p,.entry p,main.article p{line-height:1.7;max-width:68ch}
+footer{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+footer a{margin-right:0}
+.card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:0 0 .5em}
+@media (max-width:640px){main{padding:14px 12px}.grid{grid-template-columns:1fr}.hero{padding:20px 16px;border-radius:18px}.nav{gap:8px;padding:8px 10px}}
