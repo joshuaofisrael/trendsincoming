@@ -1,7 +1,7 @@
 {
 "": {
-"h": "c011afe3a2f3da85",
-"mod": "2026-11-03",
+"h": "5cedfc9704a5d9d9",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "6891ec6fe6060157",
-"mod": "2026-11-09",
+"h": "081783abf36c8328",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -99,14 +99,9 @@
 "mod": "2026-10-26",
 "pub": "2026-10-24"
 },
-"blog/france-protests-october-17-2026/": {
-"h": "f911819318f0263b",
-"mod": "2026-10-31",
-"pub": "2026-10-18"
-},
 "blog/government-funding-deadline-oct-31/": {
-"h": "1fd9bbcb6e89b523",
-"mod": "2026-10-31",
+"h": "8ba66684436739b6",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "blog/gta-6-explained/": {
@@ -441,7 +436,7 @@
 },
 "games/the-game-awards-2026/": {
 "h": "9f698c950d677584",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -495,13 +490,13 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "3da77dbc93397f1a",
-"mod": "2026-11-03",
+"h": "f1766e0653e1a53e",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "b82f5b9b19a9b656",
-"mod": "2026-11-09",
+"h": "7e3156eaf658701f",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -515,8 +510,8 @@
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "7a3f358724b2ec01",
-"mod": "2026-10-31",
+"h": "00eef663fca0420d",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
@@ -545,33 +540,38 @@
 "pub": "2026-10-14"
 },
 "money/": {
-"h": "cf573dc5d0fb49b4",
-"mod": "2026-10-20",
+"h": "5661f6a2493fdbd1",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
-"h": "19ca8926bbabf8fe",
-"mod": "2026-11-09",
+"h": "1f1250336e1e4de0",
+"mod": "2026-11-18",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
-"h": "01a39e9b89b57872",
-"mod": "2026-11-09",
+"h": "79e68930ec9d6869",
+"mod": "2026-11-18",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
-"h": "c4fef344ee8abe61",
-"mod": "2026-10-19",
+"h": "dc0aa90609187df3",
+"mod": "2026-11-18",
 "pub": "2026-10-18"
 },
+"money/2027-tax-numbers/gift-estate-tax-2027/": {
+"h": "9ca431d921458888",
+"mod": "2026-11-18",
+"pub": "2026-11-18"
+},
 "money/2027-tax-numbers/hsa-limits-2027/": {
-"h": "05cddc20924de556",
-"mod": "2026-10-19",
+"h": "ffd8e5016191bdb2",
+"mod": "2026-11-18",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/irs-mileage-rate-2027/": {
-"h": "f268d71164c46058",
-"mod": "2026-10-19",
+"h": "95ac40f2bdc58dd4",
+"mod": "2026-11-18",
 "pub": "2026-10-18"
 },
 "money/gas-prices-2026/": {
@@ -590,13 +590,18 @@
 "pub": "2026-10-14"
 },
 "money/medicare-open-enrollment-2027/": {
-"h": "c0058e1d3df65e13",
-"mod": "2026-10-24",
+"h": "20d30d162b58e448",
+"mod": "2026-11-18",
 "pub": "2026-10-15"
+},
+"money/medicare-part-b-premium-2027/": {
+"h": "bf1bfc8a1a4f764b",
+"mod": "2026-11-18",
+"pub": "2026-11-18"
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -635,13 +640,13 @@
 "pub": "2026-10-14"
 },
 "money/retirement/": {
-"h": "4a4088a604b7747b",
-"mod": "2026-10-27",
+"h": "b5d2475d3c195fa0",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "money/social-security-2027/": {
-"h": "c2f8ce7eb6c3863f",
-"mod": "2026-10-24",
+"h": "ad4c3e9ab44aaa97",
+"mod": "2026-11-18",
 "pub": "2026-10-17"
 },
 "movies/": {
@@ -676,7 +681,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -716,7 +721,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -860,14 +865,9 @@
 "pub": "2026-10-14"
 },
 "politics/": {
-"h": "2c681deb4cf86f23",
-"mod": "2026-10-31",
+"h": "45aacd063ee25451",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
-},
-"politics/alaska-senate-certification-lawsuit/": {
-"h": "edc0ea7f01396c00",
-"mod": "2026-10-29",
-"pub": "2026-10-24"
 },
 "politics/congress/": {
 "h": "79bb259f1e405f85",
@@ -885,13 +885,13 @@
 "pub": "2026-10-31"
 },
 "politics/elections-2026/": {
-"h": "b03d5053a678d964",
-"mod": "2026-10-31",
+"h": "99c4028262211fed",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "politics/government-shutdown-deadline-2026/": {
-"h": "0cbf074de39f6d49",
-"mod": "2026-10-31",
+"h": "ad26d2397873a9af",
+"mod": "2026-11-18",
 "pub": "2026-10-20"
 },
 "politics/supreme-court/": {
@@ -976,12 +976,12 @@
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
 "h": "212fe06dee867e07",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "shopping/veterans-day-free-meals-deals-2026/": {
 "h": "95a247aca8133863",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "shopping/walmart-holiday-meal-basket-2026/": {
@@ -1155,8 +1155,8 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "da7d3b0bfce3f947",
-"mod": "2026-11-09",
+"h": "753c3fcd5ef26508",
+"mod": "2026-11-18",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
@@ -1166,7 +1166,7 @@
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
 "h": "81dd54d6a7230b08",
-"mod": "2026-11-09",
+"mod": "2026-11-18",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {
@@ -1195,13 +1195,13 @@
 "pub": "2026-10-16"
 },
 "world/": {
-"h": "a3842f7bc1b90888",
-"mod": "2026-10-31",
+"h": "d663cf26e362aee2",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 },
 "world/brazil-runoff-2026/": {
-"h": "00263c7c6d72358f",
-"mod": "2026-10-29",
+"h": "344342c894ed5edb",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "world/ebola-outbreak-2026/": {
@@ -1209,14 +1209,9 @@
 "mod": "2026-10-21",
 "pub": "2026-10-19"
 },
-"world/france-protests-2026/": {
-"h": "66dcef0685b3a540",
-"mod": "2026-10-31",
-"pub": "2026-10-18"
-},
 "world/jordan-karak-church-attack-2026/": {
-"h": "f1fff15673be15b9",
-"mod": "2026-10-29",
+"h": "ddd4bbfedbfe210a",
+"mod": "2026-11-18",
 "pub": "2026-10-25"
 },
 "world/middle-east/": {
@@ -1229,19 +1224,14 @@
 "mod": "2026-10-24",
 "pub": "2026-10-24"
 },
-"world/serbia-election-2026/": {
-"h": "4f408f171c1ecfcb",
-"mod": "2026-10-31",
-"pub": "2026-10-25"
-},
 "world/tibet-earthquake-2026/": {
 "h": "4110ff62167538ec",
 "mod": "2026-10-23",
 "pub": "2026-10-23"
 },
 "world/ukraine-russia/": {
-"h": "1d57b3373ea94d79",
-"mod": "2026-10-31",
+"h": "315146abfa8fb224",
+"mod": "2026-11-18",
 "pub": "2026-10-14"
 }
 }
