@@ -28,6 +28,7 @@ HUBMAP={
  "money/open-enrollment-2027/":("money-benefits","2026-11-01","Open enrollment 2027","ACA marketplace open enrollment dates and deadlines."),
  "money/holiday-gift-card-bonus-deals-2026/":("money-benefits","2026-11-27","Holiday gift card bonus deals 2026","Every restaurant gift card bonus with buy dates, bonus per $100 and when bonus cards work."),
  "money/medicare-open-enrollment-2027/":("money-benefits","2026-12-07","Medicare open enrollment 2027","Medicare open enrollment runs Oct 15 to Dec 7."),
+ "money/medicare-part-b-premium-2027/":("money-benefits","2027-01-01","Medicare Part B premium 2027","The 2027 Part B premium is $209.40 a month, official from CMS."),
  "games/zelda-switch-2-40th-anniversary-edition/":("games-movies-music","2026-10-29","Zelda Switch 2 40th Anniversary Edition","Release day details for the Zelda Switch 2 bundle."),
  "games/ocarina-of-time-remake/":("games-movies-music","2026-11-05","Ocarina of Time remake","Release date and what is new in the remake."),
  "gaming/pokemon-delta-reign-30th-celebration/":("games-movies-music","2026-11-06","Pokemon Delta Reign","Pokemon Delta Reign and the 30th celebration."),
