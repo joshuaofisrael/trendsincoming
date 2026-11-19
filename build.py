@@ -322,11 +322,18 @@ KEYPH={"":"home-hero","politics/":"politics-voting-booths","politics/early-votin
 CATPH={"politics":"shutdown-capitol","tech-ai":"tech-ai-servers","gaming":"gaming-setup","music":"music-turntable","movies":"movies-theater","science":"science-spacecraft","money":"money-desk","finance":"money-desk","travel":"travel-airport-sunrise"}
 PHCSS='''
 .ph{margin:14px 0 18px}.ph img{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:440px;object-fit:cover;border:3px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink)}
+.ph figcaption{font-size:.9rem;margin-top:6px}.ph figcaption a{font-weight:700}
 .hero-photo{position:relative;overflow:hidden;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;background:var(--ink)}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,18,31,.05) 20%,rgba(22,18,31,.82))}.hero-photo>*:not(img){position:relative;z-index:2;text-shadow:0 2px 10px rgba(0,0,0,.55)}
 .tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));margin:10px 0 22px}.tile{position:relative;display:block;border:3px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:4px 4px 0 var(--ink);aspect-ratio:4/3;background:var(--ink);transition:transform .15s ease,box-shadow .15s ease}.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}.tile span{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;color:#fff;font-weight:900;text-decoration:none;background:linear-gradient(transparent,rgba(22,18,31,.85))}.tile:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}.tile:hover img{transform:scale(1.06)}
 .card{transition:transform .15s ease,box-shadow .15s ease}.card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pink)}
+.nr{margin:22px 0}.nrgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.nrcard{display:flex;flex-direction:column;border:2px solid var(--ink);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease,box-shadow .15s ease}
+.nrcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#eee}
+.nrcard .nrt{padding:10px 12px;font-size:.95rem;line-height:1.35}.nrcard:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--pink)}
+.compare{margin:16px 0;padding:14px 16px;border:2px solid var(--ink);border-radius:14px;background:#effcff}
+.compare h2,.compare h3{margin-top:0}.compare ul{margin:8px 0 0;padding-left:1.2em}
 main h2{margin-top:1.4em}main p{line-height:1.6}
-@media (prefers-reduced-motion:reduce){.card,.tile,.tile img{transition:none}.tile:hover img{transform:none}}
+@media (prefers-reduced-motion:reduce){.card,.tile,.tile img,.nrcard{transition:none}.tile:hover img{transform:none}}
 '''
 def photo_for(k,cat,home=False):
     n=KEYPH.get(k)
@@ -352,7 +359,7 @@ def inject_photo(body,k,cat,home,rr):
         return body.replace("<h2>🎯 Curator",tiles_html()+"<h2>🎯 Curator",1)
     i=body.find("</h1>")
     if i<0: return body
-    fig=f'<figure class="ph"><img src="{rr}assets/img/{n}.webp" width="1200" height="675" alt="{esc(alt)}" fetchpriority="high" decoding="async"></figure>'
+    fig=f'<figure class="ph"><img src="{rr}assets/img/{n}.webp" width="1200" height="675" alt="{esc(alt)}" fetchpriority="high" decoding="async"><figcaption><a href="{rr}image-policy/">AI-generated image</a></figcaption></figure>'
     return body[:i+5]+fig+body[i+5:]
 FINRX=re.compile(r"(tax|medicare|enroll|benefit|cola|social-security|wage|stock|earnings|gas-prices|inflation|irs|401k|hsa|retire|housing|payroll|mileage)")
 FINNOTE="Informational only, not financial, tax or legal advice. Verify with the official source."
@@ -421,7 +428,7 @@ def page(path,title,desc,body,ld=None,home=False,article=True,cat=None,rel=True)
 {hubbar(r)}<div class="ticker" aria-label="Trending now"><div class="tk">{"".join(f'<a href="{r}{t[0]}/">🔥 {esc(t[1])}</a>' for t in T)}</div></div>
 <main>{pnote(k)}<p class="stamp">⏱️ <time datetime="{dm if not home else UPDISO}" data-updated="{upiso}">Updated {dm}</time>{'' if home or dp==dm else f' · <span class="by">First published {dp}</span>'}</p>{body}{share(url,title)}{related(path,r,cat) if rel else ""}</main><footer>
 <p class="fnote">For information and entertainment only, not financial, tax, legal, medical or other professional advice. Predictions are not guarantees. We may show ads and may earn commissions from affiliate links, which never influence our reporting. See our <a href="{r}terms/">Terms</a> and <a href="{r}advertising-disclosure/">disclosure</a>.</p>
-<a href="{r}about/">About</a><a href="{r}trend-data/">Trend Data</a><a href="{r}contact/">Contact</a><a href="{r}about/#editorial-policy">Editorial policy</a><a href="{r}corrections/">Corrections</a><a href="{r}search/">Search</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}copyright/">Copyright &amp; DMCA</a><a href="{r}advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a><a href="#cookies" data-consent-open>Cookie settings</a></footer><script src="{r}app.js" defer></script>{BEACON}</body></html>"""
+<a href="{r}about/">About</a><a href="{r}trend-data/">Trend Data</a><a href="{r}contact/">Contact</a><a href="{r}about/#editorial-policy">Editorial policy</a><a href="{r}image-policy/">Image policy</a><a href="{r}corrections/">Corrections</a><a href="{r}search/">Search</a><a href="{r}terms/">Terms</a><a href="{r}privacy/">Privacy</a><a href="{r}disclaimer/">Disclaimer</a><a href="{r}copyright/">Copyright &amp; DMCA</a><a href="{r}advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="{r}trending-hashtags/">Hashtags</a><a href="{r}finance/trending-stocks/">Stocks</a><a href="#cookies" data-consent-open>Cookie settings</a></footer><script src="{r}app.js" defer></script>{BEACON}</body></html>"""
     h=unlink_held(h)  # legal gate: also drop template cards, hub lists and related links that point at held items
     os.makedirs(os.path.dirname(path) or ".",exist_ok=True); open(path,"w").write(h); PAGES.append(url)
     SEARCH.append({"u":"/"+k,"t":title,"d":desc,"c":CN[cat][0] if cat in CN else ""})
@@ -572,6 +579,7 @@ exec(open('extras_daily_1101.py').read())
 exec(open('extras_daily_1103.py').read())
 exec(open('extras_evergreen_1109.py').read())
 exec(open('extras_medicare_partb_1118.py').read())
+exec(open('extras_seo_1119.py').read())
 exec(open('extras_rejected.py').read())
 # ---- legal gate: trend cards, subtopic pages and blog posts (held items leave T/SUBS/POSTS, so they drop out of cards, nav, blog index, feed, search and llms.txt)
 _gate_T()
@@ -781,7 +789,7 @@ open("robots.txt","w").write("".join(f"User-agent: {a}\nAllow: /\n\n" for a in [
 open("sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{u}</loc><lastmod>{DATES.get(u.replace(B+"/",""),{}).get("mod",UPD)}</lastmod></url>\n" for u in dict.fromkeys(PAGES) if not _thin(u.replace(B+'/','')))+"</urlset>\n")
 open("llms.txt","w").write(f"# Trends Incoming\n\n> {TAG}. Hand-picked US trends with why each is trending and links to sources.\n\n## Key pages\n"+"".join(f"- [{u.replace(B,'') or '/'}]({u})\n" for u in PAGES)+"\n## Blog explainers\n"+"".join(f"- [{p[1]}]({B}/blog/{p[0]}/): {p[2]}\n" for p in POSTS)+"\n## Trends (as of "+UPD+")\n"+"".join(f"- {t[1]}: {t[2]} Source: {t[4][0][1]}\n" for t in T))
 open(f"{KEY}.txt","w").write(KEY); open(".nojekyll","w").write("")
-open("404.html","w").write('<!doctype html><html lang="en"><head><meta charset="utf-8">'+ADHEAD+'<meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found | Trends Incoming</title><link rel="stylesheet" href="/style.css"></head><body><main><h1>404: this trend already passed 😅</h1><p><a href="/">Back to what\'s trending →</a></p></main><footer><a href="/about/">About</a><a href="/trend-data/">Trend Data</a><a href="/contact/">Contact</a><a href="/corrections/">Corrections</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/disclaimer/">Disclaimer</a><a href="/copyright/">Copyright &amp; DMCA</a><a href="/advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="#cookies" data-consent-open>Cookie settings</a></footer>'+BEACON+'</body></html>')
+open("404.html","w").write('<!doctype html><html lang="en"><head><meta charset="utf-8">'+ADHEAD+'<meta name="viewport" content="width=device-width,initial-scale=1"><title>Not found | Trends Incoming</title><link rel="stylesheet" href="/style.css"></head><body><main><h1>404: this trend already passed 😅</h1><p><a href="/">Back to what\'s trending →</a></p></main><footer><a href="/about/">About</a><a href="/trend-data/">Trend Data</a><a href="/contact/">Contact</a><a href="/image-policy/">Image policy</a><a href="/corrections/">Corrections</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/disclaimer/">Disclaimer</a><a href="/copyright/">Copyright &amp; DMCA</a><a href="/advertising-disclosure/">Ads &amp; affiliate disclosure</a><a href="#cookies" data-consent-open>Cookie settings</a></footer>'+BEACON+'</body></html>')
 open("ads.txt","w").write("google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n")
 _hk=[k for k in DATES if k in HELD]
 json.dump({k:v for k,v in DATES.items() if k not in _hk},open("dates.json","w"),indent=0,sort_keys=True)
