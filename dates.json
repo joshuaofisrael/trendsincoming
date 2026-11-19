@@ -1,7 +1,7 @@
 {
 "": {
-"h": "5cedfc9704a5d9d9",
-"mod": "2026-11-18",
+"h": "c737b2be56be5608",
+"mod": "2026-11-19",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -350,8 +350,8 @@
 "pub": "2026-10-14"
 },
 "education/": {
-"h": "3a16801d6053f394",
-"mod": "2026-10-17",
+"h": "16f6c5a6cdb52a47",
+"mod": "2026-11-19",
 "pub": "2026-10-14"
 },
 "fashion-beauty/": {
@@ -436,7 +436,7 @@
 },
 "games/the-game-awards-2026/": {
 "h": "9f698c950d677584",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -490,8 +490,8 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "f1766e0653e1a53e",
-"mod": "2026-11-18",
+"h": "e940ec79e368c30d",
+"mod": "2026-11-19",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
@@ -510,8 +510,8 @@
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "00eef663fca0420d",
-"mod": "2026-11-18",
+"h": "633cdafb6d113df6",
+"mod": "2026-11-19",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
@@ -523,6 +523,11 @@
 "h": "d77248df47244a3a",
 "mod": "2026-10-30",
 "pub": "2026-10-25"
+},
+"image-policy/": {
+"h": "8ccead3de6f25ce3",
+"mod": "2026-11-19",
+"pub": "2026-11-19"
 },
 "internet-culture/": {
 "h": "841652cb0bb377f1",
@@ -540,39 +545,44 @@
 "pub": "2026-10-14"
 },
 "money/": {
-"h": "5661f6a2493fdbd1",
-"mod": "2026-11-18",
+"h": "9763e7aea5ccb105",
+"mod": "2026-11-19",
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
-"h": "1f1250336e1e4de0",
-"mod": "2026-11-18",
+"h": "416cc6210c5cdbd6",
+"mod": "2026-11-19",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
-"h": "79e68930ec9d6869",
-"mod": "2026-11-18",
+"h": "954fc658dc1e17ed",
+"mod": "2026-11-19",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
-"h": "dc0aa90609187df3",
-"mod": "2026-11-18",
+"h": "8f9b6fdae438174f",
+"mod": "2026-11-19",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/gift-estate-tax-2027/": {
-"h": "9ca431d921458888",
-"mod": "2026-11-18",
+"h": "a0bc4ad99b112c6d",
+"mod": "2026-11-19",
 "pub": "2026-11-18"
 },
 "money/2027-tax-numbers/hsa-limits-2027/": {
-"h": "ffd8e5016191bdb2",
-"mod": "2026-11-18",
+"h": "778ad2bfbb5df9d5",
+"mod": "2026-11-19",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/irs-mileage-rate-2027/": {
-"h": "95ac40f2bdc58dd4",
-"mod": "2026-11-18",
+"h": "55be39ef24215711",
+"mod": "2026-11-19",
 "pub": "2026-10-18"
+},
+"money/fafsa-deadlines/": {
+"h": "bbcdb1ee69ea0675",
+"mod": "2026-11-19",
+"pub": "2026-11-19"
 },
 "money/gas-prices-2026/": {
 "h": "46d5bc3a6d5f125f",
@@ -590,18 +600,18 @@
 "pub": "2026-10-14"
 },
 "money/medicare-open-enrollment-2027/": {
-"h": "20d30d162b58e448",
-"mod": "2026-11-18",
+"h": "231675dc3d70f978",
+"mod": "2026-11-19",
 "pub": "2026-10-15"
 },
 "money/medicare-part-b-premium-2027/": {
-"h": "bf1bfc8a1a4f764b",
-"mod": "2026-11-18",
+"h": "9da1df3b9c83cfe0",
+"mod": "2026-11-19",
 "pub": "2026-11-18"
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -640,8 +650,8 @@
 "pub": "2026-10-14"
 },
 "money/retirement/": {
-"h": "b5d2475d3c195fa0",
-"mod": "2026-11-18",
+"h": "cdd7bb8e97f7455e",
+"mod": "2026-11-19",
 "pub": "2026-10-14"
 },
 "money/social-security-2027/": {
@@ -681,7 +691,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -721,7 +731,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -976,12 +986,12 @@
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
 "h": "212fe06dee867e07",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-25"
 },
 "shopping/veterans-day-free-meals-deals-2026/": {
 "h": "95a247aca8133863",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-25"
 },
 "shopping/walmart-holiday-meal-basket-2026/": {
@@ -1105,8 +1115,8 @@
 "pub": "2026-10-19"
 },
 "tech-ai/open-source-models/": {
-"h": "0c1c07b261783b2e",
-"mod": "2026-10-30",
+"h": "4d83f0fedc95f2de",
+"mod": "2026-11-19",
 "pub": "2026-10-15"
 },
 "tech-ai/openai-security-breach/": {
@@ -1156,7 +1166,7 @@
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
 "h": "753c3fcd5ef26508",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
@@ -1166,7 +1176,7 @@
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
 "h": "81dd54d6a7230b08",
-"mod": "2026-11-18",
+"mod": "2026-11-19",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {

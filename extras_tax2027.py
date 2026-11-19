@@ -1,5 +1,5 @@
 # --- 2027 tax numbers hub: brackets + calculator, 401k/IRA, HSA, mileage (added 2026-10-18). exec'd from build.py ---
-PUB18="2026-10-18"; MOD18="2026-10-18"
+PUB18="2026-10-18"; MOD18="2026-10-18"; MOD19="2026-11-19"
 TX="money/2027-tax-numbers/"
 TXB=TX+"2027-tax-brackets/"; TXK=TX+"401k-ira-limits-2027/"; TXH=TX+"hsa-limits-2027/"; TXM=TX+"irs-mileage-rate-2027/"; TXG=TX+"gift-estate-tax-2027/"
 PB="money/medicare-part-b-premium-2027/"
@@ -34,10 +34,22 @@ def taxnav(r,cur):
     L=[(TX,"🧾 Hub: all 2027 tax numbers"),(TXB,"📊 2027 tax brackets and standard deduction"),(TXB+"#calculator","🧮 Bracket calculator"),(TXK,"🏦 401(k) and IRA limits 2027"),(TXH,"🩺 HSA limits 2027"),(TXG,"🎁 Gift and estate tax 2027"),(TXM,"🚗 IRS mileage rate 2027")]
     return '<div class="cats" style="margin:14px 0">'+"".join(f'<a href="{r}{p}">{esc(t)}</a>' for p,t in L if p!=cur)+'</div>'
 def taxrel(r):
-    return f'<h2>Related on Trends Incoming</h2><ul><li><a href="{r}money/social-security-2027/">Social Security 2027: 3.6% COLA calculator and payment dates</a></li><li><a href="{r}{PB}">Medicare Part B premium 2027: $209.40 a month (official)</a></li><li><a href="{r}money/medicare-open-enrollment-2027/">Medicare open enrollment 2027 (Oct 15 to Dec 7)</a></li><li><a href="{r}money/open-enrollment-2027/">HealthCare.gov open enrollment 2027 (Nov 1 to Jan 15)</a></li><li><a href="{r}money/minimum-wage-2027/">Minimum wage 2027 by state: every January 1 raise</a></li><li><a href="{r}money/retirement/">Retirement and Social Security trends</a></li></ul>'
-def taxart(title,desc,path,cites):
-    return {"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":PUB18,"dateModified":MOD18,"mainEntityOfPage":B+"/"+path,"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub,"citation":[u for _,u in cites],"about":{"@type":"Thing","name":"US federal tax numbers for 2027"}}
+    return f'<h2>Related on Trends Incoming</h2><ul><li><a href="{r}money/social-security-2027/">Social Security 2027: 3.6% COLA calculator and payment dates</a></li><li><a href="{r}{PB}">Medicare Part B premium 2027: $209.40 a month (official)</a></li><li><a href="{r}money/medicare-open-enrollment-2027/">Medicare open enrollment 2027 (Oct 15 to Dec 7)</a></li><li><a href="{r}money/open-enrollment-2027/">HealthCare.gov open enrollment 2027 (Nov 1 to Jan 15)</a></li><li><a href="{r}money/minimum-wage-2027/">Minimum wage 2027 by state: every January 1 raise</a></li><li><a href="{r}money/fafsa-deadlines/">FAFSA 2027-28 deadlines</a></li><li><a href="{r}money/retirement/">Retirement and Social Security trends</a></li></ul>'
+def taxart(title,desc,path,cites,mod=None):
+    return {"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":PUB18,"dateModified":mod or MOD18,"mainEntityOfPage":B+"/"+path,"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub,"citation":[u for _,u in cites],"about":{"@type":"Thing","name":"US federal tax numbers for 2027"}}
 TXCR=[("Home",""),("Money","money/"),("2027 tax numbers",TX)]
+def tax_compare(r,cur=None):
+    opts=[(TX,"2027 official numbers tracker"),(TXB,"2027 tax brackets"),(TXK,"401(k) and IRA limits 2027"),(TXH,"HSA limits 2027"),(TXG,"Gift and estate tax 2027"),(TXM,"IRS mileage rate 2027"),("money/social-security-2027/","Social Security COLA 2027"),(PB,"Medicare Part B premium 2027"),("money/minimum-wage-2027/","Minimum wage by state 2027"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines")]
+    return '<aside class="compare" aria-label="Check another 2027 number"><h2>Check another 2027 number</h2><p>Official figures only, linked to the primary release.</p><ul>'+"".join(f'<li><a href="{r}{h}">{esc(t)}</a></li>' for h,t in opts if h!=cur)+'</ul></aside>'
+def tax_next(r,extra=()):
+    items=[("money/social-security-2027/","Social Security COLA 2027","Official 3.6% COLA and January payment dates.","og/money.png"),(PB,"Medicare Part B premium 2027","$209.40 a month, official from CMS.","og/money.png"),("money/minimum-wage-2027/","Minimum wage by state 2027","Every January 1 raise, with CSV.","og/money.png"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines","Open date and federal/state deadlines.","og/education.png")]+list(extra)
+    cards="".join(f'<a class="nrcard" href="{r}{h}"><img src="{r}{th}" width="320" height="180" alt="" loading="lazy" decoding="async"><span class="nrt"><b>{esc(ti)}</b><br>{esc(bl)}</span></a>' for h,ti,bl,th in items[:4])
+    return f'<section class="nr" aria-label="Related next reads"><h2>Related next reads</h2><div class="nrgrid">{cards}</div></section>'
+def tax_next_mid(r,cur=None):
+    items=[(TXB,"2027 tax brackets","Official brackets and standard deduction.","og/money.png"),(TXK,"401(k) and IRA limits 2027","Official $25,500 401(k) limit.","og/money.png"),(TXH,"HSA limits 2027","Official $4,500 / $9,000 contribution limits.","og/money.png"),(TXG,"Gift and estate tax 2027","$20,000 gift exclusion and $15.48M estate exemption.","og/money.png"),(TX,"2027 official numbers tracker","Every figure, agency and release date.","og/money.png")]
+    items=[i for i in items if i[0]!=cur][:4]
+    cards="".join(f'<a class="nrcard" href="{r}{h}"><img src="{r}{th}" width="320" height="180" alt="" loading="lazy" decoding="async"><span class="nrt"><b>{esc(ti)}</b><br>{esc(bl)}</span></a>' for h,ti,bl,th in items)
+    return f'<section class="nr" aria-label="Keep reading"><h2>Keep reading</h2><div class="nrgrid">{cards}</div></section>'
 def mny(n): return f"${n:,}"
 # ---- bracket data (2026 official: Rev. Proc. 2025-32; 2027 projected: Thomson Reuters Checkpoint, Sep 11, 2026) ----
 RATES=[10,12,22,24,32,35,37]
@@ -96,6 +108,7 @@ bbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="..
 {NOADV}
 <table><tr><th>2027 brackets and standard deduction</th><td>{OFF} IRS IR-2026-133 / Rev. Proc. 2026-35, Nov 5, 2026</td></tr><tr><th>Tax rates</th><td>10%, 12%, 22%, 24%, 32%, 35%, 37% (permanent law, unchanged)</td></tr><tr><th>2027 standard deduction, single</th><td>$16,600 (2026: $16,100)</td></tr><tr><th>2027 standard deduction, joint</th><td>$33,200 (2026: $32,200)</td></tr><tr><th>2027 standard deduction, head of household</th><td>$24,925 (2026: $24,150)</td></tr></table>
 {taxnav("../../../",TXB)}
+{tax_compare("../../../",TXB)}
 {CALC}
 <h2>📊 2026 vs 2027 tax brackets, side by side</h2><p>Both years are now official: 2026 from IRS Rev. Proc. 2025-32, 2027 from IRS Rev. Proc. 2026-35 (Nov 5, 2026). Taxable income is income after deductions.</p>
 {"".join(sidebyside(k,l) for k,l in ST)}
@@ -104,7 +117,7 @@ bbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="..
 <h2>🔍 How the inflation adjustment works</h2><p>Brackets and the standard deduction are indexed to inflation by law (Internal Revenue Code section 1(f)). The IRS compares the chained consumer price index (C-CPI-U) for a 12-month base period with a prior base year, then rounds each increase down to the next $50 ($25 for single and married filing separately brackets). Rev. Proc. 2026-35 is the IRS's own calculation under that formula, so these figures are final, not an estimate.</p>
 <h2>🧾 Worked example (2026, official)</h2><p>A single filer with $60,000 of taxable income in 2026 pays 10% on the first $12,400 ($1,240), 12% on the next $38,000 ($4,560) and 22% on the last $9,600 ($2,112). Total: <b>$7,912</b> before credits. That matches the IRS table: $5,800 plus 22% of the amount over $50,400. Top bracket 22%, average rate about 13.2%.</p>
 <h2>📅 Where the rest of the 2027 numbers stand</h2><ul><li><b>Brackets and standard deduction:</b> official (IR-2026-133, Nov 5, 2026).</li><li><b>401(k) and IRA limits:</b> official (IR-2026-136, Nov 12, 2026). See our <a href="../401k-ira-limits-2027/">401(k) and IRA limits page</a>.</li><li><b>HSA limits:</b> official at $4,500 and $9,000. See <a href="../hsa-limits-2027/">HSA limits 2027</a>.</li><li><b>Gift and estate tax:</b> official (IR-2026-133, Nov 5, 2026). See <a href="../gift-estate-tax-2027/">gift and estate tax 2027</a>.</li><li><b>Mileage rate:</b> still not announced; IRS notice expected in December 2026. See <a href="../irs-mileage-rate-2027/">IRS mileage rate 2027</a>.</li></ul>
-{fhtml(BQ)}{taxrel("../../../")}{srclist(BSRC)}</article>'''
+{fhtml(BQ)}{tax_next("../../../")}{taxrel("../../../")}{srclist(BSRC)}</article>'''
 BTITLE="2027 Tax Brackets and Standard Deduction (IRS Official Numbers)"
 BDESC="Official IRS 2027 tax brackets and standard deduction (IR-2026-133, Nov 5, 2026) for every filing status, with 2026 numbers and a bracket calculator."
 def dsetld():
@@ -124,12 +137,13 @@ kbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="..
 <p><b>Short answer:</b> it's official. The IRS announced the 2027 retirement plan limits on <b>November 12, 2026</b> in news release <b>IR-2026-136</b> and <b>Notice 2026-66</b>. The 401(k) limit rises <b>$1,000 to $25,500</b>; the IRA limit stays at $7,500. Here's every number.</p>
 {NOADV}
 {taxnav("../../../",TXK)}
+{tax_compare("../../../",TXK)}
 <h2>🏦 2026 vs 2027, both official</h2><table><tr><th>Limit</th><th>2026 {OFF}</th><th>2027 {OFF}</th></tr>{"".join(f"<tr><td>{esc(a)}</td><td>{b}</td><td>{c}</td></tr>" for a,b,c in krows)}</table>
 <p class="src">2026: IRS IR-2025-111 and Notice 2025-67. 2027: IRS IR-2026-136 and Notice 2026-66, Nov 12, 2026.</p>
 <h2>📉 2026 vs 2027 IRA income phase-outs (official)</h2><table><tr><th>Who</th><th>2026 range (modified AGI)</th><th>2027 range (modified AGI)</th></tr><tr><td>Traditional IRA deduction: single, covered by a workplace plan</td><td>$81,000 to $91,000</td><td>$83,000 to $93,000</td></tr><tr><td>Traditional IRA deduction: married filing jointly, contributor covered</td><td>$129,000 to $149,000</td><td>$133,000 to $153,000</td></tr><tr><td>Traditional IRA deduction: contributor not covered, spouse covered</td><td>$242,000 to $252,000</td><td>$250,000 to $260,000</td></tr><tr><td>Roth IRA: single and head of household</td><td>$153,000 to $168,000</td><td>$158,000 to $173,000</td></tr><tr><td>Roth IRA: married filing jointly</td><td>$242,000 to $252,000</td><td>$250,000 to $260,000</td></tr><tr><td>Married filing separately (both)</td><td>$0 to $10,000 (not indexed)</td><td>$0 to $10,000 (not indexed)</td></tr></table>
 <h2>🔍 How the adjustment works</h2><p>The 401(k) family of limits is indexed by law (Internal Revenue Code section 415(d)) to the CPI-U average for July through September compared with a base quarter. Each increase is rounded down: to $500 for deferrals and catch-ups, $500 for total additions and $5,000 for the Roth catch-up wage threshold. Notice 2026-66 is the IRS's own published calculation, so these are final figures, not an estimate.</p>
 <p>Also funding health costs pre-tax? The <a href="../hsa-limits-2027/">2027 HSA limits</a> are official too. And see where your income lands with the <a href="../2027-tax-brackets/#calculator">bracket calculator</a>.</p>
-{fhtml(KQ)}{taxrel("../../../")}{srclist(KSRC)}</article>'''
+{fhtml(KQ)}{tax_next("../../../")}{taxrel("../../../")}{srclist(KSRC)}</article>'''
 KTITLE="401k and IRA Contribution Limits for 2027"
 KDESC="Official 2027 401(k) limit is $25,500 (IRS IR-2026-136, Nov 12, 2026); IRA stays at $7,500. Catch-ups, phase-outs and SIMPLE limits, all official."
 kld=[taxart(KTITLE,KDESC,TXK,KSRC),faqld(KQ),crumbs(TXCR+[("401(k) and IRA limits 2027",TXK)])]
@@ -145,11 +159,12 @@ hbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="..
 <p><b>Short answer:</b> this one's locked in. IRS Revenue Procedure 2026-24 sets the 2027 health savings account limit at <b>$4,500 for self-only</b> coverage and <b>$9,000 for family</b> coverage. That's $100 and $250 more than 2026. If you're picking a plan in open enrollment right now, these are the real numbers.</p>
 {NOADV}
 {taxnav("../../../",TXH)}
+{tax_compare("../../../",TXH)}
 <h2>🩺 HSA and HDHP numbers: 2026 vs 2027 (all official)</h2><table><tr><th>Item</th><th>2026 {OFF}</th><th>2027 {OFF}</th></tr><tr><td>HSA contribution limit, self-only</td><td>$4,400</td><td><b>$4,500</b></td></tr><tr><td>HSA contribution limit, family</td><td>$8,750</td><td><b>$9,000</b></td></tr><tr><td>Catch-up, age 55 and older (set by law, not indexed)</td><td>$1,000</td><td>$1,000</td></tr><tr><td>HDHP minimum deductible, self-only</td><td>$1,700</td><td>$1,750</td></tr><tr><td>HDHP minimum deductible, family</td><td>$3,400</td><td>$3,500</td></tr><tr><td>HDHP out-of-pocket maximum, self-only</td><td>$8,500</td><td>$8,700</td></tr><tr><td>HDHP out-of-pocket maximum, family</td><td>$17,000</td><td>$17,400</td></tr><tr><td>Excepted benefit HRA, max newly available</td><td>$2,200</td><td>$2,250</td></tr><tr><td>Direct primary care arrangement fee cap (monthly)</td><td>$150 / $300</td><td>$150 / $300</td></tr></table>
 <p class="src">2027: IRS Rev. Proc. 2026-24 (published in Internal Revenue Bulletin 2026-25). 2026: IRS Rev. Proc. 2025-19.</p>
 <h2>Why it's in the news now</h2><p>Open season is here. <a href="../../medicare-open-enrollment-2027/">Medicare open enrollment</a> runs through December 7, and <a href="../../open-enrollment-2027/">HealthCare.gov open enrollment</a> starts November 1, with most workplace benefits windows in between. People comparing a high-deductible plan want the 2027 HSA math, and unlike the brackets, it's already official. One heads up: once you're enrolled in Medicare, you generally can't make new HSA contributions. IRS Publication 969 has the rules.</p>
 <p>Next: check the official <a href="../401k-ira-limits-2027/">2027 401(k) and IRA limits</a>, the <a href="../gift-estate-tax-2027/">2027 gift and estate tax numbers</a>, and where you land on the <a href="../2027-tax-brackets/">2027 tax brackets</a>.</p>
-{fhtml(HQ)}{taxrel("../../../")}{srclist(HSRC)}</article>'''
+{fhtml(HQ)}{tax_next("../../../")}{taxrel("../../../")}{srclist(HSRC)}</article>'''
 HTITLE="HSA Limits 2027: $4,500 Self-Only, $9,000 Family (Official IRS)"
 HDESC="Official 2027 HSA limits from IRS Rev. Proc. 2026-24: $4,500 self-only, $9,000 family, $1,000 catch-up at 55, plus 2027 HDHP deductible and out-of-pocket limits."
 hld=[taxart(HTITLE,HDESC,TXH,HSRC),faqld(HQ),crumbs(TXCR+[("HSA limits 2027",TXH)])]
@@ -166,12 +181,14 @@ gbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="..
 <p><b>Short answer:</b> the IRS announced the 2027 gift and estate tax numbers on <b>November 5, 2026</b>, alongside the rest of the 2027 inflation adjustments, in news release <b>IR-2026-133</b> and <b>Revenue Procedure 2026-35</b>. The annual gift tax exclusion rises to <b>$20,000</b> per recipient, and the estate tax basic exclusion amount rises to <b>$15,480,000</b> per person.</p>
 {NOADV}
 {taxnav("../../../",TXG)}
+{tax_compare("../../../",TXG)}
 <h2>🎁 2026 vs 2027 gift and estate tax numbers, both official</h2><table><tr><th>Item</th><th>2026 {OFF}</th><th>2027 {OFF}</th></tr><tr><td>Annual gift tax exclusion, per recipient</td><td>$19,000</td><td><b>$20,000</b></td></tr><tr><td>Annual exclusion for gifts to a non-citizen spouse</td><td>$194,000</td><td><b>$201,000</b></td></tr><tr><td>Estate tax basic exclusion amount, per person</td><td>$15,000,000</td><td><b>$15,480,000</b></td></tr><tr><td>Generation-skipping transfer tax exemption</td><td>$15,000,000</td><td><b>$15,480,000</b></td></tr></table>
 <p class="src">Source for both years: IRS IR-2026-133 and Rev. Proc. 2026-35 (2027); the 2026 figures are the amounts the same release quotes as the prior year.</p>
+{tax_next_mid("../../../",TXG)}
 <h2>🔍 What changed and why</h2><p>The annual gift exclusion and the estate tax basic exclusion amount are both indexed to inflation under the Internal Revenue Code. The One Big Beautiful Bill Act raised the estate and gift tax basic exclusion amount to $15,000,000 starting in 2026, and it's indexed for inflation each year after that. The 2027 figure of $15,480,000 is the first inflation adjustment under that higher base.</p>
 <h2>🧮 What this means in practice</h2><p>In 2027, you can give up to $20,000 to any number of people without filing IRS Form 709 or using any of your lifetime exemption. A married couple can combine their annual exclusions to give $40,000 per recipient. For estates, the $15,480,000 exemption is the amount you can pass on, during life or at death, before federal estate or gift tax applies; with portability, a surviving spouse can generally use any exemption their late spouse didn't use, for a combined shield of roughly $30.96 million.</p>
 <p>Also new for 2027: the <a href="../2027-tax-brackets/">tax brackets and standard deduction</a> and <a href="../401k-ira-limits-2027/">401(k) and IRA limits</a> are official too.</p>
-{fhtml(GQ)}{taxrel("../../../")}{srclist(GSRC)}</article>'''
+{fhtml(GQ)}{tax_next("../../../")}{taxrel("../../../")}{srclist(GSRC)}</article>'''
 GTITLE="Gift and Estate Tax Numbers for 2027 (Official IRS Figures)"
 GDESC="Official 2027 gift and estate tax numbers from IRS IR-2026-133: $20,000 annual gift exclusion, $15,480,000 estate tax exemption, both up from 2026."
 gld=[taxart(GTITLE,GDESC,TXG,GSRC),faqld(GQ),crumbs(TXCR+[("Gift and estate tax 2027",TXG)])]
@@ -184,48 +201,95 @@ MQ=[("What is the IRS mileage rate for 2027?","Not announced yet. The IRS guidan
 ("Can employees deduct unreimbursed mileage?","Generally no. The deduction for unreimbursed employee expenses is permanently disallowed for most employees, with exceptions such as reservists, some government officials, performing artists and eligible educators. Self-employed people can still use the rate. IRS Notice 2026-10 has the details.")]
 MSRC=[S_MILE,S_IRB2629,S_IR128,S_N2610,S_PGP]
 MH=[("2026 (Jul 1 to Dec 31)","76","23.5","14"),("2026 (Jan 1 to Jun 30)","72.5","20.5","14"),("2025","70","21","14"),("2024","67","21","14"),("2023","65.5","22","14"),("2022 (Jul 1 to Dec 31)","62.5","22","14"),("2022 (Jan 1 to Jun 30)","58.5","18","14")]
-mbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="../">2027 tax numbers</a> › IRS mileage rate 2027</p><span class="pill">IRS 2027 notice expected December 2026</span>
-<h1>IRS Mileage Rate 2027: When It's Announced and Today's 76 Cent Rate</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Oct 18, 2026</p>
-<p><b>Short answer:</b> the 2027 rate isn't out. The IRS usually announces it in late December, and this year's guidance plan says December. Right now the business rate is <b>76 cents a mile</b> for driving from July 1 to December 31, 2026, after a rare midyear bump for fuel prices. Here's every current rate and the history.</p>
+mbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="../">2027 tax numbers</a> › IRS mileage rate 2027</p><span class="pill">Still pending · checked Nov 19, 2026</span>
+<h1>IRS Mileage Rate 2027: Still Not Out, Current Rate Is 76 Cents</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 19, 2026</p>
+<p><b>Short answer:</b> the 2027 rate still is not out. We re-checked the <a href="{S_MILE[1]}" rel="noopener" target="_blank">IRS standard mileage rates page</a> and the 2026 to 2027 priority guidance plan on <b>November 19, 2026</b>. No 2027 notice has posted. The IRS usually announces the next year's rates in late December, and this year's guidance plan still points at December. Right now the business rate is <b>76 cents a mile</b> for driving from July 1 to December 31, 2026.</p>
 {NOADV}
 {taxnav("../../../",TXM)}
-<h2>🚗 Current and 2027 rates (cents per mile)</h2><table><tr><th>Use</th><th>Jan 1 to Jun 30, 2026 {OFF}</th><th>Jul 1 to Dec 31, 2026 {OFF}</th><th>2027</th></tr><tr><td>Business and self-employed</td><td>72.5</td><td><b>76</b></td><td>Not announced (due December)</td></tr><tr><td>Medical; military moving</td><td>20.5</td><td><b>23.5</b></td><td>Not announced (due December)</td></tr><tr><td>Charity</td><td>14</td><td>14</td><td>14 (fixed by law)</td></tr></table>
-<h2>🔍 Our projection, and why it's not a number</h2><p>{PROJ} For charity we can say 14 cents with confidence, because the tax code sets it. For business, medical and moving, we deliberately don't print a 2027 number. Unlike brackets, these rates aren't set by an inflation formula. The IRS bases the business rate on an annual study of the fixed and variable costs of running a car (gas, insurance, maintenance, depreciation), and the medical and moving rate on the variable costs only. So our working baseline is the current 76 cents and 23.5 cents. Where 2027 lands depends mostly on fuel prices this fall, which have been high (see our <a href="../../gas-prices-2026/">gas prices page</a>). It can go down too: the January rate fell for 2020 and again for 2021.</p>
+{tax_compare("../../../",TXM)}
+<h2>🚗 Current and 2027 rates (cents per mile)</h2><table><tr><th>Use</th><th>Jan 1 to Jun 30, 2026 {OFF}</th><th>Jul 1 to Dec 31, 2026 {OFF}</th><th>2027 (checked Nov 19, 2026)</th></tr><tr><td>Business and self-employed</td><td>72.5</td><td><b>76</b></td><td>Not announced (due December)</td></tr><tr><td>Medical; military moving</td><td>20.5</td><td><b>23.5</b></td><td>Not announced (due December)</td></tr><tr><td>Charity</td><td>14</td><td>14</td><td>14 (fixed by law)</td></tr></table>
+{tax_next_mid("../../../")}
+<h2>🔍 Why we will not invent a 2027 number</h2><p>{PROJ} For charity we can say 14 cents with confidence, because the tax code sets it. For business, medical and moving, we deliberately do not print a 2027 figure. Unlike brackets, these rates are not set by an inflation formula. The IRS bases the business rate on an annual study of the fixed and variable costs of running a car (gas, insurance, maintenance, depreciation), and the medical and moving rate on the variable costs only. Our working baseline stays the current 76 cents and 23.5 cents until the notice lands. Fuel prices this fall have been high (see our <a href="../../gas-prices-2026/">gas prices page</a>), but the January rate has fallen in past years too.</p>
 <h2>📈 Rate history (cents per mile, official)</h2><table><tr><th>Period</th><th>Business</th><th>Medical / moving</th><th>Charity</th></tr>{"".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td></tr>" for a,b,c,d in MH)}</table>
 <p class="src">From the IRS standard mileage rates page. Older years are listed there too.</p>
-<p>More 2027 numbers, all official: <a href="../2027-tax-brackets/">tax brackets and standard deduction</a>, <a href="../401k-ira-limits-2027/">401(k) and IRA limits</a>, <a href="../hsa-limits-2027/">HSA limits</a> and <a href="../gift-estate-tax-2027/">gift and estate tax</a>.</p>
-{fhtml(MQ)}{taxrel("../../../")}{srclist(MSRC)}</article>'''
-MTITLE="IRS Mileage Rate 2027: Release Date and Current 76 Cent Rate"
-MDESC="The 2027 IRS standard mileage rate is due in December. Today's rates: 76 cents business, 23.5 cents medical and 14 cents charity for July to December 2026, plus history."
-mld=[taxart(MTITLE,MDESC,TXM,MSRC),faqld(MQ),crumbs(TXCR+[("IRS mileage rate 2027",TXM)])]
+<p>More 2027 numbers, all official: <a href="../2027-tax-brackets/">tax brackets and standard deduction</a>, <a href="../401k-ira-limits-2027/">401(k) and IRA limits</a>, <a href="../hsa-limits-2027/">HSA limits</a> and <a href="../gift-estate-tax-2027/">gift and estate tax</a>. Or open the full <a href="../">2027 official numbers tracker</a>.</p>
+{fhtml(MQ)}{tax_next("../../../")}{taxrel("../../../")}{srclist(MSRC)}</article>'''
+MTITLE="IRS Mileage Rate 2027: Still Not Out, Current Rate Is 76 Cents"
+MDESC="Checked Nov 19, 2026: the 2027 IRS mileage rate is still pending. Current rates are 76 cents business, 23.5 cents medical, 14 cents charity."
+mld=[taxart(MTITLE,MDESC,TXM,MSRC,mod=MOD19),faqld(MQ),crumbs(TXCR+[("IRS mileage rate 2027",TXM)])]
 page(TXM+"index.html",MTITLE,MDESC,mbody,ld=mld,article=False,cat="money")
-# ---------------- hub ----------------
+# ---------------- hub: 2027 official numbers tracker (link asset) ----------------
 XQ=[("Are the 2027 tax brackets out?","Yes, since November 5, 2026 (IRS IR-2026-133 and Rev. Proc. 2026-35)."),
-("Which 2027 tax numbers are already official?","Brackets and standard deduction, 401(k) and IRA limits, HSA limits, and gift and estate tax numbers are all official. Only the IRS mileage rate is still pending, expected in December 2026."),
-("When did each 2027 IRS number come out?","HSA limits: spring 2026 (Rev. Proc. 2026-24). Brackets, standard deduction and gift/estate tax: November 5, 2026 (IR-2026-133). 401(k), IRA and other retirement limits: November 12, 2026 (IR-2026-136). Mileage rate: still pending, expected December 2026."),
-("Is this tax advice?","No. This hub is general information built from IRS releases. For your own situation, use IRS.gov or a qualified tax professional.")]
-XSRC=[S_IR133,S_RP2635,S_IR136,S_N2666,S_RP2624,S_MILE]
-xrows=[("2027 tax brackets and standard deduction",TXB,"Official","Nov 5, 2026 (IR-2026-133)","$16,100 / $32,200 / $24,150 standard deduction"),("401(k) and IRA limits 2027",TXK,"Official","Nov 12, 2026 (IR-2026-136)","$24,500 401(k), $7,500 IRA"),("HSA limits 2027",TXH,"Official","Out (Rev. Proc. 2026-24)","$4,400 / $8,750"),("Gift and estate tax 2027",TXG,"Official","Nov 5, 2026 (IR-2026-133)","$19,000 gift exclusion, $15,000,000 estate exemption"),("IRS mileage rate 2027",TXM,"Pending, no number yet","December 2026 (expected)","76 cents business (Jul to Dec 2026)")]
-xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 tax numbers</p><span class="pill" style="background:#1a7f37;color:#fff">4 of 5 numbers now official</span>
-<h1>2027 Tax Numbers: Brackets, 401(k), HSA, Gift/Estate and Mileage, Tracked Live</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 18, 2026</p>
-<p>Every fall the IRS resets the numbers that shape next year's money moves. This hub tracks all of them in one place: what's <b>official</b>, and when each IRS release is due. As of November 18, 2026, the 2027 tax brackets, standard deduction, 401(k)/IRA limits, HSA limits and gift/estate tax numbers are all official. Only the mileage rate is still pending. We flip each page to official numbers the day the IRS posts them.</p>
+("Which 2027 tax numbers are already official?","Brackets and standard deduction, 401(k) and IRA limits, HSA limits, gift and estate tax, Social Security COLA, Medicare Part B premium, and most January 1 state minimum wages are official. Only the IRS mileage rate is still pending, expected in December 2026."),
+("When did each 2027 IRS number come out?","HSA limits: spring 2026 (Rev. Proc. 2026-24). Brackets, standard deduction and gift/estate tax: November 5, 2026 (IR-2026-133). 401(k), IRA and other retirement limits: November 12, 2026 (IR-2026-136). Mileage rate: still pending as of November 19, 2026."),
+("Can I reuse this tracker?","Yes. Download the CSV and cite this page. Free to use with a link back to Trends Incoming."),
+("Is this tax advice?","No. This hub is general information built from IRS, SSA, CMS and state labor releases. For your own situation, use the linked agencies or a qualified professional.")]
+S_SSA=("SSA press release: 3.6 percent benefit increase for 2027 (Oct 14, 2026)","https://www.ssa.gov/news/en/press/releases/2026-10-14.html")
+S_CMS=("CMS fact sheet: 2027 Medicare Parts A & B Premiums and Deductibles (Nov 17, 2026)","https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles")
+XSRC=[S_IR133,S_RP2635,S_IR136,S_N2666,S_RP2624,S_MILE,S_SSA,S_CMS]
+# Tracker rows: figure, value, agency, release date, source url, detail path
+TRACK=[
+("2027 tax brackets (single 10% top of band)","$12,800","IRS","2026-11-05",S_IR133[1],TXB),
+("2027 standard deduction (single)","$16,600","IRS","2026-11-05",S_IR133[1],TXB),
+("2027 standard deduction (married filing jointly)","$33,200","IRS","2026-11-05",S_IR133[1],TXB),
+("2027 401(k) employee deferral limit","$25,500","IRS","2026-11-12",S_IR136[1],TXK),
+("2027 IRA contribution limit","$7,500","IRS","2026-11-12",S_IR136[1],TXK),
+("2027 HSA contribution limit (self-only)","$4,500","IRS","2026 (Rev. Proc. 2026-24)",S_RP2624[1],TXH),
+("2027 HSA contribution limit (family)","$9,000","IRS","2026 (Rev. Proc. 2026-24)",S_RP2624[1],TXH),
+("2027 annual gift tax exclusion","$20,000","IRS","2026-11-05",S_IR133[1],TXG),
+("2027 estate tax basic exclusion","$15,480,000","IRS","2026-11-05",S_IR133[1],TXG),
+("2027 IRS business mileage rate","Not announced","IRS","",S_MILE[1],TXM),
+("2027 Social Security COLA","3.6%","SSA","2026-10-14",S_SSA[1],"money/social-security-2027/"),
+("2027 Medicare Part B standard premium","$209.40 / month","CMS","2026-11-17",S_CMS[1],PB),
+("2027 state minimum wages (Jan 1 raises)","See state table","State labor agencies","2026-10-19","https://trendsincoming.com/money/minimum-wage-2027/","money/minimum-wage-2027/"),
+]
+os.makedirs(TX,exist_ok=True)
+csv_lines=["figure,value,agency,release_date,source_url,detail_url"]
+for fig,val,agency,rel,src,path in TRACK:
+    csv_lines.append(",".join([
+        '"'+fig.replace('"','""')+'"',
+        '"'+val.replace('"','""')+'"',
+        agency,
+        rel,
+        src,
+        B+"/"+path,
+    ]))
+open(TX+"2027-official-numbers.csv","w").write("\n".join(csv_lines)+"\n")
+track_rows="".join(
+    f'<tr><td><a href="../../{p}"><b>{esc(fig)}</b></a></td><td>{esc(val)}</td><td>{esc(agency)}</td><td>{esc(rel or "Pending")}</td><td><a href="{src}" rel="noopener" target="_blank">Source</a></td></tr>'
+    for fig,val,agency,rel,src,p in TRACK
+)
+cite_box=f'''<div class="card" id="cite" style="background:#fff8e6;margin:14px 0"><h2 style="margin-top:0">Cite this tracker</h2>
+<p>Trends Incoming. "2027 Official Numbers Tracker." Updated {MOD19}. {B}/{TX}</p>
+<p class="src">Suggested attribution: Data compiled by Trends Incoming from the linked IRS, SSA, CMS and state releases. Free to reuse with a link back.</p>
+<p><a href="2027-official-numbers.csv">Download the table as CSV</a></p></div>'''
+xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 official numbers tracker</p><span class="pill" style="background:#1a7f37;color:#fff">Link asset · checked Nov 19, 2026</span>
+<h1>2027 Official Numbers Tracker: Every Figure, Agency and Release Date</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 19, 2026</p>
+<p>One table for the 2027 money numbers people look up every fall: IRS brackets and limits, Social Security COLA, Medicare Part B, state minimum wages, and the still-pending mileage rate. Each row names the publishing agency, the release date, and the primary source. Download the CSV or cite the box below. We flip a row the day the agency posts it. No estimates are labelled as official figures.</p>
 {NOADV}
-<h2>📋 Status board (checked Nov 18, 2026)</h2><table><tr><th>Number</th><th>2027 status</th><th>IRS release</th><th>Official 2026 figure</th></tr>{"".join(f'<tr><td><a href="../../{p}"><b>{esc(n)}</b></a></td><td>{esc(s)}</td><td>{esc(w)}</td><td>{esc(v)}</td></tr>' for n,p,s,w,v in xrows)}</table>
+{tax_compare("../../",TX)}
+<h2 id="tracker">📋 2027 official numbers (checked Nov 19, 2026)</h2>
+<div style="overflow-x:auto"><table><tr><th>Figure</th><th>Value</th><th>Agency</th><th>Release date</th><th>Source</th></tr>{track_rows}</table></div>
+{cite_box}
+{tax_next_mid("../../")}
+<h2>Child guides</h2>
 <div class="grid">
-<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>📊 2027 tax brackets and standard deduction</h3><p>Official 2026 and 2027 brackets for every filing status, side by side, and a quick "what bracket am I in" calculator.</p><div class="links"><a class="in" href="../../{TXB}">See the brackets →</a><a class="in" href="../../{TXB}#calculator">Open the calculator →</a></div></div>
-<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🏦 401(k) and IRA limits 2027</h3><p>Official $25,500 401(k) limit, catch-ups for 50+ and 60 to 63, and the 2027 IRA phase-outs.</p><div class="links"><a class="in" href="../../{TXK}">See the limits →</a></div></div>
-<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🩺 HSA limits 2027</h3><p>$4,500 self-only, $9,000 family, plus 2027 high-deductible plan rules. Handy during open enrollment.</p><div class="links"><a class="in" href="../../{TXH}">See HSA limits →</a></div></div>
-<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🎁 Gift and estate tax 2027</h3><p>$20,000 annual gift exclusion and a $15,480,000 estate tax exemption, both official for 2027.</p><div class="links"><a class="in" href="../../{TXG}">See the numbers →</a></div></div>
-<div class="card"><span class="pill">Due December</span><h3>🚗 IRS mileage rate 2027</h3><p>Today's 76 cent business rate, the midyear 2026 change, and the full history.</p><div class="links"><a class="in" href="../../{TXM}">See mileage rates →</a></div></div>
+<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>📊 2027 tax brackets and standard deduction</h3><p>Official 2026 and 2027 brackets for every filing status, plus a bracket calculator.</p><div class="links"><a class="in" href="../../{TXB}">See the brackets →</a></div></div>
+<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🏦 401(k) and IRA limits 2027</h3><p>Official $25,500 401(k) limit, catch-ups, and IRA phase-outs.</p><div class="links"><a class="in" href="../../{TXK}">See the limits →</a></div></div>
+<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🩺 HSA limits 2027</h3><p>$4,500 self-only, $9,000 family, plus HDHP rules.</p><div class="links"><a class="in" href="../../{TXH}">See HSA limits →</a></div></div>
+<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🎁 Gift and estate tax 2027</h3><p>$20,000 gift exclusion and $15,480,000 estate exemption.</p><div class="links"><a class="in" href="../../{TXG}">See the numbers →</a></div></div>
+<div class="card"><span class="pill">Due December</span><h3>🚗 IRS mileage rate 2027</h3><p>Still pending as of Nov 19, 2026. Current business rate: 76 cents.</p><div class="links"><a class="in" href="../../{TXM}">See mileage rates →</a></div></div>
 </div>
-<h2>🔍 How we label numbers</h2><p><b>Official IRS</b> means the figure is in an IRS revenue procedure, notice or news release, linked in the sources. We don't publish projections as if they were figures; where a number isn't out yet, like the 2027 mileage rate, we say so instead of guessing.</p>
-<h2>📅 Refresh calendar</h2><ul><li><b>November 2026:</b> IRS 2027 inflation adjustments landed Nov 5 (brackets, standard deduction, gift/estate tax) and Nov 12 (401(k), IRA, SIMPLE).</li><li><b>December 2026 (expected):</b> IRS 2027 standard mileage rates.</li><li><b>January 2027:</b> filing season opens for 2026 returns; we refresh everything again.</li></ul>
-{fhtml(XQ)}{taxrel("../../")}{srclist(XSRC)}</article>'''
-XTITLE="2027 Tax Numbers: Brackets, 401(k), HSA, Gift/Estate and Mileage Tracker"
-XDESC="Every 2027 IRS number in one place: tax brackets, standard deduction, 401(k), IRA, HSA and gift/estate tax limits, and the mileage rate, with release dates."
-xld=[taxart(XTITLE,XDESC,TX,XSRC),faqld(XQ),crumbs(TXCR),{"@context":"https://schema.org","@type":"ItemList","name":"2027 tax numbers pages","itemListElement":[{"@type":"ListItem","position":i+1,"url":B+"/"+p,"name":n} for i,(n,p,_,_,_) in enumerate(xrows)]}]
+<h2>🔍 How we label numbers</h2><p><b>Official</b> means the figure is in an agency revenue procedure, notice, fact sheet or news release, linked in the Source column. We do not publish projections as if they were figures. Where a number is not out yet, like the 2027 mileage rate, the Value cell says so.</p>
+<h2>📅 Refresh calendar</h2><ul><li><b>October 14, 2026:</b> SSA 2027 COLA (3.6%).</li><li><b>November 5 and 12, 2026:</b> IRS inflation and retirement limits.</li><li><b>November 17, 2026:</b> CMS Part B premium.</li><li><b>December 2026 (expected):</b> IRS 2027 standard mileage rates.</li><li><b>January 2027:</b> filing season opens for 2026 returns; we refresh the tracker again.</li></ul>
+{fhtml(XQ)}{tax_next("../../")}{taxrel("../../")}{srclist(XSRC)}</article>'''
+XTITLE="2027 Official Numbers Tracker: Every Figure, Agency and Release Date"
+XDESC="One table of 2027 IRS, SSA, CMS and state wage numbers with release dates, source links, CSV download and a cite-this box."
+xld=[taxart(XTITLE,XDESC,TX,XSRC,mod=MOD19),faqld(XQ),crumbs(TXCR),
+{"@context":"https://schema.org","@type":"Dataset","name":"2027 official US money numbers tracker","description":"IRS, SSA, CMS and state minimum-wage figures for 2027 with agency, release date and source URL.","url":B+"/"+TX,"creator":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"isBasedOn":[u for _,u in XSRC],"temporalCoverage":"2027","spatialCoverage":"United States","isAccessibleForFree":True,"license":"https://creativecommons.org/licenses/by/4.0/","dateModified":MOD19,"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":B+"/"+TX+"2027-official-numbers.csv"}]},
+{"@context":"https://schema.org","@type":"ItemList","name":"2027 tax numbers pages","itemListElement":[{"@type":"ListItem","position":i+1,"url":B+"/"+p,"name":n} for i,(n,p) in enumerate([("2027 tax brackets",TXB),("401(k) and IRA limits 2027",TXK),("HSA limits 2027",TXH),("Gift and estate tax 2027",TXG),("IRS mileage rate 2027",TXM)])]}]
 page(TX+"index.html",XTITLE,XDESC,xbody,ld=xld,article=False,cat="money")
-LM.update({B+"/"+p:PUB18B for p in (TX,TXB,TXK,TXH,TXM,TXG)})
-TAXLINK='<div class="card picks" style="margin:14px 0"><span class="pill">IRS 2027 numbers</span><h3>🧾 2027 tax numbers: brackets, 401(k), HSA, gift/estate, mileage</h3><p>What\'s official (almost everything now) and a quick bracket calculator. Updated the day the IRS posts each number.</p><div class="links"><a class="in" href="{r}money/2027-tax-numbers/">Open the tracker →</a><a class="in" href="{r}money/2027-tax-numbers/2027-tax-brackets/#calculator">Bracket calculator →</a></div></div>'
-SUBX={"medicare-open-enrollment-2027":'<p>Comparing plans with a health savings account in mind? The <a href="../2027-tax-numbers/hsa-limits-2027/">2027 HSA limits</a> are official at $4,500 and $9,000. See every <a href="../2027-tax-numbers/">2027 tax number</a> in one place, and the official <a href="../medicare-part-b-premium-2027/">2027 Medicare Part B premium</a>.</p>',
-"retirement":'<p>Planning 2027 savings? See the official <a href="../2027-tax-numbers/401k-ira-limits-2027/">2027 401(k) and IRA limits</a> and the <a href="../2027-tax-numbers/2027-tax-brackets/">2027 tax brackets</a>.</p>'}
+LM.update({B+"/"+p:(MOD19 if p in (TX,TXM) else PUB18B) for p in (TX,TXB,TXK,TXH,TXM,TXG)})
+TAXLINK='<div class="card picks" style="margin:14px 0"><span class="pill">2027 official numbers</span><h3>🧾 2027 official numbers tracker</h3><p>One table of IRS, SSA and CMS figures with release dates, a CSV download and a cite-this box.</p><div class="links"><a class="in" href="{r}money/2027-tax-numbers/">Open the tracker →</a><a class="in" href="{r}money/2027-tax-numbers/2027-tax-brackets/#calculator">Bracket calculator →</a></div></div>'
+SUBX={"medicare-open-enrollment-2027":'<p>Comparing plans with a health savings account in mind? The <a href="../2027-tax-numbers/hsa-limits-2027/">2027 HSA limits</a> are official at $4,500 and $9,000. See every <a href="../2027-tax-numbers/">2027 official number</a> in one place, and the official <a href="../medicare-part-b-premium-2027/">2027 Medicare Part B premium</a>.</p>',
+"retirement":'<p>Planning 2027 savings? See the official <a href="../2027-tax-numbers/401k-ira-limits-2027/">2027 401(k) and IRA limits</a>, the <a href="../2027-tax-numbers/2027-tax-brackets/">2027 tax brackets</a>, and the <a href="../2027-tax-numbers/">full 2027 tracker</a>.</p>'}

@@ -33,7 +33,7 @@ OWN_EMAILS = {"joshuaofisrael@gmail.com"}
 OWN_ADDRESS = "5640 W Maple Rd"
 # Our own policy pages: rule 8 words (DMCA, takedown) describe our process there, and they need no sources.
 POLICY_PAGES = {"about/", "contact/", "contact/thanks/", "terms/", "privacy/", "disclaimer/", "copyright/",
-                "corrections/", "advertising-disclosure/", "search/", "trend-data/", "404"}
+                "corrections/", "advertising-disclosure/", "search/", "trend-data/", "image-policy/", "404"}
 # Structural pages (indexes) that only list already-gated cards: no page-level rule 4 check.
 STRUCTURAL = {"", "blog/", "news/", "trending-hashtags/"}
 
