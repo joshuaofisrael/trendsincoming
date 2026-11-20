@@ -387,6 +387,16 @@
    "status": "documented",
    "origin": "OG crop of assets/img/hands-counting-notes.webp (same AI bank image)",
    "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/calculator-tax-forms.webp": {
+   "status": "documented",
+   "origin": "AI-generated photoreal still from the JI Ventures image bank (fiscalhour/calculator-tax-forms.png, ChatGPT batch); calculator, pen and forms on a desk in window light; no real faces, logos or clearly readable text; assigned to trendsincoming on 20 Nov 2026 for three tax pages (bank use already marked, not incremented again)",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/og-calculator-tax-forms.jpg": {
+   "status": "documented",
+   "origin": "OG crop of assets/img/calculator-tax-forms.webp (same AI bank image)",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
   }
  },
  "prefixes": {}

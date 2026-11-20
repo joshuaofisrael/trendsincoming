@@ -18,6 +18,7 @@ def nextreads(r, items, mid=False):
 def check_another(r, current=None):
     opts=[
         ("money/2027-tax-numbers/","2027 official numbers tracker"),
+        ("money/2027-tax-numbers/standard-deduction-2027/","Standard deduction 2027"),
         ("money/2027-tax-numbers/2027-tax-brackets/","2027 tax brackets"),
         ("money/2027-tax-numbers/401k-ira-limits-2027/","401(k) and IRA limits 2027"),
         ("money/2027-tax-numbers/hsa-limits-2027/","HSA limits 2027"),

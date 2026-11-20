@@ -24,6 +24,7 @@ HUBMAP={
  "politics/early-voting-2026/":("holidays-observances","2026-11-03","Election Day and early voting 2026","How early voting works before Election Day on Nov 3."),
  "money/social-security-2027/":("money-benefits","2027-01-01","Social Security COLA 2027","The 3.6% COLA, new benefit amounts and January payment dates."),
  "money/2027-tax-numbers/":("money-benefits",None,"2027 official numbers tracker","IRS, SSA and CMS 2027 figures with release dates, CSV and cite box."),
+ "money/2027-tax-numbers/standard-deduction-2027/":("money-benefits",None,"2027 standard deduction","$16,600 single, $33,200 joint, $24,925 head of household, plus the age and blindness add-ons."),
  "money/fafsa-deadlines/":("money-benefits","2026-09-23","FAFSA 2027-28 deadlines","Open date, federal deadline June 30, 2028, and state dates from the official form."),
  "money/minimum-wage-2027/":("money-benefits","2027-01-01","Minimum wage by state 2027","Every state minimum wage raise that starts January 1, 2027."),
  "money/open-enrollment-2027/":("money-benefits","2026-11-01","Open enrollment 2027","ACA marketplace open enrollment dates and deadlines."),
