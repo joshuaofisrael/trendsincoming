@@ -1,7 +1,9 @@
 # --- 2027 tax numbers hub: brackets + calculator, 401k/IRA, HSA, mileage (added 2026-10-18). exec'd from build.py ---
-PUB18="2026-10-18"; MOD18="2026-10-18"; MOD19="2026-11-19"
+PUB18="2026-10-18"; MOD18="2026-10-18"; MOD19="2026-11-19"; MOD20="2026-11-20"
 TX="money/2027-tax-numbers/"
-TXB=TX+"2027-tax-brackets/"; TXK=TX+"401k-ira-limits-2027/"; TXH=TX+"hsa-limits-2027/"; TXM=TX+"irs-mileage-rate-2027/"; TXG=TX+"gift-estate-tax-2027/"
+TXB=TX+"2027-tax-brackets/"; TXS=TX+"standard-deduction-2027/"; TXK=TX+"401k-ira-limits-2027/"; TXH=TX+"hsa-limits-2027/"; TXM=TX+"irs-mileage-rate-2027/"; TXG=TX+"gift-estate-tax-2027/"
+PHOTO["calculator-tax-forms"]="Calculator, ballpoint pen and a stack of printed forms on a wooden table in window light, with a speckled mug to the side"
+KEYPH[TXS]=KEYPH[TXB]=KEYPH[TX]="calculator-tax-forms"
 PB="money/medicare-part-b-premium-2027/"
 PUB18B="2026-11-18"
 S_RP2532=("IRS Rev. Proc. 2025-32: 2026 inflation adjustments (tax tables, standard deduction)","https://www.irs.gov/pub/irs-drop/rp-25-32.pdf")
@@ -31,7 +33,7 @@ NOADV='<div class="warn"><b>No personal tax advice.</b> This page is general inf
 PROJ='<span class="pill" style="background:#ff4fa3;color:#fff">PROJECTED</span>'
 OFF='<span class="pill" style="background:#1a7f37;color:#fff">OFFICIAL IRS</span>'
 def taxnav(r,cur):
-    L=[(TX,"🧾 Hub: all 2027 tax numbers"),(TXB,"📊 2027 tax brackets and standard deduction"),(TXB+"#calculator","🧮 Bracket calculator"),(TXK,"🏦 401(k) and IRA limits 2027"),(TXH,"🩺 HSA limits 2027"),(TXG,"🎁 Gift and estate tax 2027"),(TXM,"🚗 IRS mileage rate 2027")]
+    L=[(TX,"🧾 Hub: all 2027 tax numbers"),(TXS,"💵 Standard deduction 2027"),(TXB,"📊 2027 tax brackets"),(TXB+"#calculator","🧮 Bracket calculator"),(TXK,"🏦 401(k) and IRA limits 2027"),(TXH,"🩺 HSA limits 2027"),(TXG,"🎁 Gift and estate tax 2027"),(TXM,"🚗 IRS mileage rate 2027")]
     return '<div class="cats" style="margin:14px 0">'+"".join(f'<a href="{r}{p}">{esc(t)}</a>' for p,t in L if p!=cur)+'</div>'
 def taxrel(r):
     return f'<h2>Related on Trends Incoming</h2><ul><li><a href="{r}money/social-security-2027/">Social Security 2027: 3.6% COLA calculator and payment dates</a></li><li><a href="{r}{PB}">Medicare Part B premium 2027: $209.40 a month (official)</a></li><li><a href="{r}money/medicare-open-enrollment-2027/">Medicare open enrollment 2027 (Oct 15 to Dec 7)</a></li><li><a href="{r}money/open-enrollment-2027/">HealthCare.gov open enrollment 2027 (Nov 1 to Jan 15)</a></li><li><a href="{r}money/minimum-wage-2027/">Minimum wage 2027 by state: every January 1 raise</a></li><li><a href="{r}money/fafsa-deadlines/">FAFSA 2027-28 deadlines</a></li><li><a href="{r}money/retirement/">Retirement and Social Security trends</a></li></ul>'
@@ -39,14 +41,14 @@ def taxart(title,desc,path,cites,mod=None):
     return {"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":PUB18,"dateModified":mod or MOD18,"mainEntityOfPage":B+"/"+path,"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub,"citation":[u for _,u in cites],"about":{"@type":"Thing","name":"US federal tax numbers for 2027"}}
 TXCR=[("Home",""),("Money","money/"),("2027 tax numbers",TX)]
 def tax_compare(r,cur=None):
-    opts=[(TX,"2027 official numbers tracker"),(TXB,"2027 tax brackets"),(TXK,"401(k) and IRA limits 2027"),(TXH,"HSA limits 2027"),(TXG,"Gift and estate tax 2027"),(TXM,"IRS mileage rate 2027"),("money/social-security-2027/","Social Security COLA 2027"),(PB,"Medicare Part B premium 2027"),("money/minimum-wage-2027/","Minimum wage by state 2027"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines")]
+    opts=[(TX,"2027 official numbers tracker"),(TXS,"Standard deduction 2027"),(TXB,"2027 tax brackets"),(TXK,"401(k) and IRA limits 2027"),(TXH,"HSA limits 2027"),(TXG,"Gift and estate tax 2027"),(TXM,"IRS mileage rate 2027"),("money/social-security-2027/","Social Security COLA 2027"),(PB,"Medicare Part B premium 2027"),("money/minimum-wage-2027/","Minimum wage by state 2027"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines")]
     return '<aside class="compare" aria-label="Check another 2027 number"><h2>Check another 2027 number</h2><p>Official figures only, linked to the primary release.</p><ul>'+"".join(f'<li><a href="{r}{h}">{esc(t)}</a></li>' for h,t in opts if h!=cur)+'</ul></aside>'
 def tax_next(r,extra=()):
     items=[("money/social-security-2027/","Social Security COLA 2027","Official 3.6% COLA and January payment dates.","og/money.png"),(PB,"Medicare Part B premium 2027","$209.40 a month, official from CMS.","og/money.png"),("money/minimum-wage-2027/","Minimum wage by state 2027","Every January 1 raise, with CSV.","og/money.png"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines","Open date and federal/state deadlines.","og/education.png")]+list(extra)
     cards="".join(f'<a class="nrcard" href="{r}{h}"><img src="{r}{th}" width="320" height="180" alt="" loading="lazy" decoding="async"><span class="nrt"><b>{esc(ti)}</b><br>{esc(bl)}</span></a>' for h,ti,bl,th in items[:4])
     return f'<section class="nr" aria-label="Related next reads"><h2>Related next reads</h2><div class="nrgrid">{cards}</div></section>'
 def tax_next_mid(r,cur=None):
-    items=[(TXB,"2027 tax brackets","Official brackets and standard deduction.","og/money.png"),(TXK,"401(k) and IRA limits 2027","Official $25,500 401(k) limit.","og/money.png"),(TXH,"HSA limits 2027","Official $4,500 / $9,000 contribution limits.","og/money.png"),(TXG,"Gift and estate tax 2027","$20,000 gift exclusion and $15.48M estate exemption.","og/money.png"),(TX,"2027 official numbers tracker","Every figure, agency and release date.","og/money.png")]
+    items=[(TXS,"Standard deduction 2027","$16,600 single, $33,200 joint, $24,925 head of household.","og/money.png"),(TXB,"2027 tax brackets","Official brackets beside the standard deduction.","og/money.png"),(TXK,"401(k) and IRA limits 2027","Official $25,500 401(k) limit.","og/money.png"),(TXH,"HSA limits 2027","Official $4,500 / $9,000 contribution limits.","og/money.png"),(TXG,"Gift and estate tax 2027","$20,000 gift exclusion and $15.48M estate exemption.","og/money.png"),(TX,"2027 official numbers tracker","Every figure, agency and release date.","og/money.png")]
     items=[i for i in items if i[0]!=cur][:4]
     cards="".join(f'<a class="nrcard" href="{r}{h}"><img src="{r}{th}" width="320" height="180" alt="" loading="lazy" decoding="async"><span class="nrt"><b>{esc(ti)}</b><br>{esc(bl)}</span></a>' for h,ti,bl,th in items)
     return f'<section class="nr" aria-label="Keep reading"><h2>Keep reading</h2><div class="nrgrid">{cards}</div></section>'
@@ -85,8 +87,8 @@ o.innerHTML="<b>"+d.lab+"</b><br>Taxable income used: "+f(ti)+(c.checked?" (afte
 b.addEventListener("click",go);i.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();go()}});[y,s,c].forEach(function(x){x.addEventListener("change",function(){if(i.value!=="")go()})})})();</script>""".replace("__D__",CALCDATA)
 SEL='style="font:inherit;padding:6px 10px;border:2px solid #16121f;border-radius:10px;margin:6px 0"'
 CALC=f'''<div class="card" id="calculator" style="background:#effcff;margin:14px 0"><h2 style="margin-top:0">🧮 What bracket am I in? Quick calculator</h2>
-<p class="warn" style="margin-top:6px"><b>Estimate only, not personal tax advice.</b> It runs in your browser and nothing is sent anywhere. The 2027 option uses projected brackets until the IRS publishes the official ones.</p>
-<form id="taxcalc" onsubmit="return false"><label for="ty"><b>Tax year</b></label><br><select id="ty" {SEL}><option value="2026">2026 (official IRS)</option><option value="2027">2027 (projected)</option></select><br>
+<p class="warn" style="margin-top:6px"><b>Estimate only, not personal tax advice.</b> It runs in your browser and nothing is sent anywhere. Both years use the IRS revenue procedure for that year. It leaves out credits, the age and blindness add-ons, capital gains rates, AMT, payroll tax and state tax.</p>
+<form id="taxcalc" onsubmit="return false"><label for="ty"><b>Tax year</b></label><br><select id="ty" {SEL}><option value="2026">2026 (Rev. Proc. 2025-32)</option><option value="2027">2027 (Rev. Proc. 2026-35)</option></select><br>
 <label for="tst"><b>Filing status</b></label><br><select id="tst" {SEL}>{"".join(f'<option value="{k}">{esc(v)}</option>' for k,v in ST)}</select><br>
 <label for="tinc"><b>Income ($)</b></label><br><input id="tinc" type="number" min="0" max="100000000" step="1" inputmode="numeric" placeholder="e.g. 85000" {SEL.replace('margin:6px 0','margin:6px 0;width:12em')}><br>
 <label><input type="checkbox" id="tsd" checked> Subtract the standard deduction for me (uncheck if you typed taxable income)</label><br>
@@ -103,7 +105,7 @@ def bsd():
     return f'<table><tr><th>Filing status</th><th>2026 {OFF}</th><th>2027 {OFF}</th></tr><tr><td>Single; married filing separately</td><td>$16,100</td><td>$16,600</td></tr><tr><td>Married filing jointly; surviving spouse</td><td>$32,200</td><td>$33,200</td></tr><tr><td>Head of household</td><td>$24,150</td><td>$24,925</td></tr><tr><td>Extra for age 65+ or blind, married</td><td>$1,650</td><td>$1,700</td></tr><tr><td>Extra for age 65+ or blind, unmarried</td><td>$2,050</td><td>$2,100</td></tr></table>'
 BSRC=[S_IR133,S_RP2635,S_RP2532,S_IR103]
 bbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="../">2027 tax numbers</a> › 2027 tax brackets</p><span class="pill" style="background:#1a7f37;color:#fff">Official since Nov 5, 2026</span>
-<h1>2027 Tax Brackets and Standard Deduction (IRS Official Numbers)</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 18, 2026</p>
+<h1>2027 Tax Brackets and Standard Deduction (IRS Official Numbers)</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 20, 2026</p>
 <p><b>Short answer:</b> it's official. On <b>November 5, 2026</b> the IRS released the 2027 tax brackets and standard deduction in news release <b>IR-2026-133</b> and <b>Revenue Procedure 2026-35</b>. The seven rates are unchanged by law; only the income thresholds moved up with inflation. Here are the full official 2026 and 2027 numbers, plus a calculator.</p>
 {NOADV}
 <table><tr><th>2027 brackets and standard deduction</th><td>{OFF} IRS IR-2026-133 / Rev. Proc. 2026-35, Nov 5, 2026</td></tr><tr><th>Tax rates</th><td>10%, 12%, 22%, 24%, 32%, 35%, 37% (permanent law, unchanged)</td></tr><tr><th>2027 standard deduction, single</th><td>$16,600 (2026: $16,100)</td></tr><tr><th>2027 standard deduction, joint</th><td>$33,200 (2026: $32,200)</td></tr><tr><th>2027 standard deduction, head of household</th><td>$24,925 (2026: $24,150)</td></tr></table>
@@ -113,6 +115,7 @@ bbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="..
 <h2>📊 2026 vs 2027 tax brackets, side by side</h2><p>Both years are now official: 2026 from IRS Rev. Proc. 2025-32, 2027 from IRS Rev. Proc. 2026-35 (Nov 5, 2026). Taxable income is income after deductions.</p>
 {"".join(sidebyside(k,l) for k,l in ST)}
 <h2>💵 Standard deduction: 2026 vs 2027, both official</h2>{bsd()}
+<p>That table is the short version. The <a href="../standard-deduction-2027/">2027 standard deduction page</a> separates the four filing statuses, the $1,700 and $2,100 additional amounts for age or blindness, and the dependent cap, each tied to the revenue procedure section that prints it.</p>
 <p>Also still in effect for 2025 through 2028: a separate senior deduction of up to $6,000 per person age 65 or older, phased down above $75,000 of modified AGI ($150,000 joint). It sits on top of the standard deduction above.</p>
 <h2>🔍 How the inflation adjustment works</h2><p>Brackets and the standard deduction are indexed to inflation by law (Internal Revenue Code section 1(f)). The IRS compares the chained consumer price index (C-CPI-U) for a 12-month base period with a prior base year, then rounds each increase down to the next $50 ($25 for single and married filing separately brackets). Rev. Proc. 2026-35 is the IRS's own calculation under that formula, so these figures are final, not an estimate.</p>
 <h2>🧾 Worked example (2026, official)</h2><p>A single filer with $60,000 of taxable income in 2026 pays 10% on the first $12,400 ($1,240), 12% on the next $38,000 ($4,560) and 22% on the last $9,600 ($2,112). Total: <b>$7,912</b> before credits. That matches the IRS table: $5,800 plus 22% of the amount over $50,400. Top bracket 22%, average rate about 13.2%.</p>
@@ -221,7 +224,7 @@ page(TXM+"index.html",MTITLE,MDESC,mbody,ld=mld,article=False,cat="money")
 # ---------------- hub: 2027 official numbers tracker (link asset) ----------------
 XQ=[("Are the 2027 tax brackets out?","Yes, since November 5, 2026 (IRS IR-2026-133 and Rev. Proc. 2026-35)."),
 ("Which 2027 tax numbers are already official?","Brackets and standard deduction, 401(k) and IRA limits, HSA limits, gift and estate tax, Social Security COLA, Medicare Part B premium, and most January 1 state minimum wages are official. Only the IRS mileage rate is still pending, expected in December 2026."),
-("When did each 2027 IRS number come out?","HSA limits: spring 2026 (Rev. Proc. 2026-24). Brackets, standard deduction and gift/estate tax: November 5, 2026 (IR-2026-133). 401(k), IRA and other retirement limits: November 12, 2026 (IR-2026-136). Mileage rate: still pending as of November 19, 2026."),
+("When did each 2027 IRS number come out?","HSA limits: spring 2026 (Rev. Proc. 2026-24). Brackets, standard deduction (including the age and blindness add-ons) and gift/estate tax: November 5, 2026 (IR-2026-133 and Rev. Proc. 2026-35). 401(k), IRA and other retirement limits: November 12, 2026 (IR-2026-136). Mileage rate: still pending as of November 20, 2026."),
 ("Can I reuse this tracker?","Yes. Download the CSV and cite this page. Free to use with a link back to Trends Incoming."),
 ("Is this tax advice?","No. This hub is general information built from IRS, SSA, CMS and state labor releases. For your own situation, use the linked agencies or a qualified professional.")]
 S_SSA=("SSA press release: 3.6 percent benefit increase for 2027 (Oct 14, 2026)","https://www.ssa.gov/news/en/press/releases/2026-10-14.html")
@@ -230,8 +233,11 @@ XSRC=[S_IR133,S_RP2635,S_IR136,S_N2666,S_RP2624,S_MILE,S_SSA,S_CMS]
 # Tracker rows: figure, value, agency, release date, source url, detail path
 TRACK=[
 ("2027 tax brackets (single 10% top of band)","$12,800","IRS","2026-11-05",S_IR133[1],TXB),
-("2027 standard deduction (single)","$16,600","IRS","2026-11-05",S_IR133[1],TXB),
-("2027 standard deduction (married filing jointly)","$33,200","IRS","2026-11-05",S_IR133[1],TXB),
+("2027 standard deduction (single)","$16,600","IRS","2026-11-05",S_IR133[1],TXS),
+("2027 standard deduction (married filing jointly)","$33,200","IRS","2026-11-05",S_IR133[1],TXS),
+("2027 standard deduction (head of household)","$24,925","IRS","2026-11-05",S_IR133[1],TXS),
+("2027 additional standard deduction, aged or blind (married)","$1,700","IRS","2026-11-05",S_RP2635[1],TXS),
+("2027 additional standard deduction, aged or blind (unmarried)","$2,100","IRS","2026-11-05",S_RP2635[1],TXS),
 ("2027 401(k) employee deferral limit","$25,500","IRS","2026-11-12",S_IR136[1],TXK),
 ("2027 IRA contribution limit","$7,500","IRS","2026-11-12",S_IR136[1],TXK),
 ("2027 HSA contribution limit (self-only)","$4,500","IRS","2026 (Rev. Proc. 2026-24)",S_RP2624[1],TXH),
@@ -260,21 +266,22 @@ track_rows="".join(
     for fig,val,agency,rel,src,p in TRACK
 )
 cite_box=f'''<div class="card" id="cite" style="background:#fff8e6;margin:14px 0"><h2 style="margin-top:0">Cite this tracker</h2>
-<p>Trends Incoming. "2027 Official Numbers Tracker." Updated {MOD19}. {B}/{TX}</p>
+<p>Trends Incoming. "2027 Official Numbers Tracker." Updated {MOD20}. {B}/{TX}</p>
 <p class="src">Suggested attribution: Data compiled by Trends Incoming from the linked IRS, SSA, CMS and state releases. Free to reuse with a link back.</p>
 <p><a href="2027-official-numbers.csv">Download the table as CSV</a></p></div>'''
-xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 official numbers tracker</p><span class="pill" style="background:#1a7f37;color:#fff">Link asset · checked Nov 19, 2026</span>
-<h1>2027 Official Numbers Tracker: Every Figure, Agency and Release Date</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 19, 2026</p>
+xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 official numbers tracker</p><span class="pill" style="background:#1a7f37;color:#fff">Link asset · checked Nov 20, 2026</span>
+<h1>2027 Official Numbers Tracker: Every Figure, Agency and Release Date</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 20, 2026</p>
 <p>One table for the 2027 money numbers people look up every fall: IRS brackets and limits, Social Security COLA, Medicare Part B, state minimum wages, and the still-pending mileage rate. Each row names the publishing agency, the release date, and the primary source. Download the CSV or cite the box below. We flip a row the day the agency posts it. No estimates are labelled as official figures.</p>
 {NOADV}
 {tax_compare("../../",TX)}
-<h2 id="tracker">📋 2027 official numbers (checked Nov 19, 2026)</h2>
+<h2 id="tracker">📋 2027 official numbers (checked Nov 20, 2026)</h2>
 <div style="overflow-x:auto"><table><tr><th>Figure</th><th>Value</th><th>Agency</th><th>Release date</th><th>Source</th></tr>{track_rows}</table></div>
 {cite_box}
 {tax_next_mid("../../")}
 <h2>Child guides</h2>
 <div class="grid">
-<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>📊 2027 tax brackets and standard deduction</h3><p>Official 2026 and 2027 brackets for every filing status, plus a bracket calculator.</p><div class="links"><a class="in" href="../../{TXB}">See the brackets →</a></div></div>
+<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>📊 2027 tax brackets</h3><p>Official 2026 and 2027 brackets for every filing status, plus a bracket calculator.</p><div class="links"><a class="in" href="../../{TXB}">See the brackets →</a></div></div>
+<div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>💵 Standard deduction 2027</h3><p>$16,600 single, $33,200 joint, $24,925 head of household, plus the age and blindness add-ons.</p><div class="links"><a class="in" href="../../{TXS}">See the deduction →</a></div></div>
 <div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🏦 401(k) and IRA limits 2027</h3><p>Official $25,500 401(k) limit, catch-ups, and IRA phase-outs.</p><div class="links"><a class="in" href="../../{TXK}">See the limits →</a></div></div>
 <div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🩺 HSA limits 2027</h3><p>$4,500 self-only, $9,000 family, plus HDHP rules.</p><div class="links"><a class="in" href="../../{TXH}">See HSA limits →</a></div></div>
 <div class="card"><span class="pill" style="background:#1a7f37;color:#fff">Official</span><h3>🎁 Gift and estate tax 2027</h3><p>$20,000 gift exclusion and $15,480,000 estate exemption.</p><div class="links"><a class="in" href="../../{TXG}">See the numbers →</a></div></div>
@@ -285,11 +292,53 @@ xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 official 
 {fhtml(XQ)}{tax_next("../../")}{taxrel("../../")}{srclist(XSRC)}</article>'''
 XTITLE="2027 Official Numbers Tracker: Every Figure, Agency and Release Date"
 XDESC="One table of 2027 IRS, SSA, CMS and state wage numbers with release dates, source links, CSV download and a cite-this box."
-xld=[taxart(XTITLE,XDESC,TX,XSRC,mod=MOD19),faqld(XQ),crumbs(TXCR),
-{"@context":"https://schema.org","@type":"Dataset","name":"2027 official US money numbers tracker","description":"IRS, SSA, CMS and state minimum-wage figures for 2027 with agency, release date and source URL.","url":B+"/"+TX,"creator":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"isBasedOn":[u for _,u in XSRC],"temporalCoverage":"2027","spatialCoverage":"United States","isAccessibleForFree":True,"license":"https://creativecommons.org/licenses/by/4.0/","dateModified":MOD19,"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":B+"/"+TX+"2027-official-numbers.csv"}]},
-{"@context":"https://schema.org","@type":"ItemList","name":"2027 tax numbers pages","itemListElement":[{"@type":"ListItem","position":i+1,"url":B+"/"+p,"name":n} for i,(n,p) in enumerate([("2027 tax brackets",TXB),("401(k) and IRA limits 2027",TXK),("HSA limits 2027",TXH),("Gift and estate tax 2027",TXG),("IRS mileage rate 2027",TXM)])]}]
+xld=[taxart(XTITLE,XDESC,TX,XSRC,mod=MOD20),faqld(XQ),crumbs(TXCR),
+{"@context":"https://schema.org","@type":"Dataset","name":"2027 official US money numbers tracker","description":"IRS, SSA, CMS and state minimum-wage figures for 2027 with agency, release date and source URL.","url":B+"/"+TX,"creator":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"isBasedOn":[u for _,u in XSRC],"temporalCoverage":"2027","spatialCoverage":"United States","isAccessibleForFree":True,"license":"https://creativecommons.org/licenses/by/4.0/","dateModified":MOD20,"distribution":[{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":B+"/"+TX+"2027-official-numbers.csv"}]},
+{"@context":"https://schema.org","@type":"ItemList","name":"2027 tax numbers pages","itemListElement":[{"@type":"ListItem","position":i+1,"url":B+"/"+p,"name":n} for i,(n,p) in enumerate([("2027 standard deduction",TXS),("2027 tax brackets",TXB),("401(k) and IRA limits 2027",TXK),("HSA limits 2027",TXH),("Gift and estate tax 2027",TXG),("IRS mileage rate 2027",TXM)])]}]
 page(TX+"index.html",XTITLE,XDESC,xbody,ld=xld,article=False,cat="money")
-LM.update({B+"/"+p:(MOD19 if p in (TX,TXM) else PUB18B) for p in (TX,TXB,TXK,TXH,TXM,TXG)})
+# ---------------- standard deduction (dedicated lookup) ----------------
+SDQ=[
+("What is the 2027 standard deduction for a single filer?","$16,600. Married people filing separate returns use the same $16,600. Both amounts are in IRS Revenue Procedure 2026-35, section 3.15, announced with news release IR-2026-133 on November 5, 2026."),
+("What is the 2027 standard deduction for a married couple filing jointly?","$33,200, and a surviving spouse uses that same amount. IR-2026-133 says that is $1,000 more than 2026. Revenue Procedure 2025-32 set the 2026 joint amount at $32,200."),
+("What is the 2027 head of household standard deduction?","$24,925. The 2026 amount in Revenue Procedure 2025-32 was $24,150. The difference between those two published figures is $775."),
+("What is the extra standard deduction for age 65 or blindness in 2027?","Revenue Procedure 2026-35 sets the additional amount under section 63(f) for the aged or the blind at $1,700. The additional amount is $2,100 if the person is also unmarried and not a surviving spouse. For 2026 those amounts were $1,650 and $2,050."),
+("What is the 2027 standard deduction cap for a dependent?","Someone who can be claimed as a dependent by another taxpayer cannot take more than the greater of $1,400, or $500 plus that person's earned income. For 2026 the cap was the greater of $1,350, or $450 plus earned income."),
+("Do the 2027 amounts apply to the return filed in 2027?","No. IR-2026-133 says the tax year 2027 adjustments generally apply to returns filed in 2028. A return filed in 2027 is generally a 2026 return and uses the 2026 standard deduction."),
+]
+SDSRC=[S_IR133,S_RP2635,S_RP2532]
+sbody=f'''<article><p class="by"><a href="../../">💵 Money</a> › <a href="../">2027 tax numbers</a> › Standard deduction 2027</p><span class="pill" style="background:#1a7f37;color:#fff">Official since Nov 5, 2026</span>
+<h1>2027 Standard Deduction: $16,600 Single, $33,200 Joint, $24,925 Head of Household</h1><p class="by">{BY} · Published Nov 20, 2026 · Last updated Nov 20, 2026</p>
+<p><b>Short answer, checked Nov 20, 2026:</b> for tax year 2027 the IRS standard deduction is <b>$16,600</b> for single filers and for married filing separately, <b>$33,200</b> for married filing jointly and surviving spouses, and <b>$24,925</b> for head of household. The additional amount for age 65 or blindness is <b>$1,700</b>, or <b>$2,100</b> if the person is unmarried and not a surviving spouse. Those figures are in <a href="{S_RP2635[1]}" rel="noopener" target="_blank">Revenue Procedure 2026-35</a>, section 3.15. <a href="{S_IR133[1]}" rel="noopener" target="_blank">News release IR-2026-133</a> (Nov 5, 2026) prints the three base amounts and says the joint figure is up $1,000 from 2026.</p>
+{NOADV}
+<table><tr><th>Filing status</th><th>2026, Rev. Proc. 2025-32</th><th>2027, Rev. Proc. 2026-35</th><th>Difference</th></tr>
+<tr><td>Single; married filing separately</td><td>$16,100</td><td><b>$16,600</b></td><td>$500</td></tr>
+<tr><td>Married filing jointly; surviving spouse</td><td>$32,200</td><td><b>$33,200</b></td><td>$1,000</td></tr>
+<tr><td>Head of household</td><td>$24,150</td><td><b>$24,925</b></td><td>$775</td></tr>
+<tr><td>Additional amount, aged or blind, married</td><td>$1,650</td><td><b>$1,700</b></td><td>$50</td></tr>
+<tr><td>Additional amount, aged or blind, unmarried and not a surviving spouse</td><td>$2,050</td><td><b>$2,100</b></td><td>$50</td></tr>
+<tr><td>Dependent cap: greater of this floor, or the earned-income add-on plus earned income</td><td>$1,350 floor, or $450 plus earned income</td><td><b>$1,400 floor, or $500 plus earned income</b></td><td>$50 on each piece</td></tr>
+</table>
+<p class="src">Base amounts also appear in IR-2026-133. The additional amounts and the dependent cap are in section 3.15 of each revenue procedure. The Difference column is subtraction of those two published figures, not a separate IRS release.</p>
+{taxnav("../../../",TXS)}
+{tax_compare("../../../",TXS)}
+<h2>What the newsroom printed, and what it left in the PDF</h2>
+<p>IR-2026-133 leads with three numbers: $33,200 joint, $16,600 single and married filing separately, and $24,925 head of household. It does not repeat the age or blindness add-on, and it does not repeat the dependent cap. Those sit in section 3.15 of Rev. Proc. 2026-35, the same procedure the news release points to for "details about these annual adjustments." The <a href="../2027-tax-brackets/">2027 tax brackets page</a> keeps a one-row version of the add-ons next to the rate tables. This page is the lookup for the deduction itself.</p>
+{tax_next_mid("../../../",TXS)}
+<h2>The additional amount for age or blindness</h2>
+<p>Section 3.15(3) of Rev. Proc. 2026-35 says the additional standard deduction amount under Internal Revenue Code section 63(f), "for the aged or the blind," is $1,700 for 2027. It "is increased to $2,100 if the individual is also unmarried and not a surviving spouse." The 2026 procedure, Rev. Proc. 2025-32, used the same sentence with $1,650 and $2,050.</p>
+<p>The procedure states that additional amount. It does not print a combined total for someone who is both 65 or older and blind. Section 63(f) is the code section the procedure cites for how the additional amount applies. This page does not add the figures together into a personal deduction.</p>
+<h2>Dependents</h2>
+<p>Section 3.15(2) caps the standard deduction of a person who may be claimed as a dependent by another taxpayer. For 2027 the cap is the greater of $1,400, or $500 plus that person's earned income. For 2026 it was the greater of $1,350, or $450 plus earned income. The same $1,400 figure shows up elsewhere in Rev. Proc. 2026-35 as the inflation-adjusted amount in section 63(c)(5)(A), which the procedure also uses in the kiddie-tax rules. That cross-reference is in section 3.02 of the 2027 procedure. It is a definition, not a suggestion about how a household should file.</p>
+<h2>Which return these numbers belong on</h2>
+<p>IR-2026-133 says the tax year 2027 adjustments generally apply to returns filed in 2028. The return most people file in spring 2027 is the 2026 return, and that return still uses the 2026 column above: $16,100, $32,200 and $24,150, from Rev. Proc. 2025-32.</p>
+<p>The rate tables that sit on top of these deductions are on the <a href="../2027-tax-brackets/">2027 brackets page</a>, including the bracket calculator. Retirement caps for the same year are on the <a href="../401k-ira-limits-2027/">401(k) and IRA limits page</a>. The <a href="../">2027 official numbers tracker</a> lists every figure with the agency and the release date. Social Security's separate 2027 cost-of-living adjustment is on the <a href="../../social-security-2027/">COLA page</a>.</p>
+{fhtml(SDQ)}{tax_next("../../../")}{taxrel("../../../")}{srclist(SDSRC)}</article>'''
+SDTITLE="2027 Standard Deduction: $16,600 Single, $33,200 Joint, $24,925 Head of Household"
+SDDESC="2027 standard deduction: $16,600 single, $33,200 joint, $24,925 head of household, plus $1,700 or $2,100 age and blindness add-ons."
+assert len(SDDESC)<=155, len(SDDESC)
+sdld=[taxart(SDTITLE,SDDESC,TXS,SDSRC,mod=MOD20),faqld(SDQ),crumbs(TXCR+[("Standard deduction 2027",TXS)])]
+page(TXS+"index.html",SDTITLE,SDDESC,sbody,ld=sdld,article=False,cat="money")
+LM.update({B+"/"+p:(MOD20 if p in (TX,TXB,TXS) else (MOD19 if p==TXM else PUB18B)) for p in (TX,TXB,TXK,TXH,TXM,TXG,TXS)})
 TAXLINK='<div class="card picks" style="margin:14px 0"><span class="pill">2027 official numbers</span><h3>🧾 2027 official numbers tracker</h3><p>One table of IRS, SSA and CMS figures with release dates, a CSV download and a cite-this box.</p><div class="links"><a class="in" href="{r}money/2027-tax-numbers/">Open the tracker →</a><a class="in" href="{r}money/2027-tax-numbers/2027-tax-brackets/#calculator">Bracket calculator →</a></div></div>'
 SUBX={"medicare-open-enrollment-2027":'<p>Comparing plans with a health savings account in mind? The <a href="../2027-tax-numbers/hsa-limits-2027/">2027 HSA limits</a> are official at $4,500 and $9,000. See every <a href="../2027-tax-numbers/">2027 official number</a> in one place, and the official <a href="../medicare-part-b-premium-2027/">2027 Medicare Part B premium</a>.</p>',
 "retirement":'<p>Planning 2027 savings? See the official <a href="../2027-tax-numbers/401k-ira-limits-2027/">2027 401(k) and IRA limits</a>, the <a href="../2027-tax-numbers/2027-tax-brackets/">2027 tax brackets</a>, and the <a href="../2027-tax-numbers/">full 2027 tracker</a>.</p>'}

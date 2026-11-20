@@ -15,13 +15,13 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "081783abf36c8328",
-"mod": "2026-11-18",
+"h": "7be8566efdf60707",
+"mod": "2026-11-20",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
-"h": "9832a87c4c3d3034",
-"mod": "2026-10-14",
+"h": "98f617d2403a173e",
+"mod": "2026-11-20",
 "pub": "2026-10-14"
 },
 "blog/anthropic-ipo-explained-2026/": {
@@ -490,13 +490,13 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "e940ec79e368c30d",
-"mod": "2026-11-19",
+"h": "ad586ca0cba2b22d",
+"mod": "2026-11-20",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "7e3156eaf658701f",
-"mod": "2026-11-18",
+"h": "bfb0034d83672e41",
+"mod": "2026-11-20",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -510,8 +510,8 @@
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "633cdafb6d113df6",
-"mod": "2026-11-19",
+"h": "da3cd6bc344a35ba",
+"mod": "2026-11-20",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
@@ -550,38 +550,43 @@
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
-"h": "416cc6210c5cdbd6",
-"mod": "2026-11-19",
+"h": "0f51ea67804c786b",
+"mod": "2026-11-20",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
-"h": "954fc658dc1e17ed",
-"mod": "2026-11-19",
+"h": "7562419bae8183b9",
+"mod": "2026-11-20",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
-"h": "8f9b6fdae438174f",
-"mod": "2026-11-19",
+"h": "05248f475b1c28f5",
+"mod": "2026-11-20",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/gift-estate-tax-2027/": {
-"h": "a0bc4ad99b112c6d",
-"mod": "2026-11-19",
+"h": "c29f148ecfdaf1ca",
+"mod": "2026-11-20",
 "pub": "2026-11-18"
 },
 "money/2027-tax-numbers/hsa-limits-2027/": {
-"h": "778ad2bfbb5df9d5",
-"mod": "2026-11-19",
+"h": "e1444ed92ac9eb0b",
+"mod": "2026-11-20",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/irs-mileage-rate-2027/": {
-"h": "55be39ef24215711",
-"mod": "2026-11-19",
+"h": "8b000bddb581707c",
+"mod": "2026-11-20",
 "pub": "2026-10-18"
 },
+"money/2027-tax-numbers/standard-deduction-2027/": {
+"h": "8b7db0284d369fdb",
+"mod": "2026-11-20",
+"pub": "2026-11-20"
+},
 "money/fafsa-deadlines/": {
-"h": "bbcdb1ee69ea0675",
-"mod": "2026-11-19",
+"h": "afcb8a0e1b244703",
+"mod": "2026-11-20",
 "pub": "2026-11-19"
 },
 "money/gas-prices-2026/": {
@@ -940,7 +945,7 @@
 "pub": "2026-10-26"
 },
 "privacy/": {
-"h": "29e94e13d98fbee4",
+"h": "90676a88324077b3",
 "mod": "2026-10-27",
 "pub": "2026-10-14"
 },
@@ -1165,8 +1170,8 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "753c3fcd5ef26508",
-"mod": "2026-11-19",
+"h": "a9be2068916072bd",
+"mod": "2026-11-20",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
