@@ -1,7 +1,7 @@
 {
 "": {
 "h": "c737b2be56be5608",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "about/": {
@@ -15,8 +15,8 @@
 "pub": "2026-10-23"
 },
 "blog/": {
-"h": "7be8566efdf60707",
-"mod": "2026-11-20",
+"h": "30b56df1b0f330f2",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "blog/ai-model-race-october-2026/": {
@@ -180,8 +180,8 @@
 "pub": "2026-10-28"
 },
 "blog/six-seven-dance-explained/": {
-"h": "047e0684f1a38f1e",
-"mod": "2026-10-14",
+"h": "cc5b3047376063e3",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "blog/social-security-cola-2027-explained/": {
@@ -320,8 +320,8 @@
 "pub": "2026-10-14"
 },
 "celebrities/patrick-stewart-dies-86/": {
-"h": "1b64274200188ff4",
-"mod": "2026-11-03",
+"h": "f1895484aa315410",
+"mod": "2026-11-21",
 "pub": "2026-11-03"
 },
 "contact/": {
@@ -436,7 +436,7 @@
 },
 "games/the-game-awards-2026/": {
 "h": "9f698c950d677584",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "games/zelda-switch-2-40th-anniversary-edition/": {
@@ -490,13 +490,13 @@
 "pub": "2026-10-14"
 },
 "hubs/": {
-"h": "ad586ca0cba2b22d",
-"mod": "2026-11-20",
+"h": "df1777f5fb30a22f",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "hubs/coming-up/": {
-"h": "bfb0034d83672e41",
-"mod": "2026-11-20",
+"h": "2a03d4031c5b8e54",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "hubs/games-movies-music/": {
@@ -510,8 +510,8 @@
 "pub": "2026-10-25"
 },
 "hubs/money-benefits/": {
-"h": "da3cd6bc344a35ba",
-"mod": "2026-11-20",
+"h": "0232844cf62dfc6a",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "hubs/sports/": {
@@ -536,57 +536,57 @@
 },
 "memes-viral/": {
 "h": "e3dff7aa77e18302",
-"mod": "2026-10-18",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "memes-viral/tiktok-dances/": {
 "h": "8416cd8dec67ee77",
-"mod": "2026-10-21",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "money/": {
-"h": "9763e7aea5ccb105",
-"mod": "2026-11-19",
+"h": "1b8b6b81518d8c1e",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "money/2027-tax-numbers/": {
-"h": "0f51ea67804c786b",
-"mod": "2026-11-20",
+"h": "b6d3d48ec54c3017",
+"mod": "2026-11-21",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/2027-tax-brackets/": {
-"h": "7562419bae8183b9",
-"mod": "2026-11-20",
+"h": "3f34c056780031d9",
+"mod": "2026-11-21",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/401k-ira-limits-2027/": {
-"h": "05248f475b1c28f5",
-"mod": "2026-11-20",
+"h": "9f90e9cad9523880",
+"mod": "2026-11-21",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/gift-estate-tax-2027/": {
-"h": "c29f148ecfdaf1ca",
-"mod": "2026-11-20",
+"h": "74ea4cd321a18c8a",
+"mod": "2026-11-21",
 "pub": "2026-11-18"
 },
 "money/2027-tax-numbers/hsa-limits-2027/": {
-"h": "e1444ed92ac9eb0b",
-"mod": "2026-11-20",
+"h": "50eabbdcd4aabbfd",
+"mod": "2026-11-21",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/irs-mileage-rate-2027/": {
-"h": "8b000bddb581707c",
-"mod": "2026-11-20",
+"h": "d832b8550e622ffd",
+"mod": "2026-11-21",
 "pub": "2026-10-18"
 },
 "money/2027-tax-numbers/standard-deduction-2027/": {
-"h": "8b7db0284d369fdb",
-"mod": "2026-11-20",
+"h": "490df3a7694a2a5c",
+"mod": "2026-11-21",
 "pub": "2026-11-20"
 },
 "money/fafsa-deadlines/": {
-"h": "afcb8a0e1b244703",
-"mod": "2026-11-20",
+"h": "b492f65ebc68a2c9",
+"mod": "2026-11-21",
 "pub": "2026-11-19"
 },
 "money/gas-prices-2026/": {
@@ -605,18 +605,23 @@
 "pub": "2026-10-14"
 },
 "money/medicare-open-enrollment-2027/": {
-"h": "231675dc3d70f978",
-"mod": "2026-11-19",
+"h": "efae33b436636e08",
+"mod": "2026-11-21",
 "pub": "2026-10-15"
 },
 "money/medicare-part-b-premium-2027/": {
-"h": "9da1df3b9c83cfe0",
-"mod": "2026-11-19",
+"h": "b992c346e60ad2a3",
+"mod": "2026-11-21",
 "pub": "2026-11-18"
+},
+"money/medicare-part-d-out-of-pocket-cap-2027/": {
+"h": "635fe54786d30c69",
+"mod": "2026-11-21",
+"pub": "2026-11-21"
 },
 "money/minimum-wage-2027/": {
 "h": "d1ae30dbccf20bda",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-19"
 },
 "money/minimum-wage-2027/california-minimum-wage-2027/": {
@@ -655,8 +660,8 @@
 "pub": "2026-10-14"
 },
 "money/retirement/": {
-"h": "cdd7bb8e97f7455e",
-"mod": "2026-11-19",
+"h": "158d24f1a841a63f",
+"mod": "2026-11-21",
 "pub": "2026-10-14"
 },
 "money/social-security-2027/": {
@@ -696,7 +701,7 @@
 },
 "movies/sunrise-on-the-reaping-guide/": {
 "h": "3d0386e23a0d77db",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-15"
 },
 "movies/sunrise-on-the-reaping-tickets-early-screenings/": {
@@ -736,7 +741,7 @@
 },
 "music/spotify-wrapped-2026/": {
 "h": "c59269aef61154e6",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-19"
 },
 "music/spotify-wrapped-2026/apple-music-replay-2026/": {
@@ -991,12 +996,12 @@
 },
 "shopping/thanksgiving-dinner-deals-2026/": {
 "h": "212fe06dee867e07",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "shopping/veterans-day-free-meals-deals-2026/": {
 "h": "95a247aca8133863",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "shopping/walmart-holiday-meal-basket-2026/": {
@@ -1030,8 +1035,8 @@
 "pub": "2026-10-14"
 },
 "sports/nascar-championship-homestead-2026/": {
-"h": "821c7991e700157f",
-"mod": "2026-11-03",
+"h": "f6937a4eda01ede4",
+"mod": "2026-11-21",
 "pub": "2026-11-03"
 },
 "sports/nba-cup-2026/": {
@@ -1170,8 +1175,8 @@
 "pub": "2026-10-18"
 },
 "tv-streaming/hallmark-christmas-movies-2026-schedule/": {
-"h": "a9be2068916072bd",
-"mod": "2026-11-20",
+"h": "12a9edcdb4bd491b",
+"mod": "2026-11-21",
 "pub": "2026-10-26"
 },
 "tv-streaming/marvel/": {
@@ -1181,7 +1186,7 @@
 },
 "tv-streaming/new-years-rockin-eve-2027/": {
 "h": "81dd54d6a7230b08",
-"mod": "2026-11-19",
+"mod": "2026-11-21",
 "pub": "2026-10-27"
 },
 "tv-streaming/new-years-rockin-eve-2027/performers/": {
@@ -1216,7 +1221,7 @@
 },
 "world/brazil-runoff-2026/": {
 "h": "344342c894ed5edb",
-"mod": "2026-11-18",
+"mod": "2026-11-21",
 "pub": "2026-10-25"
 },
 "world/ebola-outbreak-2026/": {
