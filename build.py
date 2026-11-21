@@ -581,6 +581,7 @@ exec(open('extras_evergreen_1109.py').read())
 exec(open('extras_medicare_partb_1118.py').read())
 exec(open('extras_seo_1119.py').read())
 exec(open('extras_rejected.py').read())
+exec(open('extras_partd_1121.py').read())
 # ---- legal gate: trend cards, subtopic pages and blog posts (held items leave T/SUBS/POSTS, so they drop out of cards, nav, blog index, feed, search and llms.txt)
 _gate_T()
 _keep=[]
@@ -605,7 +606,7 @@ for c,n,e in CATS:
     extra=('<p><a href="trending-stocks/">→ Today\'s trending stocks</a></p>'+DISC if c=="finance" else "")+('<p class="warn">Strictly nonpartisan: we link sourced facts, represent both sides fairly and never endorse candidates or parties.</p>' if c=="politics" else "")
     subs=[sb for sb in SUBS if sb[0]==c]
     if c=="movies": extra+=REAPLINK.replace("{r}","../")+NNLINK.replace("{r}","../")
-    if c=="money": extra+=MWLINK.replace("{r}","../")+SSLINK.replace("{r}","../")+TAXLINK.replace("{r}","../")
+    if c=="money": extra+=MWLINK.replace("{r}","../")+SSLINK.replace("{r}","../")+TAXLINK.replace("{r}","../")+PDLINK.replace("{r}","../")
     if c=="music": extra+=WRAPLINK.replace("{r}","../")+ZBLINK.replace("{r}","../")
     if c=="sports": extra+=NCLINK.replace("{r}","../")
     extra+=HUBX.get(c,"").replace("{r}","../")
