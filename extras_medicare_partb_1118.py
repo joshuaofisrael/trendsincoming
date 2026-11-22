@@ -1,6 +1,8 @@
 # --- Medicare Part B premium 2027: official CMS release (added 2026-11-18). exec'd from build.py ---
 PUB18C="2026-11-18"
 PB="money/medicare-part-b-premium-2027/"
+PHOTO["medicare-part-b-premium-2027"]="Medicare benefits paperwork and a pen on a kitchen table in soft daylight"
+KEYPH[PB]="medicare-part-b-premium-2027"
 PBSRC=[("CMS fact sheet: 2027 Medicare Parts A & B Premiums and Deductibles (Nov 17, 2026, official)","https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles"),
 ("CMS fact sheet: 2026 Medicare Parts A & B Premiums and Deductibles (for comparison)","https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles"),
 ("SSA: 2027 Social Security COLA is 3.6% (Oct 14, 2026)","https://www.ssa.gov/news/en/press/releases/2026-10-14.html"),

@@ -1,6 +1,6 @@
 {
  "site": "trendsincoming.com",
- "updated": "2026-11-19",
+ "updated": "2026-11-22",
  "rule": "RULE.md rule 3: every image used on a page needs status documented here",
  "files": {
   "og/business.png": {
@@ -396,6 +396,26 @@
   "assets/img/og-calculator-tax-forms.jpg": {
    "status": "documented",
    "origin": "OG crop of assets/img/calculator-tax-forms.webp (same AI bank image)",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/medicare-part-b-premium-2027.webp": {
+   "status": "documented",
+   "origin": "AI-generated photoreal still from the JI Ventures image bank (trends/medicare-card-envelope.png, ChatGPT batch); Medicare benefits paperwork and a pen on a kitchen table in soft daylight; no real faces, logos or clearly readable text; assigned to trendsincoming on 21 Nov 2026",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/og-medicare-part-b-premium-2027.jpg": {
+   "status": "documented",
+   "origin": "OG crop of assets/img/medicare-part-b-premium-2027.webp (same AI bank image)",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/gift-estate-tax-2027.webp": {
+   "status": "documented",
+   "origin": "AI-generated photoreal still from the JI Ventures image bank (trends/estate-planning-desk.png, ChatGPT batch); estate-planning papers and a calculator on a wooden desk in soft daylight; no real faces, logos or clearly readable text; assigned to trendsincoming on 21 Nov 2026",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/og-gift-estate-tax-2027.jpg": {
+   "status": "documented",
+   "origin": "OG crop of assets/img/gift-estate-tax-2027.webp (same AI bank image)",
    "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
   }
  },
