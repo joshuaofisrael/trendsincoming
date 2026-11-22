@@ -6,6 +6,7 @@ PHOTO["calculator-tax-forms"]="Calculator, ballpoint pen and a stack of printed 
 KEYPH[TXS]=KEYPH[TXB]=KEYPH[TX]="calculator-tax-forms"
 PHOTO["gift-estate-tax-2027"]="Estate-planning papers and a calculator on a wooden desk in soft daylight"
 KEYPH[TXG]="gift-estate-tax-2027"
+PDP="money/medicare-part-d-out-of-pocket-cap-2027/"
 PB="money/medicare-part-b-premium-2027/"
 PUB18B="2026-11-18"
 S_RP2532=("IRS Rev. Proc. 2025-32: 2026 inflation adjustments (tax tables, standard deduction)","https://www.irs.gov/pub/irs-drop/rp-25-32.pdf")
@@ -38,12 +39,12 @@ def taxnav(r,cur):
     L=[(TX,"🧾 Hub: all 2027 tax numbers"),(TXS,"💵 Standard deduction 2027"),(TXB,"📊 2027 tax brackets"),(TXB+"#calculator","🧮 Bracket calculator"),(TXK,"🏦 401(k) and IRA limits 2027"),(TXH,"🩺 HSA limits 2027"),(TXG,"🎁 Gift and estate tax 2027"),(TXM,"🚗 IRS mileage rate 2027")]
     return '<div class="cats" style="margin:14px 0">'+"".join(f'<a href="{r}{p}">{esc(t)}</a>' for p,t in L if p!=cur)+'</div>'
 def taxrel(r):
-    return f'<h2>Related on Trends Incoming</h2><ul><li><a href="{r}money/social-security-2027/">Social Security 2027: 3.6% COLA calculator and payment dates</a></li><li><a href="{r}{PB}">Medicare Part B premium 2027: $209.40 a month (official)</a></li><li><a href="{r}money/medicare-open-enrollment-2027/">Medicare open enrollment 2027 (Oct 15 to Dec 7)</a></li><li><a href="{r}money/open-enrollment-2027/">HealthCare.gov open enrollment 2027 (Nov 1 to Jan 15)</a></li><li><a href="{r}money/minimum-wage-2027/">Minimum wage 2027 by state: every January 1 raise</a></li><li><a href="{r}money/fafsa-deadlines/">FAFSA 2027-28 deadlines</a></li><li><a href="{r}money/retirement/">Retirement and Social Security trends</a></li></ul>'
+    return f'<h2>Related on Trends Incoming</h2><ul><li><a href="{r}money/social-security-2027/">Social Security 2027: 3.6% COLA calculator and payment dates</a></li><li><a href="{r}{PB}">Medicare Part B premium 2027: $209.40 a month (official)</a></li><li><a href="{r}{PDP}">Medicare Part D cap 2027: $2,400 out of pocket, $700 deductible</a></li><li><a href="{r}money/medicare-open-enrollment-2027/">Medicare open enrollment 2027 (Oct 15 to Dec 7)</a></li><li><a href="{r}money/open-enrollment-2027/">HealthCare.gov open enrollment 2027 (Nov 1 to Jan 15)</a></li><li><a href="{r}money/minimum-wage-2027/">Minimum wage 2027 by state: every January 1 raise</a></li><li><a href="{r}money/fafsa-deadlines/">FAFSA 2027-28 deadlines</a></li><li><a href="{r}money/retirement/">Retirement and Social Security trends</a></li></ul>'
 def taxart(title,desc,path,cites,mod=None):
     return {"@context":"https://schema.org","@type":"Article","headline":title,"description":desc,"datePublished":PUB18,"dateModified":mod or MOD18,"mainEntityOfPage":B+"/"+path,"author":{"@type":"Organization","name":"The Trends Incoming team","url":B+"/about/"},"publisher":pub,"citation":[u for _,u in cites],"about":{"@type":"Thing","name":"US federal tax numbers for 2027"}}
 TXCR=[("Home",""),("Money","money/"),("2027 tax numbers",TX)]
 def tax_compare(r,cur=None):
-    opts=[(TX,"2027 official numbers tracker"),(TXS,"Standard deduction 2027"),(TXB,"2027 tax brackets"),(TXK,"401(k) and IRA limits 2027"),(TXH,"HSA limits 2027"),(TXG,"Gift and estate tax 2027"),(TXM,"IRS mileage rate 2027"),("money/social-security-2027/","Social Security COLA 2027"),(PB,"Medicare Part B premium 2027"),("money/minimum-wage-2027/","Minimum wage by state 2027"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines")]
+    opts=[(TX,"2027 official numbers tracker"),(TXS,"Standard deduction 2027"),(TXB,"2027 tax brackets"),(TXK,"401(k) and IRA limits 2027"),(TXH,"HSA limits 2027"),(TXG,"Gift and estate tax 2027"),(TXM,"IRS mileage rate 2027"),("money/social-security-2027/","Social Security COLA 2027"),(PB,"Medicare Part B premium 2027"),(PDP,"Medicare Part D cap 2027"),("money/minimum-wage-2027/","Minimum wage by state 2027"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines")]
     return '<aside class="compare" aria-label="Check another 2027 number"><h2>Check another 2027 number</h2><p>Official figures only, linked to the primary release.</p><ul>'+"".join(f'<li><a href="{r}{h}">{esc(t)}</a></li>' for h,t in opts if h!=cur)+'</ul></aside>'
 def tax_next(r,extra=()):
     items=[("money/social-security-2027/","Social Security COLA 2027","Official 3.6% COLA and January payment dates.","og/money.png"),(PB,"Medicare Part B premium 2027","$209.40 a month, official from CMS.","og/money.png"),("money/minimum-wage-2027/","Minimum wage by state 2027","Every January 1 raise, with CSV.","og/money.png"),("money/fafsa-deadlines/","FAFSA 2027-28 deadlines","Open date and federal/state deadlines.","og/education.png")]+list(extra)
@@ -225,13 +226,14 @@ mld=[taxart(MTITLE,MDESC,TXM,MSRC,mod=MOD19),faqld(MQ),crumbs(TXCR+[("IRS mileag
 page(TXM+"index.html",MTITLE,MDESC,mbody,ld=mld,article=False,cat="money")
 # ---------------- hub: 2027 official numbers tracker (link asset) ----------------
 XQ=[("Are the 2027 tax brackets out?","Yes, since November 5, 2026 (IRS IR-2026-133 and Rev. Proc. 2026-35)."),
-("Which 2027 tax numbers are already official?","Brackets and standard deduction, 401(k) and IRA limits, HSA limits, gift and estate tax, Social Security COLA, Medicare Part B premium, and most January 1 state minimum wages are official. Only the IRS mileage rate is still pending, expected in December 2026."),
+("Which 2027 tax numbers are already official?","Brackets and standard deduction, 401(k) and IRA limits, HSA limits, gift and estate tax, Social Security COLA, Medicare Part B premium, the Part D out-of-pocket threshold and standard deductible, and most January 1 state minimum wages are official. Only the IRS mileage rate is still pending, expected in December 2026."),
 ("When did each 2027 IRS number come out?","HSA limits: spring 2026 (Rev. Proc. 2026-24). Brackets, standard deduction (including the age and blindness add-ons) and gift/estate tax: November 5, 2026 (IR-2026-133 and Rev. Proc. 2026-35). 401(k), IRA and other retirement limits: November 12, 2026 (IR-2026-136). Mileage rate: still pending as of November 20, 2026."),
 ("Can I reuse this tracker?","Yes. Download the CSV and cite this page. Free to use with a link back to Trends Incoming."),
 ("Is this tax advice?","No. This hub is general information built from IRS, SSA, CMS and state labor releases. For your own situation, use the linked agencies or a qualified professional.")]
 S_SSA=("SSA press release: 3.6 percent benefit increase for 2027 (Oct 14, 2026)","https://www.ssa.gov/news/en/press/releases/2026-10-14.html")
 S_CMS=("CMS fact sheet: 2027 Medicare Parts A & B Premiums and Deductibles (Nov 17, 2026)","https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles")
-XSRC=[S_IR133,S_RP2635,S_IR136,S_N2666,S_RP2624,S_MILE,S_SSA,S_CMS]
+S_PD=("CMS CY 2027 Rate Announcement, Attachment V Part D benefit parameters (April 6, 2026)","https://www.cms.gov/files/document/2027-announcement.pdf")
+XSRC=[S_IR133,S_RP2635,S_IR136,S_N2666,S_RP2624,S_MILE,S_SSA,S_CMS,S_PD]
 # Tracker rows: figure, value, agency, release date, source url, detail path
 TRACK=[
 ("2027 tax brackets (single 10% top of band)","$12,800","IRS","2026-11-05",S_IR133[1],TXB),
@@ -249,6 +251,8 @@ TRACK=[
 ("2027 IRS business mileage rate","Not announced","IRS","",S_MILE[1],TXM),
 ("2027 Social Security COLA","3.6%","SSA","2026-10-14",S_SSA[1],"money/social-security-2027/"),
 ("2027 Medicare Part B standard premium","$209.40 / month","CMS","2026-11-17",S_CMS[1],PB),
+("2027 Medicare Part D out-of-pocket threshold","$2,400","CMS","2026-04-06",S_PD[1],PDP),
+("2027 Medicare Part D defined standard deductible","$700","CMS","2026-04-06",S_PD[1],PDP),
 ("2027 state minimum wages (Jan 1 raises)","See state table","State labor agencies","2026-10-19","https://trendsincoming.com/money/minimum-wage-2027/","money/minimum-wage-2027/"),
 ]
 os.makedirs(TX,exist_ok=True)
@@ -273,7 +277,7 @@ cite_box=f'''<div class="card" id="cite" style="background:#fff8e6;margin:14px 0
 <p><a href="2027-official-numbers.csv">Download the table as CSV</a></p></div>'''
 xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 official numbers tracker</p><span class="pill" style="background:#1a7f37;color:#fff">Link asset · checked Nov 20, 2026</span>
 <h1>2027 Official Numbers Tracker: Every Figure, Agency and Release Date</h1><p class="by">{BY} · Published Oct 18, 2026 · Last updated Nov 20, 2026</p>
-<p>One table for the 2027 money numbers people look up every fall: IRS brackets and limits, Social Security COLA, Medicare Part B, state minimum wages, and the still-pending mileage rate. Each row names the publishing agency, the release date, and the primary source. Download the CSV or cite the box below. We flip a row the day the agency posts it. No estimates are labelled as official figures.</p>
+<p>One table for the 2027 money numbers people look up every fall: IRS brackets and limits, Social Security COLA, Medicare Part B, the Part D out-of-pocket cap and standard deductible, state minimum wages, and the still-pending mileage rate. Each row names the publishing agency, the release date, and the primary source. Download the CSV or cite the box below. We flip a row the day the agency posts it. No estimates are labelled as official figures.</p>
 {NOADV}
 {tax_compare("../../",TX)}
 <h2 id="tracker">📋 2027 official numbers (checked Nov 20, 2026)</h2>
@@ -290,7 +294,7 @@ xbody=f'''<article><p class="by"><a href="../">💵 Money</a> › 2027 official 
 <div class="card"><span class="pill">Due December</span><h3>🚗 IRS mileage rate 2027</h3><p>Still pending as of Nov 19, 2026. Current business rate: 76 cents.</p><div class="links"><a class="in" href="../../{TXM}">See mileage rates →</a></div></div>
 </div>
 <h2>🔍 How we label numbers</h2><p><b>Official</b> means the figure is in an agency revenue procedure, notice, fact sheet or news release, linked in the Source column. We do not publish projections as if they were figures. Where a number is not out yet, like the 2027 mileage rate, the Value cell says so.</p>
-<h2>📅 Refresh calendar</h2><ul><li><b>October 14, 2026:</b> SSA 2027 COLA (3.6%).</li><li><b>November 5 and 12, 2026:</b> IRS inflation and retirement limits.</li><li><b>November 17, 2026:</b> CMS Part B premium.</li><li><b>December 2026 (expected):</b> IRS 2027 standard mileage rates.</li><li><b>January 2027:</b> filing season opens for 2026 returns; we refresh the tracker again.</li></ul>
+<h2>📅 Refresh calendar</h2><ul><li><b>April 6, 2026:</b> CMS Part D benefit parameters in the CY 2027 rate announcement ($2,400 threshold, $700 deductible).</li><li><b>October 14, 2026:</b> SSA 2027 COLA (3.6%).</li><li><b>November 5 and 12, 2026:</b> IRS inflation and retirement limits.</li><li><b>November 17, 2026:</b> CMS Part B premium.</li><li><b>December 2026 (expected):</b> IRS 2027 standard mileage rates.</li><li><b>January 2027:</b> filing season opens for 2026 returns; we refresh the tracker again.</li></ul>
 {fhtml(XQ)}{tax_next("../../")}{taxrel("../../")}{srclist(XSRC)}</article>'''
 XTITLE="2027 Official Numbers Tracker: Every Figure, Agency and Release Date"
 XDESC="One table of 2027 IRS, SSA, CMS and state wage numbers with release dates, source links, CSV download and a cite-this box."
