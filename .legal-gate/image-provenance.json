@@ -417,6 +417,16 @@
    "status": "documented",
    "origin": "OG crop of assets/img/gift-estate-tax-2027.webp (same AI bank image)",
    "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/pharmacy-counter-bags.webp": {
+   "status": "documented",
+   "origin": "AI-generated photoreal still from the JI Ventures image bank (trends/pharmacy-counter-bags.png, ChatGPT batch); a pharmacy counter with plain paper bags in soft daylight; no real faces, logos or clearly readable text; assigned to trendsincoming on 21 Nov 2026",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
+  },
+  "assets/img/og-pharmacy-counter-bags.jpg": {
+   "status": "documented",
+   "origin": "OG crop of assets/img/pharmacy-counter-bags.webp (same AI bank image)",
+   "licence": "Original AI output owned by site operator (Joshua Israel Ventures LLC)"
   }
  },
  "prefixes": {}

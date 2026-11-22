@@ -26,6 +26,7 @@ def check_another(r, current=None):
         ("money/2027-tax-numbers/irs-mileage-rate-2027/","IRS mileage rate 2027"),
         ("money/social-security-2027/","Social Security COLA 2027"),
         ("money/medicare-part-b-premium-2027/","Medicare Part B premium 2027"),
+        ("money/medicare-part-d-out-of-pocket-cap-2027/","Medicare Part D cap 2027"),
         ("money/minimum-wage-2027/","Minimum wage by state 2027"),
         ("money/fafsa-deadlines/","FAFSA 2027-28 deadlines"),
         ("money/open-enrollment-2027/","HealthCare.gov open enrollment 2027"),
