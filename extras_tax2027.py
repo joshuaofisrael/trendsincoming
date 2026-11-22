@@ -4,6 +4,8 @@ TX="money/2027-tax-numbers/"
 TXB=TX+"2027-tax-brackets/"; TXS=TX+"standard-deduction-2027/"; TXK=TX+"401k-ira-limits-2027/"; TXH=TX+"hsa-limits-2027/"; TXM=TX+"irs-mileage-rate-2027/"; TXG=TX+"gift-estate-tax-2027/"
 PHOTO["calculator-tax-forms"]="Calculator, ballpoint pen and a stack of printed forms on a wooden table in window light, with a speckled mug to the side"
 KEYPH[TXS]=KEYPH[TXB]=KEYPH[TX]="calculator-tax-forms"
+PHOTO["gift-estate-tax-2027"]="Estate-planning papers and a calculator on a wooden desk in soft daylight"
+KEYPH[TXG]="gift-estate-tax-2027"
 PB="money/medicare-part-b-premium-2027/"
 PUB18B="2026-11-18"
 S_RP2532=("IRS Rev. Proc. 2025-32: 2026 inflation adjustments (tax tables, standard deduction)","https://www.irs.gov/pub/irs-drop/rp-25-32.pdf")
